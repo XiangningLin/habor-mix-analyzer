@@ -1,22 +1,507 @@
 {
   "name": "GSO",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Code Performance",
+  "used_llm_or_agent": "agent",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://gso-bench.github.io/",
+    "leaderboard": "https://gso-bench.github.io/",
+    "paper": "https://arxiv.org/abs/2505.23671",
+    "github": "https://github.com/gso-bench/gso",
+    "dataset": "https://huggingface.co/datasets/gso-bench/gso"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-05",
+    "num_tasks": 102
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "Opt@1",
+    "harbor_aligned_metric": "Opt@1"
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-05-30",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "Claude-4-Sonnet",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.049,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.049,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-V2-Sonnet",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.046,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.046,
+              "unit": null
+            },
+            {
+              "metric": "Opt@10",
+              "value": 0.157,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@10",
+              "value": 0.157,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.7-Sonnet",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.038,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.038,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "O4-Mini (high)",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.036,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.036,
+              "unit": null
+            },
+            {
+              "metric": "Opt@10",
+              "value": 0.127,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@10",
+              "value": 0.127,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "O3-Mini (high)",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.013,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.013,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Initial public leaderboard release. Opt@10 rows are included where the official leaderboard reports them."
+    },
+    {
+      "date": "2025-06-09",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "O3 (high)",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.0882,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.0392,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-08-10",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "GPT-5 (high)",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.0686,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.0588,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-4-Opus",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.0686,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.049,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-08-26",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "Kimi-K2-Instruct",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.049,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.0196,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM-4.5-Air",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.0294,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.0098,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-09-02",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "Qwen3-Coder",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.049,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.0392,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-10-10",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "Claude-4.5-Sonnet",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.1471,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.1274,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-2.5-Pro",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.0392,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-11-28",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "Claude-4.5-Opus",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.2647,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.245,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-3-Pro",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.1863,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.1765,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-12-18",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "GPT-5.2 (high)",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.2745,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.2647,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.1 (high)",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.1373,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.1275,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-12-19",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "Gemini-3-Flash",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.098,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.0784,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2026-02-11",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "Claude-4.6-Opus",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.3333,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.3039,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Current official leaderboard SOTA among rows in the 2026-03-10 leaderboard data snapshot."
+    },
+    {
+      "date": "2026-03-09",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "Gemini-3.1-Pro",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.2255,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.2157,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2026-03-10",
+      "source_type": "leaderboard",
+      "source_url": "https://gso-bench.github.io/assets/leaderboard.json",
+      "results": [
+        {
+          "model": "GPT-5.4 (xhigh)",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.3137,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.3039,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.4 (high)",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Opt@1",
+              "value": 0.2549,
+              "unit": null
+            },
+            {
+              "metric": "Hack-Adjusted Opt@1",
+              "value": 0.2255,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Official leaderboard metadata lists last_updated as 2026-03-10."
+    }
+  ],
+  "notes": "GSO: Global Software Optimization. Official leaderboard percentage scores were converted to rates in [0, 1]. "
 }
