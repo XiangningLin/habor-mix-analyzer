@@ -1,22 +1,135 @@
 {
   "name": "QCircuitBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Science & Research",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
+    "website": "https://github.com/EstelYang/QCircuitBench",
     "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "paper": "https://arxiv.org/abs/2410.07961",
+    "github": "https://github.com/EstelYang/QCircuitBench",
+    "dataset": "https://drive.google.com/file/d/1dawEUtGcX4AryN2djZ8VVaLwPe6kpziA/view?usp=sharing"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-12",
+    "num_tasks": 120290
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "Semantic Score",
+    "harbor_aligned_metric": "Semantic Score"
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-12-16",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2410.07961v3",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "QASM Syntax Score (1-Shot)",
+              "value": 0.2734,
+              "unit": null
+            },
+            {
+              "metric": "Semantic Score (1-Shot)",
+              "value": 0.0245,
+              "unit": null
+            },
+            {
+              "metric": "QASM Syntax Score (5-Shot)",
+              "value": 0.5775,
+              "unit": null
+            },
+            {
+              "metric": "Semantic Score (5-Shot)",
+              "value": 0.2006,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "QASM Syntax Score (1-Shot)",
+              "value": 0.2435,
+              "unit": null
+            },
+            {
+              "metric": "Semantic Score (1-Shot)",
+              "value": 0.011,
+              "unit": null
+            },
+            {
+              "metric": "QASM Syntax Score (5-Shot)",
+              "value": 0.4602,
+              "unit": null
+            },
+            {
+              "metric": "Semantic Score (5-Shot)",
+              "value": 0.0323,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen 2.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "QASM Syntax Score (1-Shot)",
+              "value": 0.2844,
+              "unit": null
+            },
+            {
+              "metric": "Semantic Score (1-Shot)",
+              "value": 0,
+              "unit": null
+            },
+            {
+              "metric": "QASM Syntax Score (5-Shot)",
+              "value": 0.4307,
+              "unit": null
+            },
+            {
+              "metric": "Semantic Score (5-Shot)",
+              "value": 0.0998,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "QASM Syntax Score (1-Shot)",
+              "value": 0.0576,
+              "unit": null
+            },
+            {
+              "metric": "Semantic Score (1-Shot)",
+              "value": 0.0126,
+              "unit": null
+            },
+            {
+              "metric": "QASM Syntax Score (5-Shot)",
+              "value": 0.1768,
+              "unit": null
+            },
+            {
+              "metric": "Semantic Score (5-Shot)",
+              "value": 0.0102,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "arXiv v3."
+    }
+  ],
+  "notes": "QCircuitBench was first released on arXiv under the earlier QCircuitNet name and later renamed QCircuitBench. The full benchmark has three task suites over 25 quantum algorithms and 120,290 data points. The current paper reports QASM syntax and semantic scores separately, while the initial paper reported a verification-function score that can be negative."
 }
