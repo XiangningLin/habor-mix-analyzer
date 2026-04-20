@@ -1,22 +1,270 @@
 {
   "name": "GAIA2",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "agent",
+
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://huggingface.co/meta-agents-research-environments",
+    "leaderboard": "https://huggingface.co/spaces/meta-agents-research-environments/leaderboard",
+    "paper": "https://arxiv.org/abs/2509.17158",
+    "github": "https://github.com/facebookresearch/meta-agents-research-environments",
+    "dataset": "https://huggingface.co/datasets/meta-agents-research-environments/gaia2"
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-09",
+    "num_tasks": 800
   },
+
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "pass@1",
+    "harbor_aligned_metric": "pass@1 (validation_success_rate). Parity: gaia2-parity-agent@0.1.0+openai/gpt-5-mini scored 0.060+-0.000 on the Harbor adapter vs 0.060+-0.010 on the original harness, across 2 runs on a 100/800 stratified subset (2026-04-02). Harbor also re-reproduced the original side in-house because Meta has not published official gpt-5-mini baselines."
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2025-09",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2509.17158",
+      "results": [
+        {
+          "model": "Llama 3.3 70B Instruct",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.044, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.071, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.115, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.017, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.019, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.004, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.038, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.046, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama 4 Maverick",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.074, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.138, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.144, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.021, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.050, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.012, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.062, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.092, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.074, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.083, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.175, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.044, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.062, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.058, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.046, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.052, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen3-235B",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.116, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.227, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.223, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.065, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.081, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.012, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.108, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.094, "unit": null }
+          ]
+        },
+        {
+          "model": "Grok-4",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.157, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.088, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.575, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.094, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.044, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.0, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.156, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.144, "unit": null }
+          ]
+        },
+        {
+          "model": "Kimi-K2",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.201, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.342, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.360, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.083, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.240, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.008, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.188, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.183, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini-2.5-Pro",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.258, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.392, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.577, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.181, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.175, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.073, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.204, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.204, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-4-Sonnet",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.348, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.579, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.598, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.242, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.381, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.081, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.277, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.279, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap; reasoning=minimal)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.182, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.319, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.262, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.206, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.192, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.052, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.131, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.115, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap; reasoning=low)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.346, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.527, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.642, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.396, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.302, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.023, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.283, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.246, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap; reasoning=high)",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.421, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.692, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.796, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.519, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.404, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.0, "unit": null },
+            { "metric": "pass@1 (Noise)", "value": 0.354, "unit": null },
+            { "metric": "pass@1 (Agent2Agent)", "value": 0.179, "unit": null }
+          ]
+        }
+      ],
+      "note": "Release results from paper Table 2 (arXiv 2509.17158 v1, section 4.2). All numbers are pass@1 (percentage of scenarios passing the ARE Verifier on a single run), reported per capability split and averaged over 3 runs per scenario. Scaffold is the paper's ReAct-style harness at temperature 0.5 with 16K tokens/turn and a 200-step cap; the same scaffold is used for every model, so system_description is identical across rows. Paper's headline finding: GPT-5 (high) tops the benchmark at 42.1% overall, exceeding Claude 4 Sonnet by ~8 points; Kimi-K2 is the strongest open model (20.1%). Time-split is dominated by latency: frontier reasoning models score 0.0% because inference latency violates temporal tolerances, an 'inverse scaling' phenomenon documented in paper section 4.3."
+    },
+    {
+      "date": "2026-04-14",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/meta-agents-research-environments/leaderboard",
+      "results": [
+        {
+          "model": "Claude Opus 4.6 (high)",
+          "system_description": "OpenClaw 2026.4.1",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.570, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.881, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.829, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.619, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.483, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.038, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5.4 (high)",
+          "system_description": "OpenClaw 2026.4.1",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.556, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.948, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.788, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.548, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.473, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.025, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 3.1 Pro (high)",
+          "system_description": "OpenClaw 2026.4.1",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.520, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.928, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.786, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.459, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.406, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.021, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.6 (high)",
+          "system_description": "OpenClaw 2026.4.1",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.519, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.825, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.758, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.557, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.404, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.050, "unit": null }
+          ]
+        },
+        {
+          "model": "GLM 5.1 (enabled)",
+          "system_description": "OpenClaw 2026.4.1",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.505, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.838, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.712, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.569, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.394, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.012, "unit": null }
+          ]
+        },
+        {
+          "model": "Kimi-K2.5 (enabled)",
+          "system_description": "OpenClaw 2026.4.1",
+          "scores": [
+            { "metric": "pass@1 (overall)", "value": 0.340, "unit": null },
+            { "metric": "pass@1 (Search)", "value": 0.622, "unit": null },
+            { "metric": "pass@1 (Execution)", "value": 0.470, "unit": null },
+            { "metric": "pass@1 (Adaptability)", "value": 0.434, "unit": null },
+            { "metric": "pass@1 (Ambiguity)", "value": 0.166, "unit": null },
+            { "metric": "pass@1 (Time)", "value": 0.008, "unit": null }
+          ]
+        }
+      ],
+      "note": "Gaia2-CLI leaderboard snapshot from the live HF Space on 2026-04-14. This is the current primary leaderboard. It evaluates 5 of the 7 capability splits, with Noise and Agent2Agent dropped (the 'Vanilla Gaia2' leaderboard that retains both is backed by a gated dataset and is not fully public). All 6 entries run the OpenClaw 2026.4.1 harness rather than the paper's ReAct scaffold, so direct comparison against the 2025-09 release baseline is not apples to apples. Reasoning-effort tiers (high, enabled) are part of the model string as displayed on the Space and kept verbatim. The Time split remains a weak point even at current SOTA. Claude Opus 4.6 high only scores 3.8 percent there, an artifact of the inverse-scaling latency issue documented in the paper. The underlying scores are served client-side from a HF dataset that returns 401 anonymously, so these rows cannot be re-fetched without an access token."
+    }
+  ],
+
+  "notes": "GAIA2 (Froger et al., 2025; arXiv:2509.17158) is an agentic benchmark built on Meta's ARE (Agents Research Environments) platform. ARE simulates a Mobile smartphone with 10 distinct 'universes' and 101 tools covering email, messaging, calendar, contacts, shopping, and similar surfaces. The core release is 800 unique human-annotated scenarios. With the Agent2Agent (160) and Noise (160) augmentations, derived from a 160-scenario Gaia2-mini stratified subset, the total expands to 1,120 scenarios. Seven capability dimensions are evaluated at 160 scenarios each: Execution, Search, Adaptability, Time, Ambiguity, Agent2Agent, and Noise.\n\nThe primary metric is pass@1. Pass/fail on each scenario is decided by the ARE Verifier, a rubric-based LLM judge running Llama 3.3 70B Instruct at temperature 0. Each scenario is run 3 times, and the final number is macro-averaged across splits. ARE is asynchronous. Environment time advances independently of the agent, which exposes latency-sensitive failure modes invisible in static benchmarks. That is why frontier reasoning models score near zero on the Time split: their inference latency violates the scenario's temporal tolerances. The paper calls this 'inverse scaling' in section 4.3.\n\nThe current live HF leaderboard is the Gaia2-CLI variant. It evaluates only the 5 core splits (no Agent2Agent, no Noise) and runs the newer 'OpenClaw' harness rather than the paper's ReAct scaffold. Post-launch leaderboard scores therefore cannot be compared directly against paper Table 2. License is MIT (GitHub). The arXiv listing is 2509.17158 v1 (2025-09-21) with v2 on 2025-12-10. The `release_date` field reflects the v1/launch-blog month."
 }
