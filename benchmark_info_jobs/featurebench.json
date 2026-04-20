@@ -1,22 +1,489 @@
 {
-  "name": "FeatureBench",
-  "category": "",
-  "used_llm_or_agent": "",
-  "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
-  },
-  "meta": {
-    "release_date": "",
-    "num_tasks": null
-  },
-  "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
-  },
-  "results_over_time": [],
-  "notes": null
+    "name": "FeatureBench",
+    "category": "Repo-level Software Engineering",
+    "used_llm_or_agent": "agent",
+    "links": {
+        "website": "https://libercoders.github.io/FeatureBench/",
+        "leaderboard": "https://libercoders.github.io/FeatureBench/leaderboard/",
+        "paper": "https://arxiv.org/abs/2602.10975",
+        "github": "https://github.com/LiberCoders/FeatureBench",
+        "dataset": "https://huggingface.co/datasets/LiberCoders/FeatureBench"
+    },
+    "meta": {
+        "release_date": "2026-02-11",
+        "num_tasks": 200
+    },
+    "evaluation": {
+        "primary_metric": "% Resolved",
+        "harbor_aligned_metric": "% Resolved"
+    },
+    "results_over_time": [
+        {
+            "date": "2026-02-11",
+            "source_type": "paper",
+            "source_url": "https://arxiv.org/abs/2602.10975",
+            "results": [
+                {
+                    "model": "Qwen3-Coder-480B-A35B-Instruct",
+                    "system_description": "OpenHands",
+                    "scores": [
+                        {
+                            "metric": "% Passed (Lite)",
+                            "value": 0.3831,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Lite)",
+                            "value": 0.067,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Lite)",
+                            "value": 2600000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Lite)",
+                            "value": 16000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.2455,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.035,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Full)",
+                            "value": 2000000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Full)",
+                            "value": 14000,
+                            "unit": "tokens"
+                        }
+                    ]
+                },
+                {
+                    "model": "DeepSeek-V3.2",
+                    "system_description": "OpenHands",
+                    "scores": [
+                        {
+                            "metric": "% Passed (Lite)",
+                            "value": 0.3594,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Lite)",
+                            "value": 0.067,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Lite)",
+                            "value": 3100000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Lite)",
+                            "value": 24000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.263,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.055,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Full)",
+                            "value": 3100000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Full)",
+                            "value": 23000,
+                            "unit": "tokens"
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemini-3-Pro-Preview (low reasoning)",
+                    "system_description": "OpenHands",
+                    "scores": [
+                        {
+                            "metric": "% Passed (Lite)",
+                            "value": 0.4514,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Lite)",
+                            "value": 0.1,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Lite)",
+                            "value": 6000000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Lite)",
+                            "value": 41000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.3008,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.045,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Full)",
+                            "value": 6200000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Full)",
+                            "value": 40000,
+                            "unit": "tokens"
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemini-3-Pro-Preview (low reasoning)",
+                    "system_description": "Gemini-CLI",
+                    "scores": [
+                        {
+                            "metric": "% Passed (Lite)",
+                            "value": 0.4338,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Lite)",
+                            "value": 0.1,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Lite)",
+                            "value": 2600000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Lite)",
+                            "value": 13000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.3243,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.05,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Full)",
+                            "value": 2500000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Full)",
+                            "value": 12000,
+                            "unit": "tokens"
+                        }
+                    ]
+                },
+                {
+                    "model": "Claude Opus 4.5",
+                    "system_description": "Claude Code",
+                    "scores": [
+                        {
+                            "metric": "% Passed (Lite)",
+                            "value": 0.5912,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Lite)",
+                            "value": 0.2,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Lite)",
+                            "value": 9000000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Lite)",
+                            "value": 35000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.4329,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.11,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Full)",
+                            "value": 7500000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Full)",
+                            "value": 34000,
+                            "unit": "tokens"
+                        }
+                    ]
+                },
+                {
+                    "model": "GPT-5.1-Codex (medium reasoning)",
+                    "system_description": "Codex",
+                    "scores": [
+                        {
+                            "metric": "% Passed (Lite)",
+                            "value": 0.6022,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Lite)",
+                            "value": 0.2,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Lite)",
+                            "value": 6600000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Lite)",
+                            "value": 39000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.4166,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.125,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Full)",
+                            "value": 6300000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Full)",
+                            "value": 39000,
+                            "unit": "tokens"
+                        }
+                    ]
+                },
+                {
+                    "model": "Claude Opus 4.5",
+                    "system_description": "OpenHands",
+                    "scores": [
+                        {
+                            "metric": "% Passed (Lite)",
+                            "value": 0.6718,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Lite)",
+                            "value": 0.2,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Lite)",
+                            "value": 8800000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Lite)",
+                            "value": 29000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.4553,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.105,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Token Input (Full)",
+                            "value": 8100000,
+                            "unit": "tokens"
+                        },
+                        {
+                            "metric": "Token Output (Full)",
+                            "value": 29000,
+                            "unit": "tokens"
+                        }
+                    ]
+                }
+            ],
+            "note": "Release baseline from Table 2 of the paper. Percentage scores were converted to rates in [0,1]. Token I/O values are expanded from the rounded M/k values shown in the paper."
+        },
+        {
+            "date": "2026-01-21",
+            "source_type": "leaderboard",
+            "source_url": "https://github.com/LiberCoders/FeatureBench/blob/gh-pages/leaderboard/data/full.json",
+            "results": [
+                {
+                    "model": "GPT-5.1-Codex (medium reasoning)",
+                    "system_description": "Codex",
+                    "scores": [
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.125,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.4166,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Claude Opus 4.5",
+                    "system_description": "Claude Code (routing)",
+                    "scores": [
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.11,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.4329,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Claude Opus 4.5",
+                    "system_description": "OpenHands",
+                    "scores": [
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.105,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.4553,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "DeepSeek V3.2",
+                    "system_description": "OpenHands (mock)",
+                    "scores": [
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.055,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.263,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemini-3-Pro-Preview (low reasoning)",
+                    "system_description": "Gemini-CLI",
+                    "scores": [
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.05,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.3243,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemini-3-Pro-Preview (low reasoning)",
+                    "system_description": "OpenHands",
+                    "scores": [
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.045,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.3008,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Qwen3-Coder-480B-A35B-Instruct",
+                    "system_description": "OpenHands",
+                    "scores": [
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.035,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.2455,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Qwen3-Coder-30B-A3B-Instruct",
+                    "system_description": "OpenHands",
+                    "scores": [
+                        {
+                            "metric": "% Resolved (Full)",
+                            "value": 0.01,
+                            "unit": null
+                        },
+                        {
+                            "metric": "% Passed (Full)",
+                            "value": 0.1752,
+                            "unit": null
+                        }
+                    ]
+                }
+            ],
+            "note": "Official Full split leaderboard data. The leaderboard data file lists all rows with date 2026-01-21 and includes scaffold labels such as Claude Code (routing) and OpenHands (mock) as shown."
+        }
+    ],
+    "notes": "The main task count uses the official Full split (200 tasks). Hugging Face exposes 330 rows because it includes full (200), fast (100), and lite (30) splits. OpenReview lists the paper as published on 2026-01-26; arXiv submission was 2026-02-11."
 }
