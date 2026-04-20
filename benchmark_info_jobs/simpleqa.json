@@ -1,22 +1,1226 @@
 {
   "name": "SimpleQA",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Reasoning",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://openai.com/index/introducing-simpleqa/",
+    "leaderboard": "https://www.kaggle.com/benchmarks/openai/simpleqa/leaderboard",
+    "paper": "https://arxiv.org/abs/2411.04368",
+    "github": "https://github.com/openai/simple-evals",
+    "dataset": "https://huggingface.co/datasets/OpenEvals/SimpleQA"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2024-10-30",
+    "num_tasks": 4326
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "accuracy",
+    "harbor_aligned_metric": "accuracy"
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2024-10-30",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2411.04368",
+      "results": [
+        {
+          "model": "Claude-3-haiku (2024-03-07)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.051,
+              "unit": null
+            },
+            {
+              "metric": "not_attempted",
+              "value": 0.753,
+              "unit": null
+            },
+            {
+              "metric": "incorrect",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_given_attempted",
+              "value": 0.206,
+              "unit": null
+            },
+            {
+              "metric": "F-score",
+              "value": 0.082,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3-sonnet (2024-02-29)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.057,
+              "unit": null
+            },
+            {
+              "metric": "not_attempted",
+              "value": 0.75,
+              "unit": null
+            },
+            {
+              "metric": "incorrect",
+              "value": 0.193,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_given_attempted",
+              "value": 0.229,
+              "unit": null
+            },
+            {
+              "metric": "F-score",
+              "value": 0.092,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3-opus (2024-02-29)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.235,
+              "unit": null
+            },
+            {
+              "metric": "not_attempted",
+              "value": 0.396,
+              "unit": null
+            },
+            {
+              "metric": "incorrect",
+              "value": 0.369,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_given_attempted",
+              "value": 0.388,
+              "unit": null
+            },
+            {
+              "metric": "F-score",
+              "value": 0.293,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-sonnet (2024-06-20)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.289,
+              "unit": null
+            },
+            {
+              "metric": "not_attempted",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "incorrect",
+              "value": 0.361,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_given_attempted",
+              "value": 0.445,
+              "unit": null
+            },
+            {
+              "metric": "F-score",
+              "value": 0.35,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.086,
+              "unit": null
+            },
+            {
+              "metric": "not_attempted",
+              "value": 0.009,
+              "unit": null
+            },
+            {
+              "metric": "incorrect",
+              "value": 0.905,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_given_attempted",
+              "value": 0.087,
+              "unit": null
+            },
+            {
+              "metric": "F-score",
+              "value": 0.086,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.382,
+              "unit": null
+            },
+            {
+              "metric": "not_attempted",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "incorrect",
+              "value": 0.608,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_given_attempted",
+              "value": 0.38,
+              "unit": null
+            },
+            {
+              "metric": "F-score",
+              "value": 0.384,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenAI o1-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.081,
+              "unit": null
+            },
+            {
+              "metric": "not_attempted",
+              "value": 0.285,
+              "unit": null
+            },
+            {
+              "metric": "incorrect",
+              "value": 0.634,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_given_attempted",
+              "value": 0.113,
+              "unit": null
+            },
+            {
+              "metric": "F-score",
+              "value": 0.094,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenAI o1-preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.427,
+              "unit": null
+            },
+            {
+              "metric": "not_attempted",
+              "value": 0.092,
+              "unit": null
+            },
+            {
+              "metric": "incorrect",
+              "value": 0.481,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_given_attempted",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "F-score",
+              "value": 0.448,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Release baseline from Table 3 of the SimpleQA paper. Percentages were converted to rates in [0,1]. The paper labels the primary accuracy column as \"Correct\" / \"overall correct\" and also reports F-score."
+    },
+    {
+      "date": "2025-07",
+      "source_type": "other",
+      "source_url": "https://github.com/openai/simple-evals",
+      "results": [
+        {
+          "model": "o3-high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.486,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.494,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-low",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.494,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini-high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.193,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.202,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini-low",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.202,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini-high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.138,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.134,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini-low",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.13,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.426,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.424,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.076,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1-2025-04-14",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.416,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1-mini-2025-04-14",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.168,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1-nano-2025-04-14",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.076,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-2024-11-20",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.388,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-2024-08-06",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.401,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-2024-05-13",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.39,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-mini-2024-07-18",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.095,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.5-preview-2025-02-27",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.625,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4-turbo-2024-04-09",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.242,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.289,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3 Opus",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.235,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "OpenAI simple-evals README benchmark table. The repository states that as of July 2025 it no longer updates new model results, but it continues to host the SimpleQA reference implementation."
+    },
+    {
+      "date": "2025-08-07",
+      "source_type": "blog",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5",
+      "results": [
+        {
+          "model": "gpt-5-thinking",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "hallucination_rate",
+              "value": 0.4,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenAI o3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.54,
+              "unit": null
+            },
+            {
+              "metric": "hallucination_rate",
+              "value": 0.46,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5-thinking-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.22,
+              "unit": null
+            },
+            {
+              "metric": "hallucination_rate",
+              "value": 0.26,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenAI o4-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.24,
+              "unit": null
+            },
+            {
+              "metric": "hallucination_rate",
+              "value": 0.75,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5-thinking-nano",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.11,
+              "unit": null
+            },
+            {
+              "metric": "hallucination_rate",
+              "value": 0.31,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5-main",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.46,
+              "unit": null
+            },
+            {
+              "metric": "hallucination_rate",
+              "value": 0.47,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.44,
+              "unit": null
+            },
+            {
+              "metric": "hallucination_rate",
+              "value": 0.52,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "OpenAI GPT-5 System Card Table 8, SimpleQA (no web). This is an official OpenAI system-card evaluation rather than the Kaggle leaderboard."
+    },
+    {
+      "date": "2025-07",
+      "source_type": "other",
+      "source_url": "https://github.com/openai/simple-evals",
+      "results": [
+        {
+          "model": "o3-high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.486,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.494,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-low",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.494,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini-high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.193,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.202,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini-low",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.202,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini-high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.138,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.134,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini-low",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.13,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.426,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.424,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.076,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1-2025-04-14",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.416,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1-mini-2025-04-14",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.168,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1-nano-2025-04-14",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.076,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-2024-11-20",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.388,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-2024-08-06",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.401,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-2024-05-13",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.39,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-mini-2024-07-18",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.095,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.5-preview-2025-02-27",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.625,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4-turbo-2024-04-09",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.242,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.289,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3 Opus",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.235,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "OpenAI simple-evals README benchmark table. The repository states that as of July 2025 it no longer updates new model results, but it continues to host the SimpleQA reference implementation."
+    },
+    {
+      "date": "2026-03-09",
+      "source_type": "leaderboard",
+      "source_url": "https://www.kaggle.com/benchmarks/openai/simpleqa/leaderboard",
+      "results": [
+        {
+          "model": "Gemini 3.1 Pro Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.748,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.705,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.505,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen 3 235B A22B Thinking",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.504,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 4",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.503,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.483,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.413,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.337,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.4",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.327,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.6",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.321,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.319,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.295,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Deepseek V3.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.262,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral Large 2",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.242,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 2",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.236,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4 mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.205,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 3 Mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.204,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mixtral 8x22B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.193,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-oss-120b",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.126,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemma 3 27B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.100,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite 4.0 Small",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.086,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemma 3 12B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.061,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Ministral 8B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.059,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-oss-20b",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.055,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Codestral",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.053,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Ministral 3B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.048,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemma 3 4B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.038,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "OpenAI simple-evals README benchmark table. The repository states that as of July 2025 it no longer updates new model results, but it continues to host the SimpleQA reference implementation."
+    }
+  ],
+  "notes": "SimpleQA is an OpenAI short-form factuality benchmark for LLMs. Questions have short, single-answer targets and model outputs are graded as correct, incorrect, or not attempted. Results_over_time uses official OpenAI paper, repository, system-card sources, and leaderboard (up to 2026-03-09)."
 }
