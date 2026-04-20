@@ -1,22 +1,172 @@
 {
-  "name": "widesearch",
-  "category": "",
-  "used_llm_or_agent": "",
+  "name": "WideSearch",
+  "category": "Agentic/Web Search",
+  "used_llm_or_agent": "agent",
+
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://widesearch-seed.github.io/",
+    "leaderboard": "https://widesearch-seed.github.io/",
+    "paper": "https://arxiv.org/abs/2508.07999",
+    "github": "https://github.com/ByteDance-Seed/WideSearch",
+    "dataset": "https://huggingface.co/datasets/ByteDance-Seed/WideSearch"
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-08",
+    "num_tasks": 200
   },
+
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "Mean Item F1",
+    "harbor_aligned_metric": "Mean Item F1 — Harbor parity uses the same Item F1 metric as the original WideSearch benchmark. Parity: claude-code@2.1.98+claude-haiku-4-5-20251001 achieves 0.539 ± 0.005 (original 0.538 ± 0.005) across 3 runs of 200 tasks. Delta 0.0009, well within agent non-determinism. Oracle Mean Item F1: 0.9996. Adapter PR: https://github.com/harbor-framework/harbor/pull/1232. Parity cost: ~$2000."
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2025-08",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2508.07999",
+      "results": [
+        {
+          "model": "Claude Sonnet 4 (Thinking)",
+          "system_description": "Multi-Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.622, "unit": null }
+          ]
+        },
+        {
+          "model": "Kimi K2",
+          "system_description": "Multi-Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.612, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": "E2E System, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.591, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4 (Thinking)",
+          "system_description": "Single Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.579, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": "Multi-Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.574, "unit": null }
+          ]
+        },
+        {
+          "model": "OpenAI o3",
+          "system_description": "Multi-Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.573, "unit": null }
+          ]
+        },
+        {
+          "model": "Doubao-Seed-1.6 (Thinking)",
+          "system_description": "Multi-Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.546, "unit": null }
+          ]
+        },
+        {
+          "model": "Kimi K2",
+          "system_description": "Single Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.544, "unit": null }
+          ]
+        },
+        {
+          "model": "Doubao-Seed-1.6 (Non-Thinking)",
+          "system_description": "Multi-Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.528, "unit": null }
+          ]
+        },
+        {
+          "model": "OpenAI o3",
+          "system_description": "Single Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.526, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": "Single Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.510, "unit": null }
+          ]
+        },
+        {
+          "model": "Doubao-Seed-1.6 (Non-Thinking)",
+          "system_description": "Single Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.490, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4 (Thinking)",
+          "system_description": "E2E System, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.484, "unit": null }
+          ]
+        },
+        {
+          "model": "Doubao-Seed-1.6 (Thinking)",
+          "system_description": "Single Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.483, "unit": null }
+          ]
+        },
+        {
+          "model": "OpenAI o3",
+          "system_description": "E2E System, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.455, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "system_description": "Multi-Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.443, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "system_description": "Single Agent pipeline, Avg@4",
+          "scores": [
+            { "metric": "Mean Item F1", "value": 0.413, "unit": null }
+          ]
+        }
+      ],
+      "note": "Full leaderboard from the WideSearch paper and official website, sorted by Mean Item F1 descending. 200 bilingual tasks, Avg@4 (average of 4 independent runs). Three agent paradigms: Single Agent, Multi-Agent (parallel sub-agents + aggregator), E2E System (end-to-end commercial search products). Item F1 is the most granular metric, evaluating individual cell accuracy against the ground-truth table."
+    },
+    {
+      "date": "2026-04",
+      "source_type": "parity_experiment",
+      "source_url": "https://huggingface.co/datasets/harborframework/parity-experiments/discussions/227",
+      "results": [
+        {
+          "model": "claude-haiku-4-5-20251001",
+          "system_description": "agent=claude-code@2.1.98, Harbor adapter parity experiment, 3 runs x 200 tasks",
+          "scores": [
+            { "metric": "Mean Item F1 (original)", "value": 0.538, "unit": null },
+            { "metric": "Mean Item F1 (harbor)", "value": 0.539, "unit": null },
+            { "metric": "Mean Item F1 delta", "value": 0.0009, "unit": null }
+          ]
+        }
+      ],
+      "note": "Harbor adapter parity experiment run 2026-04-13. Three rounds of 200 tasks each with claude-code@2.1.98 + claude-haiku-4-5-20251001. Original runs: [0.5430, 0.5333, 0.5367]. Harbor runs: [0.5334, 0.5394, 0.5430]. Delta 0.0009, well within agent non-determinism. LLM judge uses gpt-4.1 via parity gateway. Oracle Mean Item F1: 0.9996. Adapter PR: https://github.com/harbor-framework/harbor/pull/1232. Dataset PRs: https://github.com/laude-institute/harbor-datasets/pull/199, https://github.com/laude-institute/harbor-datasets/pull/206. Parity PR: https://huggingface.co/datasets/harborframework/parity-experiments/discussions/227."
+    }
+  ],
+
+  "notes": "WideSearch is a benchmark by ByteDance Seed for evaluating AI agents on broad information-seeking tasks. It contains 200 bilingual tasks (100 English, 100 Chinese) spanning 18 distinct industries, requiring agents to search, collect, and organize large-scale structured information into markdown tables.\n\nKey characteristics:\n- 200 tasks (100 EN + 100 ZH), 18 industries\n- Evaluates operational scale and completeness, not cognitive difficulty ('I don't have time to do it' paradigm)\n- Human annotators average 2.3 hours per task, consulting 44+ web pages\n- Requires web search access (original benchmark uses ByteDance internal APIs; community must provide own search tools)\n- Three key metrics: Success Rate (perfect match, extremely stringent), Row-level F1, Item-level F1\n- Reporting: Avg@N (average of N trials) and Pass@N/Max@N (best of N trials)\n- Three agent evaluation paradigms: Single Agent, Multi-Agent (parallel sub-agents + aggregator), E2E System\n\nHarbor adapter details:\n- Adapter builder: Yizhao Chen (yic138@ucsd.edu)\n- Full 200 tasks adapted, 200 used for parity (100% sampling rate)\n- Evaluation metrics ported from official WideSearch code (exact_match, number_near, url_match, date_near, llm_judge)\n- LLM judge uses gpt-4.1 (configurable via WIDESEARCH_EVAL_MODEL)\n- LLM-based primary key alignment for row matching\n- Parity cost: ~$2000\n- Oracle Mean Item F1: 0.9996 (not exactly 1.0 due to pipe characters in gold CSV causing lossy round-trip)\n- Agent timeout: 1800 seconds (30 minutes)\n- Temporal sensitivity: some tasks referencing 'latest' data may yield different correct answers over time\n- Splits: full (200 tasks), prototype (5 tasks for development), parity (same as full)"
 }
