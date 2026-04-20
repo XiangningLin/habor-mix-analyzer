@@ -1,22 +1,93 @@
 {
   "name": "CodePDE",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Science & Research",
+  "used_llm_or_agent": "both",
   "links": {
     "website": null,
     "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "paper": "https://arxiv.org/abs/2505.08783",
+    "github": "https://github.com/LithiumDA/CodePDE",
+    "dataset": "https://huggingface.co/datasets/LDA1020/codepde-data"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-05",
+    "num_tasks": 5
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "nRMSE (geometric mean over 5 PDE families, lower is better)",
+    "harbor_aligned_metric": "pass rate: fraction of the 5 PDE families whose aggregate nRMSE over 100 instances is below 0.05 (reward=1 if nRMSE<0.05 else 0, averaged across tasks)"
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-05",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2505.08783",
+      "results": [
+        {"model": "Gemini 2.5 Pro",    "system_description": "CodePDE (Reasoning + Debugging + Refinement, best-of-12)", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00529, "unit": null},
+          {"metric": "pass rate", "value": 0.8, "unit": null}
+        ]},
+        {"model": "Claude-3.7-sonnet", "system_description": "CodePDE (Reasoning + Debugging + Refinement, best-of-12)", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00444, "unit": null},
+          {"metric": "pass rate", "value": 0.8, "unit": null}
+        ]},
+        {"model": "DeepSeek-R1",       "system_description": "CodePDE (Reasoning + Debugging + Refinement, best-of-12)", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00483, "unit": null},
+          {"metric": "pass rate", "value": 0.8, "unit": null}
+        ]},
+        {"model": "GPT-4o",            "system_description": "CodePDE (Reasoning + Debugging + Refinement, best-of-12)", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00348, "unit": null},
+          {"metric": "pass rate", "value": 1.0, "unit": null}
+        ]},
+        {"model": "o3",                "system_description": "CodePDE (Reasoning + Debugging + Refinement, best-of-12)", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00527, "unit": null},
+          {"metric": "pass rate", "value": 0.8, "unit": null}
+        ]},
+
+        {"model": "Gemini 2.5 Pro",    "system_description": "FunSearch-PDE", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00429, "unit": null},
+          {"metric": "pass rate", "value": 0.8, "unit": null}
+        ]},
+        {"model": "Claude-3.7-sonnet", "system_description": "FunSearch-PDE", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00473, "unit": null},
+          {"metric": "pass rate", "value": 0.8, "unit": null}
+        ]},
+        {"model": "DeepSeek-R1",       "system_description": "FunSearch-PDE", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00522, "unit": null},
+          {"metric": "pass rate", "value": 0.8, "unit": null}
+        ]},
+        {"model": "GPT-4o",            "system_description": "FunSearch-PDE", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.0244, "unit": null},
+          {"metric": "pass rate", "value": 0.6, "unit": null}
+        ]},
+        {"model": "o3",                "system_description": "FunSearch-PDE", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00661, "unit": null},
+          {"metric": "pass rate", "value": 0.8, "unit": null}
+        ]},
+
+        {"model": "Gemini 2.5 Pro",    "system_description": "AIDE-PDE", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00709, "unit": null},
+          {"metric": "pass rate", "value": 0.6, "unit": null}
+        ]},
+        {"model": "Claude-3.7-sonnet", "system_description": "AIDE-PDE", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00433, "unit": null},
+          {"metric": "pass rate", "value": 0.6, "unit": null}
+        ]},
+        {"model": "DeepSeek-R1",       "system_description": "AIDE-PDE", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00753, "unit": null},
+          {"metric": "pass rate", "value": 0.6, "unit": null}
+        ]},
+        {"model": "GPT-4o",            "system_description": "AIDE-PDE", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.0567, "unit": null},
+          {"metric": "pass rate", "value": 0.4, "unit": null}
+        ]},
+        {"model": "o3",                "system_description": "AIDE-PDE", "scores": [
+          {"metric": "nRMSE (geom. mean)", "value": 0.00525, "unit": null},
+          {"metric": "pass rate", "value": 0.6, "unit": null}
+        ]}
+      ],
+      "note": "nRMSE (geom. mean) is taken directly from the paper's Geom. Mean column (Appendix Table 6 for CodePDE settings; Appendix Table 7 for FunSearch-PDE and AIDE-PDE). pass rate is computed here as the fraction of the 5 PDE families (Advection, Burgers, Reaction-Diffusion, Compressible Navier-Stokes, Darcy Flow) whose per-family aggregate nRMSE reported in the same tables is strictly below 0.05."
+    }
+  ],
+  "notes": "CodePDE frames PDE solving as a code generation task: given a PDE description, an LLM produces an executable numerical solver whose nRMSE against ground-truth trajectories is used as the evaluation signal. The benchmark spans 5 PDE families (Advection, Burgers, Reaction-Diffusion, Compressible Navier-Stokes, Darcy Flow) with 100 instances each. Harbor treats each family as one task (aggregate nRMSE over the 100 instances) and assigns reward=1 if that aggregate is below 0.05, so num_tasks=5 and the Harbor-aligned pass rate is the average reward over the 5 tasks. The paper evaluates 16 LLMs; here we record results under CodePDE (Reasoning + Debugging + Refinement, best-of-12) together with two existing agentic workflows (FunSearch-PDE and AIDE-PDE) for a representative subset of models (Gemini 2.5 Pro, Claude-3.7-sonnet, DeepSeek-R1, GPT-4o, o3)."
 }
