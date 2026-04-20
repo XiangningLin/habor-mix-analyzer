@@ -1,22 +1,935 @@
 {
   "name": "HLE",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Science & Research",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://lastexam.ai/",
+    "leaderboard": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+    "paper": "https://arxiv.org/abs/2501.14249",
+    "github": "https://github.com/centerforaisafety/hle",
+    "dataset": "https://huggingface.co/datasets/cais/hle"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-01-24",
+    "num_tasks": 2500
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "accuracy",
+    "harbor_aligned_metric": "accuracy"
   },
-  "results_over_time": [],
+  "results_over_time": [
+    {
+      "date": "2025-01-24",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2501.14249v1",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.033,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.925,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 2",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.038,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.932,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.043,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.889,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 1.5 Pro",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.931,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.0 Flash Thinking",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.062,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.939,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.091,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.934,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.094,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.818,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Initial public paper baseline (arxiv v1). DeepSeek-R1 was marked as non-multimodal and evaluated on the text-only subset in the table note. Percentage metrics are stored as rates in [0, 1]. The results are somehow different from the latest arxiv version."
+    },
+    {
+      "date": "2026-04-20",
+      "source_type": "leaderboard",
+      "source_url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+      "results": [
+        {
+          "model": "gemini-3.1-pro-preview (thinking high)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4644,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.51,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5.4-pro-2026-03-05",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4432,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.38,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Muse Spark",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4056,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.5,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-3-pro-preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3752,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.57,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5.4-2026-03-05 (xhigh thinking)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3624,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.42,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-opus-4-6-thinking-max",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3444,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.46,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5-pro-2025-10-06",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3164,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.49,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5.2-2025-12-11",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.278,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.45,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5-2025-08-07",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2532,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.5,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-opus-4-5-20251101-thinking",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.252,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.55,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "kimi-k2.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2437,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.67,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5.1-thinking",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2368,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.55,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-pro-preview-06-05",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2164,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.72,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3 (high) (April 2025)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2032,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.34,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5-mini-2025-08-07",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1944,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.65,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3 (medium) (April 2025)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.192,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.39,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-opus-4-6 (Non-Thinking)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.19,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.44,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro Experimental (March 2025)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1816,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.71,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini (high) (April 2025)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1808,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.57,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro Preview (May 06 2025)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.178,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.7,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini (medium) (April 2025)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1428,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.59,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-opus-4-5-20251101",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1416,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.56,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-sonnet-4-5-20250929-thinking",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1372,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.65,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash (April 2025)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1208,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.8,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-opus-4-1-20250805-thinking",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1152,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.71,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash Preview (May 2025)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1096,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.82,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4 (Thinking)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1072,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.73,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-3.1-flash-lite-preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0864,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.83,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "glm-4p5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0832,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.79,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1 Pro",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0812,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.82,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "glm-4p5-air",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0812,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.77,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet (Thinking)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0804,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.8,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1 (December 2024)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0796,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.83,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-opus-4-1-20250805",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0792,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.7,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4 (Thinking)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0776,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.75,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-sonnet-4-5-20250929",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0752,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.7,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5.1-instant",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.068,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.69,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0668,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.74,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.0 Flash Thinking (January 2025)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0656,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.82,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama 4 Maverick",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0568,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.83,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0552,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.76,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT 4.5 Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0544,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.85,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.054,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.89,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Pro-002",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.046,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.88,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral Medium 3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0452,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.77,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Nova Pro",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.044,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.8,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet (October 2024)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0408,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.84,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Nova Lite",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0364,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.82,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o (November 2024)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0272,
+              "unit": null
+            },
+            {
+              "metric": "calibration error",
+              "value": 0.89,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Official Scale Labs public leaderboard snapshot retrieved on 2026-04-20. Accuracy and RMS calibration error are stored as rates in [0, 1]."
+    }
+  ],
   "notes": null
 }
