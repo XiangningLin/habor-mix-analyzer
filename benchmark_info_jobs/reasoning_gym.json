@@ -1,22 +1,141 @@
 {
   "name": "Reasoning Gym",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Reasoning",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://github.com/open-thought/reasoning-gym",
+    "leaderboard": "https://github.com/open-thought/reasoning-gym-eval",
+    "paper": "https://arxiv.org/abs/2505.24760",
+    "github": "https://github.com/open-thought/reasoning-gym",
+    "dataset": "https://github.com/open-thought/reasoning-gym/blob/main/GALLERY.md"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-05-30",
+    "num_tasks": 105
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "accuracy",
+    "harbor_aligned_metric": "accuracy"
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-07-04",
+      "source_type": "leaderboard",
+      "source_url": "https://github.com/open-thought/reasoning-gym-eval/blob/main/visualizations/overall_performance.png",
+      "results": [
+        {
+          "model": "openai/o3-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6351,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "deepseek/deepseek-r1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5952,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "x-ai/grok-3-mini-beta",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5506,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "meta-llama/llama-4-maverick",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.415,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "qwen/qwq-32b",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4052,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "anthropic/claude-3.5-sonnet",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4033,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "meta-llama/llama-4-scout",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3001,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "mistralai/mistral-small-3.1-24b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2601,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "meta-llama/llama-3.3-70b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2585,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "google/gemma-3-27b-it",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2026,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Official reasoning-gym-eval visualization of zero-shot average scores on hard Reasoning Gym configurations; percentage labels were converted to rates in [0, 1]."
+    }
+  ],
+  "notes": "The official README points to the reasoning-gym-eval repository for tracked evaluation results. No separate hosted leaderboard or Hugging Face dataset page was found; the dataset URL points to the official gallery/catalog of 105 available generators."
 }
