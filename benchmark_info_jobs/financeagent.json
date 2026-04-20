@@ -1,22 +1,484 @@
 {
   "name": "Finance Agent Benchmark",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://www.vals.ai/benchmarks/finance_agent",
+    "leaderboard": "https://www.vals.ai/benchmarks/finance_agent",
+    "paper": "https://arxiv.org/pdf/2508.00828",
+    "github": "https://github.com/vals-ai/finance-agent",
+    "dataset": "https://github.com/vals-ai/finance-agent/blob/main/data/public.csv"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-05-20",
+    "num_tasks": 537
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Class-balanced accuracy",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
+  "results_over_time": [
+    {
+      "date": "2025-05-20",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2508.00828",
+      "note": null,
+      "results": [
+        {
+          "model": "o3",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.468, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.514, "unit": null },
+            { "metric": "time_per_query", "value": 186.5, "unit": "s" },
+            { "metric": "cost_per_query", "value": 3.7861, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet (Thinking)",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.459, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.52, "unit": null },
+            { "metric": "time_per_query", "value": 151.3, "unit": "s" },
+            { "metric": "cost_per_query", "value": 1.0168, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.443, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.495, "unit": null },
+            { "metric": "time_per_query", "value": 121.0, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.9886, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "o4 Mini",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.373, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.406, "unit": null },
+            { "metric": "time_per_query", "value": 164.4, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.2863, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Grok 3 Mini Fast High Reasoning",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.309, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.363, "unit": null },
+            { "metric": "time_per_query", "value": 253.0, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.1305, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro Preview",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.284, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.33, "unit": null },
+            { "metric": "time_per_query", "value": 72.5, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.1963, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "GPT 4.1",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.267, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.307, "unit": null },
+            { "metric": "time_per_query", "value": 61.3, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.2309, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Grok 3 Beta",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.258, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.294, "unit": null },
+            { "metric": "time_per_query", "value": 60.5, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.4254, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "o1",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.214, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.259, "unit": null },
+            { "metric": "time_per_query", "value": 426.5, "unit": "s" },
+            { "metric": "cost_per_query", "value": 1.4398, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "GPT 4.1 mini",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.203, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.25, "unit": null },
+            { "metric": "time_per_query", "value": 51.6, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.0684, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "GPT 4o (2024-08-06)",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.2, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.246, "unit": null },
+            { "metric": "time_per_query", "value": 40.9, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.2575, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Grok 3 Mini Fast Low Reasoning",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.176, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.214, "unit": null },
+            { "metric": "time_per_query", "value": 80.5, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.0667, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Gemini 2.0 Flash (001)",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.144, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.182, "unit": null },
+            { "metric": "time_per_query", "value": 23.6, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.0115, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Haiku Latest",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.131, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.171, "unit": null },
+            { "metric": "time_per_query", "value": 46.8, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.0665, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "o3 Mini",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.128, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.16, "unit": null },
+            { "metric": "time_per_query", "value": 146.1, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.0472, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "GPT 4o Mini",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.108, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.153, "unit": null },
+            { "metric": "time_per_query", "value": 93.4, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.0375, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Mistral Small 3.1 (03/2025)",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.108, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.138, "unit": null },
+            { "metric": "time_per_query", "value": 39.1, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.0061, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "LLaMA 4 Scout",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.058, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.074, "unit": null },
+            { "metric": "time_per_query", "value": 13.8, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.0046, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Command A",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.046, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.061, "unit": null },
+            { "metric": "time_per_query", "value": 94.9, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.5628, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "LLaMA 4 Maverick",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.031, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.037, "unit": null },
+            { "metric": "time_per_query", "value": 11.8, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.0023, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "LLaMA 3.3 Instruct Turbo (70B)",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.028, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.032, "unit": null },
+            { "metric": "time_per_query", "value": 3.3, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.003, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "GPT 4.1 nano",
+          "system_description": null,
+          "scores": [
+            { "metric": "class_balanced_accuracy", "value": 0.024, "unit": null },
+            { "metric": "naive_accuracy", "value": 0.028, "unit": null },
+            { "metric": "time_per_query", "value": 65.5, "unit": "s" },
+            { "metric": "cost_per_query", "value": 0.0032, "unit": "USD" }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-16",
+      "source_type": "leaderboard",
+      "source_url": "https://www.vals.ai/benchmarks/finance_agent",
+      "note": null,
+      "results": [
+        {
+          "model": "Claude Opus 4.7",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.6437, "unit": null }]
+        },
+        {
+          "model": "Claude Sonnet 4.6",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.6333, "unit": null }]
+        },
+        {
+          "model": "Muse Spark",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.606, "unit": null }]
+        },
+        {
+          "model": "Claude Opus 4.6 (Thinking)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.6005, "unit": null }]
+        },
+        {
+          "model": "Gemini 3.1 Pro Preview...",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5972, "unit": null }]
+        },
+        {
+          "model": "Claude Opus 4.5 (Thinking)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5881, "unit": null }]
+        },
+        {
+          "model": "GPT 5.2",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5853, "unit": null }]
+        },
+        {
+          "model": "GLM 5.1",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5766, "unit": null }]
+        },
+        {
+          "model": "GPT 5.4",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5715, "unit": null }]
+        },
+        {
+          "model": "GPT 5.1",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5531, "unit": null }]
+        },
+        {
+          "model": "Gemini 3 Pro (11/25)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5515, "unit": null }]
+        },
+        {
+          "model": "Qwen 3.6 Plus",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5463, "unit": null }]
+        },
+        {
+          "model": "Claude Sonnet 4.5 (Thin...)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.545, "unit": null }]
+        },
+        {
+          "model": "Qwen 3.5 Plus",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5447, "unit": null }]
+        },
+        {
+          "model": "Grok 4",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5351, "unit": null }]
+        },
+        {
+          "model": "GLM 5",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5318, "unit": null }]
+        },
+        {
+          "model": "Grok 4.1 Fast (Reasonin...)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5245, "unit": null }]
+        },
+        {
+          "model": "Grok 4.20 (Reasoning)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5229, "unit": null }]
+        },
+        {
+          "model": "GPT 5",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5215, "unit": null }]
+        },
+        {
+          "model": "GPT 5 Mini",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5193, "unit": null }]
+        },
+        {
+          "model": "Gemma 4 31B IT",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5079, "unit": null }]
+        },
+        {
+          "model": "Kimi K2.5",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.5062, "unit": null }]
+        },
+        {
+          "model": "MiniMax-M2.7",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.484, "unit": null }]
+        },
+        {
+          "model": "GPT 5.4 Nano",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.478, "unit": null }]
+        },
+        {
+          "model": "Gemini 3 Flash (12/25)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.476, "unit": null }]
+        },
+        {
+          "model": "Claude Haiku 4.5 (Thinki...)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.4693, "unit": null }]
+        },
+        {
+          "model": "Gemini 3.1 Flash Lite Pr...",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.4612, "unit": null }]
+        },
+        {
+          "model": "Grok 4 Fast (Reasoning)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.4608, "unit": null }]
+        },
+        {
+          "model": "GLM 4.7",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.4598, "unit": null }]
+        },
+        {
+          "model": "Qwen 3.5 Flash",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.4564, "unit": null }]
+        },
+        {
+          "model": "Grok 4.1 Fast Non-Reas...",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.4436, "unit": null }]
+        },
+        {
+          "model": "Qwen 3 Max",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.4429, "unit": null }]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.4159, "unit": null }]
+        },
+        {
+          "model": "MiniMax-M2.5",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.3858, "unit": null }]
+        },
+        {
+          "model": "Kimi K2 Thinking",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.3665, "unit": null }]
+        },
+        {
+          "model": "GLM 4.6",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.3648, "unit": null }]
+        },
+        {
+          "model": "MiniMax-M2.1",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.3335, "unit": null }]
+        },
+        {
+          "model": "GPT OSS 120B",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.2154, "unit": null }]
+        },
+        {
+          "model": "Mistral Large 3",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.1805, "unit": null }]
+        },
+        {
+          "model": "GPT 4o (2024-08-06)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.0806, "unit": null }]
+        },
+        {
+          "model": "Command A",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.0423, "unit": null }]
+        },
+        {
+          "model": "DeepSeek V3.2 (Thinkin...)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.0235, "unit": null }]
+        },
+        {
+          "model": "Jamba 1.7 Large",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.0037, "unit": null }]
+        },
+        {
+          "model": "DeepSeek V3.2 (Nonthi...)",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.0, "unit": null }]
+        },
+        {
+          "model": "GPT 5.4 Mini",
+          "system_description": null,
+          "scores": [{ "metric": "accuracy", "value": 0.0, "unit": null }]
+        }
+      ]
+    }
+  ],
   "notes": null
 }

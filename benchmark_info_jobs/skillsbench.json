@@ -1,22 +1,184 @@
 {
   "name": "SkillsBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
+    "website": "https://www.skillsbench.ai/",
+    "leaderboard": "https://www.skillsbench.ai/leaderboard",
+    "paper": "https://arxiv.org/pdf/2602.12670",
+    "github": "https://github.com/benchflow-ai/skillsbench",
     "dataset": null
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2026-03-13",
+    "num_tasks": 84
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Pass rate",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
-}
+  "results_over_time": [
+    {
+      "date": "2026-03-13",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2602.12670",
+      "note": " Table 3. Pass rates (percentage) and normalized gain g (Equation 1) across Skills conditions on 84 tasks. “–” = condition not evaluated. Pass rates stored as fractions in [0,1].",
+      "results": [
+        {
+          "model": "Gemini 3 Flash",
+          "system_description": "Gemini CLI",
+          "scores": [
+            { "metric": "pass_rate_no_skills", "value": 0.313, "unit": null },
+            { "metric": "pass_rate_with_curated_skills", "value": 0.487, "unit": null },
+            { "metric": "normalized_gain_curated", "value": 0.253, "unit": null }
+          ]
+        },
+        {
+          "model": "Opus 4.5",
+          "system_description": "Claude Code",
+          "scores": [
+            { "metric": "pass_rate_no_skills", "value": 0.22, "unit": null },
+            { "metric": "pass_rate_with_curated_skills", "value": 0.453, "unit": null },
+            { "metric": "normalized_gain_curated", "value": 0.299, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.216, "unit": null },
+            { "metric": "normalized_gain_self_generated", "value": -0.005, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "system_description": "Codex",
+          "scores": [
+            { "metric": "pass_rate_no_skills", "value": 0.306, "unit": null },
+            { "metric": "pass_rate_with_curated_skills", "value": 0.447, "unit": null },
+            { "metric": "normalized_gain_curated", "value": 0.203, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.25, "unit": null },
+            { "metric": "normalized_gain_self_generated", "value": -0.081, "unit": null }
+          ]
+        },
+        {
+          "model": "Opus 4.6",
+          "system_description": "Claude Code",
+          "scores": [
+            { "metric": "pass_rate_no_skills", "value": 0.306, "unit": null },
+            { "metric": "pass_rate_with_curated_skills", "value": 0.445, "unit": null },
+            { "metric": "normalized_gain_curated", "value": 0.2, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.32, "unit": null },
+            { "metric": "normalized_gain_self_generated", "value": 0.02, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": "Gemini CLI",
+          "scores": [
+            { "metric": "pass_rate_no_skills", "value": 0.276, "unit": null },
+            { "metric": "pass_rate_with_curated_skills", "value": 0.412, "unit": null },
+            { "metric": "normalized_gain_curated", "value": 0.188, "unit": null }
+          ]
+        },
+        {
+          "model": "Sonnet 4.5",
+          "system_description": "Claude Code",
+          "scores": [
+            { "metric": "pass_rate_no_skills", "value": 0.173, "unit": null },
+            { "metric": "pass_rate_with_curated_skills", "value": 0.318, "unit": null },
+            { "metric": "normalized_gain_curated", "value": 0.175, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.152, "unit": null },
+            { "metric": "normalized_gain_self_generated", "value": -0.025, "unit": null }
+          ]
+        },
+        {
+          "model": "Haiku 4.5",
+          "system_description": "Claude Code",
+          "scores": [
+            { "metric": "pass_rate_no_skills", "value": 0.11, "unit": null },
+            { "metric": "pass_rate_with_curated_skills", "value": 0.277, "unit": null },
+            { "metric": "normalized_gain_curated", "value": 0.188, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.11, "unit": null },
+            { "metric": "normalized_gain_self_generated", "value": 0.0, "unit": null }
+          ]
+        },
+        {
+          "model": "Mean",
+          "system_description": null,
+          "scores": [
+            { "metric": "pass_rate_no_skills", "value": 0.243, "unit": null },
+            { "metric": "pass_rate_with_curated_skills", "value": 0.406, "unit": null },
+            { "metric": "normalized_gain_curated", "value": 0.215, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.21, "unit": null },
+            { "metric": "normalized_gain_self_generated", "value": -0.018, "unit": null }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-03-13",
+      "source_type": "leaderboard",
+      "source_url": "https://www.skillsbench.ai/leaderboard",
+      "note": "Listed pass rates (With Skills / Without Skills) match Table 3 for the seven model–harness configurations; g and confidence intervals appear on the site UI.",
+      "results": [
+        {
+          "model": "Gemini 3 Flash",
+          "system_description": "Gemini CLI",
+          "scores": [
+            { "metric": "pass_rate_with_curated_skills", "value": 0.487, "unit": null },
+            { "metric": "pass_rate_no_skills", "value": 0.313, "unit": null }
+          ]
+        },
+        {
+          "model": "Opus 4.5",
+          "system_description": "Claude Code",
+          "scores": [
+            { "metric": "pass_rate_with_curated_skills", "value": 0.453, "unit": null },
+            { "metric": "pass_rate_no_skills", "value": 0.22, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.216, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "system_description": "Codex",
+          "scores": [
+            { "metric": "pass_rate_with_curated_skills", "value": 0.447, "unit": null },
+            { "metric": "pass_rate_no_skills", "value": 0.306, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.25, "unit": null }
+          ]
+        },
+        {
+          "model": "Opus 4.6",
+          "system_description": "Claude Code",
+          "scores": [
+            { "metric": "pass_rate_with_curated_skills", "value": 0.445, "unit": null },
+            { "metric": "pass_rate_no_skills", "value": 0.306, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.32, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": "Gemini CLI",
+          "scores": [
+            { "metric": "pass_rate_with_curated_skills", "value": 0.412, "unit": null },
+            { "metric": "pass_rate_no_skills", "value": 0.276, "unit": null }
+          ]
+        },
+        {
+          "model": "Sonnet 4.5",
+          "system_description": "Claude Code",
+          "scores": [
+            { "metric": "pass_rate_with_curated_skills", "value": 0.318, "unit": null },
+            { "metric": "pass_rate_no_skills", "value": 0.173, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.152, "unit": null }
+          ]
+        },
+        {
+          "model": "Haiku 4.5",
+          "system_description": "Claude Code",
+          "scores": [
+            { "metric": "pass_rate_with_curated_skills", "value": 0.277, "unit": null },
+            { "metric": "pass_rate_no_skills", "value": 0.11, "unit": null },
+            { "metric": "pass_rate_self_generated_skills", "value": 0.11, "unit": null }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Abstract on first page says “86 tasks” while §2.2, §2.5, Table 3/4, Figure 2/3, and §3.5 specify 84 evaluated tasks with fixed denominator 84 for pass rate—meta.num_tasks uses 84 per the main body. Figure 2 caption text includes “+12.66pp” average improvement vs abstract’s “+16.2pp”."
+ }

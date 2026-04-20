@@ -1,22 +1,263 @@
 {
   "name": "DA-Code",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://da-code-bench.github.io/",
+    "leaderboard": "https://da-code-bench.github.io/",
+    "paper": "https://arxiv.org/pdf/2410.07331",
+    "github": "https://github.com/yiyihum/da-code",
+    "dataset": "https://huggingface.co/datasets/Luo2003/DA-Code"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2024-10-11",
+    "num_tasks": 500
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Completion Rate",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
+  "results_over_time": [
+    {
+      "date": "2024-10-11",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2410.07331",
+      "note": "Table 3. LLMs evaluated with the DA-Agent baseline on the full DA-Code benchmark (500 tasks). Column order and names: DW, ML, EDA, Easy, Medium, Hard, Total, Completion Rate (percentage), Avg Steps, Executable Code (percentage). Percentages stored as [0,1]. Avg Steps is not a rate; value uses unit \"steps\".",
+      "results": [
+        {
+          "model": "GPT-4",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.304, "unit": null },
+            { "metric": "ml", "value": 0.484, "unit": null },
+            { "metric": "eda", "value": 0.246, "unit": null },
+            { "metric": "easy", "value": 0.454, "unit": null },
+            { "metric": "medium", "value": 0.278, "unit": null },
+            { "metric": "hard", "value": 0.234, "unit": null },
+            { "metric": "total", "value": 0.305, "unit": null },
+            { "metric": "completion_rate", "value": 0.994, "unit": null },
+            { "metric": "avg_steps", "value": 7.3, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.768, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.333, "unit": null },
+            { "metric": "ml", "value": 0.48, "unit": null },
+            { "metric": "eda", "value": 0.213, "unit": null },
+            { "metric": "easy", "value": 0.462, "unit": null },
+            { "metric": "medium", "value": 0.256, "unit": null },
+            { "metric": "hard", "value": 0.217, "unit": null },
+            { "metric": "total", "value": 0.291, "unit": null },
+            { "metric": "completion_rate", "value": 0.974, "unit": null },
+            { "metric": "avg_steps", "value": 6.8, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.777, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3-Opus",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.293, "unit": null },
+            { "metric": "ml", "value": 0.468, "unit": null },
+            { "metric": "eda", "value": 0.207, "unit": null },
+            { "metric": "easy", "value": 0.447, "unit": null },
+            { "metric": "medium", "value": 0.238, "unit": null },
+            { "metric": "hard", "value": 0.19, "unit": null },
+            { "metric": "total", "value": 0.276, "unit": null },
+            { "metric": "completion_rate", "value": 0.977, "unit": null },
+            { "metric": "avg_steps", "value": 8.9, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.757, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.249, "unit": null },
+            { "metric": "ml", "value": 0.418, "unit": null },
+            { "metric": "eda", "value": 0.154, "unit": null },
+            { "metric": "easy", "value": 0.319, "unit": null },
+            { "metric": "medium", "value": 0.194, "unit": null },
+            { "metric": "hard", "value": 0.223, "unit": null },
+            { "metric": "total", "value": 0.226, "unit": null },
+            { "metric": "completion_rate", "value": 0.938, "unit": null },
+            { "metric": "avg_steps", "value": 8.6, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.722, "unit": null }
+          ]
+        },
+        {
+          "model": "Deepseek-Coder-V2.5",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.251, "unit": null },
+            { "metric": "ml", "value": 0.341, "unit": null },
+            { "metric": "eda", "value": 0.147, "unit": null },
+            { "metric": "easy", "value": 0.328, "unit": null },
+            { "metric": "medium", "value": 0.187, "unit": null },
+            { "metric": "hard", "value": 0.141, "unit": null },
+            { "metric": "total", "value": 0.207, "unit": null },
+            { "metric": "completion_rate", "value": 0.898, "unit": null },
+            { "metric": "avg_steps", "value": 7.1, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.59, "unit": null }
+          ]
+        },
+        {
+          "model": "Mixtral-8x22B",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.148, "unit": null },
+            { "metric": "ml", "value": 0.316, "unit": null },
+            { "metric": "eda", "value": 0.102, "unit": null },
+            { "metric": "easy", "value": 0.176, "unit": null },
+            { "metric": "medium", "value": 0.168, "unit": null },
+            { "metric": "hard", "value": 0.086, "unit": null },
+            { "metric": "total", "value": 0.154, "unit": null },
+            { "metric": "completion_rate", "value": 0.672, "unit": null },
+            { "metric": "avg_steps", "value": 11.1, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.551, "unit": null }
+          ]
+        },
+        {
+          "model": "Deepseek-Coder-33B",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.091, "unit": null },
+            { "metric": "ml", "value": 0.221, "unit": null },
+            { "metric": "eda", "value": 0.076, "unit": null },
+            { "metric": "easy", "value": 0.124, "unit": null },
+            { "metric": "medium", "value": 0.113, "unit": null },
+            { "metric": "hard", "value": 0.079, "unit": null },
+            { "metric": "total", "value": 0.108, "unit": null },
+            { "metric": "completion_rate", "value": 0.319, "unit": null },
+            { "metric": "avg_steps", "value": 11.6, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.497, "unit": null }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2024-10-03",
+      "source_type": "leaderboard",
+      "source_url": "https://da-code-bench.github.io/",
+      "note": "Exact match to Table 3 in the paper.",
+      "results": [
+        {
+          "model": "GPT-4",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.304, "unit": null },
+            { "metric": "ml", "value": 0.484, "unit": null },
+            { "metric": "eda", "value": 0.246, "unit": null },
+            { "metric": "easy", "value": 0.454, "unit": null },
+            { "metric": "medium", "value": 0.278, "unit": null },
+            { "metric": "hard", "value": 0.234, "unit": null },
+            { "metric": "total", "value": 0.305, "unit": null },
+            { "metric": "completion_rate", "value": 0.994, "unit": null },
+            { "metric": "avg_steps", "value": 7.3, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.768, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.333, "unit": null },
+            { "metric": "ml", "value": 0.48, "unit": null },
+            { "metric": "eda", "value": 0.213, "unit": null },
+            { "metric": "easy", "value": 0.462, "unit": null },
+            { "metric": "medium", "value": 0.256, "unit": null },
+            { "metric": "hard", "value": 0.217, "unit": null },
+            { "metric": "total", "value": 0.291, "unit": null },
+            { "metric": "completion_rate", "value": 0.974, "unit": null },
+            { "metric": "avg_steps", "value": 6.8, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.777, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3-Opus",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.293, "unit": null },
+            { "metric": "ml", "value": 0.468, "unit": null },
+            { "metric": "eda", "value": 0.207, "unit": null },
+            { "metric": "easy", "value": 0.447, "unit": null },
+            { "metric": "medium", "value": 0.238, "unit": null },
+            { "metric": "hard", "value": 0.19, "unit": null },
+            { "metric": "total", "value": 0.276, "unit": null },
+            { "metric": "completion_rate", "value": 0.977, "unit": null },
+            { "metric": "avg_steps", "value": 8.9, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.757, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.249, "unit": null },
+            { "metric": "ml", "value": 0.418, "unit": null },
+            { "metric": "eda", "value": 0.154, "unit": null },
+            { "metric": "easy", "value": 0.319, "unit": null },
+            { "metric": "medium", "value": 0.194, "unit": null },
+            { "metric": "hard", "value": 0.223, "unit": null },
+            { "metric": "total", "value": 0.226, "unit": null },
+            { "metric": "completion_rate", "value": 0.938, "unit": null },
+            { "metric": "avg_steps", "value": 8.6, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.722, "unit": null }
+          ]
+        },
+        {
+          "model": "Deepseek-Coder-V2.5",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.251, "unit": null },
+            { "metric": "ml", "value": 0.341, "unit": null },
+            { "metric": "eda", "value": 0.147, "unit": null },
+            { "metric": "easy", "value": 0.328, "unit": null },
+            { "metric": "medium", "value": 0.187, "unit": null },
+            { "metric": "hard", "value": 0.141, "unit": null },
+            { "metric": "total", "value": 0.207, "unit": null },
+            { "metric": "completion_rate", "value": 0.898, "unit": null },
+            { "metric": "avg_steps", "value": 7.1, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.59, "unit": null }
+          ]
+        },
+        {
+          "model": "Mixtral-8x22B",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.148, "unit": null },
+            { "metric": "ml", "value": 0.316, "unit": null },
+            { "metric": "eda", "value": 0.102, "unit": null },
+            { "metric": "easy", "value": 0.176, "unit": null },
+            { "metric": "medium", "value": 0.168, "unit": null },
+            { "metric": "hard", "value": 0.086, "unit": null },
+            { "metric": "total", "value": 0.154, "unit": null },
+            { "metric": "completion_rate", "value": 0.672, "unit": null },
+            { "metric": "avg_steps", "value": 11.1, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.551, "unit": null }
+          ]
+        },
+        {
+          "model": "Deepseek-Coder-33B",
+          "system_description": "DA-Agent",
+          "scores": [
+            { "metric": "dw", "value": 0.091, "unit": null },
+            { "metric": "ml", "value": 0.221, "unit": null },
+            { "metric": "eda", "value": 0.076, "unit": null },
+            { "metric": "easy", "value": 0.124, "unit": null },
+            { "metric": "medium", "value": 0.113, "unit": null },
+            { "metric": "hard", "value": 0.079, "unit": null },
+            { "metric": "total", "value": 0.108, "unit": null },
+            { "metric": "completion_rate", "value": 0.319, "unit": null },
+            { "metric": "avg_steps", "value": 11.6, "unit": "steps" },
+            { "metric": "executable_code_pct", "value": 0.497, "unit": null }
+          ]
+        }
+      ]
+    }
+  ],
   "notes": null
 }

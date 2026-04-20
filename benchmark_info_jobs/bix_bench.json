@@ -1,22 +1,45 @@
 {
   "name": "BIX-Bench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Science & Research",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
+    "website": "https://www.futurehouse.org/research-announcements/bixbench",
     "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "paper": "https://arxiv.org/pdf/2503.00096",
+    "github": "https://github.com/Future-House/BixBench",
+    "dataset": "https://huggingface.co/datasets/futurehouse/BixBench"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-02-28",
+    "num_tasks": 205
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Accuracy",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
+  "results_over_time": [
+    {
+      "date": "2025-10-08",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/pdf/2503.00096",
+      "note": "There is not much evaluation on this benchmark. The following are results from the paper.",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "system_description": "Aviary (SimpleAgent)",
+          "scores": [
+            { "metric": "accuracy", "value": 0.15, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet",
+          "system_description": "Aviary (SimpleAgent)",
+          "scores": [
+            { "metric": "accuracy", "value": 0.21, "unit": null }
+          ]
+        }
+      ]
+    }
+  ],
   "notes": null
 }
