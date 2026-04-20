@@ -1,22 +1,629 @@
 {
   "name": "KUMO",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://craftjarvis.github.io/Kumo/",
+    "leaderboard": "https://huggingface.co/spaces/zhwang4ai/GenerativeReasoningBenchmark",
+    "paper": "https://arxiv.org/abs/2504.02810",
+    "github": "https://github.com/linhaowei1/kumo",
+    "dataset": "https://huggingface.co/collections/pkuHaowei/kumo"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-04-03",
+    "num_tasks": 5000
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "success_rate",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-04-06",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/zhwang4ai/GenerativeReasoningBenchmark",
+      "results": [
+        {
+          "model": "llama-3.2-3b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.18239999999999998,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.8956800000000001,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.064,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 2.4438042524142523,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "qwen2.5-3b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.184,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.8255466666666665,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.0624,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 2.4255102697302697,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-3.5-turbo",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.272,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.8743314285714285,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.12079999999999999,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 2.34957508047508,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "qwen2.5-7b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.36639999999999995,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.8682133333333335,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.1664,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 2.3259762459762454,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.392,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.8522190476190475,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.132,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 2.3394684981684977,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama-3.1-8b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.4424,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.8441104761904763,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.11599999999999999,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 2.3321907026307027,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemma-2-27b-it",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.548,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.6583142857142856,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.1696,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 2.28467764013764,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "yi-lightning",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.6728,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5962819047619048,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.30720000000000003,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 2.031278719058719,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama-3.1-70b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.696,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5514495238095238,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.256,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.9653564912864916,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama-3.3-70b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.712,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5916438095238095,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.33840000000000003,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.90917626040626,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.7239999999999999,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5270952380952381,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.31040000000000006,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.9804984304584305,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-1.5-pro",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.7256,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5686514285714285,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.36879999999999996,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.9371788544788544,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3.5-haiku",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.7343999999999999,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.757095238095238,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.3592000000000001,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 2.0113219180819177,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "qwen2.5-14b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.756,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5723257142857143,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.3816,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.9383408547008547,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "qwen2.5-72b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.7584,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5753561904761904,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.4008,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.8648658674658674,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.7856000000000002,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.506207619047619,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.44960000000000006,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.7164597657897656,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "qwen2.5-32b-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.7879999999999999,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5955619047619047,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.43920000000000003,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.8831460717060717,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "mistral-large-instruct-2411",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.7879999999999999,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5365238095238094,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.4144,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.795764299034299,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3.5-sonnet",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.8263999999999999,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.46185714285714285,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.44000000000000006,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.6636790032190032,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "deepseek-r1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.8712,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.51432,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.6112,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.4205231568431569,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.8784000000000001,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.46449523809523807,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.6296,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.4230264535464534,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "deepseek-v3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.8928,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5308400000000001,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.5496000000000001,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.705338828948829,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "qwq-32b",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "easy_success_rate",
+              "value": 0.9032,
+              "unit": null
+            },
+            {
+              "metric": "easy_relative_action_count",
+              "value": 0.5338533333333333,
+              "unit": null
+            },
+            {
+              "metric": "hard_success_rate",
+              "value": 0.6112,
+              "unit": null
+            },
+            {
+              "metric": "hard_relative_action_count",
+              "value": 1.5151790675990677,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Initial official leaderboard snapshot from the public Hugging Face Space; scores combine the space's easy_0402.json and hard_0402.json files from commit f49345e."
+    }
+  ],
+  "notes": "Category is a template-mapping choice: KUMO is an interactive multi-turn reasoning benchmark, so I mapped it to Agentic/Interactive. Official materials describe KUMO as evaluating LLM reasoning through procedurally generated reasoning games. The paper/site describe 5,000 tasks across 100 domains, while the current public Hugging Face collection exposes kumo-easy and kumo-hard viewers with 250 rows each. Updated to include all 23 models listed in the official Hugging Face leaderboard snapshots easy_0402.json and hard_0402.json."
 }

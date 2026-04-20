@@ -1,0 +1,4261 @@
+{
+  "name": "FinBen",
+  "category": "Misc",
+  "used_llm_or_agent": "both",
+  "links": {
+    "website": "https://www.thefin.ai/dataset-benchmark/finben",
+    "leaderboard": "https://huggingface.co/spaces/TheFinAI/Open-FinLLM-Leaderboard",
+    "paper": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/adb1d9fa8be4576d28703b396b82ba1b-Abstract-Datasets_and_Benchmarks_Track.html",
+    "github": "https://github.com/The-FinAI/FinBen",
+    "dataset": "https://huggingface.co/collections/TheFinAI"
+  },
+  "meta": {
+    "release_date": "2024-09-26",
+    "num_tasks": 24
+  },
+  "evaluation": {
+    "primary_metric": "task-specific metrics (EntityF1 / F1 / Accuracy / EmAcc / ROUGE / BertScore / BARTScore / MCC / RMSE / CR / SR / DV / AV / MD)",
+    "harbor_aligned_metric": null
+  },
+  "results_over_time": [
+    {
+      "date": "2024-09-26",
+      "source_type": "paper",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/adb1d9fa8be4576d28703b396b82ba1b-Paper-Datasets_and_Benchmarks_Track.pdf",
+      "results": [
+        {
+          "model": "ChatGPT",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.77,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.28,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.8,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.78,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.78,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.53,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.77,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.64,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.5,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.39,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.59,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.85,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.58,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Regulations Rouge-1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "Regulations BertScore",
+              "value": 0.64,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.66,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -3.64,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -5.18,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.53,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": -0.025,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.5,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.005,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": -0.1,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": -0.1,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": -0.1,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": -0.1,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": -0.1,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": -0.1,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": -0.1,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": -0.1,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.48,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.31,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.24,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.12,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.83,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.77,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.81,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.78,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.76,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.8,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.5,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.86,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.71,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.69,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.65,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.79,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.63,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "Regulations Rouge-1",
+              "value": 0.11,
+              "unit": null
+            },
+            {
+              "metric": "Regulations BertScore",
+              "value": 0.62,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.76,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.67,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -3.62,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -5.18,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.54,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.74,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.19,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.34,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.15,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.09,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.46,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.19,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "Trading CR",
+              "value": 28.19,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading SR",
+              "value": 1.51,
+              "unit": null
+            },
+            {
+              "metric": "Trading DV",
+              "value": 2.52,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading AV",
+              "value": 39.88,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading MD",
+              "value": 18.34,
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "model": "Gemini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.61,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.74,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.77,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.77,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.81,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.78,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.31,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.62,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.84,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.34,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.18,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.43,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.39,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.72,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -3.87,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -4.93,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.54,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.65,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": 0.19,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 0.96,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": -0.01,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.9,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.86,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.95,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.95,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.29,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.44,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "Trading CR",
+              "value": 14.95,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading SR",
+              "value": 1.03,
+              "unit": null
+            },
+            {
+              "metric": "Trading DV",
+              "value": 2.17,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading AV",
+              "value": 34.67,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading MD",
+              "value": 20.13,
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA2-7B-chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.18,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.85,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.39,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.76,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.71,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.72,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.46,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.7,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "Regulations Rouge-1",
+              "value": 0.24,
+              "unit": null
+            },
+            {
+              "metric": "Regulations BertScore",
+              "value": 0.65,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.62,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -3.99,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -5.18,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.54,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.51,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": -0.03,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.72,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": -0.16,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.92,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.95,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": -0.01,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": -0.05,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.11,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "LLaMA2-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.61,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.73,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.72,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.83,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.63,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.58,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.36,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.63,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.86,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.31,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.68,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -3.81,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -4.86,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.51,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": -0.07,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.11,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.09,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Trading CR",
+              "value": 4.02,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading SR",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "Trading DV",
+              "value": 2.18,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading AV",
+              "value": 34.86,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading MD",
+              "value": 25.55,
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA3-8B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.69,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.7,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.51,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.28,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.39,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.34,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "Regulations Rouge-1",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "Regulations BertScore",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -4.94,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -5.18,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.56,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": -0.15,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.36,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": -0.03,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.83,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": -0.06,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": -0.07,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.94,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": -0.01,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "FinMA-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.69,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.19,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.88,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.88,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.79,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.8,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.97,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.46,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.45,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Regulations Rouge-1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "Regulations BertScore",
+              "value": 0.59,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.38,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -5.71,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -5.18,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.51,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.51,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.5,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.61,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": -0.06,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.92,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": -0.01,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.95,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.09,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "FinGPT-7b-lora",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Regulations Rouge-1",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "Regulations BertScore",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -7.23,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -5.18,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.45,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.38,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.11,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.96,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.98,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.15,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.18,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "InternLM-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.88,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.69,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.69,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.81,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.29,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.36,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.39,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.33,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.34,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.78,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Regulations Rouge-1",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "Regulations BertScore",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.48,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -4.6,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -5.18,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.56,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.51,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": -0.03,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": -0.3,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.34,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.59,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": 0.15,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": -0.13,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.92,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.95,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": -0.01,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.96,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.89,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.001,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.002,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Falcon-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.67,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.77,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.5,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.45,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.32,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.09,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.39,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Regulations Rouge-1",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "Regulations BertScore",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.15,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -6.1,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -5.18,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.51,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": -0.06,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": -0.07,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": -0.01,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.62,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.76,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.95,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.77,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": -0.03,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.24,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.22,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mixtral-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.24,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.83,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.29,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 0.5,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.39,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.34,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.31,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.61,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -4.47,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -5.18,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.46,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": -0.05,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.53,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.61,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.48,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.92,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.95,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.72,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.43,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.38,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.53,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.05,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CFGPT-sft-7B-Full",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "NER EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FINER-ORD EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FinRED F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "SC F1",
+              "value": 0.15,
+              "unit": null
+            },
+            {
+              "metric": "CD F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNXL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FSRL EntityF1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FPB F1",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "FPB Acc",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "FiQA-SA F1",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "TSA RMSE",
+              "value": 1.05,
+              "unit": null
+            },
+            {
+              "metric": "Headlines AvgF1",
+              "value": 0.61,
+              "unit": null
+            },
+            {
+              "metric": "FOMC F1",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "FOMC Acc",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ACC MicroF1",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "FinArg-ARC MicroF1",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin MicroF1",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "MA MicroF1",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "MLESG MicroF1",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "FinQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "TATQA EmAcc",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Regulations Rouge-1",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "Regulations BertScore",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "ConvFinQA EmAcc",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM Rouge-1",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BertScore",
+              "value": 0.51,
+              "unit": null
+            },
+            {
+              "metric": "EDTSUM BartScore",
+              "value": -7.08,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM Rouge-1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BertScore",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ECTSUM BartScore",
+              "value": -5.18,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 Acc",
+              "value": 0.45,
+              "unit": null
+            },
+            {
+              "metric": "BigData22 MCC",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 Acc",
+              "value": 0.48,
+              "unit": null
+            },
+            {
+              "metric": "ACL18 MCC",
+              "value": -0.03,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 Acc",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "CIKM18 MCC",
+              "value": -0.07,
+              "unit": null
+            },
+            {
+              "metric": "German F1",
+              "value": 0.53,
+              "unit": null
+            },
+            {
+              "metric": "German MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Australian F1",
+              "value": 0.29,
+              "unit": null
+            },
+            {
+              "metric": "Australian MCC",
+              "value": -0.1,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub F1",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "LendingClub MCC",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "ccf F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccf MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud F1",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "ccfraud MCC",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "polish F1",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "polish MCC",
+              "value": -0.02,
+              "unit": null
+            },
+            {
+              "metric": "taiwan F1",
+              "value": 0.7,
+              "unit": null
+            },
+            {
+              "metric": "taiwan MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro F1",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "portoseguro MCC",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance F1",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "travelinsurance MCC",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES Acc",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "MultiFin-ES F1",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "EFP Acc",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "EFP F1",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "EFPA Acc",
+              "value": 0.32,
+              "unit": null
+            },
+            {
+              "metric": "EFPA F1",
+              "value": 0.18,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES Acc",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "FinanceES F1",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES Acc",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "TSA-ES F1",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-1",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-2",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "FNS Rouge-L",
+              "value": 0.02,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Trading CR",
+              "value": -5.54,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading SR",
+              "value": -0.19,
+              "unit": null
+            },
+            {
+              "metric": "Trading DV",
+              "value": 2.73,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading AV",
+              "value": 43.62,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading MD",
+              "value": 29.96,
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "model": "GPT3.5-Turbo",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Trading CR",
+              "value": 4.48,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading SR",
+              "value": 0.15,
+              "unit": null
+            },
+            {
+              "metric": "Trading DV",
+              "value": 2.84,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading AV",
+              "value": 45.39,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading MD",
+              "value": 28.83,
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA3-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Trading CR",
+              "value": -2.57,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading SR",
+              "value": -0.04,
+              "unit": null
+            },
+            {
+              "metric": "Trading DV",
+              "value": 2.71,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading AV",
+              "value": 43.42,
+              "unit": "%"
+            },
+            {
+              "metric": "Trading MD",
+              "value": 29.31,
+              "unit": "%"
+            }
+          ]
+        }
+      ],
+      "note": "Release baseline from the NeurIPS 2024 / OpenReview final FinBen paper. This record follows the final 42-dataset, 24-task scope. Table 3 provides the main benchmark results for 12 models across non-trading tasks, and Table 4 adds stock-trading averages for large-context models. The paper uses slightly different naming conventions across the two tables (for example, ChatGPT in Table 3 and GPT3.5-Turbo in Table 4), so model names are copied as shown in the paper instead of merged by assumption."
+    }
+  ],
+  "notes": "This JSON follows the final NeurIPS 2024 / OpenReview FinBen scope (42 datasets, 24 tasks, bilingual English and Spanish), not the earlier arXiv 36-dataset version. FinBen is a benchmark for financial language models, but the official description also highlights agent-based and RAG evaluation, so used_llm_or_agent is set to both. dataset is left null deliberately: the public Hugging Face collections under TheFinAI are shared umbrella collections and language-specific collections rather than one clean, benchmark-wide FinBen-only dataset page covering the full final bilingual scope."
+}
