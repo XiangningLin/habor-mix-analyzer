@@ -1,22 +1,317 @@
 {
   "name": "SWE-Perf",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Code Performance",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://swe-perf.github.io/",
+    "leaderboard": "https://swe-perf.github.io/leaderboard.html",
+    "paper": "https://arxiv.org/abs/2507.12415",
+    "github": "https://github.com/SWE-Perf/SWE-Perf",
+    "dataset": "https://huggingface.co/datasets/SWE-Perf/SWE-Perf"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-07",
+    "num_tasks": 140
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Performance (% runtime gain， This metric measures the statistically significant minimum performance gain introduced by the patch, based on runtime comparisons. )",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-07",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2507.12415",
+      "results": [
+        {
+          "model": "Expert",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.1085,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-2.5-Pro",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.95,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.8357,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.0148,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-4-opus",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.8571,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.7857,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.0128,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenAI-o3",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.7857,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.7643,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.0137,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-4-sonnet",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.7357,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.7,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.0176,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.7-sonnet",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.6643,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.6143,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.0124,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenAI-o1",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.6642,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.6357,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.0041,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.6357,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.5643,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.006,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.5571,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.5143,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.009,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-235B-A22B",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.5429,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.4857,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.0068,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.4785,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.4286,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.0054,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.7-sonnet",
+          "effort": null,
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.8786,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.7786,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.0226,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.7-sonnet",
+          "effort": null,
+          "system_description": "Agentless",
+          "scores": [
+            {
+              "metric": "Apply",
+              "value": 0.8857,
+              "unit": null
+            },
+            {
+              "metric": "Correctness",
+              "value": 0.7071,
+              "unit": null
+            },
+            {
+              "metric": "Performance (% runtime gain)",
+              "value": 0.0041,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 2. First 11 rows are Oracle (File-Level) setting: model is given oracle files and target functions. Last 2 rows are Realistic (Repo-Level) setting using agent-based systems with Claude-3.7-sonnet. system_description is null for Oracle (pure LLM, no scaffold), and names the framework for Realistic. Expert row is the human gold standard. Three metrics: Apply (patch applies cleanly), Correctness (all tests pass), Performance (statistically significant minimum runtime gain)."
+    }
+  ],
+  "notes": "SWE-Perf is the first benchmark for repository-level code performance optimization. 140 instances derived from performance-improving pull requests on 9 popular GitHub Python repos (astropy, matplotlib, seaborn, requests, xarray, pylint, sklearn, sphinx, sympy).\n\nThree-level evaluation metrics (Section 4 of paper):\n- Apply: Whether the model-generated patch can be successfully applied to the original codebase without conflicts or errors. Apply = N_apply / N_total.\n- Correctness: Whether the patch preserves functional correctness, i.e. ALL performance-related unit tests pass after the patch is applied. Correctness = (number of samples where every test passes) / N_total. A sample counts as correct only if every one of its unit tests passes (logical AND over all tests j for sample i).\n- Performance (% runtime gain): The statistically significant minimum performance gain introduced by the patch, based on runtime comparisons. Computed per sample by: (1) warm-up with 3 test runs, (2) 20 repetitions per test, (3) IQR outlier filtering (k=1), (4) binary-search for the maximum gain δ where the modified version's runtime distribution is still statistically significantly faster than the original (Mann-Whitney U test, p < 0.1). Per-sample Performance P_i = mean of per-test minimum gains p_{i,j}. Overall Performance = mean of P_i across all N_total samples. Only patches that both apply and pass correctness can contribute positive runtime gain; failed patches contribute 0.\n\nKey characteristics:\n- Task: generate patches that reduce test execution time without introducing bugs\n- Expert patches serve as human gold standard (10.85% average runtime gain)\n- 8.59% performance gap between best AI (OpenHands, 2.26%) and expert\n- Two settings: Oracle (file-level, given relevant files) and Realistic (repo-level, agent navigates entire repo)\n\nFrom Xi'an Jiaotong University, TikTok, NUS, and UC San Diego."
 }

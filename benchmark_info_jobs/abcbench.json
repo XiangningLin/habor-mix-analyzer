@@ -1,22 +1,1444 @@
 {
-  "name": "ABCBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "name": "ABC-Bench",
+  "category": "Repo-level Software Engineering",
+  "used_llm_or_agent": "agent",
   "links": {
-    "website": null,
+    "website": "https://dawning-road.github.io/blog/abc-bench",
     "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "paper": "https://arxiv.org/abs/2601.11077",
+    "github": "https://github.com/OpenMOSS/ABC-Bench",
+    "dataset": "https://huggingface.co/datasets/OpenMOSS-Team/ABC-Bench"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2026-01",
+    "num_tasks": 224
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "average pass@1",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2026-01",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2601.11077",
+      "results": [
+        {
+          "model": "Claude Sonnet 4.5",
+          "effort": null,
+          "system_description": "OpenHands (thinking: yes)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.632,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.733,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.759,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.693,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.676,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.515,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.465,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.747,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.333,
+              "unit": null
+            },
+            {
+              "metric": "S1 build success (env tasks)",
+              "value": 0.773,
+              "unit": null
+            },
+            {
+              "metric": "S2 conditional e2e success (env tasks)",
+              "value": 0.803,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.867,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.79,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.686,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.667,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.658,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.583,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.529,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.478,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3.2",
+          "effort": null,
+          "system_description": "OpenHands (thinking: no)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.501,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.567,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.644,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.578,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.424,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.388,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.485,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "S1 build success (env tasks)",
+              "value": 0.483,
+              "unit": null
+            },
+            {
+              "metric": "S2 conditional e2e success (env tasks)",
+              "value": 0.884,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.642,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.657,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.259,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.45,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.367,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.5,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.549,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.428,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.667,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "OpenHands (thinking: yes)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.494,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.569,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.465,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.676,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.556,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.364,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.444,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.417,
+              "unit": null
+            },
+            {
+              "metric": "S1 build success (env tasks)",
+              "value": 0.393,
+              "unit": null
+            },
+            {
+              "metric": "S2 conditional e2e success (env tasks)",
+              "value": 0.829,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.544,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.716,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.552,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.519,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.433,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.733,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.333,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.333,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.39,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.667,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-Coder-480B-A35B",
+          "effort": null,
+          "system_description": "OpenHands (thinking: no)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.431,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.567,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.552,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.529,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.364,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.24,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.364,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.167,
+              "unit": null
+            },
+            {
+              "metric": "S1 build success (env tasks)",
+              "value": 0.616,
+              "unit": null
+            },
+            {
+              "metric": "S2 conditional e2e success (env tasks)",
+              "value": 0.66,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.622,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.543,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.457,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.389,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.467,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.233,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.333,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.392,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.358,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Nex-N1-671B",
+          "effort": null,
+          "system_description": "OpenHands (thinking: no)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.421,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.632,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.491,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.549,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.303,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.264,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.343,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.444,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.519,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.457,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.55,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.333,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.314,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.358,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM 4.7",
+          "effort": null,
+          "system_description": "OpenHands (thinking: yes)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.401,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.563,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.5,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.402,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.343,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.326,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.364,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.556,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.519,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.514,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.352,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.333,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.458,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.275,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.333,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.333,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Nex-N1-32B",
+          "effort": null,
+          "system_description": "OpenHands (thinking: no)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.345,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.433,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.678,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.491,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.265,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.222,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.283,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.356,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.457,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.448,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.407,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.325,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.333,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.353,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.233,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-Coder-30B-A3B",
+          "effort": null,
+          "system_description": "OpenHands (thinking: no)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.286,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.467,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.31,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.509,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.253,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.132,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.313,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.422,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.395,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.314,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.296,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.292,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.292,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.216,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.208,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "effort": null,
+          "system_description": "OpenHands (thinking: yes)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.299,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.474,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.202,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.171,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.162,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.083,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.333,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.333,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.278,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.258,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.125,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.059,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.333,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-32B",
+          "effort": null,
+          "system_description": "OpenHands (thinking: yes)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.089,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.167,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.023,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.228,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.029,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.091,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.078,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.051,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "S1 build success (env tasks)",
+              "value": 0.212,
+              "unit": null
+            },
+            {
+              "metric": "S2 conditional e2e success (env tasks)",
+              "value": 0.353,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.044,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.222,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.171,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.148,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.058,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.033,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.039,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-8B",
+          "effort": null,
+          "system_description": "OpenHands (thinking: yes)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.083,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Python)",
+              "value": 0.267,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Go)",
+              "value": 0.057,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (JS)",
+              "value": 0.219,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Java)",
+              "value": 0.039,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Ruby)",
+              "value": 0.071,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (C#)",
+              "value": 0.047,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (PHP)",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Rust)",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "S1 build success (env tasks)",
+              "value": 0.167,
+              "unit": null
+            },
+            {
+              "metric": "S2 conditional e2e success (env tasks)",
+              "value": 0.818,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Analytics, n=15)",
+              "value": 0.067,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Specialized, n=27)",
+              "value": 0.123,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Other, n=35)",
+              "value": 0.124,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Communication, n=18)",
+              "value": 0.204,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Content, n=40)",
+              "value": 0.092,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Identity, n=10)",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Infrastructure, n=8)",
+              "value": 0.042,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Commerce, n=17)",
+              "value": 0.039,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (DevTools, n=53)",
+              "value": 0.031,
+              "unit": null
+            },
+            {
+              "metric": "pass@1 (Entertainment, n=1)",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 2: average pass@1 (%) under three independent attempts per task. All models evaluated using OpenHands as the standardized agent framework. Thinking mode encoded in system_description. S1 (build success) and S2 (conditional end-to-end success) from Figure 4: environment configuration capability analysis on 92 full-lifecycle tasks — environment configuration is the primary performance bottleneck, not code logic. Rust is the hardest language (most models score 0%); only Claude Sonnet 4.5, GPT-5, Qwen3-Coder-480B-A35B, and Gemini 2.5 Pro achieve nonzero Rust scores. Figure 7 per-category pass@1 also merged: Analytics (n=15), Specialized (n=27), Other (n=35), Communication (n=18), Content (n=40), Identity (n=10), Infrastructure (n=8), Commerce (n=17), DevTools (n=53), Entertainment (n=1)."
+    },
+    {
+      "date": "2026-01",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2601.11077",
+      "results": [
+        {
+          "model": "DeepSeek-V3.2",
+          "effort": null,
+          "system_description": "Claude Code",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.427,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3.2",
+          "effort": null,
+          "system_description": "mini-SWE-agent",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.375,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "Claude Code",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.345,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "mini-SWE-agent",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.182,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Figure 6(a): Agent framework comparison. DeepSeek-V3.2 and GPT-5 evaluated across three agent frameworks. OpenHands results (DeepSeek-V3.2: 50.1%, GPT-5: 49.4%) are in the main Table 2 entry above. Framework choice significantly impacts performance — GPT-5 drops from 49.4% (OpenHands) to 18.2% (mini-SWE-agent)."
+    },
+    {
+      "date": "2026-01",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2601.11077",
+      "results": [
+        {
+          "model": "Qwen3-8B",
+          "effort": null,
+          "system_description": "OpenHands (w/o SFT)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.083,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-8B",
+          "effort": null,
+          "system_description": "OpenHands (w/ SFT)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.139,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-32B",
+          "effort": null,
+          "system_description": "OpenHands (w/o SFT)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.089,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-32B",
+          "effort": null,
+          "system_description": "OpenHands (w/ SFT)",
+          "scores": [
+            {
+              "metric": "average pass@1",
+              "value": 0.338,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Figure 6(b): Effect of Agentic Post-Training. Compares Qwen3-8B and Qwen3-32B with and without supervised fine-tuning (SFT). SFT dramatically boosts Qwen3-32B from 8.9% to 33.8% (+24.9pp), and Qwen3-8B from 8.3% to 13.9% (+5.6pp). The w/o SFT values match Table 2 baselines."
+    },
+    {
+      "date": "2026-01",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2601.11077",
+      "results": [
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "OpenHands (thinking: yes)",
+          "scores": [
+            {
+              "metric": "error count: syntax errors",
+              "value": 30,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: path missing",
+              "value": 19,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: dependency missing",
+              "value": 16,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: compilation errors",
+              "value": 8,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: logic errors",
+              "value": 30,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: other",
+              "value": 4,
+              "unit": "count"
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-Coder-480B-A35B",
+          "effort": null,
+          "system_description": "OpenHands (thinking: no)",
+          "scores": [
+            {
+              "metric": "error count: syntax errors",
+              "value": 21,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: path missing",
+              "value": 16,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: dependency missing",
+              "value": 12,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: compilation errors",
+              "value": 6,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: logic errors",
+              "value": 49,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: other",
+              "value": 22,
+              "unit": "count"
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-8B",
+          "effort": null,
+          "system_description": "OpenHands (thinking: yes)",
+          "scores": [
+            {
+              "metric": "error count: syntax errors",
+              "value": 20,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: path missing",
+              "value": 76,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: dependency missing",
+              "value": 17,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: compilation errors",
+              "value": 11,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: logic errors",
+              "value": 60,
+              "unit": "count"
+            },
+            {
+              "metric": "error count: other",
+              "value": 19,
+              "unit": "count"
+            }
+          ]
+        }
+      ],
+      "note": "Paper Figure 8: Error distribution analysis across failed tasks. GPT-5 has fewest total errors (107) with balanced syntax/logic errors. Qwen3-Coder-480B-A35B (126 errors) is dominated by logic errors (49). Qwen3-8B has the most errors (203) with path missing (76) and logic errors (60) as dominant failure modes — reflecting weaker environment navigation capability in smaller models."
+    }
+  ],
+  "notes": "ABC-Bench (Agentic Backend Coding Benchmark) evaluates agents across the complete backend development lifecycle. Unlike benchmarks that focus on isolated code editing, ABC-Bench requires end-to-end tasks from repository exploration to containerized service deployment.\n\n224 tasks from 127 MIT-licensed open-source repos:\n- 8 programming languages: Python, JavaScript, Java, Go, Ruby, C#, PHP, Rust\n- 19 major backend frameworks: Spring Boot, Express, Rails, Laravel, FastAPI, Gin, ASP.NET Core, etc.\n- 132 logic implementation tasks + 92 full-lifecycle tasks\n\nKey findings:\n- Environment configuration is the primary bottleneck, not code logic\n- Rust is a critical performance bottleneck (most models score 0%)\n- Interaction depth strongly correlates with success (Pearson r = 0.87)\n\nFrom Dawning Road and OpenMOSS."
 }

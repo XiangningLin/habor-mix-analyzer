@@ -1,22 +1,222 @@
 {
   "name": "ResearchCodeBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Machine Learning",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://researchcodebench.github.io/",
+    "leaderboard": "https://researchcodebench.github.io/leaderboard/index.html; https://researchcodebench.github.io/leaderboard/breakdown/index.html",
+    "paper": "https://arxiv.org/abs/2506.02314",
+    "github": "https://github.com/PatrickHua/ResearchCodeBench",
+    "dataset": "https://github.com/PatrickHua/ResearchCodeBench/tree/main/pset"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-06",
+    "num_tasks": 212
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "scaled pass rate, which weights each snippet by its number of executable lines of code (LoC)",
+    "harbor_aligned_metric": "success_rate (%)"
   },
-  "results_over_time": [],
-  "notes": "Former adapter slug typo 'reaserchcodebench'; file renamed to researchcodebench.json."
+  "results_over_time": [
+    {
+      "date": "2025-06",
+      "source_type": "leaderboard",
+      "source_url": "https://researchcodebench.github.io/leaderboard/index.html",
+      "results": [
+        {
+          "model": "Gemini-2.5-Pro-Preview-05-06",
+          "effort": null,
+          "system_description": "gemini-2.5-pro-preview-05-06 (Google), cutoff 2025-01, $1.25/$10",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.373, "unit": null }]
+        },
+        {
+          "model": "Gemini-2.5-Pro-Preview-03-25",
+          "effort": null,
+          "system_description": "gemini-2.5-pro-preview-03-25 (Google), cutoff 2025-01, $1.25/$10",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.335, "unit": null }]
+        },
+        {
+          "model": "O3 (High)",
+          "effort": "high",
+          "system_description": "o3-2025-04-16 (OpenAI), cutoff 2023-10, $10/$40",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.322, "unit": null }]
+        },
+        {
+          "model": "O4-Mini (High)",
+          "effort": "high",
+          "system_description": "openai/o4-mini-high (OpenAI), cutoff 2023-10, $1.1/$4.4",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.308, "unit": null }]
+        },
+        {
+          "model": "GPT-4.1",
+          "effort": null,
+          "system_description": "gpt-4.1-2025-04-14 (OpenAI), cutoff 2023-12, $2/$8",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.275, "unit": null }]
+        },
+        {
+          "model": "Claude-3.7-Sonnet",
+          "effort": null,
+          "system_description": "claude-3-7-sonnet-20250219 (Anthropic), cutoff 2024-11, $3/$15",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.262, "unit": null }]
+        },
+        {
+          "model": "O1 (High)",
+          "effort": "high",
+          "system_description": "o1-2024-12-17 (OpenAI), cutoff 2023-10, $15/$60",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.258, "unit": null }]
+        },
+        {
+          "model": "O3-Mini (High)",
+          "effort": "high",
+          "system_description": "o3-mini-2025-01-31 (OpenAI), cutoff 2023-10, $1.1/$4.4",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.243, "unit": null }]
+        },
+        {
+          "model": "Claude-3.5-Sonnet",
+          "effort": null,
+          "system_description": "claude-3-5-sonnet-20241022 (Anthropic), cutoff 2024-04, $3/$15",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.242, "unit": null }]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "deepseek-reasoner (DeepSeek), cutoff 2024-10, $0.14/$2.19",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.210, "unit": null }]
+        },
+        {
+          "model": "DeepSeek-Chat-V3-0324",
+          "effort": null,
+          "system_description": "deepseek/deepseek-chat-v3-0324 (DeepSeek), cutoff 2024-07, $0.38/$0.89",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.207, "unit": null }]
+        },
+        {
+          "model": "Grok-3-Beta",
+          "effort": null,
+          "system_description": "grok-3-beta (xAI), cutoff 2024-11-17, $3/$15",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.206, "unit": null }]
+        },
+        {
+          "model": "Gemini-2.5-Flash-Preview-04-17",
+          "effort": null,
+          "system_description": "gemini-2.5-flash-preview-04-17 (Google), cutoff 2025-01, $0.15/$0.6",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.195, "unit": null }]
+        },
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": "gpt-4o-2024-08-06 (OpenAI), cutoff 2023-10, $2.5/$10",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.193, "unit": null }]
+        },
+        {
+          "model": "GPT-4.1-Mini",
+          "effort": null,
+          "system_description": "gpt-4.1-mini-2025-04-14 (OpenAI), cutoff 2023-12, $0.4/$1.6",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.178, "unit": null }]
+        },
+        {
+          "model": "Gemini-2.0-Flash",
+          "effort": null,
+          "system_description": "gemini-2.0-flash (Google), cutoff 2024-06, $0.1/$0.4",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.174, "unit": null }]
+        },
+        {
+          "model": "Claude-3.5-Haiku",
+          "effort": null,
+          "system_description": "anthropic/claude-3.5-haiku (Anthropic), cutoff 2024-07, $0.8/$4",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.161, "unit": null }]
+        },
+        {
+          "model": "Command-A",
+          "effort": null,
+          "system_description": "cohere/command-a (Cohere), cutoff 2023-10, $2.5/$10",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.147, "unit": null }]
+        },
+        {
+          "model": "Medium-3",
+          "effort": null,
+          "system_description": "mistralai/mistral-medium-3 (Mistral AI), cutoff 2023-10, $0.4/$2",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.141, "unit": null }]
+        },
+        {
+          "model": "Mistral-Codestral-2501",
+          "effort": null,
+          "system_description": "mistralai/codestral-2501 (Mistral AI), cutoff 2023-10, $0.3/$0.9",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.141, "unit": null }]
+        },
+        {
+          "model": "Gemini-2.0-Flash-Lite",
+          "effort": null,
+          "system_description": "gemini-2.0-flash-lite (Google), cutoff 2024-08, $0.075/$0.3",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.126, "unit": null }]
+        },
+        {
+          "model": "Grok-2-1212",
+          "effort": null,
+          "system_description": "grok-2-1212 (xAI), cutoff 2024-07-17, $2/$10",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.119, "unit": null }]
+        },
+        {
+          "model": "Llama-4-Maverick",
+          "effort": null,
+          "system_description": "meta-llama/llama-4-maverick (Meta), cutoff 2024-08, $0.17/$0.6",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.119, "unit": null }]
+        },
+        {
+          "model": "Grok-3-Mini-Beta (High)",
+          "effort": "high",
+          "system_description": "grok-3-mini-beta (xAI), cutoff 2024-11, $0.3/$0.5",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.101, "unit": null }]
+        },
+        {
+          "model": "Qwen-2.5-Coder-32B",
+          "effort": null,
+          "system_description": "qwen/qwen-2.5-coder-32b-instruct (Qwen), cutoff 2024-06, $0.06/$0.15",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.095, "unit": null }]
+        },
+        {
+          "model": "Nova-Pro-V1",
+          "effort": null,
+          "system_description": "amazon/nova-pro-v1 (Amazon), cutoff 2023-10, $0.8/$3.2",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.095, "unit": null }]
+        },
+        {
+          "model": "GPT-4o-Mini",
+          "effort": null,
+          "system_description": "gpt-4o-mini (OpenAI), cutoff 2023-10, $0.15/$0.6",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.081, "unit": null }]
+        },
+        {
+          "model": "Llama-4-Scout",
+          "effort": null,
+          "system_description": "meta-llama/llama-4-scout (Meta), cutoff 2024-08, $0.08/$0.3",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.077, "unit": null }]
+        },
+        {
+          "model": "GPT-4.1-Nano",
+          "effort": null,
+          "system_description": "gpt-4.1-nano-2025-04-14 (OpenAI), cutoff 2023-12, $0.1/$0.4",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.061, "unit": null }]
+        },
+        {
+          "model": "Llama-3.3-70B",
+          "effort": null,
+          "system_description": "meta-llama/llama-3.3-70b-instruct (Meta), cutoff 2023-12, $0.1/$0.25",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.053, "unit": null }]
+        },
+        {
+          "model": "Qwen-2.5-Turbo",
+          "effort": null,
+          "system_description": "qwen/qwen-turbo (Qwen), cutoff 2023-09, $0.05/$0.2",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.033, "unit": null }]
+        },
+        {
+          "model": "Mistral-Codestral-Mamba",
+          "effort": null,
+          "system_description": "mistralai/codestral-mamba (Mistral AI), cutoff 2023-10, $0.25/$0.25",
+          "scores": [{ "metric": "scaled pass@1", "value": 0.008, "unit": null }]
+        }
+      ],
+      "note": "Full leaderboard (32 models) from researchcodebench.github.io. All are pure LLM evaluations with greedy decoding (no agent scaffold). scaled pass@1 weights each snippet by its number of executable lines of code (LoC). Models receive the full research paper text in context. system_description includes model API ID, provider, knowledge cutoff, and input/output pricing per 1M tokens."
+    }
+  ]
 }

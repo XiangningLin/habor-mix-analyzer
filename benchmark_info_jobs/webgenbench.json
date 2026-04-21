@@ -1,22 +1,1572 @@
 {
-  "name": "WebgenBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "name": "WebGen-Bench",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "agent",
   "links": {
-    "website": null,
+    "website": "https://github.com/mnluzimu/WebGen-Bench",
     "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "paper": "https://arxiv.org/abs/2505.03733",
+    "github": "https://github.com/mnluzimu/WebGen-Bench",
+    "dataset": "https://huggingface.co/datasets/luzimu/WebGen-Bench; https://huggingface.co/datasets/luzimu/WebGen-Bench_train_data",
+    "model_weights": "https://huggingface.co/luzimu/WebGen-LM-7B; https://huggingface.co/luzimu/WebGen-LM-14B; https://huggingface.co/luzimu/WebGen-LM-32B"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-05",
+    "num_tasks": 101
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "accuracy",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-05",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2505.03733",
+      "results": [
+        {
+          "model": "Claude-3.5-Sonnet",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.264,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 3.0,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.226,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.076,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.641,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.057,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.278,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 2.5,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.247,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.062,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.643,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.048,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.208,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 2.0,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.185,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.045,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.739,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.031,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 1.5,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.104,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.048,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.645,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.204,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 1.6,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.179,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.034,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.386,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.095,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 1.1,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.082,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.026,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.818,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.074,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B-Instruct",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.138,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 1.4,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.121,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.036,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.807,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.037,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WebGen-LM-7B",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 2.5,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.249,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.071,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.68,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WebGen-LM-14B",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.294,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 2.5,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.087,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.663,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WebGen-LM-32B",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.382,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 2.8,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.342,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.578,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet",
+          "effort": null,
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.223,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 2.6,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.181,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.083,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.586,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.15,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.102,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 1.4,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.085,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.034,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.604,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.277,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "effort": null,
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.09,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 1.5,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.074,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.032,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.739,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.155,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet",
+          "effort": null,
+          "system_description": "Aider",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.229,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 1.9,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.199,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.059,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.321,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "Aider",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 2.7,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.233,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.087,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.445,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.235,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "effort": null,
+          "system_description": "Aider",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.141,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score",
+              "value": 1.2,
+              "unit": null
+            },
+            {
+              "metric": "yes_rate",
+              "value": 0.125,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.031,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.543,
+              "unit": null
+            },
+            {
+              "metric": "start_failed",
+              "value": 0.301,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 3: Evaluation of three code-agent frameworks using different models. Accuracy = (N_Yes + 0.5 * N_Partial) / N_Total. Appearance score ranges 1-5 (GPT-4o graded). yes_rate/partial_rate/no_rate/start_failed are the raw test-case outcome distributions. 16 framework x model combinations across Bolt.diy, OpenHands, and Aider. WebGen-LM models are Qwen2.5-Coder-Instruct fine-tuned on Bolt.diy trajectories (7B/14B/32B sizes). WebGen-LM-32B achieves the highest accuracy (38.2%), surpassing the best proprietary model DeepSeek-R1 (27.8%). Claude-3.5-Sonnet on Bolt.diy has the highest appearance score (3.0) among general-purpose models."
+    },
+    {
+      "date": "2025-05",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2505.03733",
+      "results": [
+        {
+          "model": "Claude-3.5-Sonnet",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.356,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.212,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.262,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.171,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.263,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.52,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.437,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.206,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.247,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.211,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.293,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.443,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.371,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.166,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.112,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.105,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.282,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.381,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.264,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.059,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.112,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.047,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.246,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.287,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.177,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.134,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.114,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.255,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.336,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.175,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.069,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.059,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.019,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.145,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.23,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B-Instruct",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.282,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.101,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.056,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.058,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.254,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WebGen-LM-7B",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.279,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.238,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.381,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.22,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.475,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WebGen-LM-14B",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.302,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.278,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.316,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.236,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.269,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.492,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WebGen-LM-32B",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.466,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.332,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.388,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.291,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.43,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.561,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet",
+          "effort": null,
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.328,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.184,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.184,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.124,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.339,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.32,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.164,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.089,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.059,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.099,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.25,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "effort": null,
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.126,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.073,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.084,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.038,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.081,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.25,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet",
+          "effort": null,
+          "system_description": "Aider",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.319,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.211,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.166,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.301,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.34,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "Aider",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.391,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.286,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.134,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.176,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.352,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.443,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "effort": null,
+          "system_description": "Aider",
+          "scores": [
+            {
+              "metric": "accuracy (Content Presentation)",
+              "value": 0.178,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (User Interaction)",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Management)",
+              "value": 0.125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Functional Testing)",
+              "value": 0.097,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Data Display Testing)",
+              "value": 0.191,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Design Validation Testing)",
+              "value": 0.184,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 4: Category-wise evaluation results. 6 accuracy scores per model: 3 instruction categories (Content Presentation, User Interaction, Data Management) and 3 test case categories (Functional Testing, Data Display Testing, Design Validation Testing). Design Validation Testing consistently achieves the highest accuracy; Functional Testing yields the lowest. Content Presentation instructions are easier to satisfy than User Interaction or Data Management."
+    },
+    {
+      "date": "2025-05",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2505.03733",
+      "results": [
+        {
+          "model": "Claude-3.5-Sonnet",
+          "effort": null,
+          "system_description": "Bolt.diy (UI Agent)",
+          "scores": [
+            {
+              "metric": "yes_rate",
+              "value": 0.226,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.076,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.641,
+              "unit": null
+            },
+            {
+              "metric": "accuracy",
+              "value": 0.264,
+              "unit": null
+            },
+            {
+              "metric": "alignment_rate",
+              "value": 0.903,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet",
+          "effort": null,
+          "system_description": "Bolt.diy (Manual)",
+          "scores": [
+            {
+              "metric": "yes_rate",
+              "value": 0.224,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.071,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.59,
+              "unit": null
+            },
+            {
+              "metric": "accuracy",
+              "value": 0.26,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "Bolt.diy (UI Agent)",
+          "scores": [
+            {
+              "metric": "yes_rate",
+              "value": 0.247,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.062,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.643,
+              "unit": null
+            },
+            {
+              "metric": "accuracy",
+              "value": 0.278,
+              "unit": null
+            },
+            {
+              "metric": "alignment_rate",
+              "value": 0.861,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "Bolt.diy (Manual)",
+          "scores": [
+            {
+              "metric": "yes_rate",
+              "value": 0.28,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.043,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.581,
+              "unit": null
+            },
+            {
+              "metric": "accuracy",
+              "value": 0.301,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "effort": null,
+          "system_description": "Bolt.diy (UI Agent)",
+          "scores": [
+            {
+              "metric": "yes_rate",
+              "value": 0.185,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.045,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.739,
+              "unit": null
+            },
+            {
+              "metric": "accuracy",
+              "value": 0.208,
+              "unit": null
+            },
+            {
+              "metric": "alignment_rate",
+              "value": 0.944,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "effort": null,
+          "system_description": "Bolt.diy (Manual)",
+          "scores": [
+            {
+              "metric": "yes_rate",
+              "value": 0.19,
+              "unit": null
+            },
+            {
+              "metric": "partial_rate",
+              "value": 0.045,
+              "unit": null
+            },
+            {
+              "metric": "no_rate",
+              "value": 0.703,
+              "unit": null
+            },
+            {
+              "metric": "accuracy",
+              "value": 0.213,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 5: Alignment between UI agent testing and human manual testing on Bolt.diy. alignment_rate = proportion of test cases where agent result matches human annotation. Three human testers independently annotated; inconsistencies resolved by a fourth. Alignment ranges 86.1-94.4%, validating the automated evaluation pipeline."
+    },
+    {
+      "date": "2025-05",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2505.03733",
+      "results": [
+        {
+          "model": "WebGen-LM-32B (150 samples)",
+          "effort": null,
+          "system_description": "Bolt.diy; fine-tuned Qwen2.5-Coder-32B on 150 trajectories",
+          "scores": [
+            {
+              "metric": "yes_rate",
+              "value": 0.218,
+              "unit": null
+            },
+            {
+              "metric": "accuracy",
+              "value": 0.251,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WebGen-LM-32B (300 samples)",
+          "effort": null,
+          "system_description": "Bolt.diy; fine-tuned Qwen2.5-Coder-32B on 300 trajectories",
+          "scores": [
+            {
+              "metric": "yes_rate",
+              "value": 0.286,
+              "unit": null
+            },
+            {
+              "metric": "accuracy",
+              "value": 0.319,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WebGen-LM-32B (600 samples)",
+          "effort": null,
+          "system_description": "Bolt.diy; fine-tuned Qwen2.5-Coder-32B on 600 trajectories",
+          "scores": [
+            {
+              "metric": "yes_rate",
+              "value": 0.342,
+              "unit": null
+            },
+            {
+              "metric": "accuracy",
+              "value": 0.382,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 6: Training sample scaling ablation for WebGen-LM-32B (Qwen2.5-Coder-32B-Instruct fine-tuned on Bolt.diy trajectories). Accuracy consistently increases with more training samples (25.1% → 31.9% → 38.2%)."
+    },
+    {
+      "date": "2025-05",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2505.03733",
+      "results": [
+        {
+          "model": "Claude-3.5-Sonnet",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "appearance_score (GPT-4o)",
+              "value": 3.0,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (o3)",
+              "value": 2.7,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (Claude-3.5-Sonnet)",
+              "value": 2.4,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (Ensemble)",
+              "value": 2.7,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (Human)",
+              "value": 2.8,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "appearance_score (GPT-4o)",
+              "value": 2.5,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (o3)",
+              "value": 2.3,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (Claude-3.5-Sonnet)",
+              "value": 2.2,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (Ensemble)",
+              "value": 2.3,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (Human)",
+              "value": 2.3,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "effort": null,
+          "system_description": "Bolt.diy",
+          "scores": [
+            {
+              "metric": "appearance_score (GPT-4o)",
+              "value": 2.0,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (o3)",
+              "value": 1.9,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (Claude-3.5-Sonnet)",
+              "value": 1.7,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (Ensemble)",
+              "value": 1.9,
+              "unit": null
+            },
+            {
+              "metric": "appearance_score (Human)",
+              "value": 1.9,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 9 (Appendix L): Multi-grader appearance score comparison. Three VLM graders (GPT-4o, o3, Claude-3.5-Sonnet) plus their ensemble and human scores. Relative ordering is consistent across all graders: Claude-3.5-Sonnet > DeepSeek-R1 > DeepSeek-V3. GPT-4o scores are slightly higher but align with human preference, validating it as the default grader."
+    }
+  ],
+  "notes": "Benchmark for LLM agents generating multi-file websites from scratch. 101 instructions with 647 test cases across 3 major categories (Content Presentation, User Interaction, Data Management) and 13 minor categories.\n\nKey characteristics:\n- Agents must generate complete, functional websites (HTML/CSS/JS) from natural language instructions\n- Three frameworks evaluated: Bolt.diy (web-app generation), OpenHands (general code agent), Aider (terminal-based)\n- Evaluation via WebVoyager UI agent (Qwen2.5-VL-32B) that interacts with deployed sites\n- Appearance scored by GPT-4o on a 1-5 scale\n- Accuracy formula: (N_Yes + 0.5 * N_Partial) / N_Total\n- WebGen-LM: fine-tuned Qwen2.5-Coder-Instruct (7B/14B/32B) on 600 Bolt.diy trajectories via rejection sampling\n- UI agent testing aligns with manual testing 86-94% of the time (Table 5)\n\nFollow-up paper (arXiv:2509.22644) introduces WebGen-Agent, an improved scaffold that boosts Claude-3.5-Sonnet from 26.4% to 51.9%.\n\nFrom MMLab, The Chinese University of Hong Kong."
 }
