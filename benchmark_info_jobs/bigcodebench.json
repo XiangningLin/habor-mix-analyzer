@@ -1343,6 +1343,6903 @@
         }
       ],
       "note": "Official result-table snapshot. The Hugging Face results table stores Complete/Instruct scores as percentages; values here are converted to 0-1 rates. Rows with null Complete and Instruct scores were omitted."
+    },
+    {
+      "date": "2026-04-22",
+      "source_type": "leaderboard",
+      "source_url": "https://bigcode-bench.github.io/results.json",
+      "results": [
+        {
+          "model": "DeepSeek-V3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.622,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.5,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.561,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o-2024-05-13",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.611,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.511,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.561,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-4-Maverick",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.614,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.497,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5555,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Quasar-Alpha",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.606,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.496,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.551,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-Exp-1206",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.624,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.547,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-Exp-1114",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.593,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.492,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5425,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V2-Chat (2024-06-28)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.594,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.489,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5415,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.597,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.482,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5395,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.58,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.535,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o-2024-11-20",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.589,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.48,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5345,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4-Turbo-2024-04-09",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.582,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.482,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.532,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-2.0-Flash-Exp",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.599,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.459,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.529,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet-20240620",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.586,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.468,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.527,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Haiku-20241022",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.59,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.461,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5255,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-14B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.567,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.482,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5245,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.3-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.575,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.469,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.522,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Athene-V2-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.568,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.472,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.52,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-Exp-1121",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.581,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.454,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5175,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o-mini-2024-07-18",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.574,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.461,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5175,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4-0613",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.572,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.46,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.516,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3-Opus-20240229",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.574,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.455,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5145,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Athene-V2-Agent",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.561,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.462,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5115,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet-20241022",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.575,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.446,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5105,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V2.5-1210",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.532,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.486,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.509,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.559,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.458,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5085,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Pro-API-0514",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.575,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.438,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5065,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Hermes-2-Theta-Llama-3-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.556,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.456,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.506,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-4",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.554,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.455,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5045,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.1-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.548,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.461,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.5045,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "QwQ-32B-Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.544,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.446,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.495,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-32B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.549,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.439,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.494,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Flash-API-0514",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.551,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.435,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.493,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.545,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.436,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4905,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-32B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.523,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.45,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4865,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3-70B-Synthia-v3.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.541,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.428,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4845,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3-Sonnet-20240229",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.538,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.427,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4825,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Sky-T1-32B-Flash",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.512,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.451,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4815,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Sky-T1-32B-Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.511,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.449,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.48,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-Small-24B-Instruct-2501",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.504,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.453,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4785,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ReflectionCoder-DS-33B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.529,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.424,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4765,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemma-2-27B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.525,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.428,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4765,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WhiteRabbitNeo-33B-v1.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.526,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.417,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4715,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Codestral-22B-v0.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.525,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.418,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4715,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenCoder-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.509,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.432,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4705,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "AutoCoder",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.525,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.407,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.466,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-33B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.511,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4655,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2-72B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.54,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.385,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4625,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-14B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.522,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.398,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.46,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Hermes-2-Pro-Llama-3-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.545,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.372,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4585,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mixtral-8x22B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.502,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.406,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.454,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.496,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.407,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4515,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-3.5-Turbo-0125",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.506,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.391,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4485,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3-Haiku-20240307",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.501,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.394,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4475,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V2-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.404,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.447,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.488,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.404,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.446,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeGeex4-All-9B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.445,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepCoder-14B-Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.496,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.382,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.439,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-Coder-9B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.381,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4355,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.1-Nemotron-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.482,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.387,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4345,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-14B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.484,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.381,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4325,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-3-Medium-128K-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.487,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.376,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4315,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phind-CodeLlama-34B-v2",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.475,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.382,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4285,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Llama-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.499,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.353,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.426,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Artigenz-Coder-DS-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.471,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.38,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4255,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-Large",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.472,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.377,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4245,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ReflectionCoder-DS-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.478,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.368,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.423,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ReflectionCoder-CL-34B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.468,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.377,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4225,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Lite-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.476,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.368,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.422,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Athene-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.475,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.368,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4215,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Nxcode-CQ-7B-Orpo",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.446,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.396,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.421,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Magicoder-S-DS-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.476,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.362,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.419,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.461,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.376,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4185,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Tess-v2.5.2-Qwen2-72B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.463,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4165,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeQwen1.5-7B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.436,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.396,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.416,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-3.1-Mini-128K-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.462,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.368,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.415,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2-57B-A14B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.468,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.361,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4145,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-Small-Instruct-2409",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.466,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.361,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4135,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "StarCoder2-15B-Instruct-v0.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.451,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.376,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4135,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "AutoCoder-S-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.465,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.361,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.413,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "C4AI-Command-R-08-2024",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.452,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.371,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4115,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenCodeInterpreter-DS-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.446,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.371,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4085,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Codestral-Mamba",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.446,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.359,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4025,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-34B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.444,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.361,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.4025,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen1.5-110B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.444,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.397,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-6.7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.438,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.355,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3965,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-34B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.438,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.339,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3885,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WaveCoder-Ultra-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.437,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.339,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.388,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-9B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.424,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.345,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3845,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-20B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.34,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.38,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Command R+",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.419,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.338,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3785,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemma-2-9B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.406,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.347,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3765,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen1.5-32B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.323,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3715,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "AutoCoder-QW-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.418,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.322,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.37,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenCoder-1.5B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.388,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.349,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3685,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen1.5-72B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.403,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.332,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3675,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-Small-2402",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.413,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.321,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.367,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.1-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.328,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3665,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeGemma-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.393,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.323,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.358,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-3.5-Mini-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.385,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.328,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3565,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.421,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.291,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.356,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-3-Small-128K-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.394,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.311,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3525,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-3-Mini-128K-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.406,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.296,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.351,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ReflectionCoder-CL-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3445,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.369,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.319,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.344,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-Large-2402",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.383,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3415,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenChat-3.6-8B-20240522",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.371,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.281,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.326,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-3.0-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.354,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.293,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3235,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-34B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.356,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.29,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.323,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-13B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.317,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.285,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.301,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-1.5B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.327,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2985,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-6B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.339,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.256,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2975,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "InternLM2.5-7B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.331,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.258,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2945,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenCodeInterpreter-DS-1.3B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.298,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.253,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2755,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-1.3B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.296,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.228,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.262,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.2-3B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.283,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.234,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2585,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.257,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.219,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.238,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.271,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.203,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.237,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.273,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.195,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.234,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.249,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.175,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.212,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Llama-8B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.153,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.106,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1295,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-0.5B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.113,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.088,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1005,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.2-1B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.113,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.082,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0975,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-1.5B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.079,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0745,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenCodeInterpreter-DS-33B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.51,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "KwaiCoder-23B-A4B-v1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.499,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1-Mini-2025-04-14",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.489,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-33B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.466,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeQwen1.5-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.456,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mixtral-8x22B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.453,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-70B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.44,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3-70B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.433,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-4-Scout",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.431,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-6.7B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.418,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-34B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.4,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WarriorCoder-6.7B (Reproduced)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.399,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.397,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "StarCoder2-15B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.384,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-34B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.384,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeGemma-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.383,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-34B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.371,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-8B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.357,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-9B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.355,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-13B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.32,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-3B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.314,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Lite-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.306,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3-8B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.288,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-7B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.287,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "StarCoder2-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.277,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-6B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.275,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-20B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.256,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeGemma-2B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.239,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-7B-v0.3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.235,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-1.3B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.222,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "StarCoder2-3B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.214,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-3.0-2B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.205,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-3B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.2,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Full Set leaderboard entry. Source is the official BigCodeBench Full Set results file. Values are calibrated Pass@1 rates converted from percentages. Included 156 rows with at least one published score; omitted 46 rows whose Full Set Complete and Instruct scores were both null in the official source file."
+    },
+    {
+      "date": "2026-04-22",
+      "source_type": "leaderboard",
+      "source_url": "https://bigcode-bench.github.io/results-hard.json",
+      "results": [
+        {
+          "model": "Claude-3.7-Sonnet-20250219 (temperature=1, length=12800, reasoning=3200)",
+          "effort": "temperature=1, length=12800, reasoning=3200",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.392,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.324,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.358,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-2024-12-17 (temperature=1, reasoning=high)",
+          "effort": "temperature=1, reasoning=high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.385,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.324,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3545,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini-2025-01-31 (temperature=1, reasoning=medium)",
+          "effort": "temperature=1, reasoning=medium",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.378,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.331,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3545,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.351,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini-2025-01-31 (temperature=1, reasoning=high)",
+          "effort": "temperature=1, reasoning=high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.378,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.324,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.351,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Quasar-Alpha",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.378,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.318,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.348,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3445,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-2024-12-17 (temperature=1, reasoning=low)",
+          "effort": "temperature=1, reasoning=low",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.392,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3445,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini-2025-01-31 (temperature=1, reasoning=low)",
+          "effort": "temperature=1, reasoning=low",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.378,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.311,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3445,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-Exp-1206",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.341,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok-3-Beta",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.392,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.331,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-2.5-Pro-Exp-03-25",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.365,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.331,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-2024-12-17 (temperature=1, reasoning=medium)",
+          "effort": "temperature=1, reasoning=medium",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.372,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.328,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1-2025-04-14",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.338,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.318,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.328,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.7-Sonnet-20250219",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.338,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.318,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.328,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Optimus-Alpha",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.351,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.304,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3275,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Max",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.358,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.291,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3245,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Athene-V2-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.372,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.321,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4-Turbo-2024-04-09",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.351,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.291,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.321,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1-Mini-2025-04-14",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.318,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.318,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.318,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-2.0-Pro-Exp-02-05",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.365,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3175,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3-0324",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.358,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3175,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Athene-V2-Agent",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.331,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.314,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o-2024-11-20",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.345,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.311,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok-3-Mini-Beta (temperature=1, reasoning=low)",
+          "effort": "temperature=1, reasoning=low",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.311,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.311,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.311,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o-2024-08-06",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.365,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3075,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.338,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.3075,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet-20241022",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.351,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.257,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.304,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Haiku-20241022",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.345,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.257,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.301,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1-Nano-2025-04-14",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.318,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.301,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Instruct (2024-07-24)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.331,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.257,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.294,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet-20240620",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.331,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.257,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.294,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ChatGPT-4o-latest-20250129",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.331,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.257,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.294,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-Exp-1114",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.324,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.264,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.294,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Pro-Exp-0827",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.318,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.294,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "QwQ-32B (w/ Reasoning)",
+          "effort": "w/ Reasoning",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2905,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-Preview-2024-09-12 (temperature=1)",
+          "effort": "temperature=1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.345,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2875,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-2.0-Flash-001",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.338,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.236,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.287,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V2-Chat (2024-06-28)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.324,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.287,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-2.0-Flash-Exp",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.338,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.284,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-4-Maverick",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.291,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.284,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.3-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.284,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Sky-T1-32B-Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.264,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2805,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-4",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.304,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.243,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2735,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-Exp-1121",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.304,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.243,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2735,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-2.0-Flash-Thinking-Exp-1219",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.304,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.243,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2735,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Pro-Exp-0801",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2735,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-Mini-2024-09-12 (temperature=1)",
+          "effort": "temperature=1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2735,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o-2024-05-13",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.291,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2705,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-2.0-Flash-Thinking-Exp-01-21",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.243,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.27,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.243,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.27,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "QwQ-32B-Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.267,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Sky-T1-32B-Flash",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.257,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.267,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Pro-002",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.324,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2665,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-14B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.236,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2665,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok-Beta",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.236,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2665,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok-3-Mini-Beta (temperature=1, reasoning=high)",
+          "effort": "temperature=1, reasoning=high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.236,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2665,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.1-405B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.304,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.223,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2635,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-32B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.291,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.236,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2635,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V2.5-1210",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.257,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2635,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V2.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.291,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2605,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-Large-Instruct-2407",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.223,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.26,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3-Opus-20240229",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.297,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.223,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.26,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemma-3-27B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.26,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-2.0-Flash-Lite-Preview-02-05",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.311,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2535,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Pro-API-0514",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.311,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2535,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.291,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.216,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2535,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.1-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2535,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o-mini-2024-07-18",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.236,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.253,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.1-Nemotron-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2465,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-32B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.223,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2465,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.223,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2465,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Dracarys-Llama-3.1-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.277,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.243,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3-70B-Synthia-v3.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.291,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2365,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Flash-API-0514",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.223,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2365,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3-Sonnet-20240229",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.264,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.203,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2335,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Dracarys-72B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.226,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Hermes-2-Theta-Llama-3-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.243,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.203,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.223,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-3.1-Mini-128K-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.264,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.176,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.22,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Hermes-2-Pro-Llama-3-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.284,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2165,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Flash-Exp-0827",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.236,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.216,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-14B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.209,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-14B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.209,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2-72B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.264,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2065,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Codestral-22B-v0.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.243,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.169,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.206,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-Small-24B-Instruct-2501",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.216,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.206,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.203,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.203,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.203,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Llama-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.203,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.203,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.203,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepCoder-14B-Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.223,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.2025,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemma-2-27B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.223,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.176,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1995,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Athene-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.243,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.199,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-3.5-Turbo-0125",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.216,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.199,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mixtral-8x22B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.189,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.199,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepCoder-14B-Preview (w/ Reasoning, 64k tokens, temperature=0.6)",
+          "effort": "w/ Reasoning, 64k tokens, temperature=0.6",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.223,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.169,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.196,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WhiteRabbitNeo-33B-v1.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.176,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1925,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-33B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.176,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1925,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ReflectionCoder-DS-33B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.189,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V2-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.216,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1855,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenCoder-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.189,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1855,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3-Haiku-20240307",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.169,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1825,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4-0613",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.203,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.176,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-Large",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1755,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Lite-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.162,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.172,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Nxcode-CQ-7B-Orpo",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.162,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.172,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeQwen1.5-7B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.189,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.172,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeGeex4-All-9B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.189,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.172,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-4-Scout",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.169,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.169,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.169,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "AutoCoder",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1685,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-Nemo-12B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.216,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.115,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1655,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Tess-v2.5.2-Qwen2-72B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1655,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen1.5-110B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.196,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.122,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.159,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ReflectionCoder-DS-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.189,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.115,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.152,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenCodeInterpreter-DS-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.169,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.152,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-Small-Instruct-2409",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.189,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.108,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1485,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WaveCoder-Ultra-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.169,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1485,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-34B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.142,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1485,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-3.5-Mini-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.169,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1485,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-Coder-9B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.176,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.115,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1455,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.162,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.122,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.142,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Artigenz-Coder-DS-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.162,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.122,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.142,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phind-CodeLlama-34B-v2",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1415,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-Small-2402",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1385,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "InverseCoder-CL-13B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1385,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Codestral-Mamba",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1385,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Command R+",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.142,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1385,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "StarCoder2-15B-Instruct-v0.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.122,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1355,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.115,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.135,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.1-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.135,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "C4AI-Command-R-08-2024",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.135,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "InverseCoder-CL-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.142,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.135,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ReflectionCoder-CL-34B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.115,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.132,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "C4AI-Command-R-Plus-08-2024",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.115,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.132,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-3-Medium-128K-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.108,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1315,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Magicoder-S-DS-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1315,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "InverseCoder-DS-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.108,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1285,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-6.7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.101,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.128,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2-57B-A14B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.149,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.101,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.125,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-3-Small-128K-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.142,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.108,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.125,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen1.5-72B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.122,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.122,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.122,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.101,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.118,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenChat-3.6-8B-20240522",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.142,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.088,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.115,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen1.5-32B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.095,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1115,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-9B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.122,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.101,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1115,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Phi-3-Mini-128K-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.142,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.074,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.108,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "AutoCoder-QW-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.088,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.108,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-20B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.101,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.115,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.108,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "AutoCoder-S-6.7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.122,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.088,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.105,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeGemma-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.074,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.1045,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemma-2-9B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.101,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.101,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.101,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-34B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.108,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.088,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.098,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ReflectionCoder-CL-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.088,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.101,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0945,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-34B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.095,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.088,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0915,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenCoder-1.5B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.088,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.095,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0915,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-Large-2402",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.128,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.041,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0845,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-3.0-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.095,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.074,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0845,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-13B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.068,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.095,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0815,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.081,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.068,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0745,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-1.5B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.061,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.054,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0575,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-6B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.068,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.041,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0545,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "InternLM2.5-7B-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.074,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.034,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.054,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.061,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.047,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.054,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.2-3B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.054,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.054,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.054,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.061,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.034,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0475,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenCodeInterpreter-DS-1.3B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.034,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.054,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.044,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.041,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.034,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0375,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.047,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.014,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0305,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Llama-8B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.034,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.027,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-1.3B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.034,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.027,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-0.5B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.007,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0135,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.2-1B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.014,
+              "unit": null
+            },
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.007,
+              "unit": null
+            },
+            {
+              "metric": "average_calibrated_pass@1",
+              "value": 0.0105,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "KwaiCoder-23B-A4B-v1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.236,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenCodeInterpreter-DS-33B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.209,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-33B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.196,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-70B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.162,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeQwen1.5-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.155,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3-70B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.149,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mixtral-8x22B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.142,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WarriorCoder-6.7B (Reproduced)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.142,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-6.7B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.135,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-34B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.128,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "StarCoder2-15B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.122,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Lite-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.115,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-34B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.108,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-20B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.108,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeGemma-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.101,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-34B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.095,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-13B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.095,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-9B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.088,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "StarCoder2-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.088,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.081,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-8B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.081,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeGemma-2B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.074,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3-8B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.061,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-3B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.054,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeLlama-7B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.054,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "StarCoder2-3B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.047,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral-7B-v0.3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.047,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Yi-1.5-6B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.041,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-1.3B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.034,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-3.0-2B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.02,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Granite-Code-3B-Base",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_complete",
+              "value": 0.014,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-1.5B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "calibrated_pass@1_instruct",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Hard Set leaderboard entry. Source is the official BigCodeBench Hard Set results file. Values are calibrated Pass@1 rates converted from percentages. Included 202 rows with at least one published score; omitted 0 rows whose Hard Set Complete and Instruct scores were both null in the official source file."
     }
   ],
   "notes": "BigCodeBench evaluates Python function-level code generation on two Full-set variants, Complete and Instruct. The main Full set has 1,140 tasks; BigCodeBench-Hard is a smaller optional subset and is not used for meta.num_tasks here. The official leaderboard also offers Complete, Instruct, and Average views; this file records calibrated Pass@1 for each split and adds a computed average when both split scores are available. Harbor adapters only focus on BigCodeBench-Hard."
