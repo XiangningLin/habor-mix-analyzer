@@ -2,7 +2,6 @@
   "name": "GAIA",
   "category": "Agentic/Interactive",
   "used_llm_or_agent": "agent",
-
   "links": {
     "website": "https://huggingface.co/gaia-benchmark",
     "leaderboard": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
@@ -10,17 +9,14 @@
     "github": null,
     "dataset": "https://huggingface.co/datasets/gaia-benchmark/GAIA"
   },
-
   "meta": {
     "release_date": "2023-11",
     "num_tasks": 466
   },
-
   "evaluation": {
     "primary_metric": "accuracy",
     "harbor_aligned_metric": "accuracy. Parity: openhands+openai/gpt-5-mini scored 0.5071+-0.0093 on the Harbor adapter vs 0.5131+-0.0126 on the original harness, across 3 trials on 165 validation tasks (2026-02-08)."
   },
-
   "results_over_time": [
     {
       "date": "2023-11-23",
@@ -31,139 +27,1206 @@
           "model": "GPT-4",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy (Level 1)", "value": 0.091, "unit": null },
-            { "metric": "accuracy (Level 2)", "value": 0.026, "unit": null },
-            { "metric": "accuracy (Level 3)", "value": 0.0, "unit": null }
+            {
+              "metric": "accuracy (Level 1)",
+              "value": 0.091,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Level 2)",
+              "value": 0.026,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Level 3)",
+              "value": 0.0,
+              "unit": null
+            }
           ]
         },
         {
           "model": "GPT-4 Turbo",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy (Level 1)", "value": 0.130, "unit": null },
-            { "metric": "accuracy (Level 2)", "value": 0.055, "unit": null },
-            { "metric": "accuracy (Level 3)", "value": 0.0, "unit": null }
+            {
+              "metric": "accuracy (Level 1)",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Level 2)",
+              "value": 0.055,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Level 3)",
+              "value": 0.0,
+              "unit": null
+            }
           ]
         },
         {
           "model": "GPT-4",
           "system_description": "AutoGPT",
           "scores": [
-            { "metric": "accuracy (Level 1)", "value": 0.144, "unit": null },
-            { "metric": "accuracy (Level 2)", "value": 0.004, "unit": null },
-            { "metric": "accuracy (Level 3)", "value": 0.0, "unit": null }
+            {
+              "metric": "accuracy (Level 1)",
+              "value": 0.144,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Level 2)",
+              "value": 0.004,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Level 3)",
+              "value": 0.0,
+              "unit": null
+            }
           ]
         },
         {
           "model": "GPT-4",
           "system_description": "GPT-4 + plugins (human-selected)",
           "scores": [
-            { "metric": "accuracy (Level 1)", "value": 0.303, "unit": null },
-            { "metric": "accuracy (Level 2)", "value": 0.097, "unit": null },
-            { "metric": "accuracy (Level 3)", "value": 0.0, "unit": null }
+            {
+              "metric": "accuracy (Level 1)",
+              "value": 0.303,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Level 2)",
+              "value": 0.097,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Level 3)",
+              "value": 0.0,
+              "unit": null
+            }
           ]
         },
         {
           "model": "Human annotators",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy (Level 1)", "value": 0.939, "unit": null },
-            { "metric": "accuracy (Level 2)", "value": 0.918, "unit": null },
-            { "metric": "accuracy (Level 3)", "value": 0.873, "unit": null }
+            {
+              "metric": "accuracy (Level 1)",
+              "value": 0.939,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Level 2)",
+              "value": 0.918,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Level 3)",
+              "value": 0.873,
+              "unit": null
+            }
           ]
         }
       ],
-      "note": "Paper Table 4 (Appendix D.1) per-Level exact-match accuracy across the full 466-question set (L1=146, L2=245, L3=75). API-model scores are averaged over 3 runs. The 'GPT-4 + plugins' row is GPT-4 with human-selected (oracle) plugins, which is the row the abstract reports as ~15% overall versus human 92%. Plain 'GPT-4' / 'GPT-4 Turbo' rows are pure-LLM baselines (no scaffold) and so have system_description=null. No model scores above 0 on Level 3 in the release paper."
+      "note": "Paper Table 4 (Appendix D.1) per-Level exact-match accuracy across the full 466-question set (L1=146, L2=245, L3=75). API-model scores are averaged over 3 runs. 'GPT-4 + plugins' is GPT-4 with human-selected (oracle) plugins — the ~15% overall row that the abstract contrasts against the 92% human ceiling. Plain GPT-4 / GPT-4 Turbo rows are pure-LLM baselines. No model scores above 0 on Level 3 in the release paper."
     },
     {
-      "date": "2026-04-20",
+      "date": "2024-09-20",
       "source_type": "leaderboard",
       "source_url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
       "results": [
         {
-          "model": "Qwen, Claude 4.6, GPT 5, DeepSeek 3.2, Gemini 3 Pro, Kimi K2.5",
-          "system_description": "OPS-Agentic-Search",
+          "model": "GPT-4-turbo",
+          "system_description": "FRIDAY",
           "scores": [
-            { "metric": "accuracy (test, overall)", "value": 0.9236, "unit": null },
-            { "metric": "accuracy (test, Level 1)", "value": 0.9892, "unit": null },
-            { "metric": "accuracy (test, Level 2)", "value": 0.9057, "unit": null },
-            { "metric": "accuracy (test, Level 3)", "value": 0.8571, "unit": null }
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.2425,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.4086,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.2013,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.0612,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "GPT5, Gemini-3-Pro",
-          "system_description": "openJiuwen-deepagent",
+          "model": "GPT-4-turbo",
+          "system_description": "Multi-Agent Experiment v0.1 (powered by AutoGen)",
           "scores": [
-            { "metric": "accuracy (test, overall)", "value": 0.9169, "unit": null },
-            { "metric": "accuracy (test, Level 1)", "value": 0.9892, "unit": null },
-            { "metric": "accuracy (test, Level 2)", "value": 0.8868, "unit": null },
-            { "metric": "accuracy (test, Level 3)", "value": 0.8776, "unit": null }
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.3223,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.4731,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.2893,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.1429,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "GPT5, Gemini-3-pro, o3",
-          "system_description": "Lemon",
+          "model": "GPT-4-Turbo",
+          "system_description": "UK AI Safety Institute Internal",
           "scores": [
-            { "metric": "accuracy (test, overall)", "value": 0.9136, "unit": null },
-            { "metric": "accuracy (test, Level 1)", "value": 0.9677, "unit": null },
-            { "metric": "accuracy (test, Level 2)", "value": 0.8931, "unit": null },
-            { "metric": "accuracy (test, Level 3)", "value": 0.8776, "unit": null }
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.2492,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.3333,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.2516,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.0816,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "GPT 5, Gemini 3 Pro, DeepSeek 3.1, Qwen 3",
-          "system_description": "JoinAI_V2.2",
+          "model": "GPT-4o",
+          "system_description": "Hugging Face Agents + GPT-4o",
           "scores": [
-            { "metric": "accuracy (test, overall)", "value": 0.9070, "unit": null },
-            { "metric": "accuracy (test, Level 1)", "value": 0.9892, "unit": null },
-            { "metric": "accuracy (test, Level 2)", "value": 0.8679, "unit": null },
-            { "metric": "accuracy (test, Level 3)", "value": 0.8776, "unit": null }
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.3322,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.4946,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.283,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.1837,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "Nemotron-ToolOrchestrator-8B, GPT-5, Claude Opus 4.1, Qwen2.5-Math-72B",
-          "system_description": "Nemotron-ToolOrchestra-0106",
+          "model": "Fine-tuned GPT-4o",
+          "system_description": "Trase Agent v0.1",
           "scores": [
-            { "metric": "accuracy (test, overall)", "value": 0.9037, "unit": null },
-            { "metric": "accuracy (test, Level 1)", "value": 0.9677, "unit": null },
-            { "metric": "accuracy (test, Level 2)", "value": 0.8679, "unit": null },
-            { "metric": "accuracy (test, Level 3)", "value": 0.8980, "unit": null }
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.3555,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.5054,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.3333,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.1429,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": "Sibyl System v0.2 (gpt-4o-2024-08-06)",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.2658,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.3871,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.2453,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.102,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Pre-Magentic era (2024-01 through 2024-09). Representative submissions from the HF leaderboard on GPT-4-family backbones: FRIDAY (OS-Copilot), Multi-Agent Experiment (MSR / AutoGen), UK AI Safety Institute's internal baseline, Hugging Face's Transformers-based agent blog, Trase v0.1, Sibyl v0.2. Entry date is the latest submission in this window."
+    },
+    {
+      "date": "2024-12-21",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+      "results": [
+        {
+          "model": "GPT-4o and o1-preview (varies by agent)",
+          "system_description": "Magentic-1 (o1)",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.3787,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.5484,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.327,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.2245,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": "Magentic-1",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.3223,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.4624,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.283,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.1837,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-preview, gpt-4o",
+          "system_description": "omne v0.1",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.4053,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.5376,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.3711,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.2653,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": "TapeAgent v0.2",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.3322,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.4839,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.2767,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.2245,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 3.5, GPT-4o, o1-preview",
+          "system_description": "Barcelona v0.1",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.4618,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.6559,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.4214,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.2245,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3-5-sonnet",
+          "system_description": "h2oGPTe Agent v1.6.8",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.6512,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.7849,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.6478,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.4082,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Q4 2024 breakthrough era. Microsoft's Magentic-1 paper lands in October and TapeAgents in December; h2o.ai's h2oGPTe v1.6.8 on Claude 3.5 Sonnet is the first submission above 65%. Also includes omne v0.1 and the Barcelona ensemble."
+    },
+    {
+      "date": "2025-02-02",
+      "source_type": "blog",
+      "source_url": "https://web.archive.org/web/20250203092408/https://openai.com/index/introducing-deep-research/",
+      "results": [
+        {
+          "model": "Previous SOTA",
+          "system_description": "Previous SOTA (opens in a new window)",
+          "scores": [
+            {
+              "metric": "accuracy (validation, Level 1)",
+              "value": 0.6792,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (validation, Level 2)",
+              "value": 0.6744,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (validation, Level 3)",
+              "value": 0.4231,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (validation, overall)",
+              "value": 0.6364,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenAI Deep Research",
+          "system_description": "OpenAI Deep Research (pass@1)",
+          "scores": [
+            {
+              "metric": "accuracy (validation, Level 1)",
+              "value": 0.7429,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (validation, Level 2)",
+              "value": 0.6906,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (validation, Level 3)",
+              "value": 0.476,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (validation, overall)",
+              "value": 0.6736,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenAI Deep Research",
+          "system_description": "OpenAI Deep Research (cons@64)",
+          "scores": [
+            {
+              "metric": "accuracy (validation, Level 1)",
+              "value": 0.7866,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (validation, Level 2)",
+              "value": 0.7321,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (validation, Level 3)",
+              "value": 0.5803,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (validation, overall)",
+              "value": 0.7257,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "OpenAI Deep Research launch (2025-02-02). The announcement article reports validation-split scores across three rows: Previous SOTA (prior HF leaderboard top), Deep Research at pass@1, and Deep Research at cons@64. Validation-only — OpenAI did not submit to the HF TEST leaderboard."
+    },
+    {
+      "date": "2025-03-20",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+      "results": [
+        {
+          "model": "o1",
+          "system_description": "open Deep Research | pass@1",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.4983,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.6237,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.478,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.3265,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude, o1, Gemini",
+          "system_description": "Trase Agent v0.3",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.6678,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.8495,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.6667,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.3265,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3.7-sonnet",
+          "system_description": "TapeAgents & BrowserGym",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.4718,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.6022,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.4654,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.2449,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3-7-sonnet",
+          "system_description": "h2oGPTe Agent v1.6.27 | March 17 original date",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.7475,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.8602,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.7484,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.5306,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Q1 2025 Deep Research wave. HuggingFace's Open Deep Research (smolagents / CodeAgent on o1), Trase v0.3, h2oGPTe v1.6.27 on Claude 3.7 Sonnet, TapeAgents + BrowserGym."
+    },
+    {
+      "date": "2025-06-26",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+      "results": [
+        {
+          "model": "Anthropic,  Google,  openaI",
+          "system_description": "SU AI Zero",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.7641,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.914,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.7296,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.5918,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": "OWL++",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.608,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.7527,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.6101,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.3265,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini",
+          "system_description": "Magentic-UI",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.4252,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.6129,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.3711,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.2449,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o, DeepSeek V3, Claude-3.7-Sonnet, Gemini 2.5 Pro",
+          "system_description": "🐟 AWorld (Run Instantly)",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.6312,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.8065,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.6478,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.2449,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3-7-sonnet-20250219, gemini-2.5-pro-preview-06-05 (extended thinking)",
+          "system_description": "h2oGPTe Agent v1.6.33",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.7973,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.8925,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.7987,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.6122,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Su Zero Ultra",
+          "system_description": "Su Zero Ultra",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.804,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.9355,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.7736,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.6531,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Q2 2025 reasoning-model scaling. SU AI Zero (Suzhou AI Lab), OWL++ (CAMEL-AI), Magentic-UI (Microsoft on o4-mini), Ant Group's AWorld, h2oGPTe v1.6.33 (now on Claude 3.7 + Gemini 2.5 Pro), Su Zero Ultra."
+    },
+    {
+      "date": "2025-10-13",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+      "results": [
+        {
+          "model": "GPT-4o, DeepSeek V3, Claude-Sonnet-4, Gemini-2.5-Pro",
+          "system_description": "🐦‍🔥 AWorld (Run Instantly)",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.8173,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.957,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8113,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.5714,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "skywork-agent-model, gpt-4.1, claude-3.7-sonnet, gemini-2.5-pro",
+          "system_description": "Skywork Deep Research Agent v2",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.8339,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.9355,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8302,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.6531,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4, Gemini 2.5 Pro",
+          "system_description": "Co-Sight_v2.0.0",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.8405,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.957,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8302,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.6531,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ZTE Nebula LLM, Claude Sonnet 4, Gemini 2.5 Pro",
+          "system_description": "Co-Sight_v2.0.1",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.8439,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.957,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8302,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.6735,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "ZTE Nebula LLM, Claude Sonnet 4, Gemini 2.5 Pro",
+          "system_description": "Co-Sight_v2.1.0",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.8704,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.957,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8491,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.7755,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Q3 2025 multi-agent ensemble era. InclusionAI's AWorld builds on a multi-model ensemble (81.73%), Skywork's Deep Research Agent v2 (83.39%), and ZTE-AICloud's Co-Sight family (v2.0.0 through v2.1.0, reaching 87% by mid-October). Level 3 routinely clears 75%."
+    },
+    {
+      "date": "2026-03-11",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+      "results": [
+        {
+          "model": "GPT5，Claude-Sonnet-4，Gemini-2.5-Pro",
+          "system_description": "LeAgent_v1.0",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.8505,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.957,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8302,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.7143,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "sonnet-4-5 + gpt-5",
+          "system_description": "h2oGPTe Agent v1.6.44",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.8372,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.914,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8553,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.6327,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "HALO V1217-1",
+          "system_description": "HALO V1217-1",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.8937,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.9677,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8679,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.8367,
+              "unit": null
+            }
           ]
         },
         {
           "model": "Self Consistency 35",
           "system_description": "SU Zero - Shuqian Series Pro MAX",
           "scores": [
-            { "metric": "accuracy (test, overall)", "value": 0.9003, "unit": null },
-            { "metric": "accuracy (test, Level 1)", "value": 0.9892, "unit": null },
-            { "metric": "accuracy (test, Level 2)", "value": 0.8679, "unit": null },
-            { "metric": "accuracy (test, Level 3)", "value": 0.8367, "unit": null }
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.9003,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.9892,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8679,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.8367,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "GPT, Gemini, DeepSeek, Qwen",
-          "system_description": "JoinAI_V2.1",
+          "model": "GPT 5, Gemini 3 Pro, DeepSeek 3.1, Qwen 3",
+          "system_description": "JoinAI_V2.2",
           "scores": [
-            { "metric": "accuracy (test, overall)", "value": 0.9003, "unit": null },
-            { "metric": "accuracy (test, Level 1)", "value": 0.9892, "unit": null },
-            { "metric": "accuracy (test, Level 2)", "value": 0.8679, "unit": null },
-            { "metric": "accuracy (test, Level 3)", "value": 0.8367, "unit": null }
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.907,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.9892,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8679,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.8776,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Nemotron-ToolOrchestrator-8B, GPT-5, Claude Opus 4.1, Qwen2.5-Math-72B",
+          "system_description": "Nemotron-ToolOrchestra-0106",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.9037,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.9677,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8679,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.898,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT5, Gemini-3-pro,  o3",
+          "system_description": "Lemon",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.9136,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.9677,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8931,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.8776,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT5, Gemini-3-Pro",
+          "system_description": "openJiuwen-deepagent",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.9169,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.9892,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8868,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.8776,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen, Claude 4.6, GPT 5, DeepSeek 3.2, Gemini 3 Pro, Kimi K2.5",
+          "system_description": "OPS-Agentic-Search",
+          "scores": [
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.9236,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.9892,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.9057,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.8571,
+              "unit": null
+            }
           ]
         },
         {
           "model": "GPT5.2, Claude Sonnet 4.5, Gemini 3 Pro",
           "system_description": "ShawnAgent_v3.1",
           "scores": [
-            { "metric": "accuracy (test, overall)", "value": 0.8937, "unit": null },
-            { "metric": "accuracy (test, Level 1)", "value": 0.9677, "unit": null },
-            { "metric": "accuracy (test, Level 2)", "value": 0.8679, "unit": null },
-            { "metric": "accuracy (test, Level 3)", "value": 0.8367, "unit": null }
+            {
+              "metric": "accuracy (test, overall)",
+              "value": 0.8937,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 1)",
+              "value": 0.9677,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 2)",
+              "value": 0.8679,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (test, Level 3)",
+              "value": 0.8367,
+              "unit": null
+            }
           ]
         }
       ],
-      "note": "Top submissions on the TEST split leaderboard (validation leaderboard was closed by the authors as 'no longer informative'). Snapshot retrieved 2026-04-20. Entries are agentic ensembles listing multiple backing LLMs in the 'Model family' column; the verbatim comma-separated string is preserved in the 'model' field, and the 'Agent name' column is copied verbatim into system_description. Percentages on the Gradio leaderboard are expressed as 'Avg/Level score (%)'; values here are the corresponding [0,1] floats. The leaderboard is saturated at the top: overall is ~90+% within ~2 points of the 92% human ceiling, and Level 3 (previously 0% for all release-paper systems) now exceeds 85%."
+      "note": "Current top of the HF leaderboard. Scores saturate near the paper's ~91.7% weighted human ceiling: LeAgent v1.0 (Lenovo), h2oGPTe v1.6.44 (Claude Sonnet 4.5 + GPT-5), HALO V1217 (Microsoft AI Asia - Ads), SU Zero Pro MAX (Suzhou AI Lab), JoinAI V2.2 (China Mobile), NVIDIA Nemotron-ToolOrchestra, Lemon (Lenovo), openJiuwen-deepagent, Alibaba's OPS-Agentic-Search (92.36%, edging past human by ~0.6 p.p.), ShawnAgent v3.1."
     }
   ],
-
-  "notes": "GAIA (Mialon et al., 2023; arXiv:2311.12983) is a General AI Assistant benchmark of 466 real-world, unambiguous questions that each require multi-step reasoning, web browsing, tool use, code execution, and multi-modal input handling. Questions are divided into three difficulty levels. Level 1 tasks take at most five steps and at most one tool. Level 2 tasks take five to ten steps with multiple tools. Level 3 tasks are long-horizon, near-perfect-assistant scenarios. The paper reports 146 Level 1, 245 Level 2, and 75 Level 3 questions for a total of 466.\n\nThe live HuggingFace dataset and leaderboard operate on a 165/301 validation/test split (53/86/26 and 93/159/49 per level) after one question was retired from each split post-release. Evaluation is quasi-exact-match string accuracy via the official question_scorer in the HF Space, with light normalization for numbers, commas, and articles.\n\nAt release in November 2023, human annotators achieved around 92 percent overall while GPT-4 with human-selected plugins reached about 15 percent and every system scored 0 on Level 3. The authors later closed the validation leaderboard because contamination made it no longer informative, so only test-set submissions remain. By April 2026 the test leaderboard is dominated by multi-model ensemble agents (Alibaba OPS-Agentic-Search, Lenovo Lemon, JoinAI, NVIDIA Nemotron-ToolOrchestra, and similar) and overall scores exceed 90 percent. There is no canonical GitHub repo for GAIA because the scorer and Gradio app live only in the HF Space, which is why `links.github` is null."
+  "notes": "GAIA (Mialon et al., 2023; arXiv:2311.12983) is a General AI Assistant benchmark of 466 real-world, unambiguous questions that each require multi-step reasoning, web browsing, tool use, code execution, and multi-modal input handling. Questions are divided into three difficulty levels: Level 1 (at most 5 steps, 1 tool), Level 2 (5-10 steps, multiple tools), and Level 3 (long-horizon, near-perfect-assistant). The paper reports 146/245/75 per level.\n\nThe live HF dataset and leaderboard operate on a 165/301 validation/test split (53/86/26 and 93/159/49 per level). Evaluation is quasi-exact-match string accuracy via the official question_scorer in the HF Space, with light normalization for numbers, commas, and articles. The authors closed the validation leaderboard because contamination made it 'no longer informative', so the HF Space now only exposes TEST submissions — which is why OpenAI Deep Research's validation numbers appear in a separate 2025-02 blog entry rather than on the leaderboard.\n\nResults cover 2023-11 through 2026-04. Leaderboard rows come from the HF Space's test-split leaderboard grouped into six release eras (each entry's date is the latest submission in that window). The 2023-11 paper and the 2025-02 OpenAI announcement are separate blog/paper entries. There is no canonical GitHub repo for GAIA because the scorer and Gradio app live only in the HF Space, which is why `links.github` is null."
 }

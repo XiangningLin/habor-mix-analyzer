@@ -1,26 +1,22 @@
 {
   "name": "AA-LCR",
   "category": "Reasoning",
-  "used_llm_or_agent": "llm",
-
+  "used_llm_or_agent": "both",
   "links": {
     "website": "https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
     "leaderboard": "https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
     "paper": null,
-    "github": null,
+    "github": "https://github.com/harbor-framework/harbor/tree/main/adapters/aa-lcr",
     "dataset": "https://huggingface.co/datasets/ArtificialAnalysis/AA-LCR"
   },
-
   "meta": {
-    "release_date": "2025-08",
+    "release_date": "2025-08-05",
     "num_tasks": 100
   },
-
   "evaluation": {
     "primary_metric": "accuracy",
-    "harbor_aligned_metric": "accuracy (pass@1). A Harbor adapter is in flight at https://github.com/harbor-framework/harbor/pull/1397 (OPEN as of April 2026). It evaluates 99 of 100 tasks (task 2 excluded for an unfixable ground truth error; tasks 40 and 94 ship with corrected answers) and uses GPT-5-mini as the LLM equality judge rather than AA's Qwen3 235B. Cleanest parity run: codex@0.117.0+gpt-5-mini scored 0.687 (68/99) on Harbor vs 0.68 for gpt-5-mini on AA's direct-LLM leaderboard (2026-04-10). Three other parity runs (claude-code@2.1.104+claude-haiku-4-5, terminus-2@2.0.0+gpt-5-mini, terminus-2@2.0.0+claude-haiku-4-5) diverge more widely because AA-LCR has no native agent harness, and the scaffold choice has a large effect on long-context document QA."
+    "harbor_aligned_metric": "accuracy (pass@1). A Harbor adapter was merged at harbor-framework/harbor#1397 on 2026-04-22 and lives at adapters/aa-lcr/. It evaluates 99 of 100 tasks (task 2 excluded for an unfixable ground-truth error; tasks 40 and 94 ship with corrected answers) and uses GPT-5-mini as the LLM equality judge rather than AA's Qwen3-235B-A22B 2507 Non-Reasoning. parity_experiment.json records four 1-run parity configurations: codex@0.117.0+gpt-5-mini = 0.687 (vs AA-direct gpt-5-mini high 0.680), claude-code@2.1.104+claude-haiku-4-5 = 0.626 (vs AA-direct claude-haiku-4-5 non-reasoning 0.437), terminus-2@2.0.0+gpt-5-mini = 0.323, terminus-2@2.0.0+claude-haiku-4-5 = 0.495. Harbor scores are NOT directly comparable against the AA leaderboard - different judge, different harness - and the adapter README states its purpose is to validate the adapter across agent+model combinations, not to reproduce AA's ranking."
   },
-
   "results_over_time": [
     {
       "date": "2025-08-05",
@@ -28,158 +24,1046 @@
       "source_url": "https://artificialanalysis.ai/articles/announcing-aa-lcr",
       "results": [
         {
-          "model": "OpenAI o3",
+          "model": "o3",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.69, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.693,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "xAI Grok 4",
+          "model": "Grok 4",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.68, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.68,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "Qwen3 235B 2507 Reasoning variant",
+          "model": "Qwen3 235B 2507 (Reasoning)",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.67, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.67,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "LG Exaone 4.0 32B",
+          "model": "EXAONE 4.0 32B (Reasoning)",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.14, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.14,
+              "unit": null
+            }
           ]
         }
       ],
-      "note": "Launch scores called out in Artificial Analysis's announcement blog on 2025-08-05. At release the frontier reasoning models clustered around 69%, and LG Exaone 4.0 32B is included as the explicit low-scoring counterexample the blog highlighted. Human first-attempt accuracy on AA-LCR is reported at 40 to 60 percent."
+      "note": "Launch-day announcement blog. Lists the four anchor scores (top three plus LG's EXAONE as low-end counterpoint) and reports human first-attempt accuracy at 40-60%."
     },
     {
-      "date": "2026-04-19",
+      "date": "2025-08-05",
       "source_type": "leaderboard",
-      "source_url": "https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
+      "source_url": "https://web.archive.org/web/20250805201320/https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
       "results": [
         {
-          "model": "GPT-5.2 Codex",
-          "system_description": "xhigh",
+          "model": "Gemini 2.5 Pro",
+          "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.757, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.66,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "GPT-5",
-          "system_description": "high",
+          "model": "Claude 4 Sonnet Thinking",
+          "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.756, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.647,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "GPT-5.1",
-          "system_description": "high",
+          "model": "Gemini 2.5 Flash (Reasoning)",
+          "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.750, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.617,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.61,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek R1 0528",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.56,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini (high)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.55,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "MiniMax M1 80k",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.543,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Kimi K2",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.51,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM-4.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.483,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama 4 Maverick",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.46,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 4 Sonnet",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.443,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3 Coder 480B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.423,
+              "unit": null
+            }
           ]
         }
       ],
-      "note": "Top 3 verified directly from the Artificial Analysis leaderboard page on 2026-04-19. Reasoning-effort tiers (xhigh / high) are copied verbatim from the model-variant label on AA's page."
+      "note": "Launch-day AA leaderboard snapshot. Rows beyond the four blog callouts: Google Gemini 2.5 Pro / Flash reasoning tiers, Anthropic Claude 4 Sonnet with and without thinking, OpenAI o4-mini / GPT-4.1 baselines, DeepSeek R1, plus leading open-weights entries (Kimi K2, GLM-4.5, Llama 4 Maverick, Qwen3 Coder 480B, MiniMax M1)."
     },
     {
-      "date": "2026-04-19",
+      "date": "2025-10-17",
       "source_type": "leaderboard",
-      "source_url": "https://pricepertoken.com/leaderboards/benchmark/lcr",
+      "source_url": "https://web.archive.org/web/20251017022036/https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
       "results": [
+        {
+          "model": "GPT-5 (high)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.756,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5 (medium)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.728,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5 Codex (high)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.69,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5 mini (high)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.68,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3 235B A22B 2507",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.67,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 4.1 Opus",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.663,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5 (ChatGPT)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.637,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3 Next 80B A3B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.603,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3 30B A3B 2507",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.59,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5 (low)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.587,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Seed-OSS-36B-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.577,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash (Sep)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.567,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.547,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 4.5 Sonnet",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.513,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Magistral Medium 1.2",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.513,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3 Max",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.467,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek V3.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.45,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 4.5 Haiku",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.437,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek V3.2 Exp",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.43,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM-4.6",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.263,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Mid-October 2025 AA leaderboard. Models that debuted since launch: full GPT-5 family (high / medium / low / ChatGPT / Codex / mini), Claude 4.1 Opus, Claude 4.5 Sonnet / Haiku, Qwen3 235B / Next / 30B / Max, DeepSeek V3.1 and V3.2 Exp, Seed-OSS 36B, Magistral Medium, Grok 3, GLM-4.6."
+    },
+    {
+      "date": "2025-12-16",
+      "source_type": "leaderboard",
+      "source_url": "https://web.archive.org/web/20251216145645/https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
+      "results": [
+        {
+          "model": "GPT-5.1 (high)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.75,
+              "unit": null
+            }
+          ]
+        },
         {
           "model": "KAT-Coder-Pro V1",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.740, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.74,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2 (xhigh)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.727,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro Preview (high)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.707,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro Preview (low)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.673,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.1 Codex (high)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.673,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Kimi K2 Thinking",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.663,
+              "unit": null
+            }
           ]
         },
         {
           "model": "Claude Opus 4.5",
-          "system_description": "Thinking",
+          "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.740, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.653,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "GPT-5.3 Codex",
+          "model": "Doubao Seed Code",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.740, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.653,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "GPT-5.4",
+          "model": "GPT-5.1 Codex mini (high)",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.740, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.627,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "GPT-5",
+          "model": "Nova 2.0 Pro Preview (low)",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.728, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.617,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "GPT-5.2 Pro",
+          "model": "MiniMax-M2",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.727, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.61,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek V3.2 Speciale",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.593,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Nova 2.0 Lite (medium)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.583,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3 Max Thinking",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.577,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Apriel-v1.6-15B-Thinker",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.503,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral Large 3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.347,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "NVIDIA Nemotron 3 Nano",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.337,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 4.1 Fast",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.22,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "End-of-year 2025 AA leaderboard. Q4 frontier debuts: GPT-5.1, GPT-5.2, KAT-Coder-Pro V1, Gemini 3 Pro Preview (first Google model above 0.70), Claude Opus 4.5, Kimi K2 Thinking, MiniMax-M2, GPT-5.1 Codex, AWS Nova 2.0 family, Mistral Large 3, Grok 4.1 Fast."
+    },
+    {
+      "date": "2026-03-13",
+      "source_type": "leaderboard",
+      "source_url": "https://web.archive.org/web/20260313122404/https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
+      "results": [
+        {
+          "model": "GPT-5.2 Codex (xhigh)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.757,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.4 (xhigh)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.74,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.3 Codex (xhigh)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.74,
+              "unit": null
+            }
           ]
         },
         {
           "model": "Gemini 3.1 Pro Preview",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.727, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.727,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "Gemini 3 Pro Preview",
+          "model": "Claude Sonnet 4.6 (max)",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.707, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.707,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "Claude Opus 4.6",
-          "system_description": "Thinking",
-          "scores": [
-            { "metric": "accuracy", "value": 0.707, "unit": null }
-          ]
-        },
-        {
-          "model": "Claude Sonnet 4.6",
+          "model": "Claude Opus 4.6 (max)",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.707, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.707,
+              "unit": null
+            }
           ]
         },
         {
-          "model": "Claude Haiku 4.5",
-          "system_description": "Thinking",
-          "scores": [
-            { "metric": "accuracy", "value": 0.703, "unit": null }
-          ]
-        },
-        {
-          "model": "OpenAI o3",
+          "model": "Claude 4.5 Haiku",
           "system_description": null,
           "scores": [
-            { "metric": "accuracy", "value": 0.693, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.703,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek V3.2 Exp",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.69,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.5 122B A10B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.667,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Flash",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.663,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "MiniMax-M2.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.66,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.5 397B A17B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.657,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3.1 Flash-Lite Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.653,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Kimi K2.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.653,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM-4.7",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.64,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.5 35B A3B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.627,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "NVIDIA Nemotron 3 Super",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 4.20 Beta 0309",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.59,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.5 9B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.59,
+              "unit": null
+            }
           ]
         }
       ],
-      "note": "Ranks 4-15 as of 2026-04-19. Source is a third-party mirror (pricepertoken.com) that explicitly cites Artificial Analysis as its data origin. It is recorded here as a separate entry from the top-3-from-AA entry because AA's primary leaderboard renders scores client-side via JavaScript and a single static fetch returns only the top few rows; the mirror's top 3 match AA's page exactly, which is the provenance signal supporting the remaining ranks. Reasoning-effort tiers (Thinking) are copied verbatim; entries without a declared tier have system_description=null. Ranks 6 and 7 (GPT-5.3 Codex and GPT-5.4, both 0.740) appear distinct on the mirror but have not been individually re-verified against AA."
+      "note": "Q1 2026 AA leaderboard. New since end-of-year: GPT-5.2 Codex (new #1), GPT-5.4 / GPT-5.3 Codex, Gemini 3.1 Pro Preview, Claude Sonnet / Opus 4.6 at 'max' effort, the Qwen3.5 family, Gemini 3 Flash / Flash-Lite Preview, Kimi K2.5, MiniMax-M2.5, GLM-4.7. DeepSeek V3.2 Exp and Claude 4.5 Haiku are re-listed because AA re-measured them after their vendors added a Thinking/reasoning mode."
+    },
+    {
+      "date": "2026-04-13",
+      "source_type": "other",
+      "source_url": "https://github.com/harbor-framework/harbor/blob/main/adapters/aa-lcr/parity_experiment.json",
+      "results": [
+        {
+          "model": "gpt-5-mini",
+          "system_description": "codex@0.117.0",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.687,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "system_description": "claude-code@2.1.104",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.626,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5-mini",
+          "system_description": "terminus-2@2.0.0",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.323,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "system_description": "terminus-2@2.0.0",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.495,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Parity runs from the Harbor adapter (codex, claude-code, and terminus-2 scaffolds across gpt-5-mini and claude-haiku-4-5). Different LLM judge than the AA leaderboard, so these numbers are not directly comparable to the direct-LLM column — the adapter README states their purpose is to validate the scaffold across agent+model combinations."
+    },
+    {
+      "date": "2026-04-22",
+      "source_type": "leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/kat-coder-pro-v1",
+      "results": [
+        {
+          "model": "Claude 4.5 Sonnet",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.657,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.7 (max)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.703,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.6 Plus",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.697,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.6 Max Preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.697,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Kimi K2.6",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.697,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Muse Spark",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.697,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.4 mini (xhigh)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.693,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "MiniMax-M2.7",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.687,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.6 35B A3B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.567,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3.5 Omni Plus",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.527,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM-5.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.443,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mistral Small 4",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.447,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Current live AA leaderboard state. New entries since the 2026-03-13 snapshot: Claude Opus 4.7, Qwen3.6 Plus / Max Preview / 35B A3B, Kimi K2.6, Muse Spark, GPT-5.4 mini, MiniMax-M2.7, Qwen3.5 Omni Plus, GLM-5.1, Mistral Small 4. Claude 4.5 Sonnet is re-listed as a re-measurement (0.513 -> 0.657)."
     }
   ],
-
-  "notes": "AA-LCR is Artificial Analysis's long context reasoning benchmark. It ships 100 human-crafted questions that each require reading roughly 100K input tokens and then reasoning across several documents to arrive at a single correct answer. The dataset draws from seven real-world document categories: company reports, industry reports, government consultations, academic papers, legal documents, marketing materials, and survey reports. In total the corpus is about 3M tokens spanning 30 document sets and 234 documents.\n\nScoring is pass@1 accuracy. A candidate answer is compared against a human-verified reference by an LLM equality checker (Qwen3 235B A22B 2507 in non-reasoning mode). That design avoids brittle string matching but does introduce some dependence on the judge model. Human first-attempt accuracy is reported at 40 to 60 percent, which is why the task remains hard even for specialists.\n\nAA-LCR is one component of the Artificial Analysis Intelligence Index. There is no academic paper or public code repository, so the `paper` and `github` fields are null. The announcement blog (https://artificialanalysis.ai/articles/announcing-aa-lcr) and the Intelligence Benchmarking methodology page (https://artificialanalysis.ai/methodology/intelligence-benchmarking) are the canonical technical references. A Harbor adapter (harbor-framework/harbor PR #1397, OPEN as of April 2026) wraps the benchmark for agent evaluation. It runs 99 of the 100 tasks, swaps in GPT-5-mini as the LLM equality judge, and records four parity runs in its `parity_experiment.json` covering codex, claude-code, and terminus-2 scaffolds."
+  "notes": "AA-LCR is Artificial Analysis's long-context reasoning benchmark. It ships 100 human-crafted questions that each require reading roughly 100K input tokens and then reasoning across several documents to arrive at a single correct answer. The dataset draws from seven real-world document categories (company reports, industry reports, government consultations, academic papers, legal documents, marketing materials, survey reports); the corpus is about 3M tokens spanning 30 document sets and 234 documents.\n\nScoring is pass@1 accuracy. A candidate answer is compared against a human-verified reference by an LLM equality checker (Qwen3 235B A22B 2507 in non-reasoning mode). Human first-attempt accuracy is reported at 40 to 60 percent.\n\nAA-LCR is one component of the Artificial Analysis Intelligence Index. There is no academic paper or public code repository from the benchmark authors, so the `paper` field is null; `github` points at the merged Harbor adapter, the only open-source implementation against this benchmark.\n\nResults in this file cover the 2025-08 launch through 2026-04, reconstructed from AA's leaderboard page (current and archived snapshots) and the launch announcement blog, plus the Harbor adapter's parity runs. All scores originate with Artificial Analysis itself."
 }
