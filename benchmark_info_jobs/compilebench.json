@@ -1,22 +1,102 @@
 {
   "name": "CompileBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "agent",
+
   "links": {
-    "website": null,
-    "leaderboard": null,
+    "website": "https://www.compilebench.com/",
+    "leaderboard": "https://www.compilebench.com/",
     "paper": null,
-    "github": null,
+    "github": "https://github.com/QuesmaOrg/compilebench",
     "dataset": null
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-09",
+    "num_tasks": 15
   },
+
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "accuracy (pass@1)",
+    "harbor_aligned_metric": "Accuracy — CompileBench is already in Harbor format (built with Harbor Framework). Parity: terminus-2+claude-haiku-4-5 achieves 0.733 (73.3%) across 3 identical trials."
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2025-09",
+      "source_type": "blog",
+      "source_url": "https://quesma.com/blog/introducing-compilebench/",
+      "results": [
+        {
+          "model": "Claude Opus 4.1 (thinking-16k)",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (pass@1)", "value": 1.00, "unit": null },
+            { "metric": "cost", "value": 21.72, "unit": "USD" },
+            { "metric": "time", "value": 3528, "unit": "seconds" }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4 (thinking-16k)",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (pass@1)", "value": 0.93, "unit": null },
+            { "metric": "time", "value": 2740, "unit": "seconds" }
+          ]
+        },
+        {
+          "model": "GPT-5 (high reasoning)",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (pass@1)", "value": 0.93, "unit": null },
+            { "metric": "cost", "value": 1.99, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (pass@1)", "value": 0.87, "unit": null },
+            { "metric": "cost", "value": 1.08, "unit": "USD" },
+            { "metric": "time", "value": 1597, "unit": "seconds" }
+          ]
+        },
+        {
+          "model": "GPT-5-mini (high reasoning)",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (pass@1)", "value": 0.80, "unit": null },
+            { "metric": "cost", "value": 0.27, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "Qwen3-Max",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (pass@1)", "value": 0.67, "unit": null },
+            { "metric": "time", "value": 678, "unit": "seconds" }
+          ]
+        },
+        {
+          "model": "Grok Code Fast 1",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (pass@1)", "value": 0.47, "unit": null },
+            { "metric": "cost", "value": 0.10, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "GPT-5-mini (minimal reasoning)",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (pass@1)", "value": null, "unit": null },
+            { "metric": "cost", "value": 0.03, "unit": "USD" }
+          ]
+        }
+      ],
+      "note": "Blog post results (September 2025, updated with more models later). 19 models initially tested, expanded to 26. Accuracy is pass@1 across all 15 tasks. Cost and time are total across all 15 tasks. Pareto frontier reported: cost-efficiency vs accuracy tradeoff. Claude Opus 4.1 (thinking-16k) is the only model to achieve 100% but at 799x baseline cost. GPT-5-mini minimal is the cost baseline at $0.03."
+    }
+  ],
+
+  "notes": "CompileBench tests whether LLMs can compile real-world open-source C/C++ projects from source. Created by Quesma, it focuses on practical build challenges that go beyond typical coding benchmarks.\n\n15 tasks across 4 open-source projects:\n- **curl** (HTTP client): SSL build, static linking, ARM64 cross-compilation, Windows cross-compilation\n- **jq** (JSON processor): standard build, static, musl static\n- **GNU Coreutils**: v9.7 standard, static, v5.0 legacy (2003)\n- **cowsay**: legacy build\n\nDifficulty range:\n- Easiest: curl-ssl (97% pass@1, median 1m48s)\n- Hardest: curl-ssl-arm64-static (1% pass@1, median 7m40s) — only Claude Opus 4.1 succeeded\n\nKey challenges:\n- Dependency resolution ('dependency hell')\n- Cross-compilation (ARM64, Windows)\n- Static linking with musl libc\n- Legacy toolchains (22-year-old code from 2003)\n- Alpine Linux builds\n\nBenchmark stats: 30,240 commands executed, 31,065 LLM requests, 66 hours total runtime, $376.77 total cost across all models.\n\nNo academic paper — this is an industry benchmark from Quesma. Made Hacker News front page (Sep 22, 2025).\n\nAlready in Harbor format (built with Harbor Framework). The adapter is essentially a pass-through.\n\nNotable: GPT-5-mini attempted to cheat by creating symlinks to system binaries instead of compiling from source. Verification checks caught this.\n\nLeaderboard at compilebench.com shows interactive results with Pareto frontiers for cost vs accuracy and speed vs accuracy."
 }

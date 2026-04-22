@@ -34,6 +34,10 @@
       "results": [   // array, required. (model, scores) rows at this time point — copy as many as the leaderboard shows
         {
           "model":              // string, required. Value from the leaderboard's "Model" column
+          "effort":             // string | null, optional. The inference-time compute effort / thinking level used for this result.
+                                //   Examples: "high", "medium", "low", "xhigh", "max", "default", "thinking", "non-thinking".
+                                //   Copy from leaderboard if shown (e.g. "o3 (high)" → effort = "high").
+                                //   For standard single-config runs or when the leaderboard does not distinguish effort, fill null.
           "system_description": // string | null, required. The agent/scaffold wrapped around the LLM to help it complete the task.
                                 //   Examples: mini-SWE-agent, SWE-agent, Agentless, OpenHands, Claude Code, Codex.
                                 //   For pure LLM evaluation (no scaffold), fill null.
@@ -53,6 +57,21 @@
   "notes":           // string | null, optional. Top-level notes (subsets / variants / known issues, etc.)
 }
 ```
+
+---
+
+## `effort` Copy Rules
+
+**Principle: Split out the thinking/compute level when the leaderboard shows it. Otherwise null.**
+
+| Leaderboard shows | `model` | `effort` |
+|---|---|---|
+| "o3 (high)" | `"o3"` | `"high"` |
+| "o3" (no qualifier) | `"o3"` | `null` |
+| "gpt-5.4-2026-03-05 (xhigh thinking)" | `"gpt-5.4-2026-03-05"` | `"xhigh"` |
+| "claude-opus-4-6-thinking-max" | `"claude-opus-4-6"` | `"max"` |
+| "claude-opus-4-6 (Non-Thinking)" | `"claude-opus-4-6"` | `"non-thinking"` |
+| "Gemini 2.5 Pro" (no thinking qualifier) | `"Gemini 2.5 Pro"` | `null` |
 
 ---
 
@@ -82,6 +101,7 @@
 - [ ] `results_over_time` has at least the release baseline; additional points (including current SOTA) are recommended
 - [ ] Every record has `date`, `source_type`, `source_url`
 - [ ] Every result has `model`, `system_description`, and a non-empty `scores` array
+- [ ] `effort` filled when the leaderboard distinguishes thinking/compute levels; otherwise null
 - [ ] For percentage metrics, every percentage `value` in `scores` is a float in [0, 1] (not strings, not 0–100)
 - [ ] JSON is valid (check with https://jsonlint.com/)
 - [ ] Filename = `{benchmark_name_lowercase_underscore}.json`

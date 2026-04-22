@@ -1,22 +1,2117 @@
 {
-  "name": "MMAU",
-  "category": "",
-  "used_llm_or_agent": "",
-  "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
-  },
-  "meta": {
-    "release_date": "",
-    "num_tasks": null
-  },
-  "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
-  },
-  "results_over_time": [],
-  "notes": null
+    "name": "MMAU",
+    "category": "Reasoning",
+    "used_llm_or_agent": "llm",
+    "links": {
+        "website": "https://sakshi113.github.io/mmau_homepage/",
+        "leaderboard": "https://sakshi113.github.io/mmau_homepage/#leaderboard",
+        "paper": "https://arxiv.org/abs/2410.19168",
+        "github": "https://github.com/Sakshi113/MMAU",
+        "dataset": "https://huggingface.co/datasets/gamma-lab-umd/MMAU-test"
+    },
+    "meta": {
+        "release_date": "2024-10-24",
+        "num_tasks": 10000
+    },
+    "evaluation": {
+        "primary_metric": "Accuracy",
+        "harbor_aligned_metric": "%Resolved Rate"
+    },
+    "results_over_time": [
+        {
+            "date": "2024-10-24",
+            "source_type": "paper",
+            "source_url": "https://arxiv.org/abs/2410.19168",
+            "results": [
+                {
+                    "model": "Pengi",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.061,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.08,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.029,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.0305,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.012,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.015,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.034,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.0418,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Audio Flamingo Chat",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.2342,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.2826,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.1526,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.182,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.1141,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.1016,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.1669,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.1887,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "LTU",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.2252,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.2586,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.0969,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.1283,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.1771,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.1637,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.1689,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.1851,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "LTU AS",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.2335,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.2496,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.091,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.1046,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.206,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.213,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.1768,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.189,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "MusiLingo",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.2312,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.2776,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.0396,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.06,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.0588,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.0642,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.1098,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.1339,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "MuLLaMa",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.4084,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.448,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.3263,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.3063,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.2222,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.1656,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.319,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.3066,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "M2UGen",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.036,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.0369,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.3293,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.304,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.0636,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.0453,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.1428,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.1287,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "GAMA",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.4144,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.454,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.3233,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.3083,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.1891,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.1921,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.309,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.3181,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "GAMA-IT",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.4324,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.4323,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.2844,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.28,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.1891,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.1584,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.302,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.2902,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Qwen-Audio-Chat",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.5525,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.5673,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.44,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.409,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.3003,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.2795,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.431,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.4186,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Qwen2-Audio",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.075,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.082,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.0514,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.0616,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.031,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.0424,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.0524,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.062,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Qwen2-Audio-Instruct",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.5495,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.459,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.5098,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.5326,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.4204,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.459,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.492,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.525,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "SALAMONN",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.41,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.403,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.348,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.3376,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.255,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.2424,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.337,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.3277,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemini Pro v1.5",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.5675,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.5446,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.494,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.4856,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.5855,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.559,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.549,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.5297,
+                            "unit": null
+                        }
+                    ]
+                }
+            ],
+            "note": "Release paper Table 3."
+        },
+        {
+            "date": "2026-04-20",
+            "source_type": "leaderboard",
+            "source_url": "https://raw.githubusercontent.com/Sakshi113/mmau_homepage/refs/heads/main/leaderboard_data_v15_parsed.json",
+            "results": [
+                {
+                    "model": "Step-Audio-2",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.8404,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.806,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.7356,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.6823,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.7515,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.7275,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.7758,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.7386,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Audio Flamingo 3",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.7958,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.7583,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.7395,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.7447,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.6637,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.6697,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.733,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.7242,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Step-Audio-2-mini",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.793,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.7557,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.6844,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.6685,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.6816,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.6649,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.7273,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.7023,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "DeSTA2.5-Audio",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.7027,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.6683,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.5629,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.571,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.7147,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.7194,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.66,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.6521,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Kimi-Audio",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.7568,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.707,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.6677,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.6593,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.6216,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.5657,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.682,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.644,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Qwen2-Audio-Instruct",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.6727,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.6117,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.5629,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.5567,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.5526,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.5537,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.596,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.574,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Phi-4-multimodal",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.6547,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.6267,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.6437,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.6197,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.6727,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.638,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.657,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.6281,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Audio Reasoner",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.6787,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.6727,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.6916,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.6153,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.6607,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.6253,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.677,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.6378,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Audio Flamingo 2",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.7147,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.6813,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.7096,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.702,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.4474,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.4487,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.624,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.6106,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Audio Flamingo Chat",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.2523,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.2333,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.1766,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.1577,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.0691,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.0767,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.166,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.1559,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "M2UGen",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.4324,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.4497,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.3713,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.3853,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.3333,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.3577,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.379,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.3976,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "LTU",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.2042,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.2067,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.1597,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.1568,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.1592,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.1533,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.1744,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.1723,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "SALMONN",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.4114,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.421,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.3713,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.3783,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.2643,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.2877,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.349,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.3623,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "MusiLingo",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.4324,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.4193,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.4012,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.4123,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.3123,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.317,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.382,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.3829,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "MuLLaMa",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.3303,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.3097,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.3234,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.2967,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.1742,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.171,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.276,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.2591,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "GAMA",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.3183,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.3073,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.1771,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.1733,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.1291,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.1697,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.2082,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.2168,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "GAMA-IT",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.3093,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.3273,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.2674,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.2237,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.1081,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.1157,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.2283,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.2222,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Qwen2.5-Omni",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.781,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.7677,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.659,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.6733,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.706,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.689,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.715,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.71,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemini 2.5 Flash",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.7327,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.695,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.6557,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.694,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.7658,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.6827,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.718,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.6739,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemini 2.0 Flash",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.7117,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.6893,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.6527,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.593,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.7508,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.7287,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.705,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.6703,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemini 2.5 Flash Lite",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.6306,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.625,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.6347,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.5487,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.7207,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.6747,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.662,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.6161,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemini 2.5 Pro",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.7508,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.7063,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.6826,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.6477,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.7147,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.7267,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.716,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.6936,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "GPT-4o mini Audio",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.5075,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.4967,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.3922,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.3597,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.6907,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.6747,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.53,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.5103,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "GPT-4o Audio",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.6456,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.632,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.5629,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.4993,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.6667,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.6933,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.625,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.6082,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemma 3n (2B)",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.5135,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.4747,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.521,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.5163,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.5222,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.5707,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.5169,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.5206,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Gemma 3n (4B)",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.5586,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.5027,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.5689,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.532,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.6126,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.6213,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.58,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.552,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Audio-Thinker",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.8198,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.788,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.7425,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.738,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.7688,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.7516,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.777,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.7598,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "MiMo-Audio",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.8168,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.772,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.7425,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.6973,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.6817,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.7077,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.747,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.7259,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Nova 2 Omni",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.8108,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.7787,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.7036,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.6637,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.8198,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.8182,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.778,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.7528,
+                            "unit": null
+                        }
+                    ]
+                }
+            ],
+            "note": "Current official MMAU-v05.15.25 leaderboard snapshot from the project GitHub data file."
+        },
+        {
+            "date": "2026-04-20",
+            "source_type": "leaderboard",
+            "source_url": "https://raw.githubusercontent.com/Sakshi113/mmau_homepage/refs/heads/main/leaderboard_data_v15.json",
+            "results": [
+                {
+                    "model": "Omni-R1 (FT on Qwen2.5-Omni)",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.817,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.783,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.734,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.708,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.76,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.758,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.77,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.75,
+                            "unit": null
+                        }
+                    ]
+                },
+                {
+                    "model": "Audio Flamingo 2 Reasoning (FT on AF2)",
+                    "system_description": null,
+                    "scores": [
+                        {
+                            "metric": "Sound Test-mini accuracy",
+                            "value": 0.7598,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Sound Test accuracy",
+                            "value": 0.7523,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test-mini accuracy",
+                            "value": 0.7425,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Music Test accuracy",
+                            "value": 0.712,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test-mini accuracy",
+                            "value": 0.4354,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Speech Test accuracy",
+                            "value": 0.4767,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test-mini accuracy",
+                            "value": 0.6459,
+                            "unit": null
+                        },
+                        {
+                            "metric": "Avg Test accuracy",
+                            "value": 0.647,
+                            "unit": null
+                        }
+                    ]
+                }
+            ],
+            "note": "Community-reported MMAU-v05.15.25 leaderboard rows; the website labels these as unverified by the MMAU team."
+        }
+    ],
+    "notes": "MMAU-v05.15.25 results from official github page; the release-baseline group preserves the original paper results."
 }

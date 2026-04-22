@@ -1,22 +1,281 @@
 {
   "name": "AlgoTune",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Code Performance",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://algotune.io/",
+    "leaderboard": "https://algotune.io/",
+    "paper": "https://arxiv.org/abs/2507.15887",
+    "github": "https://github.com/oripress/AlgoTune",
+    "dataset": "https://huggingface.co/datasets/oripress/AlgoTune"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-07-19",
+    "num_tasks": 154
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "AlgoTune Score",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-07-19",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2507.15887",
+      "results": [
+        {
+          "model": "o4-mini-high",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.72,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek R1 0528",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.7,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.51,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4 20250514",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.33,
+              "unit": "x"
+            }
+          ]
+        }
+      ],
+      "note": "Paper baseline with $1 budget per task. The paper calculates harmonic mean of per-task speedups, with tasks below 1x assigned a mercy score of 1x."
+    },
+    {
+      "date": "2026-04-20",
+      "source_type": "leaderboard",
+      "source_url": "https://algotune.io/",
+      "results": [
+        {
+          "model": "GPT-5.2 (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 2.05,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3.1 Pro Preview (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 2.02,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.4 (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.85,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro Preview (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.83,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.5 (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.77,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "o4-mini (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.72,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek R1 (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.7,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5 (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.67,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5 (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.52,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "GLM-4.5 (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.52,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.51,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6 (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.47,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Qwen3 Coder (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.44,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "gpt-oss-120b (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.41,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5 Mini (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.38,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.1 (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.34,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4 (high)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.33,
+              "unit": "x"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5 Pro (medium)",
+          "system_description": "AlgoTuner",
+          "scores": [
+            {
+              "metric": "AlgoTune Score",
+              "value": 1.31,
+              "unit": "x"
+            }
+          ]
+        }
+      ],
+      "note": "Snapshot of the public leaderboard on 2026-04-20. AlgoTune Score is the harmonic mean of speedups across all AlgoTune tasks."
+    }
+  ],
+  "notes": "Primary metric is AlgoTune Score: the harmonic mean of speedup ratios (baseline_time / solver_time) across tasks, with failing or slower solutions receiving a mercy score of 1.0. The unit x is retained on score values because the score is speedup-derived."
 }

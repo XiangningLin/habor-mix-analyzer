@@ -1,22 +1,1384 @@
 {
-  "name": "TerminalBench2.0",
-  "category": "",
-  "used_llm_or_agent": "",
+  "name": "Terminal-Bench 2.0",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://www.tbench.ai/",
+    "leaderboard": "https://www.tbench.ai/leaderboard/terminal-bench/2.0",
+    "paper": "https://arxiv.org/abs/2601.11868",
+    "github": "https://github.com/laude-institute/terminal-bench",
+    "dataset": "https://huggingface.co/datasets/harborframework/terminal-bench-2.0"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2026-01-17",
+    "num_tasks": 89
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "accuracy",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
+  "results_over_time": [
+    {
+      "date": "2026-04-02",
+      "source_type": "leaderboard",
+      "source_url": "https://www.tbench.ai/leaderboard/terminal-bench/2.0",
+      "results": [
+        {
+          "model": "GPT-5.4",
+          "system_description": "ForgeCode",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.8179775280898877,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3.1 Pro",
+          "system_description": "TongAgents",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.802247191011236,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": "ForgeCode",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.797752808988764,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.3-Codex",
+          "system_description": "SageAgent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7842696629213484,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3.1 Pro",
+          "system_description": "ForgeCode",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7842696629213484,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.3-Codex",
+          "system_description": "Droid",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7730337078651686,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": "Capy",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7528089887640449,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.3-Codex",
+          "system_description": "Simple Codex",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.750561797752809,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3.1 Pro",
+          "system_description": "Terminus-KIRA",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.748314606741573,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": "Terminus-KIRA",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7471910112359551,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.3-Codex",
+          "system_description": "Mux",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7460674157303371,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 4.6 Opus",
+          "system_description": "MAYA-V2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7207865168539326,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": "TongAgents",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7191011235955056,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6 + Gemini 3 Flash + Gemini 3.1 Pro + GPT-5.3-Codex",
+          "system_description": "Junie CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7101123595505618,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.3-Codex",
+          "system_description": "CodeBrain-1",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7033707865168539,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": "Droid",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.698876404494382,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": "Ante",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6942571785268414,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.3-Codex",
+          "system_description": "IndusAGI Coding Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6913857677902622,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": "Crux",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6687265917602996,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2-Codex",
+          "system_description": "Deep Agents",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6651685393258427,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": "Mux",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6651685393258427,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": "SageAgent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.651685393258427,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "system_description": "Droid",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6494382022471911,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.3-Codex",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.647191011235955,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Flash",
+          "system_description": "Junie CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6426966292134831,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.5",
+          "system_description": "Droid",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6314606741573033,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6292134831460674,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "system_description": "Codex CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6292134831460674,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": "CodeBrain-1",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6224719101123596,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": "II-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6179775280898876,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5 + GPT-5.2",
+          "system_description": "Warp",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6123595505617978,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": "Droid",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6112359550561798,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "system_description": "Mux",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6067415730337079,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.1-Codex-Max",
+          "system_description": "Codex CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.604494382022472,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.5",
+          "system_description": "Letta Code",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5910112359550562,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5 + Gemini 3 Pro + GPT-5-Nano",
+          "system_description": "Warp",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5910112359550562,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.5",
+          "system_description": "Mux",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5842696629213483,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5 + Gemini 3 Pro",
+          "system_description": "Abacus AI Desktop",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5842696629213483,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": "Claude Code",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5797752808988764,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.1-Codex",
+          "system_description": "Crux",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5775280898876405,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.5",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5775280898876405,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 4.20 Reasoning",
+          "system_description": "grok-cli",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5730337078651685,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5685393258426966,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": "Letta Code",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5595505617977528,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.5",
+          "system_description": "Goose",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5432584269662921,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5404494382022472,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.1-Codex",
+          "system_description": "Letta Code",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5348314606741573,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM 5",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5241573033707865,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.5",
+          "system_description": "Claude Code",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5213483146067416,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.5",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5191011235955056,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.5",
+          "system_description": "OpenCode",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5168539325842697,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Flash",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5168539325842697,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5 + Claude Sonnet 4.5 + GPT-5-Nano",
+          "system_description": "Warp",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.501123595505618,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": "Codex CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4960674157303371,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.1",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.47584269662921347,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 3 Flash",
+          "system_description": "Gemini CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.47415730337078654,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "system_description": "CAMEL-AI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4651685393258427,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Codex",
+          "system_description": "Codex CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.44325842696629214,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.43820224719101125,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Codex",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.43426966292134833,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Kimi K2.5",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.43202247191011234,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "system_description": "Goose",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4314606741573034,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.1-Codex-Mini",
+          "system_description": "Crux",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4314606741573034,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4280898876404494,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 4.5 Sonnet",
+          "system_description": "MAYA-V2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.42696629213483145,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "minimax-m2.5",
+          "system_description": "cchuter",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.42696629213483145,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4258426966292135,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.42528089887640447,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Minimax m2.5",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.42247191011235957,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Codex",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4134831460674157,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "system_description": "Claude Code",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.400561797752809,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3.2",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3955056179775281,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.1",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3797752808988764,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.1",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3685393258426966,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.1-Codex",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3685393258426966,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "MiniMax M2.1",
+          "system_description": "Crux",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.36629213483146067,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Kimi K2 Thinking",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.35730337078651686,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "system_description": "Goose",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3550561797752809,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.35168539325842696,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.1",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.350561797752809,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Mini",
+          "system_description": "spoox-m",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.34831460674157305,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.1",
+          "system_description": "Claude Code",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.34831460674157305,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3393258426966292,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM 4.7",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3338951310861423,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM 4.7",
+          "system_description": "Crux",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3325842696629214,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.32640449438202246,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Mini",
+          "system_description": "Codex CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3185393258426966,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "MiniMax M2",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.300374531835206,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.298314606741573,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "MiniMax M2.1",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.29213483146067415,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Mini",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.29213483146067415,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.28314606741573034,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Kimi K2 Instruct",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.27790262172284647,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "system_description": "Claude Code",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2752808988764045,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen 3 Coder 480B",
+          "system_description": "Dakou Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.27191011235955054,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 4",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.27191011235955054,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Kimi K2 Instruct",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.26741573033707866,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2606741573033708,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok Code Fast 1",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.25842696629213485,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen 3 Coder 480B",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2539325842696629,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 4",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2539325842696629,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM 4.6",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.24531835205992508,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Mini",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.24044943820224718,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen 3 Coder 480B",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2389513108614232,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 4",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.23146067415730337,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Mini",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.22247191011235956,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": "Gemini CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.19550561797752808,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-OSS-120B",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.18689138576779027,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1707865168539326,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "AfterQuery-GPT-OSS-20B",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1702247191011236,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.16853932584269662,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.16404494382022472,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.16404494382022472,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash",
+          "system_description": "Gemini CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1544943820224719,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok Code Fast 1",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.14157303370786517,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-OSS-120B",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.14157303370786517,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1393258426966292,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Nano",
+          "system_description": "Codex CLI",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1146067415730337,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Nano",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.09887640449438202,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Nano",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.07865168539325842,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-Nano",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0696629213483146,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-OSS-20B",
+          "system_description": "Mini-SWE-Agent",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.033707865168539325,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-OSS-20B",
+          "system_description": "Terminus 2",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.030711610486891385,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "tbench.ai terminal-bench@2.0 leaderboard."
+    }
+  ],
   "notes": null
 }

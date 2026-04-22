@@ -1,22 +1,642 @@
 {
-  "name": "paperbench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "name": "PaperBench",
+  "category": "Science & Research",
+  "used_llm_or_agent": "agent",
   "links": {
-    "website": null,
+    "website": "https://openai.com/index/paperbench/",
     "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "paper": "https://arxiv.org/abs/2504.01848",
+    "github": "https://github.com/openai/frontier-evals/tree/main/project/paperbench",
+    "dataset": "https://github.com/openai/frontier-evals/tree/main/project/paperbench/data/papers"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-04",
+    "num_tasks": "8316 individually gradable tasks; 20 papers"
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Average Replication Score (%)(over 3 times)",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-04",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2504.01848",
+      "results": [
+        {
+          "model": "Claude 3.5 Sonnet (New)",
+          "effort": null,
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Replication Score (%)",
+              "value": 0.21,
+              "stderr": 0.008,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-high",
+          "effort": "high",
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Replication Score (%)",
+              "value": 0.132,
+              "stderr": 0.003,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Replication Score (%)",
+              "value": 0.06,
+              "stderr": 0.003,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.0 Flash",
+          "effort": null,
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Replication Score (%)",
+              "value": 0.032,
+              "stderr": 0.002,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Replication Score (%)",
+              "value": 0.041,
+              "stderr": 0.001,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini-high",
+          "effort": "high",
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Replication Score (%)",
+              "value": 0.026,
+              "stderr": 0.002,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 4: BasicAgent scaffold results (12-hour time limit, single A10 GPU, 3 runs per paper, 20 papers). stderr is one standard error of the mean across 3 seeds, from Table 4 PDF. Values and stderr directly from Table 4."
+    },
+    {
+      "date": "2025-04",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2504.01848",
+      "results": [
+        {
+          "model": "o1-high",
+          "effort": "high",
+          "system_description": "BasicAgent (Code-Dev)",
+          "scores": [
+            {
+              "metric": "Replication Score (%)",
+              "value": 0.434,
+              "stderr": 0.008,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 6: PaperBench Code-Dev variant. Focuses on code-only replication tasks (excludes experiment-running and result-reporting tasks). o1-high achieves 43.4% on Code-Dev, much higher than its 13.2% on the full PaperBench."
+    },
+    {
+      "date": "2025-04",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2504.01848",
+      "results": [
+        {
+          "model": "Human (PhD students)",
+          "effort": null,
+          "system_description": "best@3, 48 hours, 3-paper subset",
+          "scores": [
+            {
+              "metric": "Replication Score (%)",
+              "value": 0.414,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-high",
+          "effort": "high",
+          "system_description": "BasicAgent, 3-paper subset",
+          "scores": [
+            {
+              "metric": "Replication Score (%)",
+              "value": 0.266,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Section on human baselines. Human performance measured on a 3-paper subset: 3 PhD students each attempt 3 papers (48-hour time limit), best@3 score reported. Humans achieve 41.4%; o1-high achieves 26.6% on the same subset. Note: human baseline is on a subset only, not the full 20-paper benchmark."
+    },
+    {
+      "date": "2025-04",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2504.01848",
+      "results": [
+        {
+          "model": "GPT-4o-mini",
+          "effort": null,
+          "system_description": "SimpleJudge (JudgeEval)",
+          "scores": [
+            {
+              "metric": "Accuracy",
+              "value": 0.63,
+              "unit": null
+            },
+            {
+              "metric": "Precision",
+              "value": 0.64,
+              "unit": null
+            },
+            {
+              "metric": "Recall",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "F1",
+              "value": 0.59,
+              "unit": null
+            },
+            {
+              "metric": "Cost (USD/paper)",
+              "value": 8,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": "SimpleJudge (JudgeEval)",
+          "scores": [
+            {
+              "metric": "Accuracy",
+              "value": 0.74,
+              "unit": null
+            },
+            {
+              "metric": "Precision",
+              "value": 0.74,
+              "unit": null
+            },
+            {
+              "metric": "Recall",
+              "value": 0.72,
+              "unit": null
+            },
+            {
+              "metric": "F1",
+              "value": 0.73,
+              "unit": null
+            },
+            {
+              "metric": "Cost (USD/paper)",
+              "value": 120,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o1-mini",
+          "effort": null,
+          "system_description": "SimpleJudge (JudgeEval), reasoning_effort=high",
+          "scores": [
+            {
+              "metric": "Accuracy",
+              "value": 0.81,
+              "unit": null
+            },
+            {
+              "metric": "Precision",
+              "value": 0.85,
+              "unit": null
+            },
+            {
+              "metric": "Recall",
+              "value": 0.76,
+              "unit": null
+            },
+            {
+              "metric": "F1",
+              "value": 0.78,
+              "unit": null
+            },
+            {
+              "metric": "Cost (USD/paper)",
+              "value": 72,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o1",
+          "effort": null,
+          "system_description": "SimpleJudge (JudgeEval), reasoning_effort=high",
+          "scores": [
+            {
+              "metric": "Accuracy",
+              "value": 0.84,
+              "unit": null
+            },
+            {
+              "metric": "Precision",
+              "value": 0.84,
+              "unit": null
+            },
+            {
+              "metric": "Recall",
+              "value": 0.84,
+              "unit": null
+            },
+            {
+              "metric": "F1",
+              "value": 0.84,
+              "unit": null
+            },
+            {
+              "metric": "Cost (USD/paper)",
+              "value": 830,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o3-mini",
+          "effort": null,
+          "system_description": "SimpleJudge (JudgeEval), reasoning_effort=high",
+          "scores": [
+            {
+              "metric": "Accuracy",
+              "value": 0.83,
+              "unit": null
+            },
+            {
+              "metric": "Precision",
+              "value": 0.83,
+              "unit": null
+            },
+            {
+              "metric": "Recall",
+              "value": 0.83,
+              "unit": null
+            },
+            {
+              "metric": "F1",
+              "value": 0.83,
+              "unit": null
+            },
+            {
+              "metric": "Cost (USD/paper)",
+              "value": 66,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Random",
+          "effort": null,
+          "system_description": "Random baseline (JudgeEval)",
+          "scores": [
+            {
+              "metric": "Accuracy",
+              "value": 0.48,
+              "unit": null
+            },
+            {
+              "metric": "Precision",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "Recall",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "F1",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "Cost (USD/paper)",
+              "value": 0,
+              "unit": "USD"
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 3: JudgeEval results — evaluating LLM-based judges, NOT agent replication scores. Macro-averaged metrics of different models as SimpleJudge backends for grading PaperBench submissions. o3-mini (reasoning_effort=high) is the chosen judge at F1=0.83, costing $66/paper. o1 achieves F1=0.84 but costs $830/paper."
+    },
+    {
+      "date": "2025-04",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2504.01848",
+      "results": [
+        {
+          "model": "Gemini 2.0 Flash",
+          "effort": null,
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.05,
+              "stderr": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.0,
+              "stderr": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.0,
+              "stderr": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.077,
+              "stderr": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.001,
+              "stderr": 0.001,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.0,
+              "stderr": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini-high",
+          "effort": "high",
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.051,
+              "stderr": 0.008,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.006,
+              "stderr": 0.001,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.004,
+              "stderr": 0.004,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-high",
+          "effort": "high",
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.195,
+              "stderr": 0.012,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.057,
+              "stderr": 0.009,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.0,
+              "stderr": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "effort": null,
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.098,
+              "stderr": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.01,
+              "stderr": 0.008,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.0,
+              "stderr": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet (New)",
+          "effort": null,
+          "system_description": "BasicAgent",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.354,
+              "stderr": 0.008,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.018,
+              "stderr": 0.007,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.007,
+              "stderr": 0.003,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini-high",
+          "effort": "high",
+          "system_description": "IterativeAgent",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.164,
+              "stderr": 0.014,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.006,
+              "stderr": 0.004,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.003,
+              "stderr": 0.001,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-high",
+          "effort": "high",
+          "system_description": "IterativeAgent",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.433,
+              "stderr": 0.011,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.045,
+              "stderr": 0.015,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.0,
+              "stderr": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet (New)",
+          "effort": null,
+          "system_description": "IterativeAgent",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.275,
+              "stderr": 0.016,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.011,
+              "stderr": 0.001,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.009,
+              "stderr": 0.004,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-high",
+          "effort": "high",
+          "system_description": "IterativeAgent, 36-hour limit",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.424,
+              "stderr": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.074,
+              "stderr": 0.011,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.014,
+              "stderr": 0.001,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Human (PhD students)",
+          "effort": null,
+          "system_description": "best@3, 3-paper subset",
+          "scores": [
+            {
+              "metric": "Code Development (%)",
+              "value": 0.724,
+              "unit": null
+            },
+            {
+              "metric": "Execution (%)",
+              "value": 0.204,
+              "unit": null
+            },
+            {
+              "metric": "Results Analysis (%)",
+              "value": 0.089,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 9 (Appendix I): Replication Scores stratified by requirement type. Code Development = code correctness; Execution = reproduce.sh runs successfully; Results Analysis = reproduced results match paper. stderr computed across 3 seeds (2 seeds for o1 IterativeAgent and Gemini BasicAgent). Human has no stderr (best@3, 3-paper subset). IterativeAgent removes early-stop, forces full time usage; significantly boosts o1/o3-mini but hampers Claude."
+    }
+  ],
+  "notes": "PaperBench evaluates AI agents on replicating machine learning research papers from scratch. Constructed from 20 ICML 2024 Spotlight and Oral papers, it contains 8,316 individually gradable leaf tasks organized in hierarchical rubrics.\n\nKey characteristics:\n- Agents must replicate research papers autonomously (12-hour time limit, single A10 GPU)\n- Rubrics co-developed with original paper authors\n- LLM judge (o3-mini SimpleJudge) achieves F1 = 0.83 vs human judges at $66/paper\n- Human baseline: 41.4% on a 3-paper subset (best@3, 48 hours)\n- PaperBench Code-Dev variant focuses on code-only replication (o1-high: 43.4%)\n\nTwo agent scaffolds tested:\n- BasicAgent: Simple loop with tool access (generate command → execute → observe)\n- IterativeAgent: Forces models to use full time budget, improves some models\n  (exact IterativeAgent scores not rendered in paper HTML; tables blank due to LaTeX rendering issues)\n\nCode at github.com/openai/frontier-evals. From OpenAI."
 }

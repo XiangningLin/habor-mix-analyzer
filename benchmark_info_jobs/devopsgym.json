@@ -1,22 +1,114 @@
 {
   "name": "DevOps-Gym",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "agent",
+
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
+    "website": "https://www.devops-gym.com/",
+    "leaderboard": "https://www.devops-gym.com/",
+    "paper": "https://arxiv.org/abs/2601.20882",
+    "github": "https://github.com/ucsb-mlsec/DevOps-Gym",
     "dataset": null
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2026-01",
+    "num_tasks": 733
   },
+
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "Resolved Rate (%) per category",
+    "harbor_aligned_metric": "Resolved Rate — Harbor adapter covers all 733 tasks. Parity on 50-task subset: codex+gpt-5-nano original 4.0%±0.89 vs harbor 3.6%±1.17; codex+gpt-5-mini original 22.67%±1.76 vs harbor 22.0%±0.0; openhands+claude-haiku-4-5 original 20.0%±1.15 vs harbor 19.33%±1.76."
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2026-01",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2601.20882",
+      "results": [
+        {
+          "model": "Claude-4-Sonnet",
+          "system_description": "Claude Code",
+          "scores": [
+            { "metric": "Build & Config (%)", "value": 0.5185, "unit": null },
+            { "metric": "Monitoring (%)", "value": 0.2056, "unit": null },
+            { "metric": "Issue Resolving (%)", "value": 0.2387, "unit": null },
+            { "metric": "Test Generation (%)", "value": 0.1387, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-4-Sonnet",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Build & Config (%)", "value": 0.4259, "unit": null },
+            { "metric": "Monitoring (%)", "value": 0.1470, "unit": null },
+            { "metric": "Issue Resolving (%)", "value": 0.2387, "unit": null },
+            { "metric": "Test Generation (%)", "value": 0.1161, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-4-Sonnet",
+          "system_description": "mini-SWE-Agent",
+          "scores": [
+            { "metric": "Build & Config (%)", "value": 0.2962, "unit": null },
+            { "metric": "Monitoring (%)", "value": 0.0291, "unit": null },
+            { "metric": "Issue Resolving (%)", "value": 0.0516, "unit": null },
+            { "metric": "Test Generation (%)", "value": 0.0098, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-4-Sonnet",
+          "system_description": "Aider",
+          "scores": [
+            { "metric": "Issue Resolving (%)", "value": 0.1710, "unit": null },
+            { "metric": "Test Generation (%)", "value": 0.0516, "unit": null }
+          ]
+        },
+        {
+          "model": "o4-mini",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Build & Config (%)", "value": 0.2407, "unit": null },
+            { "metric": "Monitoring (%)", "value": 0.0294, "unit": null },
+            { "metric": "Issue Resolving (%)", "value": 0.1645, "unit": null },
+            { "metric": "Test Generation (%)", "value": 0.0839, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini-2.5-Pro",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Build & Config (%)", "value": 0.2778, "unit": null },
+            { "metric": "Monitoring (%)", "value": 0.0000, "unit": null },
+            { "metric": "Issue Resolving (%)", "value": 0.1742, "unit": null },
+            { "metric": "Test Generation (%)", "value": 0.0645, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-v3.1",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Build & Config (%)", "value": 0.1852, "unit": null },
+            { "metric": "Monitoring (%)", "value": 0.0000, "unit": null },
+            { "metric": "Issue Resolving (%)", "value": 0.1355, "unit": null },
+            { "metric": "Test Generation (%)", "value": 0.0484, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen3-Coder-30B",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Build & Config (%)", "value": 0.0741, "unit": null },
+            { "metric": "Monitoring (%)", "value": 0.0000, "unit": null },
+            { "metric": "Issue Resolving (%)", "value": 0.0516, "unit": null },
+            { "metric": "Test Generation (%)", "value": 0.0161, "unit": null }
+          ]
+        }
+      ],
+      "note": "Paper baselines from Table 1. End-to-end pipeline tasks achieve 0% across all agent-model combinations (no agent completes all 4 stages). Build & Config has 54 tasks (repair + implementation). Monitoring has 34 tasks. Issue Resolving and Test Generation each have 310 tasks (same issues). End-to-end has 18 tasks. Some models score 0% on Monitoring. Gemini-2.5-Pro, DeepSeek-v3.1, and Qwen3-Coder-30B all get 0% on Monitoring."
+    }
+  ],
+
+  "notes": "DevOps-Gym is the first end-to-end benchmark covering core DevOps workflows. 733 tasks from 30+ Java and Go projects across 5 categories:\n\n1. **Build & Configuration** (66 tasks): Repair (dependency conflicts, misconfiguration, compilation errors, toolchain mismatches, dependency unavailability) and Implementation (migrations, upgrades, plugin integration)\n2. **Monitoring** (34 tasks): Resource anomalies (memory leaks, disk leaks, handle exhaustion, CPU spikes) and performance degradation (I/O bottlenecks, inefficient SQL). Agents use CLI tools without source code access.\n3. **Issue Resolving** (310 tasks): SWE-Bench style fail-to-pass test transitions on Java/Go repos\n4. **Test Generation** (310 tasks): SWT-Bench style test creation on same issues as Issue Resolving\n5. **End-to-End** (18 tasks): Sequential 4-stage pipelines (Build → Monitor → Fix → Test). 0% success rate across all models.\n\nNote: adapter_metadata.json lists 733 total (66 build + 34 monitor + 308 codegen + 308 testgen + 17 e2e), slightly different from paper counts (54 + 34 + 310 + 310 + 18 = 726). The adapter may include additional tasks or count differently.\n\nKey findings:\n- Best overall: Claude Code + Claude-4-Sonnet (51.85% build, 20.56% monitoring, 23.87% issue resolving, 13.87% test gen)\n- Monitoring is extremely hard: 0% for Gemini-2.5-Pro, DeepSeek-v3.1, and Qwen3-Coder-30B\n- Language bias: Claude-3.5-Sonnet drops from 70.4% on SWE-Bench-Verified (Python) to 23.87% on DevOps-Gym (Java/Go)\n- End-to-end: 0% across all agents — no agent can chain all 4 DevOps stages\n- Framework matters: Claude Code >> OpenHands >> mini-SWE-Agent with same model\n- Published at ICLR 2026\n\nHarbor adapter covers all 733 tasks with parity on 50-task subset (~6.8% sampling). Oracle achieves 100% across all 5 categories.\n\nLeaderboard exists at devops-gym.com but loads dynamically (couldn't scrape full data)."
 }

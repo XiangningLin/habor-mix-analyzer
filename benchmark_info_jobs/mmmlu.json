@@ -1,22 +1,103 @@
 {
   "name": "MMMLU",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Reasoning",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
+    "website": "https://huggingface.co/datasets/openai/MMMLU",
     "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "paper": "https://arxiv.org/abs/2009.03300",
+    "github": "https://github.com/openai/simple-evals",
+    "dataset": "https://huggingface.co/datasets/openai/MMMLU"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2024-09",
+    "num_tasks": 210630
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "Average accuracy across 57 translated MMLU subject categories and 14 languages",
+    "harbor_aligned_metric": "Accuracy (%) on a 150-unit MMMLU Harbor parity subset (10 questions per language × 15 languages), averaged over 5 runs; parity: codex + gpt-5.1-codex-mini; 63.33 ± 0.47% (Harbor) vs 63.47 ± 0.53% (original)"
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-08",
+      "source_type": "paper",
+      "source_url": "https://cdn.openai.com/pdf/419b6906-9da6-406c-a19d-1bb078ac7637/oai_gpt-oss_model_card.pdf",
+      "results": [
+        {
+          "model": "OpenAI o3",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.888, "unit": null }
+          ]
+        },
+        {
+          "model": "OpenAI o4-mini",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.852, "unit": null }
+          ]
+        },
+        {
+          "model": "OpenAI o3-mini",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.807, "unit": null }
+          ]
+        },
+        {
+          "model": "gpt-oss-120b",
+          "system_description": null,
+          "effort": "high",
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.813, "unit": null }
+          ]
+        },
+        {
+          "model": "gpt-oss-120b",
+          "system_description": null,
+          "effort": "medium",
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.793, "unit": null }
+          ]
+        },
+        {
+          "model": "gpt-oss-120b",
+          "system_description": null,
+          "effort": "low",
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.741, "unit": null }
+          ]
+        },
+        {
+          "model": "gpt-oss-20b",
+          "system_description": null,
+          "effort": "high",
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.757, "unit": null }
+          ]
+        },
+        {
+          "model": "gpt-oss-20b",
+          "system_description": null,
+          "effort": "medium",
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.735, "unit": null }
+          ]
+        },
+        {
+          "model": "gpt-oss-20b",
+          "system_description": null,
+          "effort": "low",
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.67, "unit": null }
+          ]
+        }
+      ],
+      "note": "Reported MMMLU average accuracy across 14 languages from the OpenAI gpt-oss model card."
+    }
+  ],
+  "notes": "MMMLU is the MMLU test set translated by professional human translators into 14 languages: Arabic, Bengali, German, Spanish, French, Hindi, Indonesian, Italian, Japanese, Korean, Brazilian Portuguese, Swahili, Yoruba, and Simplified Chinese. The translated benchmark preserves the 57 original MMLU subject categories. If your schema uses num_tasks to mean total evaluation examples instead of subject categories, the translated dataset contains about 14k questions per language."
 }

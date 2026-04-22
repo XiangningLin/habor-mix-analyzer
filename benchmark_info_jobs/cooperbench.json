@@ -1,22 +1,161 @@
 {
   "name": "CooperBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "agent",
+
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://cooperbench.com/",
+    "leaderboard": "https://cooperbench.com/leaderboard",
+    "paper": "https://arxiv.org/abs/2601.13295",
+    "github": "https://github.com/cooperbench/CooperBench",
+    "dataset": "https://huggingface.co/datasets/CodeConflict/cooperbench-dataset"
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-01",
+    "num_tasks": 652
   },
+
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "Cooperative Success Rate (Coop)",
+    "harbor_aligned_metric": "pass_rate — Harbor adapter covers all 652 tasks. Parity on flash subset (50 pairs): original 32.7% ±2.3% vs harbor 30.7% ±2.3% (3 runs each) with openhands-sdk@1.10.0+gemini-3-flash-preview."
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2025-01",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2601.13295",
+      "results": [
+        {
+          "model": "GPT-5",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.48, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.28, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.20, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.47, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.26, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.21, "unit": null }
+          ]
+        },
+        {
+          "model": "MiniMax-M2",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.36, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.14, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.22, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen3-Coder-30B-A3B-Instruct",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.22, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.13, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.09, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen3-30B-A3B-Instruct-2507",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.06, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.05, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.01, "unit": null }
+          ]
+        }
+      ],
+      "note": "Paper release baselines from Figure 4. All use OpenHands v0.54 agent framework. Solo = one agent does both features. Coop = two agents each do one feature, communicating via SQL-based message passing. 100 action steps budget per agent. Error bars are 95% Wilson confidence intervals."
+    },
+    {
+      "date": "2026-04",
+      "source_type": "leaderboard",
+      "source_url": "https://cooperbench.com/leaderboard",
+      "results": [
+        {
+          "model": "Gemini-3-Flash",
+          "system_description": "OpenHands SDK",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.486, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.262, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.224, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.4831, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.2795, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.2036, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.471, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.259, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.212, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini-3-Pro",
+          "system_description": "Mini-SWE",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.368, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.204, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.164, "unit": null }
+          ]
+        },
+        {
+          "model": "MiniMax-M2",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.362, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.140, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.222, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini-3-Flash",
+          "system_description": "Mini-SWE",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.252, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.123, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.129, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen3-Coder-30B",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.216, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.133, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.083, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen3-30B",
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Solo Success Rate", "value": 0.063, "unit": null },
+            { "metric": "Coop Success Rate", "value": 0.046, "unit": null },
+            { "metric": "Coordination Gap", "value": -0.017, "unit": null }
+          ]
+        }
+      ],
+      "note": "Current leaderboard snapshot as of 2026-04-18. Leaderboard tracks Solo, Coop, and Gap metrics. Gemini-3-Flash (OpenHands SDK) tops the leaderboard by Coop rate. Multiple agent frameworks (OpenHands, OpenHands SDK, Mini-SWE) are represented."
+    }
+  ],
+
+  "notes": "CooperBench evaluates multi-agent cooperation on shared codebases. Two agents work simultaneously on paired features from the same repository, communicating via message passing to avoid merge conflicts while delivering working code.\n\nKey characteristics:\n- 199 features across 30 tasks from 12 open-source repositories\n- 652 unique feature pairs (tasks) from C(n,2) combinations within each feature pool\n- 4 languages: Python, TypeScript, Go, Rust\n- 8 annotators with software engineering backgrounds\n- Expert-written features, unit tests, and ground-truth solutions\n- 77.3% of tasks have conflicting ground-truth solutions\n- Tasks not adversarial but require coordination under conflicts\n\nCore finding — 'The Curse of Coordination': agents consistently perform worse in Coop vs Solo settings (~50% coordination gap for leading models). Communication tool does not improve success rate but does reduce merge conflicts.\n\nThree capability gaps identified:\n1. Expectation failures (42%): agents neglect partner state information\n2. Commitment failures (32%): agents break promises or make unverifiable assertions\n3. Communication failures (26%): unanswered questions, vague/repetitive messages\n\nEmergent coordination patterns in successful cases: role division, resource division, negotiation.\n\nScaling experiment: 2 agents (68.6%) → 3 agents (46.5%) → 4 agents (30.0%) on 46-task subset.\n\nHarbor adapter covers all 652 tasks. Uses OpenHands SDK with isolated Docker volumes and Redis for message brokering."
 }

@@ -1,22 +1,185 @@
 {
   "name": "AA-LCR",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Reasoning",
+  "used_llm_or_agent": "llm",
+
   "links": {
-    "website": null,
-    "leaderboard": null,
+    "website": "https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
+    "leaderboard": "https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
     "paper": null,
     "github": null,
-    "dataset": null
+    "dataset": "https://huggingface.co/datasets/ArtificialAnalysis/AA-LCR"
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-08",
+    "num_tasks": 100
   },
+
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "accuracy",
+    "harbor_aligned_metric": "accuracy (pass@1). A Harbor adapter is in flight at https://github.com/harbor-framework/harbor/pull/1397 (OPEN as of April 2026). It evaluates 99 of 100 tasks (task 2 excluded for an unfixable ground truth error; tasks 40 and 94 ship with corrected answers) and uses GPT-5-mini as the LLM equality judge rather than AA's Qwen3 235B. Cleanest parity run: codex@0.117.0+gpt-5-mini scored 0.687 (68/99) on Harbor vs 0.68 for gpt-5-mini on AA's direct-LLM leaderboard (2026-04-10). Three other parity runs (claude-code@2.1.104+claude-haiku-4-5, terminus-2@2.0.0+gpt-5-mini, terminus-2@2.0.0+claude-haiku-4-5) diverge more widely because AA-LCR has no native agent harness, and the scaffold choice has a large effect on long-context document QA."
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2025-08-05",
+      "source_type": "blog",
+      "source_url": "https://artificialanalysis.ai/articles/announcing-aa-lcr",
+      "results": [
+        {
+          "model": "OpenAI o3",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.69, "unit": null }
+          ]
+        },
+        {
+          "model": "xAI Grok 4",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.68, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen3 235B 2507 Reasoning variant",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.67, "unit": null }
+          ]
+        },
+        {
+          "model": "LG Exaone 4.0 32B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.14, "unit": null }
+          ]
+        }
+      ],
+      "note": "Launch scores called out in Artificial Analysis's announcement blog on 2025-08-05. At release the frontier reasoning models clustered around 69%, and LG Exaone 4.0 32B is included as the explicit low-scoring counterexample the blog highlighted. Human first-attempt accuracy on AA-LCR is reported at 40 to 60 percent."
+    },
+    {
+      "date": "2026-04-19",
+      "source_type": "leaderboard",
+      "source_url": "https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning",
+      "results": [
+        {
+          "model": "GPT-5.2 Codex",
+          "system_description": "xhigh",
+          "scores": [
+            { "metric": "accuracy", "value": 0.757, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": "high",
+          "scores": [
+            { "metric": "accuracy", "value": 0.756, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5.1",
+          "system_description": "high",
+          "scores": [
+            { "metric": "accuracy", "value": 0.750, "unit": null }
+          ]
+        }
+      ],
+      "note": "Top 3 verified directly from the Artificial Analysis leaderboard page on 2026-04-19. Reasoning-effort tiers (xhigh / high) are copied verbatim from the model-variant label on AA's page."
+    },
+    {
+      "date": "2026-04-19",
+      "source_type": "leaderboard",
+      "source_url": "https://pricepertoken.com/leaderboards/benchmark/lcr",
+      "results": [
+        {
+          "model": "KAT-Coder-Pro V1",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.740, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.5",
+          "system_description": "Thinking",
+          "scores": [
+            { "metric": "accuracy", "value": 0.740, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5.3 Codex",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.740, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5.4",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.740, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.728, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5.2 Pro",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.727, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 3.1 Pro Preview",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.727, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro Preview",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.707, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": "Thinking",
+          "scores": [
+            { "metric": "accuracy", "value": 0.707, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4.6",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.707, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "system_description": "Thinking",
+          "scores": [
+            { "metric": "accuracy", "value": 0.703, "unit": null }
+          ]
+        },
+        {
+          "model": "OpenAI o3",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.693, "unit": null }
+          ]
+        }
+      ],
+      "note": "Ranks 4-15 as of 2026-04-19. Source is a third-party mirror (pricepertoken.com) that explicitly cites Artificial Analysis as its data origin. It is recorded here as a separate entry from the top-3-from-AA entry because AA's primary leaderboard renders scores client-side via JavaScript and a single static fetch returns only the top few rows; the mirror's top 3 match AA's page exactly, which is the provenance signal supporting the remaining ranks. Reasoning-effort tiers (Thinking) are copied verbatim; entries without a declared tier have system_description=null. Ranks 6 and 7 (GPT-5.3 Codex and GPT-5.4, both 0.740) appear distinct on the mirror but have not been individually re-verified against AA."
+    }
+  ],
+
+  "notes": "AA-LCR is Artificial Analysis's long context reasoning benchmark. It ships 100 human-crafted questions that each require reading roughly 100K input tokens and then reasoning across several documents to arrive at a single correct answer. The dataset draws from seven real-world document categories: company reports, industry reports, government consultations, academic papers, legal documents, marketing materials, and survey reports. In total the corpus is about 3M tokens spanning 30 document sets and 234 documents.\n\nScoring is pass@1 accuracy. A candidate answer is compared against a human-verified reference by an LLM equality checker (Qwen3 235B A22B 2507 in non-reasoning mode). That design avoids brittle string matching but does introduce some dependence on the judge model. Human first-attempt accuracy is reported at 40 to 60 percent, which is why the task remains hard even for specialists.\n\nAA-LCR is one component of the Artificial Analysis Intelligence Index. There is no academic paper or public code repository, so the `paper` and `github` fields are null. The announcement blog (https://artificialanalysis.ai/articles/announcing-aa-lcr) and the Intelligence Benchmarking methodology page (https://artificialanalysis.ai/methodology/intelligence-benchmarking) are the canonical technical references. A Harbor adapter (harbor-framework/harbor PR #1397, OPEN as of April 2026) wraps the benchmark for agent evaluation. It runs 99 of the 100 tasks, swaps in GPT-5-mini as the LLM equality judge, and records four parity runs in its `parity_experiment.json` covering codex, claude-code, and terminus-2 scaffolds."
 }

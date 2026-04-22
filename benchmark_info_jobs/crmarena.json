@@ -1,22 +1,306 @@
 {
   "name": "CRMArena",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://huggingface.co/spaces/Salesforce/CRMArena-Leaderboard",
+    "leaderboard": "https://huggingface.co/spaces/Salesforce/CRMArena-Leaderboard",
+    "paper": "https://arxiv.org/abs/2411.02305",
+    "github": "https://github.com/SalesforceAIResearch/CRMArena",
+    "dataset": "https://github.com/SalesforceAIResearch/CRMArena"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2024-11-04",
+    "num_tasks": 1170
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "overall_mean",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2024-11-04",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/pdf/2411.02305",
+      "results": [
+        {
+          "model": "gpt-4o",
+          "system_description": "Act",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.294,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-mini",
+          "system_description": "Act",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.167,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3.5-sonnet",
+          "system_description": "Act",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.374,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3-sonnet",
+          "system_description": "Act",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.166,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama3.1-405b",
+          "system_description": "Act",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.222,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama3.1-70b",
+          "system_description": "Act",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.186,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama3.1-8b",
+          "system_description": "Act",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.025,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o",
+          "system_description": "ReAct",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.382,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-mini",
+          "system_description": "ReAct",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.283,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3.5-sonnet",
+          "system_description": "ReAct",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.343,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3-sonnet",
+          "system_description": "ReAct",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.173,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama3.1-405b",
+          "system_description": "ReAct",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.338,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama3.1-70b",
+          "system_description": "ReAct",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.278,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama3.1-8b",
+          "system_description": "ReAct",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.031,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1",
+          "system_description": "ReAct",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.577,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "deepseek-r1",
+          "system_description": "ReAct",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.351,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o",
+          "system_description": "Function Calling",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.544,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-mini",
+          "system_description": "Function Calling",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.195,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3.5-sonnet",
+          "system_description": "Function Calling",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.418,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3-sonnet",
+          "system_description": "Function Calling",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.151,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama3.1-405b",
+          "system_description": "Function Calling (prompt)",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.513,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama3.1-70b",
+          "system_description": "Function Calling (prompt)",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.411,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "llama3.1-8b",
+          "system_description": "Function Calling (prompt)",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1",
+          "system_description": "Function Calling (prompt)",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.643,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "deepseek-r1",
+          "system_description": "Function Calling (prompt)",
+          "scores": [
+            {
+              "metric": "overall_mean",
+              "value": 0.09,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Paper Table 2 reports per-task scores for 9 tasks plus ALL. Here I only kept the aggregate ALL/overall_mean column as the main benchmark score, as shown in the leaderboard. The paper states KQA uses F1, while all other tasks use exact match."
+    }
+  ],
+  "notes": "num_tasks counts benchmark instances: CRMArena has 1,170 test instances, organized as 9 task types * 130 instances each. The primary metric name is overall_mean, matching the adapter README parity metric. It is an overall mean across task types; knowledge_qa is scored by fuzzy token-level F1 and all other task types are scored by exact match."
 }

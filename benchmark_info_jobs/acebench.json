@@ -1,22 +1,1360 @@
 {
-  "name": "acebench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "name": "ACEBench",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://chenchen0103.github.io/ACEBench/",
+    "leaderboard": "https://chenchen0103.github.io/ACEBench/",
+    "paper": "https://arxiv.org/pdf/2501.12851",
+    "github": "https://github.com/chenchen0103/ACEBench",
+    "dataset": "https://huggingface.co/datasets/oliveirabruno01/acebench"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-01-22",
+    "num_tasks": 2000
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Overall Accuracy",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
+  "results_over_time": [
+    {
+      "date": "2025-11-20",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/pdf/2501.12851",
+      "note": "Table 2. Comprehensive evaluation on ACEBench for Chinese and English combined (percentage).",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.934, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.845, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.77, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.85, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.876, "unit": null },
+            { "metric": "accuracy_special", "value": 0.93, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.638, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.854, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4-Turbo",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.932, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.848, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.775, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.86, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.86, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.88, "unit": null },
+            { "metric": "accuracy_special", "value": 0.867, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.675, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.845, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen-Max",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.912, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.805, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.68, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.842, "unit": null },
+            { "metric": "accuracy_special", "value": 0.74, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.643, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.784, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o-Mini",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.865, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.665, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.77, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.799, "unit": null },
+            { "metric": "accuracy_special", "value": 0.79, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.333, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.725, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Pro",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.845, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.768, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.645, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.8, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.79, "unit": null },
+            { "metric": "accuracy_special", "value": 0.787, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.255, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.707, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3-5-Sonnet",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.769, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.725, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.625, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.71, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.729, "unit": null },
+            { "metric": "accuracy_special", "value": 0.774, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.395, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.689, "unit": null }
+          ]
+        },
+        {
+          "model": "Doubao-Pro-32k",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.798, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.555, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.66, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.707, "unit": null },
+            { "metric": "accuracy_special", "value": 0.55, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.25, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.594, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.902, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.81, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.71, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.81, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.841, "unit": null },
+            { "metric": "accuracy_special", "value": 0.807, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.608, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.796, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.915, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.84, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.77, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.865, "unit": null },
+            { "metric": "accuracy_special", "value": 0.73, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.345, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.748, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.868, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.803, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.695, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.81, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.821, "unit": null },
+            { "metric": "accuracy_special", "value": 0.757, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.45, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.747, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.1-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.825, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.683, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.635, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.79, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.68, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.755, "unit": null },
+            { "metric": "accuracy_special", "value": 0.383, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.423, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.604, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.603, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.585, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.67, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.694, "unit": null },
+            { "metric": "accuracy_special", "value": 0.47, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.138, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.548, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Lite-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.752, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.578, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.465, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.65, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.664, "unit": null },
+            { "metric": "accuracy_special", "value": 0.403, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.02, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.495, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.638, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.575, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.74, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.68, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.701, "unit": null },
+            { "metric": "accuracy_special", "value": 0.223, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.155, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.489, "unit": null }
+          ]
+        },
+        {
+          "model": "Watt-Tool-8B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.857, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.693, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.555, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.79, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.64, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.756, "unit": null },
+            { "metric": "accuracy_special", "value": 0.06, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.028, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.457, "unit": null }
+          ]
+        },
+        {
+          "model": "Hammer2.1-7B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.737, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.575, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.4, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.62, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.55, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.628, "unit": null },
+            { "metric": "accuracy_special", "value": 0.147, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.168, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.429, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.1-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.519, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.398, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.28, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.66, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.46, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.466, "unit": null },
+            { "metric": "accuracy_special", "value": 0.21, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.053, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.334, "unit": null }
+          ]
+        },
+        {
+          "model": "Phi-3-Mini-128k-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.572, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.393, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.23, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.32, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.465, "unit": null },
+            { "metric": "accuracy_special", "value": 0.187, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.008, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.32, "unit": null }
+          ]
+        },
+        {
+          "model": "xLAM-7B-r",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.435, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.22, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.19, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.61, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.0, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.337, "unit": null },
+            { "metric": "accuracy_special", "value": 0.027, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.088, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.216, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.2-3B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.387, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.153, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.09, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.42, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.32, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.296, "unit": null },
+            { "metric": "accuracy_special", "value": 0.094, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.0, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.196, "unit": null }
+          ]
+        },
+        {
+          "model": "Hammer2.1-3B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.224, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.115, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.035, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.4, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.2, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.187, "unit": null },
+            { "metric": "accuracy_special", "value": 0.01, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.015, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.113, "unit": null }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-07-21",
+      "source_type": "leaderboard",
+      "source_url": "https://chenchen0103.github.io/ACEBench/",
+      "note": "Leaderboard for Chinese and English combined. Values are exact matches to Table 2 in the paper.",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.934, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.845, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.77, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.85, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.876, "unit": null },
+            { "metric": "accuracy_special", "value": 0.93, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.638, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.854, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4-Turbo",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.932, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.848, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.775, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.86, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.86, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.88, "unit": null },
+            { "metric": "accuracy_special", "value": 0.867, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.675, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.845, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen-Max",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.912, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.805, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.68, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.842, "unit": null },
+            { "metric": "accuracy_special", "value": 0.74, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.643, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.784, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o-Mini",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.865, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.665, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.77, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.799, "unit": null },
+            { "metric": "accuracy_special", "value": 0.79, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.333, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.725, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Pro",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.845, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.768, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.645, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.8, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.79, "unit": null },
+            { "metric": "accuracy_special", "value": 0.787, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.255, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.707, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3-5-Sonnet",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.769, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.725, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.625, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.71, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.729, "unit": null },
+            { "metric": "accuracy_special", "value": 0.774, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.395, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.689, "unit": null }
+          ]
+        },
+        {
+          "model": "Doubao-Pro-32k",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.798, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.555, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.66, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.707, "unit": null },
+            { "metric": "accuracy_special", "value": 0.55, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.25, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.594, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.902, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.81, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.71, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.81, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.841, "unit": null },
+            { "metric": "accuracy_special", "value": 0.807, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.608, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.796, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.915, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.84, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.77, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.865, "unit": null },
+            { "metric": "accuracy_special", "value": 0.73, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.345, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.748, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.868, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.803, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.695, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.81, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.821, "unit": null },
+            { "metric": "accuracy_special", "value": 0.757, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.45, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.747, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.1-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.825, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.683, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.635, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.79, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.68, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.755, "unit": null },
+            { "metric": "accuracy_special", "value": 0.383, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.423, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.604, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.603, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.585, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.67, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.694, "unit": null },
+            { "metric": "accuracy_special", "value": 0.47, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.138, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.548, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Lite-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.752, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.578, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.465, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.65, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.664, "unit": null },
+            { "metric": "accuracy_special", "value": 0.403, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.02, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.495, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.638, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.575, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.74, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.68, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.701, "unit": null },
+            { "metric": "accuracy_special", "value": 0.223, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.155, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.489, "unit": null }
+          ]
+        },
+        {
+          "model": "Watt-Tool-8B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.857, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.693, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.555, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.79, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.64, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.756, "unit": null },
+            { "metric": "accuracy_special", "value": 0.06, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.028, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.457, "unit": null }
+          ]
+        },
+        {
+          "model": "Hammer2.1-7B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.737, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.575, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.4, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.62, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.55, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.628, "unit": null },
+            { "metric": "accuracy_special", "value": 0.147, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.168, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.429, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.1-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.519, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.398, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.28, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.66, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.46, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.466, "unit": null },
+            { "metric": "accuracy_special", "value": 0.21, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.053, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.334, "unit": null }
+          ]
+        },
+        {
+          "model": "Phi-3-Mini-128k-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.572, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.393, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.23, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.32, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.465, "unit": null },
+            { "metric": "accuracy_special", "value": 0.187, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.008, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.32, "unit": null }
+          ]
+        },
+        {
+          "model": "xLAM-7B-r",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.435, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.22, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.19, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.61, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.0, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.337, "unit": null },
+            { "metric": "accuracy_special", "value": 0.027, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.088, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.216, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.2-3B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.387, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.153, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.09, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.42, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.32, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.296, "unit": null },
+            { "metric": "accuracy_special", "value": 0.094, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.0, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.196, "unit": null }
+          ]
+        },
+        {
+          "model": "Hammer2.1-3B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.224, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.115, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.035, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.4, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.2, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.187, "unit": null },
+            { "metric": "accuracy_special", "value": 0.01, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.015, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.113, "unit": null }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-07-21",
+      "source_type": "leaderboard",
+      "source_url": "https://chenchen0103.github.io/ACEBench/",
+      "note": "Chinese leaderboard only.",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.967, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.91, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.86, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.9, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.88, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.927, "unit": null },
+            { "metric": "accuracy_special", "value": 0.933, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.715, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.896, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemi-2.5-Pro-05-06",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.913, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.79, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.84, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.8, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.863, "unit": null },
+            { "metric": "accuracy_special", "value": 0.893, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.7, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.854, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen-Max",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.943, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.86, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.75, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.92, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.84, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.887, "unit": null },
+            { "metric": "accuracy_special", "value": 0.74, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.685, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.817, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o-Mini",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.887, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.785, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.74, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.8, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.834, "unit": null },
+            { "metric": "accuracy_special", "value": 0.813, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.39, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.76, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3-5-Sonnet",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.87, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.81, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.79, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.84, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.835, "unit": null },
+            { "metric": "accuracy_special", "value": 0.82, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.35, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.756, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemi-1.5-Pro",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.867, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.805, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.68, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.86, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.84, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.822, "unit": null },
+            { "metric": "accuracy_special", "value": 0.8, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.25, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.728, "unit": null }
+          ]
+        },
+        {
+          "model": "Doubao-Pro-32K",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.843, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.53, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.64, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.82, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.75, "unit": null },
+            { "metric": "accuracy_special", "value": 0.593, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.235, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.628, "unit": null }
+          ]
+        },
+        {
+          "model": "Kimi-k2-0711",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.913, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.875, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.8, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.86, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.879, "unit": null },
+            { "metric": "accuracy_special", "value": 0.867, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.834, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.869, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.943, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.885, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.83, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.9, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.9, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.908, "unit": null },
+            { "metric": "accuracy_special", "value": 0.813, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.715, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.853, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.923, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.86, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.75, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.9, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.82, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.873, "unit": null },
+            { "metric": "accuracy_special", "value": 0.773, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.525, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.795, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeekV3",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.95, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.905, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.91, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.9, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.88, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.926, "unit": null },
+            { "metric": "accuracy_special", "value": 0.733, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.35, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.785, "unit": null }
+          ]
+        },
+        {
+          "model": "ToolACE-2.5-Llama-3.1-8B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.903, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.855, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.88, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.859, "unit": null },
+            { "metric": "accuracy_special", "value": 0.753, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.217, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.732, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.1-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.813, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.65, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.66, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.84, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.7, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.753, "unit": null },
+            { "metric": "accuracy_special", "value": 0.473, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.435, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.629, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.817, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.635, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.68, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.82, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.759, "unit": null },
+            { "metric": "accuracy_special", "value": 0.447, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.125, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.578, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Lite-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.787, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.575, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.43, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.82, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.7, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.688, "unit": null },
+            { "metric": "accuracy_special", "value": 0.413, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.015, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.511, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.787, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.64, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.63, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.735, "unit": null },
+            { "metric": "accuracy_special", "value": 0.193, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.125, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.496, "unit": null }
+          ]
+        },
+        {
+          "model": "Watt-Toolx8",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.87, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.67, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.54, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.88, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.66, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.763, "unit": null },
+            { "metric": "accuracy_special", "value": 0.1, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.04, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.471, "unit": null }
+          ]
+        },
+        {
+          "model": "Hammer2.1-7B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.625, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.37, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.6, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.627, "unit": null },
+            { "metric": "accuracy_special", "value": 0.26, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.185, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.461, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.1-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.527, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.3, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.28, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.36, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.45, "unit": null },
+            { "metric": "accuracy_special", "value": 0.267, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.04, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.338, "unit": null }
+          ]
+        },
+        {
+          "model": "Phi-3-Mini-128K-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.48, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.295, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.15, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.32, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.389, "unit": null },
+            { "metric": "accuracy_special", "value": 0.253, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.015, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.295, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.2-3B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.457, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.09, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.09, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.5, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.32, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.327, "unit": null },
+            { "metric": "accuracy_special", "value": 0.1, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.0, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.216, "unit": null }
+          ]
+        },
+        {
+          "model": "xLAM-7B-r",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.253, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.02, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.06, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.56, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.0, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.187, "unit": null },
+            { "metric": "accuracy_special", "value": 0.013, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.075, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.123, "unit": null }
+          ]
+        },
+        {
+          "model": "Hammer2.1-3B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.12, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.09, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.0, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.44, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.08, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.118, "unit": null },
+            { "metric": "accuracy_special", "value": 0.013, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.015, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.074, "unit": null }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-07-21",
+      "source_type": "leaderboard",
+      "source_url": "https://chenchen0103.github.io/ACEBench/",
+      "note": "English leaderboard only.",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.9, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.68, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.8, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.825, "unit": null },
+            { "metric": "accuracy_special", "value": 0.927, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.56, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.811, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemi-2.5-Pro-05-06",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.837, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.735, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.61, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.751, "unit": null },
+            { "metric": "accuracy_special", "value": 0.907, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.525, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.758, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen-Max",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.88, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.75, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.61, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.74, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.82, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.797, "unit": null },
+            { "metric": "accuracy_special", "value": 0.74, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.6, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.751, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4-Mini",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.843, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.735, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.59, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.74, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.764, "unit": null },
+            { "metric": "accuracy_special", "value": 0.767, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.275, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.689, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemi-1.5-Pro",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.823, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.73, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.61, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.74, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.757, "unit": null },
+            { "metric": "accuracy_special", "value": 0.773, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.26, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.685, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.667, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.64, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.46, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.68, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.622, "unit": null },
+            { "metric": "accuracy_special", "value": 0.727, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.44, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.622, "unit": null }
+          ]
+        },
+        {
+          "model": "DoubaoPro-32K",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.753, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.52, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.7, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.54, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.663, "unit": null },
+            { "metric": "accuracy_special", "value": 0.507, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.265, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.568, "unit": null }
+          ]
+        },
+        {
+          "model": "Kimi-k2-0711",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.87, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.785, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.62, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.7, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.74, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.789, "unit": null },
+            { "metric": "accuracy_special", "value": 0.813, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.65, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.774, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.86, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.735, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.59, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.72, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.774, "unit": null },
+            { "metric": "accuracy_special", "value": 0.8, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.5, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.739, "unit": null }
+          ]
+        },
+        {
+          "model": "ToolACE-2.5-Llama-3.1-8B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.87, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.755, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.62, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.74, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.66, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.783, "unit": null },
+            { "metric": "accuracy_special", "value": 0.76, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.359, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.711, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeekV3",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.88, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.775, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.63, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.78, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.803, "unit": null },
+            { "metric": "accuracy_special", "value": 0.727, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.34, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.711, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.813, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.745, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.64, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.76, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.8, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.768, "unit": null },
+            { "metric": "accuracy_special", "value": 0.74, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.375, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.7, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.1-70B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.837, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.715, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.61, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.74, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.66, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.756, "unit": null },
+            { "metric": "accuracy_special", "value": 0.293, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.41, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.579, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.703, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.57, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.49, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.62, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.628, "unit": null },
+            { "metric": "accuracy_special", "value": 0.493, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.15, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.51, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-lite-Instruc",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.717, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.5, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.62, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.6, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.64, "unit": null },
+            { "metric": "accuracy_special", "value": 0.393, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.025, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.479, "unit": null }
+          ]
+        },
+        {
+          "model": "Watt-Toolx8B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.847, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.715, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.57, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.7, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.62, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.748, "unit": null },
+            { "metric": "accuracy_special", "value": 0.02, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.04, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.447, "unit": null }
+          ]
+        },
+        {
+          "model": "Hammer2.1-7B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.713, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.625, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.43, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.64, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.52, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.629, "unit": null },
+            { "metric": "accuracy_special", "value": 0.033, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.15, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.396, "unit": null }
+          ]
+        },
+        {
+          "model": "Phi-3-mini-128K-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.663, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.49, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.31, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.58, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.32, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.54, "unit": null },
+            { "metric": "accuracy_special", "value": 0.12, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.0, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.344, "unit": null }
+          ]
+        },
+        {
+          "model": "mLlama-3.1-8B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.51, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.495, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.28, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.6, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.56, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.481, "unit": null },
+            { "metric": "accuracy_special", "value": 0.153, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.065, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.329, "unit": null }
+          ]
+        },
+        {
+          "model": "xLAM-7b-",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.617, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.42, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.32, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.66, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.0, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.487, "unit": null },
+            { "metric": "accuracy_special", "value": 0.04, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.0, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.306, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama-3.2-3B-Instruct",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.317, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.215, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.09, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.34, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.32, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.264, "unit": null },
+            { "metric": "accuracy_special", "value": 0.087, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.0, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.176, "unit": null }
+          ]
+        },
+        {
+          "model": "Hammer2.1-3B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy_normal_atom", "value": 0.327, "unit": null },
+            { "metric": "accuracy_normal_single_turn", "value": 0.14, "unit": null },
+            { "metric": "accuracy_normal_multi_turn", "value": 0.07, "unit": null },
+            { "metric": "accuracy_normal_similar_api", "value": 0.36, "unit": null },
+            { "metric": "accuracy_normal_preference", "value": 0.32, "unit": null },
+            { "metric": "accuracy_normal_summary", "value": 0.255, "unit": null },
+            { "metric": "accuracy_special", "value": 0.007, "unit": null },
+            { "metric": "accuracy_agent", "value": 0.015, "unit": null },
+            { "metric": "accuracy_overall", "value": 0.152, "unit": null }
+          ]
+        }
+      ]
+    }
+  ],
   "notes": null
 }

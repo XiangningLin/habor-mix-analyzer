@@ -1,22 +1,75 @@
 {
   "name": "SWE-Lancer",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Repo-level Software Engineering",
+  "used_llm_or_agent": "agent",
+
   "links": {
-    "website": null,
+    "website": "https://openai.com/index/swe-lancer/",
     "leaderboard": null,
-    "paper": null,
-    "github": null,
+    "paper": "https://arxiv.org/abs/2502.12115",
+    "github": "https://github.com/openai/SWELancer-Benchmark",
     "dataset": null
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-02",
+    "num_tasks": 1488
   },
+
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "pass@1",
+    "harbor_aligned_metric": "Pass Rate (%) — Harbor adapter covers Diamond split (463 tasks). Parity: original 48.38% ±1.40% vs harbor 47.56% ±0.86% (claude-code@1.0.53+claude-sonnet-4, 5 vs 3 trials)."
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2025-02",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2502.12115",
+      "results": [
+        {
+          "model": "Claude-3.5-Sonnet",
+          "system_description": null,
+          "scores": [
+            { "metric": "pass@1 (Diamond overall)", "value": 0.361, "unit": null },
+            { "metric": "pass@1 (IC SWE Diamond)", "value": 0.262, "unit": null },
+            { "metric": "pass@1 (SWE Manager Diamond)", "value": 0.449, "unit": null },
+            { "metric": "Earn Rate (Diamond)", "value": 0.415, "unit": null },
+            { "metric": "Dollars Earned (Diamond)", "value": 208000, "unit": "USD" },
+            { "metric": "pass@1 (Full overall)", "value": 0.337, "unit": null },
+            { "metric": "Dollars Earned (Full)", "value": 403000, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "o1",
+          "system_description": null,
+          "scores": [
+            { "metric": "pass@1 (Diamond overall)", "value": 0.297, "unit": null },
+            { "metric": "pass@1 (IC SWE Diamond, High)", "value": 0.165, "unit": null },
+            { "metric": "pass@1 (SWE Manager Diamond)", "value": 0.415, "unit": null },
+            { "metric": "Earn Rate (Diamond)", "value": 0.331, "unit": null },
+            { "metric": "Dollars Earned (Diamond)", "value": 166000, "unit": "USD" },
+            { "metric": "pass@1 (Full overall)", "value": 0.329, "unit": null },
+            { "metric": "Dollars Earned (Full)", "value": 380000, "unit": "USD" }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            { "metric": "pass@1 (Diamond overall)", "value": 0.233, "unit": null },
+            { "metric": "pass@1 (IC SWE Diamond)", "value": 0.080, "unit": null },
+            { "metric": "pass@1 (SWE Manager Diamond)", "value": 0.370, "unit": null },
+            { "metric": "Earn Rate (Diamond)", "value": 0.277, "unit": null },
+            { "metric": "Dollars Earned (Diamond)", "value": 139000, "unit": "USD" },
+            { "metric": "pass@1 (Full overall)", "value": 0.233, "unit": null },
+            { "metric": "Dollars Earned (Full)", "value": 304000, "unit": "USD" }
+          ]
+        }
+      ],
+      "note": "Paper release baselines from Table 1. Diamond set: 237 IC SWE tasks ($236,300) + 265 SWE Manager tasks ($264,500) = 502 tasks ($500,800). Full set: 764 IC SWE ($414,775) + 724 Manager ($585,225) = 1,488 tasks ($1M). IC SWE use user tool (Playwright) by default. o1 uses 'High' reasoning effort. All pass@1, single attempt. All models use basic scaffold (browse files, edit, execute terminal commands) in Docker with no internet."
+    }
+  ],
+
+  "notes": "SWE-Lancer is an OpenAI benchmark of real freelance software engineering tasks from Upwork/Expensify, valued at $1 million USD total.\n\nTwo task types:\n1. **IC SWE** (Individual Contributor): Code generation tasks from $50 bug fixes to $32,000 feature implementations. Graded with end-to-end Playwright tests triple-verified by experienced engineers.\n2. **SWE Manager**: Choose between technical implementation proposals. Assessed against original engineering managers' decisions. 99% agreement between independent engineers and original choices.\n\nSplits:\n- **SWE-Lancer Diamond** (public eval): 502 tasks worth $500,800 (237 IC SWE + 265 Manager)\n- **SWE-Lancer Full** (private): 1,488 tasks worth $1,000,000 (764 IC SWE + 724 Manager)\n\nHarbor adapter covers Diamond split with 463 tasks (198 IC SWE + 265 Manager — slightly different from paper's 237 IC SWE, possibly due to filtering).\n\nUnique features:\n- Real economic value: tasks have actual Upwork payouts\n- User tool: Playwright browser simulation for IC SWE tasks, giving agents visual feedback\n- Price analysis: models can reduce freelancer costs by 8-33% when used as first pass\n- Single repo (Expensify), $300M public company, 12M users\n- Tasks from 2023-2024 public GitHub issues\n\nKey findings:\n- Best: Claude 3.5 Sonnet earns $208K on Diamond, $403K on Full ($1M total)\n- o1 with higher reasoning effort improves from 9.3% to 16.5% on IC SWE Diamond\n- Pass@k increases significantly: o1 nearly triples with 6 attempts\n- User tool removal has minimal impact on pass@1 but stronger models lose more\n- Published at ICML 2025\n\nGitHub repo archived July 2025, merged into https://github.com/openai/preparedness"
 }

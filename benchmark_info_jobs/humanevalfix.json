@@ -1,22 +1,73 @@
 {
   "name": "HumanEvalFix",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Competitive/Function-level Programming",
+  "used_llm_or_agent": "both",
+
   "links": {
     "website": null,
     "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "paper": "https://arxiv.org/abs/2308.07124",
+    "github": "https://github.com/bigcode-project/octopack",
+    "dataset": "https://huggingface.co/datasets/bigcode/humanevalpack"
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2023-08",
+    "num_tasks": 164
   },
+
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "pass@1",
+    "harbor_aligned_metric": "Accuracy — Harbor adapter covers Python subset (164 tasks). Parity: openhands+gpt-4o-mini original 55.27%±3.49 vs harbor 56.1%±1.31; openhands+gpt-5-mini original 98.1%±0.8 vs harbor 97.9%±0.5 (3 trials each)."
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2023-08",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2308.07124",
+      "results": [
+        {
+          "model": "GPT-4",
+          "system_description": null,
+          "scores": [
+            { "metric": "pass@1 (Python)", "value": 0.478, "unit": null },
+            { "metric": "pass@1 (Avg 6 langs)", "value": 0.478, "unit": null }
+          ]
+        },
+        {
+          "model": "OctoCoder",
+          "system_description": null,
+          "scores": [
+            { "metric": "pass@1 (Python)", "value": 0.303, "unit": null },
+            { "metric": "pass@1 (Avg 6 langs)", "value": 0.270, "unit": null }
+          ]
+        },
+        {
+          "model": "WizardCoder",
+          "system_description": null,
+          "scores": [
+            { "metric": "pass@1 (Avg 6 langs)", "value": 0.257, "unit": null }
+          ]
+        },
+        {
+          "model": "OctoGeeX",
+          "system_description": null,
+          "scores": [
+            { "metric": "pass@1 (Avg 6 langs)", "value": 0.244, "unit": null }
+          ]
+        },
+        {
+          "model": "StarCoder",
+          "system_description": null,
+          "scores": [
+            { "metric": "pass@1 (Avg 6 langs)", "value": 0.134, "unit": null }
+          ]
+        }
+      ],
+      "note": "Paper release baselines from Table in Section 4.2. HumanEvalFix has two variants: 'tests' (given unit tests) and 'docs' (given docstring). Results above are for 'tests' variant. Pass@1 with T=0.2, top_p=0.95, 20 samples. 6 languages: Python, JavaScript, Java, Go, C++, Rust. GPT-4 evaluated with 1 sample."
+    }
+  ],
+
+  "notes": "HumanEvalFix is one of three tasks in HumanEvalPack, introduced in the OctoPack paper (NeurIPS 2023). The task: given a buggy function and unit tests, fix the bug.\n\nKey characteristics:\n- 164 buggy functions per language (derived from original HumanEval solutions)\n- 6 languages: Python, JavaScript, Java, Go, C++, Rust (984 total tasks across all languages)\n- Bugs manually inserted into correct HumanEval solutions\n- Each bug causes at least one unit test to fail\n- Code remains executable but produces incorrect results\n- Two evaluation variants: 'tests' (given unit tests) and 'docs' (given docstring)\n\nHumanEvalPack also includes:\n- HumanEvalSynthesize: generate code from docstrings (NL→C)\n- HumanEvalExplain: explain code then regenerate from explanation (NL+C→NL→C)\n\nThe Harbor adapter covers only the Python subset (164 tasks) and converts the benchmark from direct LLM code generation to agent-based code repair using OpenHands.\n\nPaper findings on HumanEvalFix:\n- 'Most challenging task for most models' — models commonly regenerate buggy function unchanged or introduce new bugs\n- 'Bugs that require removing excess code are the most challenging'\n- CommitPackFT training data (~20% bug fixes) is critical for HumanEvalFix performance\n- GPT-4 at 47.8% (avg across 6 languages) was best at paper release\n\nHarbor parity shows gpt-5-mini achieves 98.1% — the benchmark is largely saturated for frontier models on Python.\n\nNo external leaderboard specific to HumanEvalFix. EvalPlus leaderboard tracks HumanEval (synthesis) but not HumanEvalFix.\n\nPublished at NeurIPS 2023 (ICLR 2024 per OpenReview). Authors from BigCode project (HuggingFace, various institutions)."
 }

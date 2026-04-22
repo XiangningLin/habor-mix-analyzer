@@ -1,22 +1,114 @@
 {
   "name": "GPQA Diamond",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Science & Research",
+  "used_llm_or_agent": "llm",
+
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://www.vals.ai/benchmarks/gpqa",
+    "leaderboard": "https://epoch.ai/benchmarks/gpqa-diamond",
+    "paper": "https://arxiv.org/abs/2311.12022",
+    "github": "https://github.com/idavidrein/gpqa",
+    "dataset": "https://huggingface.co/datasets/Idavidrein/gpqa"
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2023-11",
+    "num_tasks": 198
   },
+
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "accuracy",
+    "harbor_aligned_metric": "Accuracy — Harbor adapter covers all 198 Diamond tasks. Parity: original 87.88% ±0.58 vs harbor 87.21% ±0.34 averaged over 3 trials with codex+gpt-5.2."
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2023-11",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2311.12022",
+      "results": [
+        {
+          "model": "GPT-4",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.39, "unit": null }
+          ]
+        }
+      ],
+      "note": "Paper release baseline. GPQA has 448 questions total; Diamond is a 198-question highest-quality subset. Human expert (PhD): 65% on full GPQA, 69.7% on Diamond. Non-expert with web access: 34%. Random guessing: 25%. Published at COLM 2024."
+    },
+    {
+      "date": "2026-04",
+      "source_type": "leaderboard",
+      "source_url": "https://intuitionlabs.ai/articles/gpqa-diamond-ai-benchmark",
+      "results": [
+        {
+          "model": "Gemini-3.1-Pro-Preview",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.941, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.924, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini-3-Pro",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.919, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.913, "unit": null }
+          ]
+        },
+        {
+          "model": "Grok-4 (Heavy)",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.889, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini-2.5-Pro",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.864, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.782, "unit": null }
+          ]
+        },
+        {
+          "model": "o1",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.773, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3-Opus",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy", "value": 0.60, "unit": null }
+          ]
+        }
+      ],
+      "note": "Current leaderboard snapshot as of 2026-04-18 from Intuition Labs. Top models exceed 90% — well above human expert baseline of 69.7%. GPT-4 baseline was 39% at paper release (Nov 2023). Benchmark approaching saturation for frontier models."
+    }
+  ],
+
+  "notes": "GPQA (Graduate-Level Google-Proof Q&A) Diamond is a 198-question subset of the highest-quality questions from the full 448-question GPQA benchmark. Tests graduate-level scientific reasoning across biology, physics, and chemistry.\n\nKey characteristics:\n- 198 multiple-choice questions (4 options each)\n- Domains: biology, physics, chemistry at graduate level\n- 'Google-proof': designed so that even skilled non-experts with web access only reach 34%\n- Human expert (PhD) accuracy: 65% (full), 69.7% (Diamond)\n- Questions created by domain experts, validated by other experts\n- Random guessing baseline: 25%\n\nThree subsets in the full GPQA dataset:\n- GPQA Main: 448 questions\n- GPQA Extended: 546 questions (includes lower-quality questions)\n- GPQA Diamond: 198 questions (highest quality, most commonly benchmarked)\n\nThe Harbor adapter converts Diamond questions into agent tasks where the model writes its answer (A/B/C/D) to /app/answer.txt. Docker environment includes scientific Python packages (numpy, scipy, sympy, pandas, matplotlib). 1-hour timeout. Gated on HuggingFace (requires accepting terms + HF_TOKEN).\n\nAnswer choices are deterministically shuffled in the adapter to prevent memorization of answer positions.\n\nPublished at COLM 2024. Authors from NYU (Bowman lab).\n\nBenchmark is approaching saturation: top models now exceed 90% vs human expert 69.7%."
 }

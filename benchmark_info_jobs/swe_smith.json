@@ -1,22 +1,151 @@
 {
   "name": "SWE-smith",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Repo-level Software Engineering",
+  "used_llm_or_agent": "agent",
   "links": {
-    "website": null,
+    "website": "https://swesmith.com/",
     "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "paper": "https://neurips.cc/virtual/2025/loc/san-diego/poster/121828",
+    "github": "https://github.com/SWE-bench/SWE-smith",
+    "dataset": "https://huggingface.co/datasets/SWE-bench/SWE-smith"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-04",
+    "num_tasks": 50137
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "Pass@1 resolve rate",
+    "harbor_aligned_metric": "Resolved Rate (%) on a 100-unit SWE-smith parity subset; mini-swe-agent + claude-sonnet-4-20250514: 37 (original) vs 38 (Terminal-Bench adapter), and mini-swe-agent + claude-3-haiku-20240307: 0 (Terminal-Bench adapter) vs 0 (Harbor)"
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-04",
+      "source_type": "paper",
+      "source_url": "https://neurips.cc/virtual/2025/loc/san-diego/poster/121828",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": "Agentless",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.388, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": "SWE-agent",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.23, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet",
+          "effort": null,
+          "system_description": "Agentless",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.508, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet",
+          "effort": null,
+          "system_description": "AutoCodeRover",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.462, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet",
+          "effort": null,
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.53, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude 3.5 Sonnet",
+          "effort": null,
+          "system_description": "SWE-agent",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.336, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet",
+          "effort": null,
+          "system_description": "SWE-agent",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.582, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama3-SWE-RL-70B",
+          "effort": null,
+          "system_description": "Agentless; train size 11M",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.41, "unit": null }
+          ]
+        },
+        {
+          "model": "Lingma-SWE-GPT-72B",
+          "effort": null,
+          "system_description": "SWE-SynInfer",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.288, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen3-235B-A22B",
+          "effort": null,
+          "system_description": "OpenHands",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.344, "unit": null }
+          ]
+        },
+        {
+          "model": "R2E-Gym-32B",
+          "effort": null,
+          "system_description": "OpenHands; train size 3.3k",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.344, "unit": null }
+          ]
+        },
+        {
+          "model": "SWE-fixer-72B",
+          "effort": null,
+          "system_description": "SWE-Fixer; train size 110k",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.328, "unit": null }
+          ]
+        },
+        {
+          "model": "SWE-gym-32B",
+          "effort": null,
+          "system_description": "OpenHands; train size 491",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.206, "unit": null }
+          ]
+        },
+        {
+          "model": "SWE-agent-LM-7B",
+          "effort": null,
+          "system_description": "SWE-agent; train size 2k",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.152, "unit": null }
+          ]
+        },
+        {
+          "model": "SWE-agent-LM-32B",
+          "effort": null,
+          "system_description": "SWE-agent; train size 5k",
+          "scores": [
+            { "metric": "Pass@1 resolve rate on SWE-bench Verified", "value": 0.402, "unit": null }
+          ]
+        }
+      ],
+      "note": "SWE-bench Verified Pass@1 resolve rates from the SWE-smith paper comparison table."
+    }
+  ],
+  "notes": "SWE-smith is a pipeline and dataset for generating software engineering training data at scale. The paper reports a dataset of 50,137 task instances from 128 GitHub repositories. It is aimed at training software engineering agents rather than serving purely as a standalone evaluation benchmark."
 }

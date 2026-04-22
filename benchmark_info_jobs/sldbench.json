@@ -1,22 +1,2623 @@
 {
   "name": "SLDBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Science & Research",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://linhaowei1.github.io/scaling_law_discovery/",
+    "leaderboard": "https://linhaowei1.github.io/scaling_law_discovery/#leaderboard",
+    "paper": "https://arxiv.org/abs/2507.21184",
+    "github": "https://github.com/linhaowei1/SLD",
+    "dataset": "https://huggingface.co/datasets/pkuHaowei/sldbench"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-07-28",
+    "num_tasks": 8
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Mean R^2",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
+  "results_over_time": [
+    {
+      "date": "2025-07-28",
+      "source_type": "leaderboard",
+      "source_url": "https://linhaowei1.github.io/scaling_law_discovery/",
+      "results": [
+        {
+          "model": "gpt-5",
+          "system_description": "SLDAgent",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.7481539,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.858972625,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9998142,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.99996,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.9873636,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.988215,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.992974,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.993177,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9882472,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.990152,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.773378,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.796252,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.9439686,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.975693,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": 0.6044644,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.847918,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.3049788,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.280414,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5",
+          "system_description": "goose",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.6947668279,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.7994375208,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.999635438,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9999581901,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.9616106919,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9803444596,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.8986273274,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.967555637,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9439364585,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9711402924,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.8129033901,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.832695,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.8935198613,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9135283065,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": 0.2795120204,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.3536821022,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.2316105642,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.376596179,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini",
+          "system_description": "SLDAgent",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.65686605,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.682227375,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9996484,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.999662,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.9716106,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.97183,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.9944112,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.994482,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9890196,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.992708,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.7725998,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.784449,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.9168592,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.923362,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": 0.6107796,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.791326,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-3-pro-preview",
+          "system_description": "SLDAgent",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.63608545,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.68609475,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9996588,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.999662,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.981861,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.981861,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.9917764,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.99293,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9842394,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.993529,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.7655802,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.767353,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.8529852,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.947351,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": 0.5125826,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.806072,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-sonnet-4-5-20250929",
+          "system_description": "SLDAgent",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.5897181,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.806633625,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9999074,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.999971,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.982734,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.983574,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.981251,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.992399,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.985428,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.992206,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.845949,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.891089,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.9591966,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.980281,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.5142966,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.348059,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.5224246,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.26549,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5",
+          "system_description": "codex",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.5497329066,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.8181912829,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9987461404,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9999637018,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.9773074919,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9803294597,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.8547526834,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9808284172,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9332597924,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9904279621,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.6493745446,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.8327367229,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.7634593667,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9146078335,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.039210698,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.5457665098,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.7398260688,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.3008696558,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-haiku-4-5-20251001",
+          "system_description": "SLDAgent",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.51944595,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.744779625,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9998362,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.999957,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.9693772,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.974042,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.9648394,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.971748,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9803564,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.991244,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.7052586,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.809275,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.9466968,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.987175,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.6571172,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.090342,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.7536798,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.134454,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "human",
+          "system_description": "human",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.5165670449,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.5165670449,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.999892597,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.999892597,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.9663633623,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9663633623,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.9570773394,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9570773394,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.671117371,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.671117371,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.7032072577,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.7032072577,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.9105673171,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9105673171,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.0756888853,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.0756888853,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-flash",
+          "system_description": "SLDAgent",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.506316875,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.70802375,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.99972,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.99996,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.9601206,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.986445,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.9832572,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.99293,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9905772,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.991338,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.8096,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.851909,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.936071,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.985663,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.8706878,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.353439,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.7581232,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.209384,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5",
+          "system_description": "opencode",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.5007666804,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.7872589018,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9995537068,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9999525339,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.8893649058,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9633395291,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.8454506293,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.8933421465,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9602456042,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9894230209,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.2398529789,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.8326948945,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.9196199765,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9361348826,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.3680081376,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.380674312,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.479946221,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.3025098952,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-sonnet-4-5",
+          "system_description": "claude-code",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.4717743128,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.5355940159,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9978050419,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9996642094,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.9622152945,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9864474724,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.9161390287,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9483641433,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9705429676,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9715978378,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.8577700768,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.958,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.9155053298,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9209736489,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.845783237,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.5002951848,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5",
+          "system_description": "mini-swe-agent",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.4714758711,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.7846874803,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9971735368,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9999656839,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.5542635545,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9762167727,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.8528155687,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9712278433,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.8725298705,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9022243524,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.352084682,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.8088674102,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.9028563945,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9429629724,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.2687180181,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.3735249093,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.4911986204,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.3025098979,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "system_description": "claude-code",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.4194034625,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.6544558247,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9995017802,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.999572,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.8953397356,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.949581678,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.8938910286,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9483641431,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9054490821,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9708404106,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.3942897231,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.6900126157,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.7782187748,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9141388739,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.5114624248,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.763136876,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-3-pro-preview",
+          "system_description": "gemini-cli",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.3817768265,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.7829217172,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.599700631,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9996581747,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.5775131609,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9735188732,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.4620163233,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9483641433,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.9781073191,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9894232424,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.8326976762,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.8327068948,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.7832485172,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9905925144,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.3322636193,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.763136876,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.8468053962,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -0.2340269811,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini",
+          "system_description": "codex",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.3494705704,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.4103258666,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9995719802,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.999572,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.8611209963,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.861121,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.8829199545,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9483637723,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.5533685403,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9747667014,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.4676220043,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.4676220213,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.804644,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.8046440002,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.7734829124,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.7734825622,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5",
+          "system_description": "openhands",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.3165329249,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.6514212495,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9996287374,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.999968687,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.1821212888,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.980329444,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.6396594695,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9807743474,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.8990811891,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9714759455,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.4656527209,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.8326956044,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.5338759808,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9781099041,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.9093931124,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.7734825622,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.2783628748,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.2414986258,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.1838663096,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.7454130478,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9905063291,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9995716457,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.1323452864,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9046364318,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.131226246,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.89297123,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.5136775256,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9711466282,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.1189676747,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.8255653734,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.7177441083,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9634745416,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.6590427344,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.0252353279,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.4744939593,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.3807032035,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5.2",
+          "system_description": "openhands",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.1717750437,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.5547028662,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.5998240486,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9999527089,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.5794148911,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.986447973,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.2066369179,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.7872390905,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.5329350518,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9331370855,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.7322669194,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.8326973787,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.428585025,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9141377394,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.7054625041,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.0159890463,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-5",
+          "system_description": "terminus-2",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.1678604621,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.6595764355,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9995980287,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9999631435,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.53336728,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9780303998,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.1138327246,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9602806228,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.5016689714,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.902223857,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.1860216984,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.823210492,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.3664734624,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9141363121,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.7543529108,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.4513155538,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.6037255579,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.1500822105,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1",
+          "system_description": "openhands",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.129319202,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.4537992909,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.5995862792,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9995716457,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.8839083107,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9761333072,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.9211812144,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9483793538,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.4557738234,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9022238561,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": -0.2385531102,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.4584640795,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.3054082842,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.8093780155,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.9546965887,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.7734829433,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.9380545974,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -0.6902729869,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-flash",
+          "system_description": "gemini-cli",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.0773418985,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.5953720116,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.1997430074,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9995750369,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.4853169257,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9336026286,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.7872389696,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.787239,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.5295966705,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9683293524,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.2725497081,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.8326945403,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.0108143953,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9839739763,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.8727333124,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.7734825622,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.7937911759,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": 0.0310441207,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3",
+          "system_description": "openhands",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.0301960747,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.5913850746,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.9995436251,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9995716553,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.5119529307,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9709598134,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.0275020417,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.7872386457,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.4935535902,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9379072323,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": -0.6076983294,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.4676220213,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.3734803887,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.8046443531,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.5567656497,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.763136876,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3.2",
+          "system_description": "openhands",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": 0.0249170015,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.5281016986,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.1979189713,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9995719009,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.9182482831,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.980334835,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.0225016958,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9483637723,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.5083957501,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.970995995,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": 0.1443150633,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.6891457019,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.1340490487,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9141363797,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.7828486366,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.5615141794,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -0.9432441634,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -0.7162208169,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3.2-reasoning",
+          "system_description": "openhands",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": -0.0535847342,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.5361327127,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.1996946902,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9995719009,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.1005019143,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.9610319536,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": 0.1257205083,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9483641431,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": 0.5375142769,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9714345955,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": -0.1193851769,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.4678315239,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": 0.386027348,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.9141370721,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.6587514347,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": 0.0266905128,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini",
+          "system_description": "openhands",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": -0.3406363914,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": 0.3889956829,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": 0.5996571919,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9995718608,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": 0.4346337763,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.8611209817,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": -0.6079450888,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9602745559,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": -0.6415570789,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.7922146054,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": -0.4129514817,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": 0.4676220213,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": -0.2781423999,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.8046440002,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -0.8187860497,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -0.7734825622,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-3-flash-preview",
+          "system_description": "openhands",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": -0.7092990829,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": -0.2566479921,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": -0.2001540358,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": 0.9996581753,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": -0.2473385245,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": 0.9763039011,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": -0.2269001027,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": 0.9708539869,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o",
+          "system_description": "openhands",
+          "scores": [
+            {
+              "metric": "Mean R^2 (all_tasks)",
+              "value": -0.8455515633,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (all_tasks)",
+              "value": -0.584091531,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (parallel_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (parallel_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (vocab_scaling_law)",
+              "value": -0.1253413741,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (vocab_scaling_law)",
+              "value": 0.5226234136,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (sft_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (sft_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (domain_mixture_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (domain_mixture_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (moe_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (moe_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (data_constrained_scaling_law)",
+              "value": -0.6390711323,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (data_constrained_scaling_law)",
+              "value": 0.8046443387,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (lr_bsz_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (lr_bsz_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Mean R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            },
+            {
+              "metric": "Max R^2 (easy_question_scaling_law)",
+              "value": -1.0,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    }
+  ],
   "notes": null
 }

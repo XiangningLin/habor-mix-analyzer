@@ -1,22 +1,142 @@
 {
   "name": "SWE-Bench-Multilingual",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Repo-level Software Engineering",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://www.swebench.com/multilingual.html",
+    "leaderboard": "https://www.swebench.com/multilingual-leaderboard.html",
+    "paper": "https://arxiv.org/pdf/2504.21798",
+    "github": "https://github.com/SWE-bench/SWE-bench",
+    "dataset": "https://huggingface.co/datasets/SWE-bench/SWE-bench_Multilingual"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-04-30",
+    "num_tasks": 300
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Percentage Resolved",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2026-02-13",
+      "source_type": "leaderboard",
+      "source_url": "https://www.swebench.com/multilingual-leaderboard.html",
+      "results": [
+        {
+          "model": "Gemini 3 Flash",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.727, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude 4.6 Opus",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.72, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude 4.5 Opus",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.707, "unit": null }
+          ]
+        },
+        {
+          "model": "GLM-5",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.697, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.687, "unit": null }
+          ]
+        },
+        {
+          "model": "Kimi K2.5",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.673, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude 4.5 Sonnet",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.67, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5.2 (high reasoning)",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.667, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude 4.5 Haiku",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.647, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek V3.2",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.59, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5 mini",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.397, "unit": null }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-02-16",
+      "source_type": "leaderboard",
+      "source_url": "https://www.swebench.com/multilingual-leaderboard.html",
+      "results": [
+        {
+          "model": "Minimax 2.5",
+          "system_description": "2.0.0a0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.683, "unit": null }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-02-20",
+      "source_type": "leaderboard",
+      "source_url": "https://www.swebench.com/multilingual-leaderboard.html",
+      "results": [
+        {
+          "model": "GPT-5-2",
+          "system_description": "Codex 2.0.0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.663, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT 5.2",
+          "system_description": "Codex 2.0.0",
+          "scores": [
+            { "metric": "Percentage Resolved", "value": 0.663, "unit": null }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "SWE-Bench-Multilingual is introduced in https://arxiv.org/pdf/2504.21798, but no result tables are provided for this benchmark there. The results here are provided from the available leaderboard from the website."
 }

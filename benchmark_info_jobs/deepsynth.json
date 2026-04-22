@@ -1,22 +1,403 @@
 {
   "name": "DeepSynth",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Science & Research",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://agentdeepsynthesis.github.io/deepsynth.github.io/",
+    "leaderboard": "https://agentdeepsynthesis.github.io/deepsynth.github.io/#deepsynth-dev-results",
+    "paper": "https://openreview.net/forum?id=0Dhpt9aY3n",
+    "github": "https://github.com/agentdeepsynthesis/deepsynth-bench",
+    "dataset": "https://huggingface.co/datasets/DeepSynthesisTeam/deepsynth-bench"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2026-01-26",
+    "num_tasks": 40
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "F1",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2026-01-26",
+      "source_type": "paper",
+      "source_url": "https://openreview.net/pdf?id=0Dhpt9aY3n",
+      "results": [
+        {
+          "model": "o4-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0326,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0263,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0429,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.025,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0181,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0157,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0214,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.075,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0633,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0568,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0714,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.0125,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.1,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0618,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0672,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0571,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.0125,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.125,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-Pro-2.5",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0587,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0498,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0714,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.05,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini-Pro-3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0859,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0753,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.15,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.1564,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.1845,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.1357,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.05,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Chat",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0211,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0208,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0214,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.05,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Reasoner",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0503,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0449,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0571,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.0125,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.075,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-deep-research",
+          "system_description": "o3-deep-research",
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0988,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0755,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.1429,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.075,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.2,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": "Smolagent",
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0633,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0568,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0714,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.0714,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.075,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": "OWL",
+          "scores": [
+            {
+              "metric": "F1",
+              "value": 0.0411,
+              "unit": null
+            },
+            {
+              "metric": "precision",
+              "value": 0.0395,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0429,
+              "unit": null
+            },
+            {
+              "metric": "exact match",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "LLM Judge",
+              "value": 0.125,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "DEEPSYNTH-Dev benchmark (Pass@1) from paper Table 13. Only the Dev/Lite split is retained; full 120-task Test/Main Results are intentionally omitted."
+    }
+  ],
+  "notes": "Only the DEEPSYNTH-Dev/Lite split is retained. Values come from OpenReview paper Table 13, which reports DEEPSYNTH-Dev Pass@1 F1, Precision, Recall, Exact Match, and LLM Judge Score (GPT-4.1)."
 }

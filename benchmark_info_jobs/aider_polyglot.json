@@ -1,22 +1,1712 @@
 {
   "name": "Aider Polyglot",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Competitive/Function-level Programming",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
-    "leaderboard": null,
+    "website": "https://aider.chat/docs/leaderboards/",
+    "leaderboard": "https://aider.chat/docs/leaderboards/",
     "paper": null,
-    "github": null,
-    "dataset": null
+    "github": "https://github.com/Aider-AI/aider",
+    "dataset": "https://github.com/Aider-AI/polyglot-benchmark"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2024-12-21",
+    "num_tasks": 225
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "pass rate",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2024-12-21",
+      "source_type": "blog",
+      "source_url": "https://aider.chat/2024/12/21/polyglot.html",
+      "results": [
+        {
+          "model": "o1-2024-12-17 (high)",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.617,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.915,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3-5-sonnet-20241022",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.453,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-exp-1206",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.382,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.982,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-mini-2024-09-12",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.329,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.969,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "claude-3-5-haiku-20241022",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.28,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.911,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.0-flash-exp",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.222,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek Chat V2.5",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.178,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.929,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-2024-11-20",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.151,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.96,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B-Instruct",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.716,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-mini-2024-07-18",
+          "system_description": "aider",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.036,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-11-20",
+      "source_type": "leaderboard",
+      "source_url": "https://aider.chat/docs/leaderboards/",
+      "results": [
+        {
+          "model": "gpt-5 (high)",
+          "system_description": "aider",
+          "run_date": "2025-08-23",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.88,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.916,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 29.0829,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gpt-5 (medium)",
+          "system_description": "aider",
+          "run_date": "2025-08-25",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.867,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.884,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 17.693,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o3-pro (high)",
+          "system_description": "aider",
+          "run_date": "2025-06-28",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.849,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.978,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 146.3249,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-pro-preview-06-05 (32k think)",
+          "system_description": "aider",
+          "run_date": "2025-06-06",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.831,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.996,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 49.8822,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gpt-5 (low)",
+          "system_description": "aider",
+          "run_date": "2025-08-25",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.813,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.867,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 10.3713,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o3 (high)",
+          "system_description": "aider",
+          "run_date": "2025-06-25",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.813,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.947,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 21.2259,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "grok-4 (high)",
+          "system_description": "aider",
+          "run_date": "2025-07-11",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.796,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.973,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 59.6182,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-pro-preview-06-05 (default think)",
+          "system_description": "aider",
+          "run_date": "2025-06-06",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.791,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 45.5961,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o3 (high) + gpt-4.1",
+          "system_description": "aider",
+          "run_date": "2025-06-27",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.782,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 17.5518,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o3",
+          "system_description": "aider",
+          "run_date": "2025-06-25",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.769,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.938,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 13.7517,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro Preview 05-06",
+          "system_description": "aider",
+          "run_date": "2025-05-07",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.769,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.973,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 37.4104,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3.2-Exp (Reasoner)",
+          "system_description": "aider",
+          "run_date": "2025-10-03",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.742,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.973,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 1.3045,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro Preview 03-25",
+          "system_description": "aider",
+          "run_date": "2025-04-12",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.729,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.924,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "claude-opus-4-20250514 (32k thinking)",
+          "system_description": "aider",
+          "run_date": "2025-05-25",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.72,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.973,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 65.7484,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o4-mini (high)",
+          "system_description": "aider",
+          "run_date": "2025-04-16",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.72,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.907,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 19.6399,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek R1 (0528)",
+          "system_description": "aider",
+          "run_date": "2025-06-06",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.714,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.946,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 4.8016,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "claude-opus-4-20250514 (no think)",
+          "system_description": "aider",
+          "run_date": "2025-05-25",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.707,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.987,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 68.6253,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3.2-Exp (Chat)",
+          "system_description": "aider",
+          "run_date": "2025-10-03",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.702,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.982,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.8756,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "claude-3-7-sonnet-20250219 (32k thinking tokens)",
+          "system_description": "aider",
+          "run_date": "2025-02-24",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.649,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.978,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 36.8343,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek R1 + claude-3-5-sonnet-20241022",
+          "system_description": "aider",
+          "run_date": "2025-01-23",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.64,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 13.2933,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o1-2024-12-17 (high)",
+          "system_description": "aider",
+          "run_date": "2024-12-21",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.617,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.915,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 186.4958,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "claude-sonnet-4-20250514 (32k thinking)",
+          "system_description": "aider",
+          "run_date": "2025-05-24",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.613,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.973,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 26.5755,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "claude-3-7-sonnet-20250219 (no thinking)",
+          "system_description": "aider",
+          "run_date": "2025-02-24",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.604,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.933,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 17.7191,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o3-mini (high)",
+          "system_description": "aider",
+          "run_date": "2025-01-31",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.604,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.933,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 18.1584,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Qwen3 235B A22B diff, no think, Alibaba API",
+          "system_description": "aider",
+          "run_date": "2025-05-09",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.596,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.929,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Kimi K2",
+          "system_description": "aider",
+          "run_date": "2025-07-17",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.591,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.929,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 1.2357,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek R1",
+          "system_description": "aider",
+          "run_date": "2025-01-20",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.569,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.969,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 5.4193,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "claude-sonnet-4-20250514 (no thinking)",
+          "system_description": "aider",
+          "run_date": "2025-05-24",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.564,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.982,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 15.8155,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-flash-preview-05-20 (24k think)",
+          "system_description": "aider",
+          "run_date": "2025-05-25",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.551,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.956,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 8.5625,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek V3 (0324)",
+          "system_description": "aider",
+          "run_date": "2025-03-24",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.551,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.996,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 1.1164,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Quasar Alpha",
+          "system_description": "aider",
+          "run_date": "2025-04-04",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.547,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.982,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o3-mini (medium)",
+          "system_description": "aider",
+          "run_date": "2025-01-31",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.538,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.951,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 8.8599,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Grok 3 Beta",
+          "system_description": "aider",
+          "run_date": "2025-04-10",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.533,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.996,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 11.0338,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Optimus Alpha",
+          "system_description": "aider",
+          "run_date": "2025-04-10",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.529,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.973,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1",
+          "system_description": "aider",
+          "run_date": "2025-04-14",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.524,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.982,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 9.8556,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "claude-3-5-sonnet-20241022",
+          "system_description": "aider",
+          "run_date": "2025-01-17",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.516,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.996,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 14.4063,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Grok 3 Mini Beta (high)",
+          "system_description": "aider",
+          "run_date": "2025-04-10",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.493,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.996,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.7346,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek Chat V3 (prev)",
+          "system_description": "aider",
+          "run_date": "2024-12-25",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.484,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.987,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.3369,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-flash-preview-04-17 (default)",
+          "system_description": "aider",
+          "run_date": "2025-04-20",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.471,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.853,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 1.8451,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "chatgpt-4o-latest (2025-03-29)",
+          "system_description": "aider",
+          "run_date": "2025-03-29",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.453,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.644,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 19.7416,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.5-preview",
+          "system_description": "aider",
+          "run_date": "2025-02-27",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.449,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.973,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 183.1802,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-flash-preview-05-20 (no think)",
+          "system_description": "aider",
+          "run_date": "2025-05-26",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.44,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.938,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 1.1354,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gpt-oss-120b (high)",
+          "system_description": "aider",
+          "run_date": "2025-08-06",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.418,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.791,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.7406,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Qwen3 32B",
+          "system_description": "aider",
+          "run_date": "2025-05-08",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.836,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.7603,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gemini-exp-1206",
+          "system_description": "aider",
+          "run_date": "2024-12-22",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.382,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.982,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.0 Pro exp-02-05",
+          "system_description": "aider",
+          "run_date": "2025-02-25",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.356,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Grok 3 Mini Beta (low)",
+          "system_description": "aider",
+          "run_date": "2025-04-10",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.347,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.7856,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "o1-mini-2024-09-12",
+          "system_description": "aider",
+          "run_date": "2024-12-22",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.329,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.969,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 18.577,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1-mini",
+          "system_description": "aider",
+          "run_date": "2025-04-14",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.324,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.924,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 1.9918,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "claude-3-5-haiku-20241022",
+          "system_description": "aider",
+          "run_date": "2024-12-21",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.28,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.911,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 6.0583,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "chatgpt-4o-latest (2025-02-15)",
+          "system_description": "aider",
+          "run_date": "2025-02-15",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.271,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.933,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 14.3703,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "QwQ-32B + Qwen 2.5 Coder Instruct",
+          "system_description": "aider",
+          "run_date": "2025-03-07",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.262,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-2024-08-06",
+          "system_description": "aider",
+          "run_date": "2024-12-30",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.231,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.942,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 7.0286,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.0-flash-exp",
+          "system_description": "aider",
+          "run_date": "2024-12-22",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.222,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "qwen-max-2025-01-25",
+          "system_description": "aider",
+          "run_date": "2025-01-28",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.218,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.902,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "QwQ-32B",
+          "system_description": "aider",
+          "run_date": "2025-03-06",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.676,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.0-flash-thinking-exp-01-21",
+          "system_description": "aider",
+          "run_date": "2025-01-21",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.778,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-2024-11-20",
+          "system_description": "aider",
+          "run_date": "2024-12-30",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.182,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.951,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 6.7351,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek Chat V2.5",
+          "system_description": "aider",
+          "run_date": "2024-12-21",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.178,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.929,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.5101,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B-Instruct",
+          "system_description": "aider",
+          "run_date": "2024-12-26",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.164,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.996,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Llama 4 Maverick",
+          "system_description": "aider",
+          "run_date": "2025-04-06",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.156,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.991,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "yi-lightning",
+          "system_description": "aider",
+          "run_date": "2024-12-23",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.129,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.929,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "command-a-03-2025-quality",
+          "system_description": "aider",
+          "run_date": "2025-03-14",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.996,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Codestral 25.01",
+          "system_description": "aider",
+          "run_date": "2025-01-13",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.111,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 1.9834,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "openhands-lm-32b-v0.1",
+          "system_description": "aider",
+          "run_date": "2025-04-19",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.102,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.951,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1-nano",
+          "system_description": "aider",
+          "run_date": "2025-04-14",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.089,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.942,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.4281,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-Coder-32B-Instruct",
+          "system_description": "aider",
+          "run_date": "2024-12-22",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 0.716,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gemma-3-27b-it",
+          "system_description": "aider",
+          "run_date": "2025-03-15",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.049,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.0,
+              "unit": "USD"
+            }
+          ]
+        },
+        {
+          "model": "gpt-4o-mini-2024-07-18",
+          "system_description": "aider",
+          "run_date": "2024-12-21",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.036,
+              "unit": null
+            },
+            {
+              "metric": "correct edit format",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.3236,
+              "unit": "USD"
+            }
+          ]
+        }
+      ],
+      "note": null
+    }
+  ],
+  "notes": "The public Aider leaderboard also reports cost and correct edit format; those two extra metrics are retained in results as leaderboard metadata/secondary measurements, but they are not adapter verifier metrics."
 }

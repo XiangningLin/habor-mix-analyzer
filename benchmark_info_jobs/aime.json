@@ -1,22 +1,128 @@
 {
   "name": "AIME",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Math",
+  "used_llm_or_agent": "llm",
+
   "links": {
-    "website": null,
-    "leaderboard": null,
+    "website": "https://www.vals.ai/benchmarks/aime",
+    "leaderboard": "https://www.vals.ai/benchmarks/aime",
     "paper": null,
-    "github": null,
+    "github": "https://github.com/GAIR-NLP/AIME-Preview",
     "dataset": null
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2024-02",
+    "num_tasks": 60
   },
+
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "accuracy",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2025-02",
+      "source_type": "other",
+      "source_url": "https://github.com/GAIR-NLP/AIME-Preview",
+      "results": [
+        {
+          "model": "DeepSeek-R1-Distill-Llama-70B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025-I)", "value": 0.514, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-14B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025-I)", "value": 0.467, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-32B",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025-I)", "value": 0.461, "unit": null }
+          ]
+        }
+      ],
+      "note": "AIME-Preview results from February 2025. 8 samples per question, averaged across temperatures (0.0, 0.3, 0.6). These are early results; the benchmark has since been largely saturated by frontier models."
+    },
+    {
+      "date": "2026-04",
+      "source_type": "leaderboard",
+      "source_url": "https://www.vellum.ai/llm-leaderboard",
+      "results": [
+        {
+          "model": "Gemini-3-Pro",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025)", "value": 1.00, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5.2",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025)", "value": 1.00, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025)", "value": 0.998, "unit": null }
+          ]
+        },
+        {
+          "model": "Kimi-K2-Thinking",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025)", "value": 0.991, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025)", "value": 0.946, "unit": null }
+          ]
+        },
+        {
+          "model": "Grok-4",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025)", "value": 0.906, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-5-Mini",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025)", "value": 0.908, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025)", "value": 0.740, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3.7-Sonnet",
+          "system_description": null,
+          "scores": [
+            { "metric": "accuracy (AIME 2025)", "value": 0.527, "unit": null }
+          ]
+        }
+      ],
+      "note": "Current leaderboard snapshot as of 2026-04-18. AIME 2025 is largely saturated — top models achieve 100%. Scores aggregated from multiple third-party leaderboards (Vellum, Intuition Labs). Note: exact methodology (pass@1, consensus, maj@k) varies by source; some may report best-of-k rather than pass@1."
+    }
+  ],
+
+  "notes": "AIME (American Invitational Mathematics Examination) is a prestigious math competition used as an LLM benchmark. Unlike purpose-built benchmarks, AIME consists of real competition problems not designed for AI evaluation.\n\nKey characteristics:\n- 30 questions per year (15 per session, AIME I and AIME II)\n- Integer answers in range 0-999\n- Exact match scoring only (no partial credit)\n- Covers algebra, geometry, number theory, combinatorics, probability\n- Problems require multi-step mathematical reasoning\n- Human median top competitor: 26-40% (4-6 of 15 problems)\n\nThe Harbor adapter uses 60 tasks: AIME 2024 (30 questions) + AIME 2025-I (15) + AIME 2025-II (15), sourced from GAIR-NLP/AIME-Preview.\n\n**No adapter_metadata.json or parity_experiment.json exist** in the Harbor repo for this adapter (404 errors). The adapter appears to be simpler — just exact-match integer comparison in a Docker environment.\n\n**Benchmark saturation**: As of April 2026, AIME 2025 is largely saturated. Gemini-3-Pro and GPT-5.2 achieve 100%, Claude Opus 4.6 at 99.8%. This was not the case in early 2025 when top models scored ~50%.\n\n**No single authoritative paper**: AIME is a math competition, not an ML benchmark paper. The GAIR-NLP/AIME-Preview repo provides an evaluation framework with citation but is not a traditional benchmark paper. Multiple third-party leaderboards track results (Vals AI, Vellum, LM Council).\n\n**Tool-augmented results**: With code execution (Python), GPT-5 Pro achieves 100%. Tool use significantly boosts performance on computational problems.\n\n**Data contamination risk**: AIME problems are publicly available after competition, so models trained on post-competition data may have seen the problems. AIME 2025 problems released Feb 2025 mitigate this for models with earlier training cutoffs."
 }

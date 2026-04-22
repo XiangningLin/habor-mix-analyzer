@@ -1,22 +1,176 @@
 {
   "name": "CRUST-Bench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Repo-level Software Engineering",
+  "used_llm_or_agent": "both",
+
   "links": {
     "website": null,
     "leaderboard": null,
-    "paper": null,
-    "github": null,
+    "paper": "https://arxiv.org/abs/2504.15254",
+    "github": "https://github.com/anirudhkhatry/CRUST-bench",
     "dataset": null
   },
+
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-04",
+    "num_tasks": 100
   },
+
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "Test Pass Rate (pass@1)",
+    "harbor_aligned_metric": "Resolved Rate — Harbor adapter covers all 100 tasks. Parity: original 58.3% ±1.2% vs harbor 58.3% ±2.1% averaged over 3 trials with codex@0.77.0+gpt-5-nano."
   },
-  "results_over_time": [],
-  "notes": null
+
+  "results_over_time": [
+    {
+      "date": "2025-04",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2504.15254",
+      "results": [
+        {
+          "model": "o3",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.19, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.35, "unit": null },
+            { "metric": "Test (Compiler repair r=3)", "value": 0.31, "unit": null },
+            { "metric": "Build (Compiler repair r=3)", "value": 0.68, "unit": null },
+            { "metric": "Test (Test repair r=3)", "value": 0.48, "unit": null },
+            { "metric": "Build (Test repair r=3)", "value": 0.63, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Opus 4",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.22, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.43, "unit": null },
+            { "metric": "Test (Compiler repair r=3)", "value": 0.29, "unit": null },
+            { "metric": "Build (Compiler repair r=3)", "value": 0.78, "unit": null },
+            { "metric": "Test (Test repair r=3)", "value": 0.40, "unit": null },
+            { "metric": "Build (Test repair r=3)", "value": 0.65, "unit": null }
+          ]
+        },
+        {
+          "model": "o1",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.15, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.32, "unit": null },
+            { "metric": "Test (Compiler repair r=3)", "value": 0.28, "unit": null },
+            { "metric": "Build (Compiler repair r=3)", "value": 0.69, "unit": null },
+            { "metric": "Test (Test repair r=3)", "value": 0.37, "unit": null },
+            { "metric": "Build (Test repair r=3)", "value": 0.54, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3.7-Sonnet",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.13, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.26, "unit": null },
+            { "metric": "Test (Compiler repair r=3)", "value": 0.23, "unit": null },
+            { "metric": "Build (Compiler repair r=3)", "value": 0.54, "unit": null },
+            { "metric": "Test (Test repair r=3)", "value": 0.32, "unit": null },
+            { "metric": "Build (Test repair r=3)", "value": 0.49, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3.5-Sonnet",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.11, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.26, "unit": null },
+            { "metric": "Test (Compiler repair r=3)", "value": 0.21, "unit": null },
+            { "metric": "Build (Compiler repair r=3)", "value": 0.49, "unit": null },
+            { "metric": "Test (Test repair r=3)", "value": 0.24, "unit": null },
+            { "metric": "Build (Test repair r=3)", "value": 0.38, "unit": null }
+          ]
+        },
+        {
+          "model": "o1-mini",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.09, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.19, "unit": null },
+            { "metric": "Test (Compiler repair r=3)", "value": 0.16, "unit": null },
+            { "metric": "Build (Compiler repair r=3)", "value": 0.47, "unit": null },
+            { "metric": "Test (Test repair r=3)", "value": 0.21, "unit": null },
+            { "metric": "Build (Test repair r=3)", "value": 0.27, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.07, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.18, "unit": null },
+            { "metric": "Test (Compiler repair r=3)", "value": 0.18, "unit": null },
+            { "metric": "Build (Compiler repair r=3)", "value": 0.52, "unit": null },
+            { "metric": "Test (Test repair r=3)", "value": 0.22, "unit": null },
+            { "metric": "Build (Test repair r=3)", "value": 0.42, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini-1.5-Pro",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.03, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.11, "unit": null },
+            { "metric": "Test (Compiler repair r=3)", "value": 0.11, "unit": null },
+            { "metric": "Build (Compiler repair r=3)", "value": 0.35, "unit": null },
+            { "metric": "Test (Test repair r=3)", "value": 0.14, "unit": null },
+            { "metric": "Build (Test repair r=3)", "value": 0.30, "unit": null }
+          ]
+        },
+        {
+          "model": "Virtuoso (Distilled DeepSeek-V3)",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.02, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.02, "unit": null },
+            { "metric": "Test (Compiler repair r=3)", "value": 0.06, "unit": null },
+            { "metric": "Build (Compiler repair r=3)", "value": 0.21, "unit": null },
+            { "metric": "Test (Test repair r=3)", "value": 0.06, "unit": null },
+            { "metric": "Build (Test repair r=3)", "value": 0.10, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-32B",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.00, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.01, "unit": null }
+          ]
+        },
+        {
+          "model": "QwQ-32B-Preview",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.00, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.01, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen-2.5-Coder-32B",
+          "system_description": null,
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.00, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.00, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude-3.7-Sonnet",
+          "system_description": "Pipelined SWE-agent",
+          "scores": [
+            { "metric": "Test (pass@1)", "value": 0.32, "unit": null },
+            { "metric": "Build (pass@1)", "value": 0.41, "unit": null }
+          ]
+        }
+      ],
+      "note": "Paper release baselines from Table 4. All pass@1 results use greedy decoding (T=0). Build = compilation success, Test = test passage. Values are counts out of 100 (= rates). Compiler repair and Test repair use r=3 rounds. LLaMA-3-8B omitted from paper as it produced no correct solutions. Pipelined SWE-agent uses $2 cost budget."
+    }
+  ],
+
+  "notes": "CRUST-Bench evaluates C-to-safe-Rust transpilation at the repository level. Key characteristics:\n\n- 100 C repositories from GitHub (created 2005-2025), avg 958 LoC, covering PL infra, algorithms, data structures, system utilities, networking, crypto\n- Each paired with manually-written safe Rust interfaces (299 interface files, 3,085 functions total) and test cases (avg 76.4 tests, 67% coverage)\n- Three validation criteria: (1) interface conformance, (2) successful compilation (type check + borrow checker), (3) all tests pass\n- Annotated by 4 experts, avg 1.5 hours per benchmark, reviewed by first author\n- No external leaderboard — results only in paper\n- Published at COLM 2025\n\nThe Harbor adapter covers all 100 tasks with 1:1 mapping. Parity experiment uses codex@0.77.0+gpt-5-nano achieving 58.3% resolved rate (averaged over 3 trials).\n\nNote: The paper reports raw counts (e.g., o3 passes 19 tests out of 100 = 19%), not percentages. All values in the JSON are converted to [0,1] rates."
 }

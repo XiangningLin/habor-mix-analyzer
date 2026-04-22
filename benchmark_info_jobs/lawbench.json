@@ -1,22 +1,57 @@
 {
   "name": "LawBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Reasoning",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://lawbench.opencompass.org.cn/",
+    "leaderboard": "https://lawbench.opencompass.org.cn/leaderboard",
+    "paper": "https://aclanthology.org/2024.emnlp-main.452/",
+    "github": "https://github.com/open-compass/LawBench",
+    "dataset": "https://github.com/open-compass/LawBench/tree/main/data"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2023-09",
+    "num_tasks": 20
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "Overall average score across 20 tasks (task-specific metrics include ROUGE-L, Accuracy, F0.5, F1, rc-F1, soft-F1, and normalized log-distance)",
+    "harbor_aligned_metric": "Accuracy (%) on a 120-unit LawBench Harbor parity subset (20 scenarios × 2 prompt types × 3 chunks), averaged over 3 runs; parity: qwen-code@0.6.0 + glm-4.7; 65.6 ± 1.0 (Harbor) vs 65.0 ± 0.4 (original)"
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2024-11",
+      "source_type": "paper",
+      "source_url": "https://github.com/open-compass/LawBench",
+      "results": [
+        {
+          "model": "Qwen1.5-72B-Chat",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "overall-zero-shot", "value": 56.26, "unit": "score" },
+            { "metric": "overall-one-shot", "value": 57.38, "unit": "score" }
+          ]
+        },
+        {
+          "model": "GPT-4",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "overall-zero-shot", "value": 52.35, "unit": "score" },
+            { "metric": "overall-one-shot", "value": 53.85, "unit": "score" }
+          ]
+        },
+        {
+          "model": "ChatGPT (GPT-3.5-turbo)",
+          "effort": null,
+          "scores": [
+            { "metric": "overall-zero-shot", "value": 42.15, "unit": "score" },
+            { "metric": "overall-one-shot", "value": 44.52, "unit": "score" }
+          ]
+        }
+      ],
+      "note": "Official paper results. LawBench evaluates Chinese legal tasks. The main ranking is based on average task performance."
+    }
+  ],
+  "notes": "Chinese legal benchmark under the Chinese civil law system. Contains 20 tasks across 3 cognitive levels: memorization, understanding, and application."
 }

@@ -1,22 +1,1117 @@
 {
-  "name": "Omni-math",
-  "category": "",
-  "used_llm_or_agent": "",
+  "name": "Omni-MATH",
+  "category": "Math",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://omni-math.github.io/",
+    "leaderboard": "https://omni-math.github.io/",
+    "paper": "https://arxiv.org/abs/2410.07985",
+    "github": "https://github.com/KbsdJames/Omni-MATH",
+    "dataset": "https://huggingface.co/datasets/KbsdJames/Omni-MATH"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2024-10-10",
+    "num_tasks": 4428
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "accuracy",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2026-04-20",
+      "source_type": "leaderboard",
+      "source_url": "https://omni-math.github.io/",
+      "results": [
+        {
+          "model": "OpenAI o1-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.6054,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.6782,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.6818,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.6094,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.515,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.3768,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.6174,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.6052,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.8223,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.631,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.4911,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.4269,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenAI o1-preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.5255,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.577,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.5747,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.5391,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.4311,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.3126,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.4967,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.5342,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.8011,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.5083,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.4225,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.3771,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-MATH-72b-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.362,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.4333,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.4253,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.3984,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.2657,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.1828,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.3428,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.3337,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.7096,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.3137,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.2775,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.2229,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2-MATH-72b-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.3368,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.4027,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.2734,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.2253,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.175,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.3001,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.3296,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.701,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.2906,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.2471,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.1798,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-MATH-7b-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.3322,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.3939,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.3125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.2689,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.1693,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.2862,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.3037,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.6623,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.292,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.2468,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.2034,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.3049,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.3612,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.3977,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.2188,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.2157,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.1574,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.2575,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.2938,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.6838,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.2501,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.2183,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.1581,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2-MATH-7b-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.2936,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.3608,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.3523,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.2422,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.1868,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.1441,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.2704,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.2593,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.6352,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.243,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.2152,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.1854,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "NuminaMATH-72B-COT",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.2845,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.3474,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.2727,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.2188,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.2041,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.1695,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.2347,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.2506,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.6563,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.237,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.2033,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.2108,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude-3.5-SONNET",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.2623,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.303,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.2955,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.1953,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.177,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.1574,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.1951,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.267,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.6623,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.1891,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.1827,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.1741,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.2578,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.3024,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.3523,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.1562,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.1799,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.1271,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.209,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.2358,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.6538,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.1884,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.1806,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.1461,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "MetaLlama-3.1-70B-instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.2416,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.2915,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.1605,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.1875,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.1476,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.1174,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.1703,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.2466,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.6266,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.1682,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.1695,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.1371,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-Coder-V2-Lite-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.1973,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.2455,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.2386,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.1328,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.1306,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.0892,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.1588,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.1681,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.5593,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.1315,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.1286,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.0955,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mathstral-7B-v0.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.1913,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.2399,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.1328,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.1219,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.1004,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.1458,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.163,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.5307,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.1093,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.1529,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.1186,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeekMATH-7b-RL",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.1612,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.2128,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.2045,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.0987,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.0771,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.0998,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.1358,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.4907,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.0911,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.1149,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.078,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "InternLM2-math-plus-mixtral8*22B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.1424,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Algebra)",
+              "value": 0.1819,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Precalculus)",
+              "value": 0.125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Calculus)",
+              "value": 0.1016,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Geometry)",
+              "value": 0.087,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Discrete Mathematics)",
+              "value": 0.0803,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Number Theory)",
+              "value": 0.1009,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Applied Mathematics)",
+              "value": 0.1236,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 1-3)",
+              "value": 0.4278,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 3-5)",
+              "value": 0.0801,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 5-8)",
+              "value": 0.1035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Difficulty: 8-10)",
+              "value": 0.0674,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2026-04-20",
+      "source_type": "leaderboard",
+      "source_url": "https://omni-math.github.io/#rule-based-evaluation-results",
+      "results": [
+        {
+          "model": "o1-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (rule-based)",
+              "value": 0.622,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1-preview",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (rule-based)",
+              "value": 0.517,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen-QwQ",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (rule-based)",
+              "value": 0.496,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "qwen2.5-MATH-72b-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (rule-based)",
+              "value": 0.362,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "qwen2.5-MATH-7b-Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (rule-based)",
+              "value": 0.323,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (rule-based)",
+              "value": 0.292,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "NuminaMATH-72b-cot",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (rule-based)",
+              "value": 0.262,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepseekMATH-7b-RL",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (rule-based)",
+              "value": 0.149,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    }
+  ],
+  "notes": "The adapter README describes Harbor scoring as LLM-as-judge accuracy / mean reward over 4,428 tasks. This file keeps the current Omni-MATH website leaderboard metrics instead: overall accuracy, domain accuracies, difficulty-bucket accuracies, and a separate rule-based accuracy snapshot. The rule-based snapshot is not the Harbor adapter verifier metric; it is retained because the website presents it as a distinct leaderboard table."
 }

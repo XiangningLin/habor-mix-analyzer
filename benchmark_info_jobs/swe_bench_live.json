@@ -1,22 +1,411 @@
 {
   "name": "SWE-Bench-Live",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Repo-level Software Engineering",
+  "used_llm_or_agent": "agent",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://swe-bench-live.github.io/",
+    "leaderboard": "https://swe-bench-live.github.io/",
+    "paper": "https://arxiv.org/abs/2505.23419",
+    "github": "https://github.com/microsoft/SWE-bench-Live",
+    "dataset": "https://huggingface.co/datasets/SWE-bench-Live/SWE-bench-Live"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-05",
+    "num_tasks": 1890
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "% Resolved",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-05",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2505.23419",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.72,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.3033,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1133,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.5933,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.2867,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1767,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.84,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.48,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek V3",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.81,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.3833,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": "SWE-agent",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.9333,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.4033,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": "SWE-agent",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1633,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.95,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.4733,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet",
+          "system_description": "SWE-agent",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1767,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.8467,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.4633,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek V3",
+          "system_description": "SWE-agent",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1533,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.92,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.44,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": "Agentless",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1167,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.9167,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.3767,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": "Agentless",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.8433,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.39,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet",
+          "system_description": "Agentless",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1133,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.68,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.3,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek V3",
+          "system_description": "Agentless",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1333,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.8333,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.4067,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Release paper baseline on the SWE-bench-Live Lite subset (300 tasks); percentage metrics converted to rates."
+    },
+    {
+      "date": "2025-05",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2505.23419",
+      "results": [
+        {
+          "model": "Claude 3.7 Sonnet",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1925,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.8589,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.4829,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": "SWE-agent",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1857,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.9454,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.495,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet",
+          "system_description": "SWE-agent",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.1713,
+              "unit": null
+            },
+            {
+              "metric": "Patch Apply Rate",
+              "value": 0.8915,
+              "unit": null
+            },
+            {
+              "metric": "Localization Success Rate",
+              "value": 0.4586,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Release paper top-3 combinations on the SWE-bench-Live Full split."
+    },
+    {
+      "date": "2025-11-30",
+      "source_type": "leaderboard",
+      "source_url": "https://swe-bench-live.github.io/",
+      "results": [
+        {
+          "model": "Claude-4.5-Sonnet",
+          "system_description": "SWE-agent",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.36,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Official leaderboard, SWE-bench-Live Lite."
+    },
+    {
+      "date": "2025-10-31",
+      "source_type": "leaderboard",
+      "source_url": "https://swe-bench-live.github.io/",
+      "results": [
+        {
+          "model": "GPT5-Thinking (Medium)",
+          "system_description": "SWE-agent",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.2433,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Official leaderboard, SWE-bench-Live Lite."
+    },
+    {
+      "date": "2025-07-24",
+      "source_type": "leaderboard",
+      "source_url": "https://swe-bench-live.github.io/",
+      "results": [
+        {
+          "model": "Qwen3-Coder-480B-A35B",
+          "system_description": "OpenHands",
+          "scores": [
+            {
+              "metric": "% Resolved",
+              "value": 0.2467,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "Official leaderboard, SWE-bench-Live Lite."
+    }
+  ],
+  "notes": "SWE-bench-Live is a live-updating repository-level software-engineering benchmark. num_tasks is set to the current official Full split count of 1,890 tasks; the initial 2025-05 release had 1,319 tasks across 93 repositories."
 }

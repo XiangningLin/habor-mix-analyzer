@@ -1,22 +1,247 @@
 {
   "name": "SWE-Bench Pro",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Repo-level Software Engineering",
+  "used_llm_or_agent": "agent",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://labs.scale.com/leaderboard/swe_bench_pro_public",
+    "leaderboard": "https://labs.scale.com/leaderboard/swe_bench_pro_public",
+    "paper": "https://arxiv.org/abs/2509.16941",
+    "github": "https://github.com/scaleapi/SWE-bench_Pro-os",
+    "dataset": "https://huggingface.co/datasets/ScaleAI/SWE-bench_Pro"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-09",
+    "num_tasks": 731
   },
   "evaluation": {
-    "primary_metric": "",
-    "harbor_aligned_metric": null
+    "primary_metric": "Pass@1 resolve rate",
+    "harbor_aligned_metric": "Pass@1 resolve rate on SWE-Bench Pro parity validation. codex@0.77.0 + gpt-5-mini-2025-08-07 over 6 trials of 100 tasks: 0.357 +/- 0.006 original vs 0.363 +/- 0.010 Harbor adapter. codex@0.114.0 + gpt-5.4 over 4 trials of 10 tasks: 0.650 +/- 0.065 original vs 0.625 +/- 0.025 Harbor adapter."
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2026-04",
+      "source_type": "leaderboard",
+      "source_url": "https://labs.scale.com/leaderboard/swe_bench_pro_public",
+      "results": [
+        {
+          "model": "gpt-5.4",
+          "system_description": "mini-swe-agent",
+          "effort": "xHigh",
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.591, "unit": null },
+            { "metric": "stderr", "value": 0.0356, "unit": null }
+          ]
+        },
+        {
+          "model": "Muse Spark",
+          "system_description": "mini-swe-agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.55, "unit": null },
+            { "metric": "stderr", "value": 0.036, "unit": null }
+          ]
+        },
+        {
+          "model": "claude-opus-4-6",
+          "system_description": "mini-swe-agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.519, "unit": null },
+            { "metric": "stderr", "value": 0.0361, "unit": null }
+          ]
+        },
+        {
+          "model": "gemini-3.1-pro",
+          "system_description": "mini-swe-agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.461, "unit": null },
+            { "metric": "stderr", "value": 0.036, "unit": null }
+          ]
+        },
+        {
+          "model": "claude-opus-4-5-20251101",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.4589, "unit": null },
+            { "metric": "stderr", "value": 0.036, "unit": null }
+          ]
+        },
+        {
+          "model": "claude-4-5-Sonnet",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.436, "unit": null },
+            { "metric": "stderr", "value": 0.036, "unit": null }
+          ]
+        },
+        {
+          "model": "gemini-3-pro-preview",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.433, "unit": null },
+            { "metric": "stderr", "value": 0.036, "unit": null }
+          ]
+        },
+        {
+          "model": "claude-4-Sonnet",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.427, "unit": null },
+            { "metric": "stderr", "value": 0.0359, "unit": null }
+          ]
+        },
+        {
+          "model": "gpt-5-2025-08-07",
+          "system_description": "SWE-Agent",
+          "effort": "High",
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.4178, "unit": null },
+            { "metric": "stderr", "value": 0.0349, "unit": null }
+          ]
+        },
+        {
+          "model": "gpt-5.2-codex",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.4104, "unit": null },
+            { "metric": "stderr", "value": 0.0357, "unit": null }
+          ]
+        },
+        {
+          "model": "claude-4-5-haiku",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.3945, "unit": null },
+            { "metric": "stderr", "value": 0.0355, "unit": null }
+          ]
+        },
+        {
+          "model": "qwen3-coder-480b-a35b",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.387, "unit": null },
+            { "metric": "stderr", "value": 0.0355, "unit": null }
+          ]
+        },
+        {
+          "model": "minimax-2.1",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.3681, "unit": null },
+            { "metric": "stderr", "value": 0.0355, "unit": null }
+          ]
+        },
+        {
+          "model": "gemini-3-flash",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.3463, "unit": null },
+            { "metric": "stderr", "value": 0.0355, "unit": null }
+          ]
+        },
+        {
+          "model": "gpt-5.2",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.2994, "unit": null },
+            { "metric": "stderr", "value": 0.0215, "unit": null }
+          ]
+        },
+        {
+          "model": "kimi-k2-instruct",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.2767, "unit": null },
+            { "metric": "stderr", "value": 0.0325, "unit": null }
+          ]
+        },
+        {
+          "model": "qwen3-235b-a22b",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.2141, "unit": null },
+            { "metric": "stderr", "value": 0.0225, "unit": null }
+          ]
+        },
+        {
+          "model": "gpt-oss-120b",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.162, "unit": null },
+            { "metric": "stderr", "value": 0.0267, "unit": null }
+          ]
+        },
+        {
+          "model": "deepseek-v3p2",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.1556, "unit": null },
+            { "metric": "stderr", "value": 0.0263, "unit": null }
+          ]
+        },
+        {
+          "model": "gemma-3-27b-it",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.1138, "unit": null },
+            { "metric": "stderr", "value": 0.0215, "unit": null }
+          ]
+        },
+        {
+          "model": "llama3-1-405b-instruct",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.1118, "unit": null },
+            { "metric": "stderr", "value": 0.0215, "unit": null }
+          ]
+        },
+        {
+          "model": "glm-4.6",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.0967, "unit": null },
+            { "metric": "stderr", "value": 0.0215, "unit": null }
+          ]
+        },
+        {
+          "model": "llama4-maverick-17b-instruct",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.0524, "unit": null },
+            { "metric": "stderr", "value": 0.0124, "unit": null }
+          ]
+        },
+        {
+          "model": "codestral-2405",
+          "system_description": "SWE-Agent",
+          "effort": null,
+          "scores": [
+            { "metric": "Pass@1 resolve rate", "value": 0.0151, "unit": null },
+            { "metric": "stderr", "value": 0.0151, "unit": null }
+          ]
+        }
+      ],
+      "note": "Leaderboard scores are reported as percentages with +/- stderr; values are stored as fractions in [0, 1]."
+    }
+  ],
+  "notes": "SWE-Bench Pro is an enterprise-grade benchmark evaluating AI agents on long-horizon, real-world software engineering tasks across multiple languages (Python, JavaScript/TypeScript, Go)."
 }

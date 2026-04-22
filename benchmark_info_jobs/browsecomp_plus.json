@@ -1,22 +1,2012 @@
 {
-  "name": "browsecomp-plus",
-  "category": "",
-  "used_llm_or_agent": "",
+  "name": "BrowseComp-Plus",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "agent",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://texttron.github.io/BrowseComp-Plus/",
+    "leaderboard": "https://huggingface.co/spaces/Tevatron/BrowseComp-Plus",
+    "paper": "https://arxiv.org/abs/2508.06600",
+    "github": "https://github.com/texttron/BrowseComp-Plus",
+    "dataset": "https://huggingface.co/datasets/Tevatron/browsecomp-plus"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-10",
+    "num_tasks": 830
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "accuracy",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-08",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/Tevatron/BrowseComp-Plus",
+      "results": [
+        {
+          "model": "GPT-4.1",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.153,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.1642,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 10.35,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.6852,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3639,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.3689,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 8.67,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.5379,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5048,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.5664,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 25.93,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.1448,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.659,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.7324,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 23.97,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.1968,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Sonnet 4",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.147,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.2131,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 9.95,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.2878,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Sonnet 4",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3735,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.4733,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 9.03,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.2484,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Opus 4",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1554,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.2296,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 11.22,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.223,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Opus 4",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3675,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.5084,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 10.24,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.1233,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1627,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.2145,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 10.56,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.2851,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3458,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.4019,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 9.77,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.2042,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1988,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.2281,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 7.44,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.5245,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2952,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.3531,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 6.04,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.4425,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-32B",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0361,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0312,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 0.92,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.5817,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-32B",
+          "effort": null,
+          "system_description": "Qwen3-Embed-0.6B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0422,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0345,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 0.91,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.612,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-32B",
+          "effort": null,
+          "system_description": "Qwen3-Embed-4B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0807,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.062,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 0.89,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.6117,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-32B",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1072,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.078,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 0.94,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.5888,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-32B",
+          "effort": null,
+          "system_description": "ReasonIR",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0928,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0759,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 0.91,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.5608,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "SearchR1-32B",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0411,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0261,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 1.78,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "SearchR1-32B",
+          "effort": null,
+          "system_description": "Qwen3-Embed-0.6B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0602,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.053,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 1.73,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "SearchR1-32B",
+          "effort": null,
+          "system_description": "Qwen3-Embed-4B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0928,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.079,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 1.68,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "SearchR1-32B",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1108,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.1017,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 1.69,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "SearchR1-32B",
+          "effort": null,
+          "system_description": "ReasonIR",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0931,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0837,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 1.74,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-20b-low",
+          "effort": "low",
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0399,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0536,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 1.89,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.4156,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-20b-low",
+          "effort": "low",
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.141,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.1737,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 1.87,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3617,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-20b-medium",
+          "effort": "medium",
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1687,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.2196,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 13.72,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.4119,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-20b-medium",
+          "effort": "medium",
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3048,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.4131,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 13.64,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3549,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-20b-high",
+          "effort": "high",
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2145,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.3198,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 26.87,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3308,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-20b-high",
+          "effort": "high",
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3506,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.4929,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 23.87,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.2769,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-low",
+          "effort": "low",
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0976,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0854,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 2.06,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.437,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-low",
+          "effort": "low",
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2554,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.225,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 2.21,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.4037,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-medium",
+          "effort": "medium",
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2458,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.2702,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 9.73,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.457,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-medium",
+          "effort": "medium",
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3855,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.4345,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 9.64,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.4163,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-high",
+          "effort": "high",
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2916,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.355,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 19.45,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.4592,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-high",
+          "effort": "high",
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.441,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.5263,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 18.35,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3932,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5759,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.617,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 23.23,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.1263,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7169,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.7898,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 21.74,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.0958,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "kimi-k2-0711-preview",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1458,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.1543,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 14.9,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.6941,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "kimi-k2-0711-preview",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3542,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.3838,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 11.22,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.5351,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-0528",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.0856,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.0758,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 2.71,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.6247,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-0528",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1639,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.1632,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 2.72,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.5766,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-high",
+          "effort": "high",
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2916,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.355,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 19.45,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.4592,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "HuggingFace leaderboard data (41 submissions). system_description is 'retriever (scaffold_name)' when a custom scaffold is used, otherwise just the retriever name."
+    },
+    {
+      "date": "2025-09",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/Tevatron/BrowseComp-Plus",
+      "results": [
+        {
+          "model": "WebSailor-32B",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.1205,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 8.76,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "WebSailor-32B",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2759,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.293,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 8.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Tongyi-DeepResearch-30B-A3B",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3398,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.4683,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 32.92,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Tongyi-DeepResearch-30B-A3B",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4446,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.6232,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 30.37,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "FrugalRAG-Qwen7B",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2046,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.2357,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 7.95,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.7367,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "HuggingFace leaderboard data (5 submissions). system_description is 'retriever (scaffold_name)' when a custom scaffold is used, otherwise just the retriever name."
+    },
+    {
+      "date": "2025-10",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/Tevatron/BrowseComp-Plus",
+      "results": [
+        {
+          "model": "GLM-4.6",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.2774,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.3498,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 29.71,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3712,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM-4.6",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4819,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.5772,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 25.6,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.263,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash",
+          "effort": null,
+          "system_description": "Mixedbread Search",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3988,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.4278,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 8.3,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.2461,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "Mixedbread Search",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.741,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.8029,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 21.22,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.11,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "HuggingFace leaderboard data (4 submissions). system_description is 'retriever (scaffold_name)' when a custom scaffold is used, otherwise just the retriever name."
+    },
+    {
+      "date": "2025-11",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/Tevatron/BrowseComp-Plus",
+      "results": [
+        {
+          "model": "GPT-5-mini",
+          "effort": null,
+          "system_description": "openJiuwen-deepsearch (openJiuwen custom setup)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.8,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.5451,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 6.05,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.1882,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "HuggingFace leaderboard data (1 submissions). system_description is 'retriever (scaffold_name)' when a custom scaffold is used, otherwise just the retriever name."
+    },
+    {
+      "date": "2025-12",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/Tevatron/BrowseComp-Plus",
+      "results": [
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "Mixedbread Search (Agentica custom scaffold)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7841,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.4885,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 44.67,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.0792,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-high",
+          "effort": "high",
+          "system_description": "BM25 (gpt-oss native toolset)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4361,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.5838,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 46.51,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3682,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-high",
+          "effort": "high",
+          "system_description": "Qwen3-Embed-8B (gpt-oss native toolset)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5699,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.747,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 41.86,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.2905,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM-4.7",
+          "effort": null,
+          "system_description": "BM25",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3325,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.4597,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 41.55,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.169,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM-4.7",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5018,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.6869,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 35.32,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.132,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Tongyi-DeepResearch-30B-A3B",
+          "effort": null,
+          "system_description": "BM25 (Tongyi-DeepResearch native toolset)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3687,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.4302,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 17.91,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Tongyi-DeepResearch-30B-A3B",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B (Tongyi-DeepResearch native toolset)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5193,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.6051,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 17.14,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "HuggingFace leaderboard data (7 submissions). system_description is 'retriever (scaffold_name)' when a custom scaffold is used, otherwise just the retriever name."
+    },
+    {
+      "date": "2026-02",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/Tevatron/BrowseComp-Plus",
+      "results": [
+        {
+          "model": "OpenResearcher",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B (OpenResearcher toolset)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6092,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.7577,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 41.0,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.2759,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "SearchAgent-Zero",
+          "effort": null,
+          "system_description": "Qwen3-Embed-8B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.3795,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.5087,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 38.47,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.5806,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "HuggingFace leaderboard data (2 submissions). system_description is 'retriever (scaffold_name)' when a custom scaffold is used, otherwise just the retriever name."
+    },
+    {
+      "date": "2026-03",
+      "source_type": "leaderboard",
+      "source_url": "https://huggingface.co/spaces/Tevatron/BrowseComp-Plus",
+      "results": [
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "Reason-ModernColBERT (Search with get_doc)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.8759,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.8155,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 13.27,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.0607,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "Reason-ModernColBERT",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.7952,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.8352,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 19.31,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.0746,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-high",
+          "effort": "high",
+          "system_description": "GTE-ModernColBERT-v1 (Search with get_doc)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5892,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.5799,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 13.29,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3284,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-high",
+          "effort": "high",
+          "system_description": "GTE-ModernColBERT-v1",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5566,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.6694,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 17.51,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3102,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-high",
+          "effort": "high",
+          "system_description": "Reason-ModernColBERT (Search with get_doc)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.612,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.6084,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 13.87,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3245,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-high",
+          "effort": "high",
+          "system_description": "Reason-ModernColBERT",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5904,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.6864,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 18.87,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3007,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Tongyi-DeepResearch-30B-A3B",
+          "effort": null,
+          "system_description": "AgentIR-4B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6627,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.7886,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 25.91,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Tongyi-DeepResearch-30B-A3B",
+          "effort": null,
+          "system_description": "AgentIR-4B (Tongyi-DeepResearch native toolset)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6807,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.7658,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 24.49,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "oss-120b-high",
+          "effort": "high",
+          "system_description": "AgentIR-4B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6699,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.7813,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 24.08,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.2255,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GLM-4.7",
+          "effort": null,
+          "system_description": "AgentIR-4B",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.6466,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.7921,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 29.85,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.2985,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "Mixedbread Search (v3)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.8,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.8529,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 16.24,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.0847,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": "Mixedbread Search (v3) (Search with get_doc)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.9048,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.8303,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 11.53,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.0314,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenResearcher",
+          "effort": null,
+          "system_description": "Qwen3-Embed-0.6B (OpenResearcher toolset)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.4434,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.6048,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 49.54,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3321,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "OpenResearcher",
+          "effort": null,
+          "system_description": "LRAT-Qwen3-Embed-0.6B (OpenResearcher toolset)",
+          "scores": [
+            {
+              "metric": "accuracy",
+              "value": 0.5373,
+              "unit": null
+            },
+            {
+              "metric": "recall",
+              "value": 0.7031,
+              "unit": null
+            },
+            {
+              "metric": "avg_search_calls",
+              "value": 44.4,
+              "unit": null
+            },
+            {
+              "metric": "calibration_error",
+              "value": 0.3128,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": "HuggingFace leaderboard data (14 submissions). system_description is 'retriever (scaffold_name)' when a custom scaffold is used, otherwise just the retriever name."
+    }
+  ],
+  "notes": "BrowseComp-Plus is a benchmark for Deep-Research agents, derived from OpenAI's BrowseComp (1,266 questions). After human verification, 830 queries passed quality checks.\n\nKey characteristics:\n- Fixed, curated corpus of ~100K web documents (not live web search)\n- Each query includes human-verified evidence documents and mined hard negatives\n- Enables controlled experimentation: retriever and LLM agent can be evaluated independently\n- 14 university student annotators, 400+ hours of manual annotation effort\n- Corpus: Tevatron/browsecomp-plus-corpus on HuggingFace\n\nsystem_description in results refers to the retriever paired with the LLM search agent (e.g., BM25, Qwen3-Embed-8B, or ReasonIR), not an agent scaffold. SearchR1-32B uses its own search-augmented generation approach rather than the shared tool-use prompt.\n\nFrom University of Waterloo, CSIRO, Carnegie Mellon University, and The University of Queensland.\n\nLeaderboard column definitions (from https://huggingface.co/spaces/Tevatron/BrowseComp-Plus):\n- #: A \"Proprietary\" flag is added if the LLM is closed. Else, we label its size.\n- LLM: The name of the LLM, as well as the date the evaluation was performed.\n- Retriever: The name of the retrieval system.\n- Submitted By: The organization that submitted the evaluation results.\n- Scaffold: \"Standard\" refers to the default scaffold used by BrowseComp-Plus, where the model is only given a search tool that returns the top 5 results. For entries that used different scaffolds, we labeled it as \"Custom\", and you can hover over the \"Custom\" label to see its details.\n- Accuracy: Comparing the generated answer to the ground-truth answer. We follow BrowseComp to evaluate with LLM-as-a-judge. However, due to concerns about the long-term availability of GPT-4.1, instead of using GPT-4.1, we evaluate with Qwen3-32B, an open-weight model. The two judges differ by < 1%, and the LLM-judged results in BrowseComp-Plus baselines have been human verified to be reliable.\n- Recall: For each query, in addition to the ground-truth answer, BrowseComp-Plus labeled a list of \"Evidence Documents\" that are needed to answer the query. We take all documents ever searched by the agent in this trajectory, and compute recall against the evidence documents.\n- Search Calls: The number of search calls made by the agent.\n- Calibration Error: The calibration error of the agent, which measures if the agent's confidence in its answer is consistent with its accuracy, lower is better. It is computed following BrowseComp."
 }

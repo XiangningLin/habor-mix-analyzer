@@ -1,22 +1,111 @@
 {
   "name": "QuixBugs",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Repo-level Software Engineering",
+  "used_llm_or_agent": "agent",
   "links": {
-    "website": null,
+    "website": "https://jkoppel.github.io/QuixBugs/",
     "leaderboard": null,
-    "paper": null,
-    "github": null,
+    "paper": "https://jkoppel.github.io/QuixBugs/quixbugs.pdf",
+    "github": "https://github.com/jkoppel/QuixBugs",
     "dataset": null
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2017-10-22",
+    "num_tasks": 40
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Num Repaired programs",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
+  "results_over_time": [
+    {
+      "date": "2020-09-28",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/1805.03454",
+      "note": "The original QuixBugs paper and the GitHub/website repo do not publish a table of results using repair-tools or models; they only define the benchmark and the defect classes. The following results are published in another paper (A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark), arXiv:1805.03454v4. Table 2 reports number of generated patches and number of repaired programs per repair tool.",
+      "results": [
+        {
+          "model": "JGenProg",
+          "system_description": null,
+          "scores": [
+            { "metric": "num_generated_patches", "value": 164, "unit": null },
+            { "metric": "num_repaired_programs", "value": 4, "unit": null }
+          ]
+        },
+        {
+          "model": "Arja",
+          "system_description": null,
+          "scores": [
+            { "metric": "num_generated_patches", "value": 113, "unit": null },
+            { "metric": "num_repaired_programs", "value": 4, "unit": null }
+          ]
+        },
+        {
+          "model": "RSRepair",
+          "system_description": null,
+          "scores": [
+            { "metric": "num_generated_patches", "value": 31, "unit": null },
+            { "metric": "num_repaired_programs", "value": 3, "unit": null }
+          ]
+        },
+        {
+          "model": "NPEFix",
+          "system_description": null,
+          "scores": [
+            { "metric": "num_generated_patches", "value": 9, "unit": null },
+            { "metric": "num_repaired_programs", "value": 2, "unit": null }
+          ]
+        },
+        {
+          "model": "Cardumen",
+          "system_description": null,
+          "scores": [
+            { "metric": "num_generated_patches", "value": 5, "unit": null },
+            { "metric": "num_repaired_programs", "value": 5, "unit": null }
+          ]
+        },
+        {
+          "model": "Tibra",
+          "system_description": null,
+          "scores": [
+            { "metric": "num_generated_patches", "value": 4, "unit": null },
+            { "metric": "num_repaired_programs", "value": 2, "unit": null }
+          ]
+        },
+        {
+          "model": "Nopol",
+          "system_description": null,
+          "scores": [
+            { "metric": "num_generated_patches", "value": 4, "unit": null },
+            { "metric": "num_repaired_programs", "value": 4, "unit": null }
+          ]
+        },
+        {
+          "model": "JKali",
+          "system_description": null,
+          "scores": [
+            { "metric": "num_generated_patches", "value": 3, "unit": null },
+            { "metric": "num_repaired_programs", "value": 2, "unit": null }
+          ]
+        },
+        {
+          "model": "JMutRepair",
+          "system_description": null,
+          "scores": [
+            { "metric": "num_generated_patches", "value": 3, "unit": null },
+            { "metric": "num_repaired_programs", "value": 3, "unit": null }
+          ]
+        },
+        {
+          "model": "Dynamoth",
+          "system_description": null,
+          "scores": [
+            { "metric": "num_generated_patches", "value": 2, "unit": null },
+            { "metric": "num_repaired_programs", "value": 2, "unit": null }
+          ]
+        }
+      ]
+    }
+  ],
   "notes": null
 }

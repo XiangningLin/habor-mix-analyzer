@@ -1,22 +1,97 @@
 {
   "name": "SpreadsheetBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "agent",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://spreadsheetbench.github.io/",
+    "leaderboard": "https://spreadsheetbench.github.io/",
+    "paper": "https://arxiv.org/abs/2406.14991",
+    "github": "https://github.com/RUCKBReasoning/SpreadsheetBench",
+    "dataset": "https://huggingface.co/datasets/KAKA22/SpreadsheetBench"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2024-06-21",
+    "num_tasks": 400
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "pass rate",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2026-03-07",
+      "source_type": "leaderboard",
+      "source_url": "https://spreadsheetbench.github.io/",
+      "results": [
+        {
+          "model": "Tetra-Beta-2",
+          "system_description": "Tetra-Beta-2",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.9425,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Nobie Agent",
+          "system_description": "Nobie Agent",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.91,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qingqiu Agent",
+          "system_description": "Qingqiu Agent",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.8925,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Shortcut.ai",
+          "system_description": "Shortcut.ai",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.86,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Kyra",
+          "system_description": "Kyra",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.8425,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Decide Agent",
+          "system_description": "Decide Agent",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.825,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    }
+  ],
+  "notes": "Only SpreadsheetBench V1 Verified (400) is retained; num_tasks therefore reflects the verified_400 split rather than the 912-task V1 Full benchmark. The metric is pass rate: the percentage of tasks whose spreadsheet output matches the ground-truth answer file at the benchmark answer_position."
 }

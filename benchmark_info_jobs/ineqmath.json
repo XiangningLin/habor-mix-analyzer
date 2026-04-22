@@ -1,22 +1,3139 @@
 {
   "name": "IneqMath",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Math",
+  "used_llm_or_agent": "llm",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
-    "dataset": null
+    "website": "https://ineqmath.github.io/",
+    "leaderboard": "https://ineqmath.github.io/#leaderboard",
+    "paper": "https://arxiv.org/pdf/2506.07927",
+    "github": "https://github.com/lupantech/ineqmath",
+    "dataset": "https://huggingface.co/datasets/AI4Math/IneqMath"
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-06-09",
+    "num_tasks": 200
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Overall Accuracy",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
-  "notes": null
+  "results_over_time": [
+    {
+      "date": "2025-12-15",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/pdf/2506.07927",
+      "note": "Table 4. Metrics copied as: Overall Acc, Answer Acc, and Step Acc across four categories (No Toy Case, No Logic Gap, No Approx. Error, No Comp. Error).",
+      "results": [
+        {
+          "model": "Qwen2.5-Coder-32B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.015,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.36,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.905,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.885,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-4-Scout",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.015,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.335,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.305,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.93,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.925,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.545,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.91,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.95,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-4-Maverick",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.425,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.89,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.95,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.445,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.045,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.925,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.0 Flash-Lite",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.015,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.33,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.115,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.73,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.905,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.395,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.29,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.9,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.595,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.935,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.32,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.925,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.94,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.0 Flash",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.945,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.945,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.545,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.36,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "QwQ-32B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.495,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.295,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.87,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Llama-70B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.535,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.355,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.87,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-Distill-Qwen-14B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.355,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.85,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.495,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.175,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.81,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.95,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-235B-A22B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.36,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.31,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.925,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.935,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.045,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.055,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.88,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 1.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 3 mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.715,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.24,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.195,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.535,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.91,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.885,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.19,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.995,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.625,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.345,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.175,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.865,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.995,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.095,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.625,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.22,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.775,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.95,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.65,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.62,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.865,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.935,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.395,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.915,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.97,
+              "unit": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2024-02-21",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Gemma-2B (6K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.075,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.735,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.99,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.95,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2024-06-25",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Gemma-2-9B (6K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.835,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.005,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.99,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2024-07-18",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "GPT-4o mini",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.395,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.29,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.9,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3.1-8B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.145,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.905,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.99,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.92,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2024-08-06",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.32,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.925,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.94,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2024-09-16",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Qwen2.5-7B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.445,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.045,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.925,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Qwen2.5-72B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.545,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.91,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.95,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2024-09-25",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Llama-3.2-3B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.11,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.82,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.985,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.885,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2024-11-10",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Qwen2.5-Coder-32B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.015,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.36,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.905,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.885,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2024-11-27",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "QwQ-32B-preview (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.435,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.28,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.3,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.225,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.875,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2024-12-17",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "o1 (medium, 10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.625,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.345,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.175,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.865,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.995,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o1 (medium, 40K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.075,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.68,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.285,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.19,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.835,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.955,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-01-19",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "DeepSeek-R1 (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.495,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.175,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.81,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.95,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-01-20",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "DeepSeek-R1 (Qwen-14B) (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.05,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.355,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.85,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1 (Llama-70B) (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.535,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.23,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.355,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.87,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1 (Qwen-1.5B) (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.005,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.145,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.48,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.835,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-01-31",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "o3-mini (medium, 10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.095,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.625,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.22,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.775,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.95,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-02-05",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Gemini 2.0 Flash",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.555,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.945,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-02-19",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Grok 3 mini (medium, 10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.715,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.24,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.195,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.535,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.91,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Grok 3",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.545,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.17,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.36,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.42,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.935,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude 3.7 Sonnet (8K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.01,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.415,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.935,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.92,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-02-25",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Gemini 2.0 Flash-Lite",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.015,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.33,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.115,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.73,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.905,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-03-05",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "QwQ-32B (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.02,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.495,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.295,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.87,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-03-25",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Gemini 2.5 Pro (30K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.435,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.68,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.875,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.63,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.91,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.98,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3-0324",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.545,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.175,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.15,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.63,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.945,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.07,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.885,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.19,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.995,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-04-05",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Llama-4-Maverick",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.425,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.04,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.89,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.95,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-4-Scout",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.015,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.335,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.305,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.035,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.93,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.925,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-04-14",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "GPT-4.1",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.405,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.595,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.935,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-04-16",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "o3 (medium, 40K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.72,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.965,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.56,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.865,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.94,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3 (medium, 10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.37,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.935,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.395,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.915,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.97,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o4-mini (medium, 10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.65,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.62,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.26,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.865,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-04-17",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Gemini 2.5 Flash (40K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.235,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.445,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.81,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.365,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.935,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.975,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.045,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.055,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.88,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.135,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 1.0,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-04-27",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Qwen3-4B",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.055,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.44,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.21,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.32,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.855,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-04-28",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Qwen3-235B-A22B (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.06,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.41,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.36,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.31,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.925,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-05-14",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Claude Opus 4 (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.055,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.475,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.25,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.09,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.895,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.94,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4 (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.03,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.44,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.195,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.065,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.865,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.955,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-05-20",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Gemini 2.5 Flash Preview 05-20 (40K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.275,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.45,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.83,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.44,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.89,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.96,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Flash Preview 05-20 (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.145,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.175,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.82,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.31,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.965,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.955,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-05-28",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "DeepSeek-R1-0528 (40K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.095,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.73,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.49,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.925,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-R1-0528 (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.045,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.34,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.325,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.29,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.905,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-06-05",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Gemini 2.5 Pro Preview (40K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.46,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.66,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.85,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.65,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.925,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.975,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Gemini 2.5 Pro Preview (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.91,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.98,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.985,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-06-10",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "o3-pro (medium, 40K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.46,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.685,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.955,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.735,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.86,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.945,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "o3-pro (medium, 10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.455,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.68,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.985,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.67,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.87,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.975,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-07-09",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Grok 4 (40K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.76,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.57,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.93,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.965,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-07-12",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "Kimi K2 Instruct",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.09,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.625,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.335,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.255,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.525,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.93,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-08-05",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "gpt-oss-120b (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.235,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.665,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.955,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.905,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.935,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-08-07",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "GPT-5 (medium, 30K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.665,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.955,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.69,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.935,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.98,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5 mini (medium, 10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.305,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.555,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.955,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.5,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.91,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.985,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-5 (medium, 10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.28,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.365,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.945,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.47,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.935,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.97,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "date": "2025-08-21",
+      "source_type": "leaderboard",
+      "source_url": "https://ineqmath.github.io/#leaderboard",
+      "results": [
+        {
+          "model": "DeepSeek-V3.1 (Thinking Mode) (30K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.155,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.73,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.52,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.31,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.645,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.945,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3.1 (Thinking Mode) (10K)",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy_overall",
+              "value": 0.12,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_answer",
+              "value": 0.325,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_toy_case",
+              "value": 0.765,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_logical_gap",
+              "value": 0.27,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_approx_error",
+              "value": 0.88,
+              "unit": null
+            },
+            {
+              "metric": "accuracy_step_no_comp_error",
+              "value": 0.975,
+              "unit": null
+            }
+          ]
+        }
+      ],
+      "note": null
+    }
+  ],
+  "notes": "The results from the leaderboard page are added at different dates. To better keep track of the results over time, the leaderboard blocks here are organized by the date of the results."
 }

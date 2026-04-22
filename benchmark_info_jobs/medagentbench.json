@@ -1,22 +1,139 @@
 {
   "name": "MedAgentBench",
-  "category": "",
-  "used_llm_or_agent": "",
+  "category": "Agentic/Interactive",
+  "used_llm_or_agent": "both",
   "links": {
-    "website": null,
-    "leaderboard": null,
-    "paper": null,
-    "github": null,
+    "website": "https://stanfordmlgroup.github.io/projects/medagentbench/",
+    "leaderboard": "https://stanfordmlgroup.github.io/projects/medagentbench/",
+    "paper": "https://arxiv.org/pdf/2501.14654",
+    "github": "https://github.com/stanfordmlgroup/MedAgentBench",
     "dataset": null
   },
   "meta": {
-    "release_date": "",
-    "num_tasks": null
+    "release_date": "2025-01-24",
+    "num_tasks": 300
   },
   "evaluation": {
-    "primary_metric": "",
+    "primary_metric": "Task success rate",
     "harbor_aligned_metric": null
   },
-  "results_over_time": [],
+  "results_over_time": [
+    {
+      "date": "2025-02-12",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/pdf/2501.14654",
+      "note": "Table 3. Metrics reported are Overall SR, Query SR, and Action SR; values converted from percentages to fractions. Paper states 300 tasks total (150 query tasks requiring GET, 150 action tasks requiring POST often with prior GET) and pass@1 single-attempt evaluation.",
+      "results": [
+        {
+          "model": "Claude 3.5 Sonnet v2",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.6967, "unit": null },
+            { "metric": "query_sr", "value": 0.8533, "unit": null },
+            { "metric": "action_sr", "value": 0.54, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.64, "unit": null },
+            { "metric": "query_sr", "value": 0.72, "unit": null },
+            { "metric": "action_sr", "value": 0.56, "unit": null }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.6267, "unit": null },
+            { "metric": "query_sr", "value": 0.7067, "unit": null },
+            { "metric": "action_sr", "value": 0.5467, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini-1.5 Pro",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.62, "unit": null },
+            { "metric": "query_sr", "value": 0.5267, "unit": null },
+            { "metric": "action_sr", "value": 0.7133, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o-mini",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.5633, "unit": null },
+            { "metric": "query_sr", "value": 0.5933, "unit": null },
+            { "metric": "action_sr", "value": 0.5333, "unit": null }
+          ]
+        },
+        {
+          "model": "o3-mini",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.5167, "unit": null },
+            { "metric": "query_sr", "value": 0.5467, "unit": null },
+            { "metric": "action_sr", "value": 0.4867, "unit": null }
+          ]
+        },
+        {
+          "model": "Qwen2.5",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.5133, "unit": null },
+            { "metric": "query_sr", "value": 0.3867, "unit": null },
+            { "metric": "action_sr", "value": 0.64, "unit": null }
+          ]
+        },
+        {
+          "model": "Llama 3.3",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.4633, "unit": null },
+            { "metric": "query_sr", "value": 0.5, "unit": null },
+            { "metric": "action_sr", "value": 0.4267, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 2.0 Flash",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.3833, "unit": null },
+            { "metric": "query_sr", "value": 0.34, "unit": null },
+            { "metric": "action_sr", "value": 0.4267, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemma2",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.1933, "unit": null },
+            { "metric": "query_sr", "value": 0.3867, "unit": null },
+            { "metric": "action_sr", "value": 0.0, "unit": null }
+          ]
+        },
+        {
+          "model": "Gemini 2.0 Pro",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.18, "unit": null },
+            { "metric": "query_sr", "value": 0.2533, "unit": null },
+            { "metric": "action_sr", "value": 0.1067, "unit": null }
+          ]
+        },
+        {
+          "model": "Mistral v0.3",
+          "system_description": "MedAgentBench agent orchestrator",
+          "scores": [
+            { "metric": "overall_sr", "value": 0.04, "unit": null },
+            { "metric": "query_sr", "value": 0.08, "unit": null },
+            { "metric": "action_sr", "value": 0.0, "unit": null }
+          ]
+        }
+      ]
+    }
+  ],
   "notes": null
 }
