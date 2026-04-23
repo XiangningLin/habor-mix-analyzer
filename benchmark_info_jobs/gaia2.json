@@ -25,6 +25,7 @@
       "results": [
         {
           "model": "Llama 3.3 70B Instruct",
+          "effort": null,
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -71,6 +72,7 @@
         },
         {
           "model": "Llama 4 Maverick",
+          "effort": null,
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -117,6 +119,7 @@
         },
         {
           "model": "GPT-4o",
+          "effort": null,
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -163,6 +166,7 @@
         },
         {
           "model": "Qwen3-235B",
+          "effort": null,
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -209,6 +213,7 @@
         },
         {
           "model": "Grok-4",
+          "effort": null,
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -255,6 +260,7 @@
         },
         {
           "model": "Kimi-K2",
+          "effort": null,
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -301,6 +307,7 @@
         },
         {
           "model": "Gemini-2.5-Pro",
+          "effort": null,
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -347,6 +354,7 @@
         },
         {
           "model": "Claude-4-Sonnet",
+          "effort": null,
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -392,7 +400,8 @@
           ]
         },
         {
-          "model": "GPT-5 (minimal)",
+          "model": "GPT-5",
+          "effort": "minimal",
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -438,7 +447,8 @@
           ]
         },
         {
-          "model": "GPT-5 (low)",
+          "model": "GPT-5",
+          "effort": "low",
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -484,7 +494,8 @@
           ]
         },
         {
-          "model": "GPT-5 (high)",
+          "model": "GPT-5",
+          "effort": "high",
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -538,7 +549,8 @@
       "source_url": "https://arxiv.org/abs/2602.11964",
       "results": [
         {
-          "model": "GPT-OSS 120B (high)",
+          "model": "GPT-OSS 120B",
+          "effort": "high",
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -584,7 +596,8 @@
           ]
         },
         {
-          "model": "Qwen3-235B Thinking",
+          "model": "Qwen3-235B",
+          "effort": "thinking",
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -630,7 +643,8 @@
           ]
         },
         {
-          "model": "Claude-4-Sonnet Thinking",
+          "model": "Claude-4-Sonnet",
+          "effort": "thinking",
           "system_description": "ReAct (temperature=0.5, 3 runs/scenario, 200-step cap)",
           "scores": [
             {
@@ -684,7 +698,8 @@
       "source_url": "https://huggingface.co/spaces/meta-agents-research-environments/leaderboard",
       "results": [
         {
-          "model": "Claude Opus 4.6 (high)",
+          "model": "Claude Opus 4.6",
+          "effort": "high",
           "system_description": "OpenClaw 2026.4.1",
           "scores": [
             {
@@ -720,7 +735,8 @@
           ]
         },
         {
-          "model": "GPT-5.4 (high)",
+          "model": "GPT-5.4",
+          "effort": "high",
           "system_description": "OpenClaw 2026.4.1",
           "scores": [
             {
@@ -756,7 +772,8 @@
           ]
         },
         {
-          "model": "Gemini 3.1 Pro (high)",
+          "model": "Gemini 3.1 Pro",
+          "effort": "high",
           "system_description": "OpenClaw 2026.4.1",
           "scores": [
             {
@@ -792,7 +809,8 @@
           ]
         },
         {
-          "model": "Claude Sonnet 4.6 (high)",
+          "model": "Claude Sonnet 4.6",
+          "effort": "high",
           "system_description": "OpenClaw 2026.4.1",
           "scores": [
             {
@@ -828,7 +846,8 @@
           ]
         },
         {
-          "model": "GLM 5.1 (enabled)",
+          "model": "GLM 5.1",
+          "effort": "enabled",
           "system_description": "OpenClaw 2026.4.1",
           "scores": [
             {
@@ -864,7 +883,8 @@
           ]
         },
         {
-          "model": "Kimi-K2.5 (enabled)",
+          "model": "Kimi-K2.5",
+          "effort": "enabled",
           "system_description": "OpenClaw 2026.4.1",
           "scores": [
             {

@@ -25,6 +25,7 @@
       "results": [
         {
           "model": "GPT-4",
+          "effort": null,
           "system_description": null,
           "scores": [
             {
@@ -46,6 +47,7 @@
         },
         {
           "model": "GPT-4 Turbo",
+          "effort": null,
           "system_description": null,
           "scores": [
             {
@@ -67,6 +69,7 @@
         },
         {
           "model": "GPT-4",
+          "effort": null,
           "system_description": "AutoGPT",
           "scores": [
             {
@@ -88,6 +91,7 @@
         },
         {
           "model": "GPT-4",
+          "effort": null,
           "system_description": "GPT-4 + plugins (human-selected)",
           "scores": [
             {
@@ -109,6 +113,7 @@
         },
         {
           "model": "Human annotators",
+          "effort": null,
           "system_description": null,
           "scores": [
             {
@@ -138,6 +143,7 @@
       "results": [
         {
           "model": "GPT-4-turbo",
+          "effort": null,
           "system_description": "FRIDAY",
           "scores": [
             {
@@ -164,6 +170,7 @@
         },
         {
           "model": "GPT-4-turbo",
+          "effort": null,
           "system_description": "Multi-Agent Experiment v0.1 (powered by AutoGen)",
           "scores": [
             {
@@ -190,6 +197,7 @@
         },
         {
           "model": "GPT-4-Turbo",
+          "effort": null,
           "system_description": "UK AI Safety Institute Internal",
           "scores": [
             {
@@ -216,6 +224,7 @@
         },
         {
           "model": "GPT-4o",
+          "effort": null,
           "system_description": "Hugging Face Agents + GPT-4o",
           "scores": [
             {
@@ -242,6 +251,7 @@
         },
         {
           "model": "Fine-tuned GPT-4o",
+          "effort": null,
           "system_description": "Trase Agent v0.1",
           "scores": [
             {
@@ -268,6 +278,7 @@
         },
         {
           "model": "GPT-4o",
+          "effort": null,
           "system_description": "Sibyl System v0.2 (gpt-4o-2024-08-06)",
           "scores": [
             {
@@ -302,6 +313,7 @@
       "results": [
         {
           "model": "GPT-4o and o1-preview (varies by agent)",
+          "effort": null,
           "system_description": "Magentic-1 (o1)",
           "scores": [
             {
@@ -328,6 +340,7 @@
         },
         {
           "model": "GPT-4o",
+          "effort": null,
           "system_description": "Magentic-1",
           "scores": [
             {
@@ -354,6 +367,7 @@
         },
         {
           "model": "o1-preview, gpt-4o",
+          "effort": null,
           "system_description": "omne v0.1",
           "scores": [
             {
@@ -380,6 +394,7 @@
         },
         {
           "model": "GPT-4o",
+          "effort": null,
           "system_description": "TapeAgent v0.2",
           "scores": [
             {
@@ -406,6 +421,7 @@
         },
         {
           "model": "Claude Sonnet 3.5, GPT-4o, o1-preview",
+          "effort": null,
           "system_description": "Barcelona v0.1",
           "scores": [
             {
@@ -432,6 +448,7 @@
         },
         {
           "model": "claude-3-5-sonnet",
+          "effort": null,
           "system_description": "h2oGPTe Agent v1.6.8",
           "scores": [
             {
@@ -466,6 +483,7 @@
       "results": [
         {
           "model": "Previous SOTA",
+          "effort": null,
           "system_description": "Previous SOTA (opens in a new window)",
           "scores": [
             {
@@ -492,6 +510,7 @@
         },
         {
           "model": "OpenAI Deep Research",
+          "effort": null,
           "system_description": "OpenAI Deep Research (pass@1)",
           "scores": [
             {
@@ -518,6 +537,7 @@
         },
         {
           "model": "OpenAI Deep Research",
+          "effort": null,
           "system_description": "OpenAI Deep Research (cons@64)",
           "scores": [
             {
@@ -552,6 +572,7 @@
       "results": [
         {
           "model": "o1",
+          "effort": null,
           "system_description": "open Deep Research | pass@1",
           "scores": [
             {
@@ -578,6 +599,7 @@
         },
         {
           "model": "Claude, o1, Gemini",
+          "effort": null,
           "system_description": "Trase Agent v0.3",
           "scores": [
             {
@@ -604,6 +626,7 @@
         },
         {
           "model": "claude-3.7-sonnet",
+          "effort": null,
           "system_description": "TapeAgents & BrowserGym",
           "scores": [
             {
@@ -630,6 +653,7 @@
         },
         {
           "model": "claude-3-7-sonnet",
+          "effort": null,
           "system_description": "h2oGPTe Agent v1.6.27 | March 17 original date",
           "scores": [
             {
@@ -664,6 +688,7 @@
       "results": [
         {
           "model": "Anthropic,  Google,  openaI",
+          "effort": null,
           "system_description": "SU AI Zero",
           "scores": [
             {
@@ -690,6 +715,7 @@
         },
         {
           "model": "GPT-4.1",
+          "effort": null,
           "system_description": "OWL++",
           "scores": [
             {
@@ -716,6 +742,7 @@
         },
         {
           "model": "o4-mini",
+          "effort": null,
           "system_description": "Magentic-UI",
           "scores": [
             {
@@ -742,6 +769,7 @@
         },
         {
           "model": "GPT-4o, DeepSeek V3, Claude-3.7-Sonnet, Gemini 2.5 Pro",
+          "effort": null,
           "system_description": "🐟 AWorld (Run Instantly)",
           "scores": [
             {
@@ -767,7 +795,8 @@
           ]
         },
         {
-          "model": "claude-3-7-sonnet-20250219, gemini-2.5-pro-preview-06-05 (extended thinking)",
+          "model": "claude-3-7-sonnet-20250219, gemini-2.5-pro-preview-06-05",
+          "effort": "extended thinking",
           "system_description": "h2oGPTe Agent v1.6.33",
           "scores": [
             {
@@ -794,6 +823,7 @@
         },
         {
           "model": "Su Zero Ultra",
+          "effort": null,
           "system_description": "Su Zero Ultra",
           "scores": [
             {
@@ -828,6 +858,7 @@
       "results": [
         {
           "model": "GPT-4o, DeepSeek V3, Claude-Sonnet-4, Gemini-2.5-Pro",
+          "effort": null,
           "system_description": "🐦‍🔥 AWorld (Run Instantly)",
           "scores": [
             {
@@ -854,6 +885,7 @@
         },
         {
           "model": "skywork-agent-model, gpt-4.1, claude-3.7-sonnet, gemini-2.5-pro",
+          "effort": null,
           "system_description": "Skywork Deep Research Agent v2",
           "scores": [
             {
@@ -880,6 +912,7 @@
         },
         {
           "model": "Claude Sonnet 4, Gemini 2.5 Pro",
+          "effort": null,
           "system_description": "Co-Sight_v2.0.0",
           "scores": [
             {
@@ -906,6 +939,7 @@
         },
         {
           "model": "ZTE Nebula LLM, Claude Sonnet 4, Gemini 2.5 Pro",
+          "effort": null,
           "system_description": "Co-Sight_v2.0.1",
           "scores": [
             {
@@ -932,6 +966,7 @@
         },
         {
           "model": "ZTE Nebula LLM, Claude Sonnet 4, Gemini 2.5 Pro",
+          "effort": null,
           "system_description": "Co-Sight_v2.1.0",
           "scores": [
             {
@@ -966,6 +1001,7 @@
       "results": [
         {
           "model": "GPT5，Claude-Sonnet-4，Gemini-2.5-Pro",
+          "effort": null,
           "system_description": "LeAgent_v1.0",
           "scores": [
             {
@@ -992,6 +1028,7 @@
         },
         {
           "model": "sonnet-4-5 + gpt-5",
+          "effort": null,
           "system_description": "h2oGPTe Agent v1.6.44",
           "scores": [
             {
@@ -1018,6 +1055,7 @@
         },
         {
           "model": "HALO V1217-1",
+          "effort": null,
           "system_description": "HALO V1217-1",
           "scores": [
             {
@@ -1044,6 +1082,7 @@
         },
         {
           "model": "Self Consistency 35",
+          "effort": null,
           "system_description": "SU Zero - Shuqian Series Pro MAX",
           "scores": [
             {
@@ -1070,6 +1109,7 @@
         },
         {
           "model": "GPT 5, Gemini 3 Pro, DeepSeek 3.1, Qwen 3",
+          "effort": null,
           "system_description": "JoinAI_V2.2",
           "scores": [
             {
@@ -1096,6 +1136,7 @@
         },
         {
           "model": "Nemotron-ToolOrchestrator-8B, GPT-5, Claude Opus 4.1, Qwen2.5-Math-72B",
+          "effort": null,
           "system_description": "Nemotron-ToolOrchestra-0106",
           "scores": [
             {
@@ -1122,6 +1163,7 @@
         },
         {
           "model": "GPT5, Gemini-3-pro,  o3",
+          "effort": null,
           "system_description": "Lemon",
           "scores": [
             {
@@ -1148,6 +1190,7 @@
         },
         {
           "model": "GPT5, Gemini-3-Pro",
+          "effort": null,
           "system_description": "openJiuwen-deepagent",
           "scores": [
             {
@@ -1174,6 +1217,7 @@
         },
         {
           "model": "Qwen, Claude 4.6, GPT 5, DeepSeek 3.2, Gemini 3 Pro, Kimi K2.5",
+          "effort": null,
           "system_description": "OPS-Agentic-Search",
           "scores": [
             {
@@ -1200,6 +1244,7 @@
         },
         {
           "model": "GPT5.2, Claude Sonnet 4.5, Gemini 3 Pro",
+          "effort": null,
           "system_description": "ShawnAgent_v3.1",
           "scores": [
             {
