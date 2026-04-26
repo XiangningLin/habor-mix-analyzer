@@ -15,21 +15,46 @@
   },
   "evaluation": {
     "primary_metric": "Overall average score across 20 tasks (task-specific metrics include ROUGE-L, Accuracy, F0.5, F1, rc-F1, soft-F1, and normalized log-distance)",
-    "harbor_aligned_metric": "Accuracy (%) on a 120-unit LawBench Harbor parity subset (20 scenarios × 2 prompt types × 3 chunks), averaged over 3 runs; parity: qwen-code@0.6.0 + glm-4.7; 65.6 ± 1.0 (Harbor) vs 65.0 ± 0.4 (original)"
+    "harbor_aligned_metric": "Accuracy (%) on a 120-unit LawBench Harbor parity subset (20 scenarios x 2 prompt types x 3 chunks), averaged over 3 runs; parity: qwen-code@0.6.0 + glm-4.7; 65.6 +/- 1.0 (Harbor) vs 65.0 +/- 0.4 (original)"
   },
   "results_over_time": [
     {
       "date": "2024-11",
-      "source_type": "paper",
-      "source_url": "https://github.com/open-compass/LawBench",
+      "source_type": "leaderboard",
+      "source_url": "https://lawbench.opencompass.org.cn/leaderboard",
       "results": [
         {
-          "model": "Qwen1.5-72B-Chat",
+          "model": "Qwen-1.5-72B-Chat",
           "system_description": null,
           "effort": null,
           "scores": [
-            { "metric": "overall-zero-shot", "value": 56.26, "unit": "score" },
-            { "metric": "overall-one-shot", "value": 57.38, "unit": "score" }
+            {
+              "metric": "overall-zero-shot",
+              "value": 56.26,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 57.38,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "BlueLM",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 53.09,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 54.54,
+              "unit": "score"
+            }
           ]
         },
         {
@@ -37,16 +62,985 @@
           "system_description": null,
           "effort": null,
           "scores": [
-            { "metric": "overall-zero-shot", "value": 52.35, "unit": "score" },
-            { "metric": "overall-one-shot", "value": 53.85, "unit": "score" }
+            {
+              "metric": "overall-zero-shot",
+              "value": 52.35,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 53.85,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-1.5-14B-Chat",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 46.85,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 49.43,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "InternLM2-Chat-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 45.8,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 48.53,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-1.5-72B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 42.17,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 40.83,
+              "unit": "score"
+            }
           ]
         },
         {
           "model": "ChatGPT (GPT-3.5-turbo)",
+          "system_description": null,
           "effort": null,
           "scores": [
-            { "metric": "overall-zero-shot", "value": 42.15, "unit": "score" },
-            { "metric": "overall-one-shot", "value": 44.52, "unit": "score" }
+            {
+              "metric": "overall-zero-shot",
+              "value": 42.15,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 44.52,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-1.5-7B-Chat",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 41.41,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 43.87,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "InternLM2-Chat-20B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 40.47,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 47.74,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "StableBeluga2",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 39.23,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 38.97,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-7B-Chat",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 37.0,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 38.99,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "InternLM-Chat-7B-8K",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 35.73,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 37.28,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-1.5-14B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 35.28,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 32.8,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "InternLM-Chat-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 34.62,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 36.11,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Yulan-Chat-2-13B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 33.76,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 34.51,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Fuzi-Mingcha",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 33.05,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 28.78,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "ChatLaw-13B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 32.76,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 32.63,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Wisdom-Interrogatory",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 31.41,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 27.74,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "BELLE-LLaMA-2",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 30.41,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 30.79,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-1.5-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 30.27,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 28.22,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "HanFei",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 29.71,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 24.91,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LexiLaw",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 28.78,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 26.41,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "ChatLaw-33B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 26.14,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 25.41,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "TigerBot-SFT",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 25.89,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 25.62,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Lawyer-LLaMA",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 25.32,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 23.02,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "TigerBot-Base",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 21.71,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 20.34,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Baichuan-13B-Chat",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 21.41,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 29.59,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "ChatGLM2-6B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 21.15,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 22.94,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 19.58,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 18.62,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Baichuan-13B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 19.06,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 24.04,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Ziya-LLaMA-13B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 17.99,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 18.79,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "InternLM-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 16.27,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 22.47,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "MOSS-Moon-SFT",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 15.22,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 15.6,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Baichuan-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 15.09,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 21.18,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "MOSS-Moon",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 14.84,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 15.68,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-2-Chat-70B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 14.71,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 12.67,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-2-Chat-13B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 14.64,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 12.11,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "WizardLM-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 13.79,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 14.47,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Chinese-Alpaca-2-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 13.77,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 19.22,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-2-70B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 13.56,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 20.8,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "XVERSE-13B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 13.55,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 13.71,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Vicuna-v1.3-13B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 12.39,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 15.81,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-2-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 11.69,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 18.26,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Vicuna-v1.3-33B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 11.57,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 19.11,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Vicuna-v1.3-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 11.52,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 13.65,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "MPT-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 11.21,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 14.33,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "MPT-Instruct-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 10.33,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 12.63,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Alpaca-v1.0-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 10.02,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 15.62,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LaWGPT-7B-beta1.1",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 9.91,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 11.59,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-2-13B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 9.78,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 18.37,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 9.72,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 14.76,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-30B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 9.26,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 16.52,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "GoGPT",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 8.92,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 16.23,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Chinese-LLaMA-2-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 8.79,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 12.55,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-13B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 8.74,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 16.61,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-65B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 8.44,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 17.67,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-2-Chat-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 7.16,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 6.83,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-2-Chinese-13B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 4.31,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 17.08,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LLaMA-2-Chinese-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 2.96,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 10.67,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "LaWGPT-7B-beta1.0",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 1.51,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 2.33,
+              "unit": "score"
+            }
           ]
         }
       ],

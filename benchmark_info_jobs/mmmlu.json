@@ -19,34 +19,490 @@
   },
   "results_over_time": [
     {
-      "date": "2025-08",
+      "date": "2026-04-24",
       "source_type": "paper",
-      "source_url": "https://cdn.openai.com/pdf/419b6906-9da6-406c-a19d-1bb078ac7637/oai_gpt-oss_model_card.pdf",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf",
       "results": [
         {
-          "model": "OpenAI o3",
+          "model": "DeepSeek-V3.2 Base",
           "system_description": null,
           "effort": null,
-          "scores": [
-            { "metric": "average-accuracy", "value": 0.888, "unit": null }
-          ]
+          "scores": [{ "metric": "average-accuracy", "value": 0.879, "unit": null }]
         },
         {
-          "model": "OpenAI o4-mini",
+          "model": "DeepSeek-V4-Flash Base",
           "system_description": null,
           "effort": null,
-          "scores": [
-            { "metric": "average-accuracy", "value": 0.852, "unit": null }
-          ]
+          "scores": [{ "metric": "average-accuracy", "value": 0.888, "unit": null }]
         },
         {
-          "model": "OpenAI o3-mini",
+          "model": "DeepSeek-V4-Pro Base",
           "system_description": null,
           "effort": null,
-          "scores": [
-            { "metric": "average-accuracy", "value": 0.807, "unit": null }
-          ]
+          "scores": [{ "metric": "average-accuracy", "value": 0.903, "unit": null }]
+        }
+      ],
+      "note": "DeepSeek V4 Paper; metrics evaluated based on Exact Match (EM) evaluated in a 5-shot setting"
+    },
+    {
+      "date": "2026-04-16",
+      "source_type": "paper",
+      "source_url": "https://anthropic.com/claude-opus-4-7-system-card",
+      "results": [
+        {
+          "model": "Claude Opus 4.7",
+          "system_description": null,
+          "effort": "max",
+          "scores": [{ "metric": "average-accuracy", "value": 0.915, "unit": null }]
+        }
+      ],
+      "note": "Claude Opus 4.7 system card."
+    },
+    {
+      "date": "2026-04-07",
+      "source_type": "paper",
+      "source_url": "https://www.anthropic.com/claude-mythos-preview-system-card",
+      "results": [
+        {
+          "model": "Claude Mythos Preview",
+          "system_description": null,
+          "effort": "max",
+          "scores": [{ "metric": "average-accuracy", "value": 0.927, "unit": null }]
+        }
+      ],
+      "note": "Claude Mythos Preview system card."
+    },
+    {
+      "date": "2026-04-01",
+      "source_type": "blog",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6",
+      "results": [
+        {
+          "model": "GLM-5",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.866, "unit": null }]
         },
+        {
+          "model": "Qwen3.6-Plus",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.895, "unit": null }]
+        }
+      ],
+      "note": "Qwen3.6 release blog."
+    },
+    {
+      "date": "2026-04-17",
+      "source_type": "other",
+      "source_url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "results": [
+        {
+          "model": "Gemma 4 31B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.884, "unit": null }]
+        },
+        {
+          "model": "Gemma 4 26B A4B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.863, "unit": null }]
+        },
+        {
+          "model": "Gemma 4 E4B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.766, "unit": null }]
+        },
+        {
+          "model": "Gemma 4 E2B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.674, "unit": null }]
+        },
+        {
+          "model": "Gemma 3 27B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.707, "unit": null }]
+        }
+      ],
+      "note": "Gemma 4 model card with MMMLU results for the base pretrained models."
+    },
+    {
+      "date": "2026-04-02",
+      "source_type": "blog",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+      "results": [
+        {
+          "model": "Gemma 4 31B IT",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.852, "unit": null }]
+        },
+        {
+          "model": "Gemma 4 26B A4B IT",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.826, "unit": null }]
+        },
+        {
+          "model": "Gemma 4 E4B IT",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.694, "unit": null }]
+        },
+        {
+          "model": "Gemma 4 E2B IT",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.60, "unit": null }]
+        },
+        {
+          "model": "Gemma 3 27B IT",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.676, "unit": null }]
+        }
+      ],
+      "note": "Gemma 4 launch blog with MMMLU results for the instruction-tuned Gemma IT models."
+    },
+    {
+      "date": "2026-03-03",
+      "source_type": "blog",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
+      "results": [
+        {
+          "model": "Gemini 3.1 Flash-Lite",
+          "system_description": null,
+          "effort": "high",
+          "scores": [{ "metric": "average-accuracy", "value": 0.889, "unit": null }]
+        },
+        {
+          "model": "Gemini 2.5 Flash-Lite",
+          "system_description": null,
+          "effort": "dynamic",
+          "scores": [{ "metric": "average-accuracy", "value": 0.845, "unit": null }]
+        },
+        {
+          "model": "GPT-5 mini",
+          "system_description": null,
+          "effort": "high",
+          "scores": [{ "metric": "average-accuracy", "value": 0.849, "unit": null }]
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "system_description": null,
+          "effort": "extended",
+          "scores": [{ "metric": "average-accuracy", "value": 0.83, "unit": null }]
+        }
+      ],
+      "note": "Gemini 3.1 Flash-lite release blog."
+    },
+    {
+      "date": "2026-02-19",
+      "source_type": "blog",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+      "results": [
+        {
+          "model": "Gemini 3.1 Pro",
+          "system_description": null,
+          "effort": "high",
+          "scores": [{ "metric": "average-accuracy", "value": 0.926, "unit": null }]
+        }
+      ],
+      "note": "Gemini 3.1 Pro release blog."
+    },
+    {
+      "date": "2026-03-01",
+      "source_type": "other",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.5-2B",
+      "results": [
+        {
+          "model": "Qwen3-4B-2507",
+          "system_description": "Instruct (Non-Thinking) Mode",
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.649, "unit": null }]
+        },
+        {
+          "model": "Qwen3-1.7B",
+          "system_description": "Instruct (Non-Thinking) Mode",
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.467, "unit": null }]
+        },
+        {
+          "model": "Qwen3.5-2B",
+          "system_description": "Instruct (Non-Thinking) Mode",
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.569, "unit": null }]
+        },
+        {
+          "model": "Qwen3.5-0.8B",
+          "system_description": "Instruct (Non-Thinking) Mode",
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.341, "unit": null }]
+        }
+      ],
+      "note": "Qwen3.5-2B Hugging Face model card."
+    },
+    {
+      "date": "2026-02-28",
+      "source_type": "other",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.5-9B",
+      "results": [
+        {
+          "model": "Qwen3-Next-80B-A3B-Thinking",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.813, "unit": null }]
+        },
+        {
+          "model": "Qwen3-30B-A3B-Thinking-2507",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.784, "unit": null }]
+        },
+        {
+          "model": "Qwen3.5-9B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.812, "unit": null }]
+        },
+        {
+          "model": "Qwen3.5-4B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.761, "unit": null }]
+        }
+      ],
+      "note": "Qwen 3.5 release note."
+    },
+    {
+      "date": "2026-02-24",
+      "source_type": "other",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.5-27B",
+      "results": [
+        {
+          "model": "GPT-5-mini-2025-08-07",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.862, "unit": null }]
+        },
+        {
+          "model": "gpt-oss-120B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.782, "unit": null }]
+        },
+        {
+          "model": "Qwen3-235B-A22B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.834, "unit": null }]
+        },
+        {
+          "model": "Qwen3.5-122B-A10B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.867, "unit": null }]
+        },
+        {
+          "model": "Qwen3.5-27B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.859, "unit": null }]
+        },
+        {
+          "model": "Qwen3.5-35B-A3B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.852, "unit": null }]
+        }
+      ],
+      "note": "Qwen3.5-27B Hugging Face model card."
+    },
+    {
+      "date": "2026-02-15",
+      "source_type": "blog",
+      "source_url": "https://qwen.ai/blog?id=qwen3.5",
+      "results": [
+        {
+          "model": "Qwen-3-Max",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.844, "unit": null }]
+        },
+        {
+          "model": "Kimi K2.5",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.86, "unit": null }]
+        },
+        {
+          "model": "Qwen3.5-397B-A17B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.885, "unit": null }]
+        }
+      ],
+      "note": "Qwen 3.5 release note."
+    },
+    {
+      "date": "2026-02-17",
+      "source_type": "paper",
+      "source_url": "https://anthropic.com/claude-sonnet-4-6-system-card",
+      "results": [
+        {
+          "model": "Claude Sonnet 4.6",
+          "system_description": null,
+          "effort": "max",
+          "scores": [{ "metric": "average-accuracy", "value": 0.893, "unit": null }]
+        }
+      ],
+      "note": "Claude Sonnet 4.6 system card."
+    },
+    {
+      "date": "2026-02",
+      "source_type": "paper",
+      "source_url": "https://www.anthropic.com/claude-opus-4-6-system-card",
+      "results": [
+        {
+          "model": "Claude Opus 4.6",
+          "system_description": null,
+          "effort": "max",
+          "scores": [{ "metric": "average-accuracy", "value": 0.911, "unit": null }]
+        }
+      ],
+      "note": "Claude Opus 4.6 system card."
+    },
+    {
+      "date": "2026-01-09",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2601.01739",
+      "results": [
+        {
+          "model": "K-EXAONE-236B-A23B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.857, "unit": null }]
+        },
+        {
+          "model": "EXAONE 4.0",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.832, "unit": null }]
+        },
+        {
+          "model": "gpt-oss-120b",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.838, "unit": null }]
+        },
+        {
+          "model": "Qwen3-235B-A22B",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.873, "unit": null }]
+        },
+        {
+          "model": "DeepSeek-V3.2",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.88, "unit": null }]
+        }
+      ],
+      "note": "K-EXAONE-236B-A23B release paper; MMMLU is reported on the (ko,de,es,ja) 4-language subset."
+    },
+    {
+      "date": "2025-12",
+      "source_type": "paper",
+      "source_url": "http://deepmind.google/models/evals-methodology/gemini-3-flash",
+      "results": [
+        {
+          "model": "Gemini 3 Pro",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.918, "unit": null }]
+        },
+        {
+          "model": "Gemini 3 Flash",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.918, "unit": null }]
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.895, "unit": null }]
+        },
+        {
+          "model": "Gemini 2.5 Flash",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.866, "unit": null }]
+        },
+        {
+          "model": "Grok 4.1 Fast",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.868, "unit": null }]
+        }
+      ],
+      "note": "Google DeepMind Gemini 3 Flash evaluation methodology page."
+    },
+    {
+      "date": "2025-12-11",
+      "source_type": "blog",
+      "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+      "results": [
+        {
+          "model": "GPT-5.2",
+          "system_description": null,
+          "effort": "xhigh",
+          "scores": [{ "metric": "average-accuracy", "value": 0.896, "unit": null }]
+        },
+        {
+          "model": "GPT-5.1",
+          "system_description": null,
+          "effort": "high",
+          "scores": [{ "metric": "average-accuracy", "value": 0.895, "unit": null }]
+        }
+      ],
+      "note": "GPT-5.2 release blog."
+    },
+    {
+      "date": "2025-11-24",
+      "source_type": "blog",
+      "source_url": "https://www.anthropic.com/news/claude-opus-4-5",
+      "results": [
+        {
+          "model": "Claude Opus 4.5",
+          "system_description": null,
+          "effort": "high",
+          "scores": [{ "metric": "average-accuracy", "value": 0.908, "unit": null }]
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "system_description": null,
+          "effort": "high",
+          "scores": [{ "metric": "average-accuracy", "value": 0.891, "unit": null }]
+        },
+        {
+          "model": "Claude Opus 4.1",
+          "system_description": null,
+          "effort": "high",
+          "scores": [{ "metric": "average-accuracy", "value": 0.895, "unit": null }]
+        }
+      ],
+      "note": "Claude Opus 4.5 release blog."
+    },
+    {
+      "date": "2025-08-05",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2508.10925",
+      "results": [
         {
           "model": "gpt-oss-120b",
           "system_description": null,
@@ -97,6 +553,236 @@
         }
       ],
       "note": "Reported MMMLU average accuracy across 14 languages from the OpenAI gpt-oss model card."
+    },
+    {
+      "date": "2025-05-22",
+      "source_type": "blog",
+      "source_url": "https://www.anthropic.com/news/claude-4/",
+      "results": [
+        {
+          "model": "Claude Opus 4",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.888, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 4",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.865, "unit": null }
+          ]
+        },
+        {
+          "model": "Claude Sonnet 3.7",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.859, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4.1",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.748, "unit": null }
+          ]
+        }
+      ],
+      "note": "Claude 4 release blog; Claude scores on MMMLU are the average over 14 non-English languages."
+    },
+    {
+      "date": "2025-04-21",
+      "source_type": "other",
+      "source_url": "https://github.com/openai/simple-evals/blob/main/multilingual_mmlu_benchmark_results.md",
+      "results": [
+        {
+          "model": "OpenAI o3",
+          "system_description": null,
+          "effort": "high",
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.888, "unit": null }
+          ]
+        },
+        {
+          "model": "OpenAI o1",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.877, "unit": null }
+          ]
+        },
+        {
+          "model": "OpenAI o4-mini",
+          "system_description": null,
+          "effort": "high",
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.852, "unit": null }
+          ]
+        },
+        {
+          "model": "OpenAI o3-mini",
+          "system_description": null,
+          "effort": "high",
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.807, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4.5-preview-2025-02-27",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.851, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4.1-2025-04-14",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.837, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o-2024-11-20",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.814, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4.1-mini-2025-04-14",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.785, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o-mini-2024-07-18",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.705, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4.1-nano-2025-04-14",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.669, "unit": null }
+          ]
+        }
+      ],
+      "note": "OpenAI simple-evals Multilingual MMLU results. Scores are average accuracies across professionally translated versions of MMLU in 14 languages."
+    },
+    {
+      "date": "2025-02-27",
+      "source_type": "blog",
+      "source_url": "https://openai.com/index/introducing-gpt-4-5/",
+      "results": [
+        {
+          "model": "GPT-4.5",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.851, "unit": null }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.815, "unit": null }
+          ]
+        },
+        {
+          "model": "OpenAI o3-mini",
+          "system_description": null,
+          "effort": "high",
+          "scores": [
+            { "metric": "average-accuracy", "value": 0.811, "unit": null }
+          ]
+        }
+      ],
+      "note": "GPT-4.5 release blog."
+    },
+    {
+      "date": "2024-08-20",
+      "source_type": "other",
+      "source_url": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
+      "results": [
+        {
+          "model": "Phi-3.5-mini-instruct",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.554, "unit": null }]
+        },
+        {
+          "model": "Phi-3.0-Mini-128k-Instruct",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.5108, "unit": null }]
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.474, "unit": null }]
+        }
+      ],
+      "note": "Microsoft Phi-3.5-mini-instruct Hugging Face model card."
+    },
+    {
+      "date": "2024-08-20",
+      "source_type": "other",
+      "source_url": "https://huggingface.co/microsoft/Phi-3.5-MoE-instruct",
+      "results": [
+        {
+          "model": "Phi-3.5-MoE-instruct",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.699, "unit": null }]
+        },
+        {
+          "model": "Mistral-Nemo-12B-instruct-2407",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.589, "unit": null }]
+        },
+        {
+          "model": "Llama-3.1-8B-instruct",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.562, "unit": null }]
+        },
+        {
+          "model": "Gemma-2-9b-It",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.638, "unit": null }]
+        },
+        {
+          "model": "Gemini-1.5-Flash",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.772, "unit": null }]
+        },
+        {
+          "model": "GPT-4o-mini-2024-07-18 (Chat)",
+          "system_description": null,
+          "effort": null,
+          "scores": [{ "metric": "average-accuracy", "value": 0.729, "unit": null }]
+        }
+      ],
+      "note": "Microsoft Phi-3.5-MoE-instruct Hugging Face model card; evaluated in a 5-shot setting"
     }
   ],
   "notes": "MMMLU is the MMLU test set translated by professional human translators into 14 languages: Arabic, Bengali, German, Spanish, French, Hindi, Indonesian, Italian, Japanese, Korean, Brazilian Portuguese, Swahili, Yoruba, and Simplified Chinese. The translated benchmark preserves the 57 original MMLU subject categories. If your schema uses num_tasks to mean total evaluation examples instead of subject categories, the translated dataset contains about 14k questions per language."
