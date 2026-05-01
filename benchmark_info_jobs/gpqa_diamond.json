@@ -15,7 +15,7 @@
   },
   "evaluation": {
     "primary_metric": "accuracy",
-    "harbor_aligned_metric": "Accuracy — Harbor adapter covers all 198 Diamond tasks. Parity: original 87.88% ±0.58 vs harbor 87.21% ±0.34 averaged over 3 trials with codex+gpt-5.2."
+    "harbor_aligned_metric": "Accuracy \u2014 Harbor adapter covers all 198 Diamond tasks. Parity: original 87.88% \u00b10.58 vs harbor 87.21% \u00b10.34 averaged over 3 trials with codex+gpt-5.2."
   },
   "results_over_time": [
     {
@@ -29,7 +29,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.388,
               "unit": null
             },
@@ -66,7 +66,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.388,
               "unit": null
             },
@@ -88,7 +88,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.393,
               "unit": null
             }
@@ -100,7 +100,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.357,
               "unit": null
             }
@@ -112,7 +112,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.342,
               "unit": null
             }
@@ -124,7 +124,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.306,
               "unit": null
             }
@@ -136,7 +136,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.296,
               "unit": null
             }
@@ -148,7 +148,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.281,
               "unit": null
             }
@@ -160,7 +160,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.26,
               "unit": null
             }
@@ -172,7 +172,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.311,
               "unit": null
             }
@@ -184,7 +184,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.281,
               "unit": null
             }
@@ -196,7 +196,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.265,
               "unit": null
             }
@@ -208,14 +208,14 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (Diamond)",
+              "metric": "accuracy",
               "value": 0.24,
               "unit": null
             }
           ]
         }
       ],
-      "note": "Paper release baselines from Table 6 (full results). All 13 model×method combinations on the Diamond set (198 questions). GPT-4 Few-Shot CoT is the best at 38.8% on Diamond. Domain breakdown for GPT-4 Few-Shot CoT: Biology 58.1% >> Physics 37.0% > Chemistry 31.8%. Human baselines: Expert 81.2%* (Diamond), Non-expert 21.9%* (Diamond). *Skewed by selection effects. GPT-4 with search has 41.3% abstention rate on Diamond. Published at COLM 2024."
+      "note": "Paper release baselines from Table 6 (full results). All 13 model\u00d7method combinations on the Diamond set (198 questions). GPT-4 Few-Shot is the best at 39.3% on Diamond; GPT-4 Few-Shot CoT is 38.8%. Domain breakdown for GPT-4 Few-Shot CoT: Biology 58.1% >> Physics 37.0% > Chemistry 31.8%. Human baselines: Expert 81.2%* (Diamond), Non-expert 21.9%* (Diamond). *Skewed by selection effects. GPT-4 with search has 41.3% abstention rate on Diamond. Published at COLM 2024."
     },
     {
       "date": "2026-04",
@@ -3221,7 +3221,7 @@
           ]
         },
         {
-          "model": "Tülu 3 70B",
+          "model": "T\u00fclu 3 70B",
           "effort": null,
           "system_description": null,
           "scores": [

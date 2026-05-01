@@ -6,7 +6,6 @@
         "subdomain": "Repo-level Issue Resolution",
         "benchmarks": {
           "agentic": [
-            "Multi-SWE-bench",
             "SWEGym",
             "SWE-Bench-Multilingual",
             "SWE-Bench Pro",
@@ -35,7 +34,7 @@
         "benchmarks": {
           "modified-agentic": [
             "Aider Polyglot",
-            "BigCodeBench",
+            "BigCodeBench-Hard",
             "FrontierCS",
             "LiveCodeBench",
             "USACO"

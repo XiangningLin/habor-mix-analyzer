@@ -19,9 +19,10 @@
   },
   "results_over_time": [
     {
-      "date": "2026-04-20",
+      "date": "2024-10-10",
       "source_type": "leaderboard",
       "source_url": "https://omni-math.github.io/",
+      "note": null,
       "results": [
         {
           "model": "OpenAI o1-mini",
@@ -1028,13 +1029,13 @@
             }
           ]
         }
-      ],
-      "note": null
+      ]
     },
     {
-      "date": "2026-04-20",
+      "date": "2024-10-10",
       "source_type": "leaderboard",
       "source_url": "https://omni-math.github.io/#rule-based-evaluation-results",
+      "note": null,
       "results": [
         {
           "model": "o1-mini",
@@ -1056,18 +1057,6 @@
             {
               "metric": "accuracy (rule-based)",
               "value": 0.517,
-              "unit": null
-            }
-          ]
-        },
-        {
-          "model": "Qwen-QwQ",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (rule-based)",
-              "value": 0.496,
               "unit": null
             }
           ]
@@ -1132,8 +1121,27 @@
             }
           ]
         }
-      ],
-      "note": null
+      ]
+    },
+    {
+      "date": "2024-11-28",
+      "source_type": "leaderboard",
+      "source_url": "https://omni-math.github.io/#rule-based-evaluation-results",
+      "note": null,
+      "results": [
+        {
+          "model": "Qwen-QwQ",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (rule-based)",
+              "value": 0.496,
+              "unit": null
+            }
+          ]
+        }
+      ]
     }
   ],
   "notes": "The adapter README describes Harbor scoring as LLM-as-judge accuracy / mean reward over 4,428 tasks. This file keeps the current Omni-MATH website leaderboard metrics instead: overall accuracy, domain accuracies, difficulty-bucket accuracies, and a separate rule-based accuracy snapshot. The rule-based snapshot is not the Harbor adapter verifier metric; it is retained because the website presents it as a distinct leaderboard table."

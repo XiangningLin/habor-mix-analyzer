@@ -1,23 +1,23 @@
 stem,name,used_llm_or_agent,used_llm_or_agent_normalized,has_harbor_matrix_column,harbor_matrix_column,has_llm_flag,has_agent_flag,n_result_time_blocks,n_result_rows,n_bare_llm_result_rows,n_agent_result_rows,n_unique_bare_llm_names,n_unique_bare_llm_names_overlapping_harbor,n_unique_system_descriptions,n_unique_system_descriptions_overlapping_harbor,overlapping_harbor_models,overlapping_bare_llm_names,overlapping_harbor_agents,overlapping_system_descriptions
-aa_lcr,AA-LCR,both,both,False,,True,True,7,90,86,4,77,5,3,3,claude-opus-4-6; claude-sonnet-4-6; gemini-3-flash-preview; gemini-3.1-pro-preview; gpt-5.4,Claude Opus 4.6; Claude Sonnet 4.6; Gemini 3 Flash; Gemini 3.1 Pro Preview; GPT-5.4,claude-code; codex; terminus-2,claude-code@2.1.104; codex@0.117.0; terminus-2@2.0.0
+aa_lcr,AA-LCR,both,both,True,aa-lcr,True,True,7,90,86,4,77,5,3,3,claude-opus-4-6; claude-sonnet-4-6; gemini-3-flash-preview; gemini-3.1-pro-preview; gpt-5.4,Claude Opus 4.6; Claude Sonnet 4.6; Gemini 3 Flash; Gemini 3.1 Pro Preview; GPT-5.4,claude-code; codex; terminus-2,claude-code@2.1.104; codex@0.117.0; terminus-2@2.0.0
 abcbench,ABC-Bench,agent,agent,False,,False,True,4,22,0,22,0,0,6,1,,,claude-code,Claude Code
 acebench,ACEBench,both,both,False,,True,True,4,87,87,0,37,0,0,0,,,,
 aider_polyglot,Aider Polyglot,agent,agent,True,aider-polyglot,False,True,2,79,0,79,0,0,1,0,,,,
 aime,AIME,llm,llm,True,aime,True,False,2,113,113,0,113,0,0,0,,,,
 algotune,AlgoTune,agent,agent,True,algotune,False,True,2,22,0,22,0,0,1,0,,,,
 arc_agi_2,ARC-AGI-2,llm,llm,True,arc-agi-2,True,False,15,50,50,0,26,5,0,0,claude-opus-4-6; claude-sonnet-4-6; gemini-3-flash-preview; gemini-3.1-pro-preview; gpt-5.4,Claude Opus 4.6; Claude Sonnet 4.6; Gemini 3 Flash Preview; Gemini 3.1 Pro (Preview); GPT-5.4,,
-bfcl,Berkeley Function Calling Leaderboard (BFCL),llm,llm,True,bfcl,True,False,1,109,109,0,83,3,0,0,claude-haiku-4-5-20251001; gpt-5-mini; gpt-5-nano,Claude-Haiku-4-5-20251001; GPT-5-mini-2025-08-07; GPT-5-nano-2025-08-07,,
-bigcodebench,BigCodeBench,llm,llm,True,bigcodebench,True,False,4,428,428,0,203,0,0,0,,,,
+bfcl,Berkeley Function Calling Leaderboard (BFCL),llm,llm,True,bfcl,True,False,17,109,109,0,83,3,0,0,claude-haiku-4-5-20251001; gpt-5-mini; gpt-5-nano,Claude-Haiku-4-5-20251001; GPT-5-mini-2025-08-07; GPT-5-nano-2025-08-07,,
+bigcodebench,BigCodeBench-Hard,llm,llm,True,bigcodebench,True,False,58,202,202,0,202,0,0,0,,,,
 bix_bench,BIX-Bench,both,both,True,bixbench,True,True,1,2,0,2,0,0,1,0,,,,
 browsecomp,browsecomp,both,both,False,,True,True,7,11,10,1,10,2,1,0,claude-opus-4-6; gemini-3.1-pro-preview,Claude Opus 4.6; Gemini 3.1 Pro,,
 browsecomp_plus,BrowseComp-Plus,agent,agent,False,,False,True,7,74,0,74,0,0,8,0,,,,
 clbench,CLBench,llm,llm,False,,True,False,2,23,23,0,20,0,0,0,,,,
-codepde,CodePDE,both,both,True,codepde,True,True,1,15,0,15,0,0,3,0,,,,
-compilebench,CompileBench,agent,agent,True,compilebench,False,True,1,26,26,0,26,0,0,0,,,,
+codepde,CodePDE,both,both,True,codepde,True,True,1,14,0,14,0,0,3,0,,,,
+compilebench,CompileBench,agent,agent,True,compilebench,False,True,7,26,26,0,26,0,0,0,,,,
 cooperbench,CooperBench,agent,agent,False,,False,True,2,13,0,13,0,0,3,0,,,,
 crmarena,CRMArena,both,both,True,crmarena,True,True,1,25,9,16,9,0,2,0,,,,
 crust_bench,CRUST-Bench,both,both,True,crustbench,True,True,1,13,12,1,12,0,1,0,,,,
-cybergym,CyberGym,agent,agent,False,,False,True,11,35,0,35,0,0,10,3,,,claude-code; codex; gemini-cli,Claude Code; Codex CLI; Gemini CLI
+cybergym,CyberGym,agent,agent,True,cybergym,False,True,11,35,0,35,0,0,10,3,,,claude-code; codex; gemini-cli,Claude Code; Codex CLI; Gemini CLI
 da_code,DA-Code,both,both,True,dacode,True,True,2,14,0,14,0,0,1,0,,,,
 deepsynth,DeepSynth,both,both,True,deepsynth,True,True,1,12,9,3,9,0,3,0,,,,
 devopsgym,DevOps-Gym,agent,agent,True,devopsgym,False,True,2,17,0,17,0,0,5,1,,,claude-code,Claude Code
@@ -33,19 +33,18 @@ humanevalfix,HumanEvalFix,llm,llm,True,humanevalfix,True,False,1,9,9,0,9,0,0,0,,
 ineqmath,IneqMath,llm,llm,True,ineqmath,True,False,34,79,79,0,68,0,0,0,,,,
 kumo,KUMO,llm,llm,True,kumo,True,False,1,23,23,0,23,0,0,0,,,,
 lab_bench,LAB-Bench,both,both,True,labbench,True,True,1,7,7,0,7,0,0,0,,,,
-lawbench,LawBench,llm,llm,True,lawbench,True,False,1,3,3,0,3,0,0,0,,,,
+lawbench,LawBench,llm,llm,True,lawbench,True,False,8,60,60,0,60,0,0,0,,,,
 livecodebench,LiveCodeBench,llm,llm,True,livecodebench,True,False,28,321,321,0,257,1,0,0,gemini-3-flash-preview,Gemini 3 Flash Preview,,
-medagentbench,MedAgentBench,both,both,True,medagentbench,True,True,1,12,0,12,0,0,1,0,,,,
+medagentbench,MedAgentBench,both,both,True,medagentbench,True,True,3,12,0,12,0,0,1,0,,,,
 mlgym_bench,MLGym-Bench,agent,agent,True,mlgym,False,True,1,5,0,5,0,0,1,0,,,,
 mmau,MMAU,llm,llm,True,mmau,True,False,3,45,45,0,37,0,0,0,,,,
-mmmlu,MMMLU,llm,llm,True,mmmlu,True,False,1,9,9,0,5,0,0,0,,,,
-multi_swe_bench,Multi-SWE-bench,both,both,True,multi-swe-bench,True,True,2,63,0,63,0,0,3,0,,,,
+mmmlu,MMMLU,llm,llm,True,mmmlu,True,False,24,88,84,4,77,6,1,0,claude-haiku-4-5-20251001; claude-opus-4-6; claude-sonnet-4-6; gemini-3-flash-preview; gemini-3.1-pro-preview; gpt-5-mini,Claude Haiku 4.5; Claude Opus 4.6; Claude Sonnet 4.6; Gemini 3 Flash; Gemini 3.1 Pro; GPT-5-mini-2025-08-07,,
 officeqa,OfficeQA,both,both,False,,True,True,4,34,12,22,3,3,16,12,claude-opus-4-6; gemini-3.1-pro-preview; gpt-5.4,Claude Opus 4.6; Gemini 3.1 Pro Preview; GPT-5.4,claude-code; codex; gemini-cli,"Claude Agent SDK (Full corpus, DBX Parsed); Claude Agent SDK (Full corpus, PDF); Claude Agent SDK (Oracle corpus, DBX Parsed); Claude Agent SDK (Oracle corpus, PDF); Gemini CLI (Full corpus, DBX Parsed); Gemini CLI (Full corpus, PDF); Gemini CLI (Oracle corpus, DBX Parsed); Gemini CLI (Oracle corpus, PDF); OpenAI Codex CLI (Full corpus, DBX Parsed); OpenAI Codex CLI (Full corpus, PDF); OpenAI Codex CLI (Oracle corpus, DBX Parsed); OpenAI Codex CLI (Oracle corpus, PDF)"
-omni_math,Omni-MATH,llm,llm,True,omnimath,True,False,2,23,23,0,22,0,0,0,,,,
+omni_math,Omni-MATH,llm,llm,True,omnimath,True,False,3,23,23,0,22,0,0,0,,,,
 paperbench,PaperBench,agent,agent,False,,False,True,5,26,0,26,0,0,10,0,,,,
 pixiu,PIXIU,llm,llm,True,pixiu,True,False,1,8,8,0,8,0,0,0,,,,
 qcircuitbench,QCircuitBench,both,both,True,qcircuitbench,True,True,1,4,4,0,4,0,0,0,,,,
-quixbugs,QuixBugs,agent,agent,True,quixbugs,False,True,1,10,10,0,10,0,0,0,,,,
+quixbugs,QuixBugs,agent,agent,True,quixbugs,False,True,3,10,10,0,10,0,0,0,,,,
 reasoning_gym,Reasoning Gym,llm,llm,True,reasoning-gym,True,False,1,10,10,0,10,0,0,0,,,,
 replicationbench,ReplicationBench,agent,agent,True,replicationbench,False,True,1,7,0,7,0,0,1,0,,,,
 researchcodebench,ResearchCodeBench,llm,llm,True,research-code-bench,True,False,1,32,32,0,32,0,0,0,,,,
@@ -56,19 +55,19 @@ simpleqa,SimpleQA,llm,llm,True,simpleqa,True,False,5,88,88,0,63,4,0,0,claude-opu
 skillsbench,SkillsBench,both,both,True,skillsbench,True,True,2,15,1,14,1,0,3,3,,,claude-code; codex; gemini-cli,Claude Code; Codex; Gemini CLI
 sldbench,SLDBench,both,both,True,sldbench,True,True,1,27,0,27,0,0,11,4,,,claude-code; codex; gemini-cli; terminus-2,claude-code; codex; gemini-cli; terminus-2
 spider_2,Spider 2.0,both,both,True,spider2,True,True,4,120,3,117,2,0,57,0,,,,
-spreadsheetbench,SpreadsheetBench,agent,agent,True,spreadsheetbench,False,True,1,6,0,6,0,0,6,0,,,,
-strongreject,StrongReject,llm,llm,True,strongreject,True,False,1,3,3,0,3,0,0,0,,,,
+spreadsheetbench,SpreadsheetBench,agent,agent,True,spreadsheetbench,False,True,2,22,16,6,16,0,6,0,,,,
+strongreject,StrongReject,llm,llm,True,strongreject,True,False,3,3,3,0,3,0,0,0,,,,
 swe_bench_live,SWE-Bench-Live,agent,agent,False,,False,True,14,91,0,91,0,0,5,1,,,claude-code,Claude Code
 swe_bench_multilingual,SWE-Bench-Multilingual,both,both,True,swebench-multilingual,True,True,3,14,0,14,0,0,2,1,,,codex,Codex 2.0.0
-swe_bench_pro,SWE-Bench Pro,agent,agent,True,swebenchpro,False,True,1,24,0,24,0,0,2,0,,,,
+swe_bench_pro,SWE-Bench Pro,agent,agent,True,swebenchpro,False,True,15,24,0,24,0,0,2,0,,,,
 swe_bench_verified,SWE-bench-verified,agent,agent,True,swebench-verified,False,True,116,183,0,183,0,0,96,0,,,,
 swe_fficiency,SWE-fficiency,agent,agent,False,,False,True,2,31,0,31,0,0,3,0,,,,
 swe_lancer,SWE-Lancer,agent,agent,True,swe-lancer,False,True,1,3,3,0,3,0,0,0,,,,
 swe_perf,SWE-Perf,both,both,False,,True,True,1,13,11,2,11,0,2,0,,,,
 swe_smith,SWE-smith,agent,agent,True,swesmith,False,True,1,15,0,15,0,0,11,0,,,,
-swegym,SWE-Gym,agent,agent,True,swegym,False,True,0,0,0,0,0,0,0,0,,,,
+swegym,SWE-Gym,agent,agent,False,,False,True,0,0,0,0,0,0,0,0,,,,
 swt_bench,SWT-Bench,both,both,True,swtbench,True,True,3,44,0,44,0,0,20,0,,,,
-terminalbench_2_0,Terminal-Bench 2.0,both,both,True,terminal-bench,True,True,1,124,0,124,0,0,33,6,,,claude-code; codex; gemini-cli; terminus-2,Claude Code; Codex; Codex CLI; Gemini CLI; Simple Codex; Terminus 2
+terminalbench_2_0,Terminal-Bench 2.0,both,both,True,terminal-bench,True,True,5,124,0,124,0,0,33,6,,,claude-code; codex; gemini-cli; terminus-2,Claude Code; Codex; Codex CLI; Gemini CLI; Simple Codex; Terminus 2
 usaco,USACO,both,both,True,usaco,True,True,6,32,5,27,5,0,9,0,,,,
 webgenbench,WebGen-Bench,agent,agent,False,,False,True,5,44,0,44,0,0,8,0,,,,
 widesearch,WideSearch,agent,agent,True,widesearch,False,True,2,18,0,18,0,0,4,1,,,claude-code,"agent=claude-code@2.1.98, Harbor adapter parity experiment, 3 runs x 200 tasks"

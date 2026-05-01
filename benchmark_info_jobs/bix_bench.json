@@ -19,7 +19,7 @@
   },
   "results_over_time": [
     {
-      "date": "2025-10-08",
+      "date": "2025-02-28",
       "source_type": "paper",
       "source_url": "https://arxiv.org/pdf/2503.00096",
       "note": "There is not much evaluation on this benchmark. The following are results from the paper.",
@@ -28,14 +28,22 @@
           "model": "GPT-4o",
           "system_description": "Aviary (SimpleAgent)",
           "scores": [
-            { "metric": "accuracy", "value": 0.15, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.15,
+              "unit": null
+            }
           ]
         },
         {
           "model": "Claude 3.5 Sonnet",
           "system_description": "Aviary (SimpleAgent)",
           "scores": [
-            { "metric": "accuracy", "value": 0.21, "unit": null }
+            {
+              "metric": "accuracy",
+              "value": 0.21,
+              "unit": null
+            }
           ]
         }
       ]

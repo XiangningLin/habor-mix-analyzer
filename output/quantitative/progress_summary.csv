@@ -1,8 +1,11 @@
 benchmark,domain,superdomain,earliest_date,latest_date,earliest_best,latest_best,absolute_progress,n_snapshots
 swe_bench_verified,Software Engineering,Agentic,2023-10,2026-04,0.044,0.939,0.8949999999999999,19
-arc_agi_2,Mathematics & Reasoning,Non-Agentic,2025-05,2026-02,0.03,0.846,0.816,3
+arc_agi_2,Mathematics & Reasoning,Non-Agentic,2023-11,2026-02,0.016,0.846,0.83,5
 livecodebench,Software Engineering,Modified Agentic,2023-03,2025-11,0.109,0.917,0.808,11
+spreadsheetbench,Professional Domains,Agentic,2024-06,2026-03,0.2,0.9425,0.7424999999999999,2
+gpqa_diamond,Knowledge & Long Context,Non-Agentic,2023-11,2026-04,0.393,0.9545,0.5615,2
 usaco,Software Engineering,Modified Agentic,2024-04,2025-08,0.202,0.6971,0.49510000000000004,5
+spider_2,Data & Analytics,Modified Agentic,2024-11,2026-04,0.1282,0.5156,0.38739999999999997,2
 hle,Knowledge & Long Context,Non-Agentic,2025-01,2026-04,0.094,0.4644,0.37039999999999995,2
 ineqmath,Mathematics & Reasoning,Non-Agentic,2024-02,2025-07,0.5375,0.88,0.3425,10
 simpleqa,Knowledge & Long Context,Non-Agentic,2024-10,2026-03,0.427,0.748,0.321,3
@@ -10,18 +13,22 @@ gso,Software Engineering,Agentic,2025-05,2026-02,0.049,0.3333,0.2843,6
 aider_polyglot,Software Engineering,Modified Agentic,2024-12,2025-11,0.617,0.88,0.263,2
 mmau,Multimodal,Non-Agentic,2024-10,2026-04,0.549,0.778,0.22899999999999998,2
 mmmlu,Knowledge & Long Context,Non-Agentic,2024-08,2026-04,0.772,0.927,0.15500000000000003,7
+swe_bench_pro,Software Engineering,Agentic,2025-09,2026-03,0.436,0.591,0.15499999999999997,4
+terminalbench_2_0,"Agents, Tools & Systems",Agentic,2026-01,2026-04,0.6942571785268414,0.8202247191011236,0.12596754057428217,4
 scicode,Scientific Research,Modified Agentic,2024-03,2024-09,0.215,0.285,0.06999999999999998,4
 algotune,Software Engineering,Modified Agentic,2025-07,2026-04,0.3516279254962272,0.4178735386225294,0.06624561312630223,2
-gaia,"Agents, Tools & Systems",Agentic,2025-02,2025-02,0.7257,0.7257,0.0,1
-bigcodebench,Software Engineering,Modified Agentic,2024-06,2024-06,0.561,0.561,0.0,1
-aime,Mathematics & Reasoning,Non-Agentic,2026-04,2026-04,0.9812,0.9812,0.0,1
+strongreject,Safety & Security,Non-Agentic,2024-02,2024-07,0.010000000000000009,0.050000000000000044,0.040000000000000036,2
+bigcodebench,Software Engineering,Modified Agentic,2024-06,2025-02,0.321,0.358,0.03699999999999998,3
+quixbugs,Software Engineering,Non-Agentic,2017-10,2017-12,0.1,0.125,0.024999999999999994,2
+bfcl,"Agents, Tools & Systems",Non-Agentic,2025-07,2025-07,0.907203,0.907203,0.0,1
+compilebench,Software Engineering,Agentic,2025-09,2025-09,0.9111,0.9111,0.0,1
 devopsgym,Software Engineering,Agentic,2026-04,2026-04,0.4681,0.4681,0.0,1
+aime,Mathematics & Reasoning,Non-Agentic,2026-04,2026-04,0.9812,0.9812,0.0,1
+medagentbench,Professional Domains,Agentic,2025-01,2025-01,0.6967,0.6967,0.0,1
+gaia,"Agents, Tools & Systems",Agentic,2025-02,2025-02,0.7257,0.7257,0.0,1
 da_code,Data & Analytics,Agentic,2024-10,2024-10,0.305,0.305,0.0,1
-gpqa_diamond,Knowledge & Long Context,Non-Agentic,2026-04,2026-04,0.9545,0.9545,0.0,1
-multi_swe_bench,Software Engineering,Agentic,2025-03,2025-03,0.2162,0.2162,0.0,1
-omni_math,Mathematics & Reasoning,Non-Agentic,2026-04,2026-04,0.6054,0.6054,0.0,1
+omni_math,Mathematics & Reasoning,Non-Agentic,2024-10,2024-10,0.6054,0.6054,0.0,1
 seal0,"Agents, Tools & Systems",Agentic,2025-06,2025-06,0.171,0.171,0.0,1
 swe_bench_multilingual,Software Engineering,Agentic,2026-02,2026-02,0.727,0.727,0.0,1
-spider_2,Data & Analytics,Modified Agentic,2026-04,2026-04,0.5156,0.5156,0.0,1
 swt_bench,Software Engineering,Agentic,2024-06,2024-06,0.203,0.203,0.0,1
 widesearch,"Agents, Tools & Systems",Agentic,2025-08,2025-08,0.622,0.622,0.0,1

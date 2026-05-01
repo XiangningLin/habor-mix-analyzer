@@ -1,9 +1,11 @@
 benchmark,n_anomalous,issues,example_score
-mlgym,16,"above_1, extreme_magnitude, negative",672.113412
-swegym,14,exact_zero,0.0
+mlgym,16,"above_1, extreme_magnitude, negative",677.363639
 mmmlu,3,exact_zero,0.0
-algotune,2,exact_zero,0.0
 arc-agi-2,2,exact_zero,0.0
+algotune,2,exact_zero,0.0
 gaia2,2,exact_zero,0.0
+research-code-bench,2,exact_zero,0.0
 gso,1,exact_zero,0.0
-research-code-bench,1,exact_zero,0.0
+financeagent_terminal,1,exact_zero,0.0
+codepde,1,exact_zero,0.0
+qcircuitbench,1,exact_zero,0.0

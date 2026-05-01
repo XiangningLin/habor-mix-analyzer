@@ -6,10 +6,6 @@
         "name": "Repo-level Issue Resolution",
         "benchmarks": [
           {
-            "name": "Multi-SWE-bench",
-            "type": "agentic"
-          },
-          {
             "name": "SWE-Bench-Multilingual",
             "type": "agentic"
           },

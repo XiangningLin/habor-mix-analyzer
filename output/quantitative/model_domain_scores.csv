@@ -1,73 +1,73 @@
 model,domain,mean_score,n_benchmarks
-gemini-3.1-pro-preview,"Agents, Tools & Systems",0.5919429285714285,7
-claude-opus-4-6,"Agents, Tools & Systems",0.5486833846153846,7
-claude-sonnet-4-6,"Agents, Tools & Systems",0.5089680769230769,7
-gpt-5.4,"Agents, Tools & Systems",0.5045202857142858,7
-gemini-3-flash-preview,"Agents, Tools & Systems",0.4700103846153846,7
-gpt-5-mini,"Agents, Tools & Systems",0.3676456428571428,7
-claude-haiku-4-5-20251001,"Agents, Tools & Systems",0.3349597857142857,7
-gpt-5-nano,"Agents, Tools & Systems",0.1967782857142857,7
-claude-opus-4-6,Data & Analytics,0.45651425,2
-gemini-3.1-pro-preview,Data & Analytics,0.43265149999999997,2
-claude-sonnet-4-6,Data & Analytics,0.43191275,2
-gemini-3-flash-preview,Data & Analytics,0.40894600000000003,2
-gpt-5.4,Data & Analytics,0.36260749999999997,2
-gpt-5-mini,Data & Analytics,0.27727975,2
-claude-haiku-4-5-20251001,Data & Analytics,0.228125,1
-gpt-5-nano,Data & Analytics,0.1488285,2
-gemini-3.1-pro-preview,Knowledge & Long Context,0.7316581,5
-gpt-5.4,Knowledge & Long Context,0.6409271999999999,5
-gemini-3-flash-preview,Knowledge & Long Context,0.6392481,5
-claude-opus-4-6,Knowledge & Long Context,0.6258595,4
-claude-sonnet-4-6,Knowledge & Long Context,0.5745797500000001,4
-gpt-5-mini,Knowledge & Long Context,0.5659580999999999,5
-claude-haiku-4-5-20251001,Knowledge & Long Context,0.448864875,4
-gpt-5-nano,Knowledge & Long Context,0.3638063,5
-gemini-3.1-pro-preview,Mathematics & Reasoning,0.8835968333333333,6
-claude-opus-4-6,Mathematics & Reasoning,0.8279834545454545,6
-claude-sonnet-4-6,Mathematics & Reasoning,0.785287,6
-gpt-5.4,Mathematics & Reasoning,0.7687836666666666,6
-gpt-5-mini,Mathematics & Reasoning,0.7400143333333333,6
-gemini-3-flash-preview,Mathematics & Reasoning,0.6964776666666667,6
-claude-haiku-4-5-20251001,Mathematics & Reasoning,0.6782761666666667,6
-gpt-5-nano,Mathematics & Reasoning,0.5937123333333333,6
-claude-opus-4-6,Multimodal,0.687,1
-gpt-5.4,Multimodal,0.6739999999999999,1
-claude-sonnet-4-6,Multimodal,0.635,1
-gemini-3.1-pro-preview,Multimodal,0.618,1
-gpt-5-mini,Multimodal,0.583,1
-gemini-3-flash-preview,Multimodal,0.5760000000000001,1
-claude-haiku-4-5-20251001,Multimodal,0.529,1
-gpt-5-nano,Multimodal,0.307,1
-gemini-3.1-pro-preview,Professional Domains,0.6505212727272727,6
-claude-opus-4-6,Professional Domains,0.6472433,5
-claude-sonnet-4-6,Professional Domains,0.6217037000000001,5
-gpt-5.4,Professional Domains,0.5828845454545455,6
-gemini-3-flash-preview,Professional Domains,0.5365911818181819,6
-claude-haiku-4-5-20251001,Professional Domains,0.44950159999999995,5
-gpt-5-mini,Professional Domains,0.415076,6
-gpt-5-nano,Professional Domains,0.17567254545454547,6
-claude-haiku-4-5-20251001,Safety & Security,0.9668335,1
-gpt-5.4,Safety & Security,0.950583,1
-gpt-5-nano,Safety & Security,0.9490415,1
-gpt-5-mini,Safety & Security,0.944882,1
-claude-opus-4-6,Safety & Security,0.9163335,1
-claude-sonnet-4-6,Safety & Security,0.9078335,1
-gemini-3.1-pro-preview,Safety & Security,0.89175,1
-gemini-3-flash-preview,Safety & Security,0.808236,1
-gemini-3.1-pro-preview,Scientific Research,0.5128254375,8
-gpt-5.4,Scientific Research,0.5025045625,8
-gemini-3-flash-preview,Scientific Research,0.4375899375,8
-claude-opus-4-6,Scientific Research,0.4197900625,8
-claude-sonnet-4-6,Scientific Research,0.3804784375,8
-gpt-5-mini,Scientific Research,0.342311375,8
-claude-haiku-4-5-20251001,Scientific Research,0.32028875,8
-gpt-5-nano,Scientific Research,0.1149858125,8
-gemini-3.1-pro-preview,Software Engineering,0.6252842222222222,18
-claude-opus-4-6,Software Engineering,0.61397325,17
-gpt-5.4,Software Engineering,0.5975096,18
-gemini-3-flash-preview,Software Engineering,0.5719464444444444,18
-claude-sonnet-4-6,Software Engineering,0.5653044545454545,17
-gpt-5-mini,Software Engineering,0.4354196571428572,18
-claude-haiku-4-5-20251001,Software Engineering,0.4028543870967742,16
-gpt-5-nano,Software Engineering,0.18580333333333335,18
+gemini-3.1-pro-preview,"Agents, Tools & Systems",0.5763725,8
+claude-opus-4-6,"Agents, Tools & Systems",0.5387041875,8
+claude-sonnet-4-6,"Agents, Tools & Systems",0.5066335,8
+gpt-5.4,"Agents, Tools & Systems",0.499378375,8
+gemini-3-flash-preview,"Agents, Tools & Systems",0.4559438125,8
+gpt-5-mini,"Agents, Tools & Systems",0.34518068749999997,8
+claude-haiku-4-5-20251001,"Agents, Tools & Systems",0.31417275,8
+gpt-5-nano,"Agents, Tools & Systems",0.1743595,8
+claude-opus-4-6,Data & Analytics,0.460735,2
+gemini-3.1-pro-preview,Data & Analytics,0.44770175,2
+claude-sonnet-4-6,Data & Analytics,0.4377435,2
+gemini-3-flash-preview,Data & Analytics,0.4084335,2
+gpt-5.4,Data & Analytics,0.37012674999999995,2
+gpt-5-mini,Data & Analytics,0.2795,2
+claude-haiku-4-5-20251001,Data & Analytics,0.2317705,1
+gpt-5-nano,Data & Analytics,0.151123,2
+gemini-3.1-pro-preview,Knowledge & Long Context,0.7149689,5
+claude-opus-4-6,Knowledge & Long Context,0.6374283000000001,5
+gpt-5.4,Knowledge & Long Context,0.6323768000000001,5
+gemini-3-flash-preview,Knowledge & Long Context,0.6200034999999999,5
+claude-sonnet-4-6,Knowledge & Long Context,0.5988532,5
+gpt-5-mini,Knowledge & Long Context,0.5475702,5
+claude-haiku-4-5-20251001,Knowledge & Long Context,0.473142,5
+gpt-5-nano,Knowledge & Long Context,0.3458574,5
+gemini-3.1-pro-preview,Mathematics & Reasoning,0.8851629166666667,6
+claude-opus-4-6,Mathematics & Reasoning,0.8297445833333333,6
+claude-sonnet-4-6,Mathematics & Reasoning,0.7881846666666666,6
+gpt-5.4,Mathematics & Reasoning,0.7677754166666667,6
+gpt-5-mini,Mathematics & Reasoning,0.7393154166666666,6
+gemini-3-flash-preview,Mathematics & Reasoning,0.7004474166666667,6
+claude-haiku-4-5-20251001,Mathematics & Reasoning,0.6812570833333332,6
+gpt-5-nano,Mathematics & Reasoning,0.5902619166666666,6
+claude-opus-4-6,Multimodal,0.6933335,1
+gpt-5.4,Multimodal,0.6816665,1
+claude-sonnet-4-6,Multimodal,0.625,1
+gemini-3.1-pro-preview,Multimodal,0.6183335,1
+gpt-5-mini,Multimodal,0.59,1
+gemini-3-flash-preview,Multimodal,0.566667,1
+claude-haiku-4-5-20251001,Multimodal,0.5266665,1
+gpt-5-nano,Multimodal,0.30333350000000003,1
+gemini-3.1-pro-preview,Professional Domains,0.6636936666666666,6
+claude-opus-4-6,Professional Domains,0.6405666363636363,6
+claude-sonnet-4-6,Professional Domains,0.6172707272727272,6
+gpt-5.4,Professional Domains,0.5936430833333334,6
+gemini-3-flash-preview,Professional Domains,0.5457865833333333,6
+claude-haiku-4-5-20251001,Professional Domains,0.45654725,6
+gpt-5-mini,Professional Domains,0.4120368333333333,6
+gpt-5-nano,Professional Domains,0.19132025,6
+gpt-5-nano,Safety & Security,0.95625,1
+gpt-5.4,Safety & Security,0.954444,1
+gpt-5-mini,Safety & Security,0.946667,1
+gemini-3.1-pro-preview,Safety & Security,0.8919445,1
+claude-haiku-4-5-20251001,Safety & Security,0.824722,2
+gemini-3-flash-preview,Safety & Security,0.8038890000000001,1
+claude-opus-4-6,Safety & Security,0.7985186666666667,2
+claude-sonnet-4-6,Safety & Security,0.75361125,2
+gemini-3.1-pro-preview,Scientific Research,0.512090375,8
+gpt-5.4,Scientific Research,0.506585625,8
+gemini-3-flash-preview,Scientific Research,0.4324816875,8
+claude-opus-4-6,Scientific Research,0.41761824999999997,8
+claude-sonnet-4-6,Scientific Research,0.37990475,8
+gpt-5-mini,Scientific Research,0.335119,8
+claude-haiku-4-5-20251001,Scientific Research,0.3161343125,8
+gpt-5-nano,Scientific Research,0.11004687499999999,8
+claude-opus-4-6,Software Engineering,0.6650314545454545,17
+gemini-3.1-pro-preview,Software Engineering,0.663968205882353,17
+gpt-5.4,Software Engineering,0.6191202647058823,17
+claude-sonnet-4-6,Software Engineering,0.6164457352941176,17
+gemini-3-flash-preview,Software Engineering,0.6074835588235293,17
+gpt-5-mini,Software Engineering,0.4448318235294118,17
+claude-haiku-4-5-20251001,Software Engineering,0.43220738235294115,17
+gpt-5-nano,Software Engineering,0.20188279411764706,17

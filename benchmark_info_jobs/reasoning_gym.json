@@ -19,9 +19,10 @@
   },
   "results_over_time": [
     {
-      "date": "2025-07-04",
+      "date": "2025-05-30",
       "source_type": "leaderboard",
       "source_url": "https://github.com/open-thought/reasoning-gym-eval/blob/main/visualizations/overall_performance.png",
+      "note": "Official reasoning-gym-eval visualization of zero-shot average scores on hard Reasoning Gym configurations; percentage labels were converted to rates in [0, 1].",
       "results": [
         {
           "model": "openai/o3-mini",
@@ -133,8 +134,7 @@
             }
           ]
         }
-      ],
-      "note": "Official reasoning-gym-eval visualization of zero-shot average scores on hard Reasoning Gym configurations; percentage labels were converted to rates in [0, 1]."
+      ]
     }
   ],
   "notes": "The official README points to the reasoning-gym-eval repository for tracked evaluation results. No separate hosted leaderboard or Hugging Face dataset page was found; the dataset URL points to the official gallery/catalog of 105 available generators."

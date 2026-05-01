@@ -19,9 +19,10 @@
   },
   "results_over_time": [
     {
-      "date": "2026-04-12",
+      "date": "2025-07-17",
       "source_type": "leaderboard",
       "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
       "results": [
         {
           "model": "BitAgent-Bounty-8B",
@@ -61,59 +62,6 @@
             {
               "metric": "latency mean",
               "value": 16.52,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Gemini-3-Pro-Preview",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 298.47,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.861977,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.9065,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.8312,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.6875,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8559,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.085,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.017,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 12.08,
               "unit": "s"
             }
           ]
@@ -172,49 +120,6 @@
           ]
         },
         {
-          "model": "Claude-Sonnet-4-5-20250929",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 43.73,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.851425,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8865,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.8113,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.6875,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8661,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 4.31,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "Qwen3-14B",
           "effort": null,
           "system_description": null,
@@ -263,59 +168,6 @@
             {
               "metric": "latency mean",
               "value": 1.2,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Claude-Opus-4-5-20251101",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 88.33,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.848403,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8965,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7602,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.6875,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.9075,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.13,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.0365,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 3.76,
               "unit": "s"
             }
           ]
@@ -427,134 +279,6 @@
           ]
         },
         {
-          "model": "GLM-4.6",
-          "effort": null,
-          "system_description": null,
-          "note": "FC thinking",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 4.64,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.84231,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8756,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.809,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.75,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8496,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 4.34,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Claude-Opus-4-5-20251101",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 86.55,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.840122,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8858,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7979,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.625,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8472,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 4.38,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Arch-Agent-32B",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 8.87,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.837389,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8892,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.8068,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.8125,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8215,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 9.44,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "Gemini-2.5-Flash",
           "effort": null,
           "system_description": null,
@@ -651,49 +375,6 @@
           ]
         },
         {
-          "model": "Command A Reasoning",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 3.04,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.834989,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8627,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7861,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.6875,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8675,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 3.44,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "Qwen3-8B",
           "effort": null,
           "system_description": null,
@@ -785,188 +466,6 @@
             {
               "metric": "latency mean",
               "value": 2.09,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Amazon-Nova-2-Lite-v1:0",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 78.19,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.831357,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8696,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.8083,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.75,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8211,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 8.55,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Claude-Haiku-4-5-20251001",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 14.23,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.830638,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.865,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7868,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.625,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8511,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 1.68,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Qwen3-4B-Instruct-2507",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 6.37,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.827043,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8788,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7639,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.875,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8493,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 7.61,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Qwen3-235B-A22B-Instruct-2507",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 3.12,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.824907,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.9033,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7868,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.9375,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.7889,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.08,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.0195,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 2.56,
               "unit": "s"
             }
           ]
@@ -1187,92 +686,6 @@
           ]
         },
         {
-          "model": "Grok-4-1-fast-reasoning",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 17.26,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.818702,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8827,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7846,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.8125,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.7943,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 6.74,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Gemini-3-Pro-Preview",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 224.69,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.817686,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8575,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.8172,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.75,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.7785,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 15.87,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "xLAM-2-32b-fc-r",
           "effort": null,
           "system_description": null,
@@ -1311,92 +724,6 @@
             {
               "metric": "latency mean",
               "value": 6.94,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Nanbeige4-3B-Thinking-2511",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 14.14,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.812158,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8158,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7942,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.75,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8309,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 13.46,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Qwen3-30B-A3B-Instruct-2507",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 5.62,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.810327,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8577,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7794,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.8125,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.799,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 5.95,
               "unit": "s"
             }
           ]
@@ -1445,59 +772,6 @@
           ]
         },
         {
-          "model": "Qwen3-30B-A3B-Instruct-2507",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 1.56,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.806905,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8892,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7839,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.9375,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.7485,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.16,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.0413,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 1.24,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "Gemini-2.5-Flash-Lite",
           "effort": null,
           "system_description": null,
@@ -1536,49 +810,6 @@
             {
               "metric": "latency mean",
               "value": 1.18,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Grok-4-1-fast-non-reasoning",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 16.27,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.799845,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8813,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7794,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.8125,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.7409,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 2.29,
               "unit": "s"
             }
           ]
@@ -1910,59 +1141,6 @@
             {
               "metric": "latency mean",
               "value": 4.47,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Qwen3-4B-Instruct-2507",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 53.66,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.788218,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8644,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7469,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.875,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.7587,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.18,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.0522,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 44.7,
               "unit": "s"
             }
           ]
@@ -2350,48 +1528,6 @@
           ]
         },
         {
-          "model": "Arch-Agent-3B",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 3.7,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.777811,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8667,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7291,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.6875,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.7467,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 3.56,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "GPT-4.1-mini-2025-04-14",
           "effort": null,
           "system_description": null,
@@ -2488,59 +1624,6 @@
           ]
         },
         {
-          "model": "GPT-5.2-2025-12-11",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 164.58,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.769074,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.7829,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.6714,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.75,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8726,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.13,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.0325,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 4.21,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "Hammer2.1-1.5b",
           "effort": null,
           "system_description": null,
@@ -2584,49 +1667,6 @@
           ]
         },
         {
-          "model": "GPT-5.2-2025-12-11",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 85.65,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.768175,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8185,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7039,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.75,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.7942,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 2.23,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "Command R7B",
           "effort": null,
           "system_description": null,
@@ -2665,59 +1705,6 @@
             {
               "metric": "latency mean",
               "value": 1.38,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "DeepSeek-V3.2-Exp",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt + Thinking",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 57.75,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.763139,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8552,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7602,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.9375,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.67,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.1,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.0277,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 37.89,
               "unit": "s"
             }
           ]
@@ -2919,48 +1906,6 @@
             {
               "metric": "latency mean",
               "value": 11.1,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Arch-Agent-1.5B",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 2.45,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.746725,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8267,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.6773,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.75,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.7483,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 2.38,
               "unit": "s"
             }
           ]
@@ -3181,49 +2126,6 @@
           ]
         },
         {
-          "model": "GPT-5-mini-2025-08-07",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 22.18,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.72183,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.6985,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.5862,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.625,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.9101,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 8.32,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "Granite-3.1-8B-Instruct",
           "effort": null,
           "system_description": null,
@@ -3401,49 +2303,6 @@
             {
               "metric": "latency mean",
               "value": 3.2,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "GPT-5-nano-2025-08-07",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 8.79,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.713683,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.68,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.5944,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.75,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.891,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 10.36,
               "unit": "s"
             }
           ]
@@ -3674,59 +2533,6 @@
           ]
         },
         {
-          "model": "Claude-Haiku-4-5-20251001",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 45.13,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.66531,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.5542,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.5248,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.3125,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.9529,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.675,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.2007,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 3.75,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "GPT-4.1-nano-2025-04-14",
           "effort": null,
           "system_description": null,
@@ -3866,59 +2672,6 @@
           ]
         },
         {
-          "model": "GPT-5-nano-2025-08-07",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 21.47,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.662886,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.8081,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.7069,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.9375,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.4575,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.085,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.0257,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 10.67,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "Qwen3-0.6B",
           "effort": null,
           "system_description": null,
@@ -3967,112 +2720,6 @@
             {
               "metric": "latency mean",
               "value": 3.1,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "RZN-T",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 12.31,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.657123,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.6794,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.4974,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.8125,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8241,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.635,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.2553,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 12.32,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Claude-Sonnet-4-5-20250929",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 47.82,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.656682,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.5981,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.4656,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.375,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.9503,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.375,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.1007,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 3.84,
               "unit": "s"
             }
           ]
@@ -4260,49 +2907,6 @@
           ]
         },
         {
-          "model": "Qwen3-235B-A22B-Instruct-2507",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 2.5,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.62997,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.374,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.6891,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.875,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.8173,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 2.57,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "o4-mini-2025-04-16",
           "effort": null,
           "system_description": null,
@@ -4389,112 +2993,6 @@
           ]
         },
         {
-          "model": "Bielik-11B-v2.3-Instruct",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 22.44,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.624274,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.815,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.678,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.9375,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.3601,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.35,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.0974,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 23.75,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "GPT-5-mini-2025-08-07",
-          "effort": null,
-          "system_description": null,
-          "note": "Prompt",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 82.74,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.623096,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.6804,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.6255,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.9375,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.5571,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity max delta",
-              "value": 0.16,
-              "unit": null
-            },
-            {
-              "metric": "format sensitivity SD",
-              "value": 0.0378,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 8.89,
-              "unit": "s"
-            }
-          ]
-        },
-        {
           "model": "Falcon3-7B-Instruct",
           "effort": null,
           "system_description": null,
@@ -4533,49 +3031,6 @@
             {
               "metric": "latency mean",
               "value": 93.11,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Nanbeige3.5-Pro-Thinking",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 23.46,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.614133,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.3835,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.6995,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 1.0,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.742,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 21.12,
               "unit": "s"
             }
           ]
@@ -4629,49 +3084,6 @@
             {
               "metric": "latency mean",
               "value": 31.18,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "DeepSeek-V3.2-Exp",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 6.71,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.59848,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.3485,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.5366,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.375,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.9318,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 5.83,
               "unit": "s"
             }
           ]
@@ -4778,49 +3190,6 @@
             {
               "metric": "latency mean",
               "value": 0.84,
-              "unit": "s"
-            }
-          ]
-        },
-        {
-          "model": "Granite-4.0-350m",
-          "effort": null,
-          "system_description": null,
-          "note": "FC",
-          "scores": [
-            {
-              "metric": "cost",
-              "value": 1.44,
-              "unit": "USD"
-            },
-            {
-              "metric": "accuracy (overall)",
-              "value": 0.577003,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Non-live (AST))",
-              "value": 0.6792,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Single Turn/Live (AST))",
-              "value": 0.4611,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Relevance)",
-              "value": 0.8125,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
-              "value": 0.6084,
-              "unit": null
-            },
-            {
-              "metric": "latency mean",
-              "value": 1.74,
               "unit": "s"
             }
           ]
@@ -5102,9 +3471,1768 @@
               "unit": "s"
             }
           ]
+        },
+        {
+          "model": "Qwen3-4B-Instruct-2507",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 6.37,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.827043,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8788,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7639,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.875,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8493,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 7.61,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-235B-A22B-Instruct-2507",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 3.12,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.824907,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.9033,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7868,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.9375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.7889,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.08,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.0195,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 2.56,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-30B-A3B-Instruct-2507",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 5.62,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.810327,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8577,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7794,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.8125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.799,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 5.95,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-30B-A3B-Instruct-2507",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 1.56,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.806905,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8892,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7839,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.9375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.7485,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.0413,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 1.24,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-4B-Instruct-2507",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 53.66,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.788218,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8644,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7469,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.875,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.7587,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.18,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.0522,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 44.7,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Qwen3-235B-A22B-Instruct-2507",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 2.5,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.62997,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.374,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.6891,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.875,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8173,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 2.57,
+              "unit": "s"
+            }
+          ]
         }
-      ],
-      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded."
+      ]
+    },
+    {
+      "date": "2025-08-07",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "GPT-5-mini-2025-08-07",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 22.18,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.72183,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.6985,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.5862,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.625,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.9101,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 8.32,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-nano-2025-08-07",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 8.79,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.713683,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.68,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.5944,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.75,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.891,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 10.36,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-nano-2025-08-07",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 21.47,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.662886,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8081,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7069,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.9375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.4575,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.085,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.0257,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 10.67,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5-mini-2025-08-07",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 82.74,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.623096,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.6804,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.6255,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.9375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.5571,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.16,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.0378,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 8.89,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-08-28",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Command A Reasoning",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 3.04,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.834989,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8627,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7861,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.6875,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8675,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 3.44,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-29",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Claude-Sonnet-4-5-20250929",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 43.73,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.851425,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8865,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.8113,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.6875,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8661,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 4.31,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3.2-Exp",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt + Thinking",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 57.75,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.763139,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8552,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7602,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.9375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.67,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.1,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.0277,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 37.89,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Claude-Sonnet-4-5-20250929",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 47.82,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.656682,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.5981,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.4656,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.9503,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.375,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.1007,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 3.84,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "DeepSeek-V3.2-Exp",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 6.71,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.59848,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.3485,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.5366,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.9318,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 5.83,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-30",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "GLM-4.6",
+          "effort": null,
+          "system_description": null,
+          "note": "FC thinking",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 4.64,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.84231,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8756,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.809,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.75,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8496,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 4.34,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-02",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Granite-4.0-350m",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 1.44,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.577003,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.6792,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.4611,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.8125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.6084,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 1.74,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-15",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Claude-Haiku-4-5-20251001",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 14.23,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.830638,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.865,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7868,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.625,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8511,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 1.68,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Claude-Haiku-4-5-20251001",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 45.13,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.66531,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.5542,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.5248,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.3125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.9529,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.675,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.2007,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 3.75,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-01",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "RZN-T",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 12.31,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.657123,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.6794,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.4974,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.8125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8241,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.635,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.2553,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 12.32,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Nanbeige4-3B-Thinking-2511",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 14.14,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.812158,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8158,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7942,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.75,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8309,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 13.46,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-17",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Grok-4-1-fast-reasoning",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 17.26,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.818702,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8827,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7846,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.8125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.7943,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 6.74,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Grok-4-1-fast-non-reasoning",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 16.27,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.799845,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8813,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7794,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.8125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.7409,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 2.29,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-18",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Gemini-3-Pro-Preview",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 298.47,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.861977,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.9065,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.8312,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.6875,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8559,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.085,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.017,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 12.08,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Gemini-3-Pro-Preview",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 224.69,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.817686,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8575,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.8172,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.75,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.7785,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 15.87,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-22",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Nanbeige3.5-Pro-Thinking",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 23.46,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.614133,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.3835,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.6995,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 1.0,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.742,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 21.12,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-24",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Claude-Opus-4-5-20251101",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 88.33,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.848403,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8965,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7602,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.6875,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.9075,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.0365,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 3.76,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Claude-Opus-4-5-20251101",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 86.55,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.840122,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8858,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7979,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.625,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8472,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 4.38,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-02",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Amazon-Nova-2-Lite-v1:0",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 78.19,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.831357,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8696,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.8083,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.75,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8211,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 8.55,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-11",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "GPT-5.2-2025-12-11",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 164.58,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.769074,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.7829,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.6714,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.75,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8726,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.13,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.0325,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 4.21,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "GPT-5.2-2025-12-11",
+          "effort": null,
+          "system_description": null,
+          "note": "FC",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 85.65,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.768175,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8185,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7039,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.75,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.7942,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 2.23,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-28",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Bielik-11B-v2.3-Instruct",
+          "effort": null,
+          "system_description": null,
+          "note": "Prompt",
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 22.44,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.624274,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.815,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.678,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.9375,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.3601,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity max delta",
+              "value": 0.35,
+              "unit": null
+            },
+            {
+              "metric": "format sensitivity SD",
+              "value": 0.0974,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 23.75,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-03-02",
+      "source_type": "leaderboard",
+      "source_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "note": "Leaderboard snapshot aligned to the Harbor BFCL adapter-supported subset. Adapter-aligned overall accuracy is recomputed over 3,641 tasks: Non-live AST 1,150; Live AST 1,351; relevance 16; irrelevance 1,124. Agentic and multi-turn categories from the public leaderboard are excluded.",
+      "results": [
+        {
+          "model": "Arch-Agent-32B",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 8.87,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.837389,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8892,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.8068,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.8125,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.8215,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 9.44,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Arch-Agent-3B",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 3.7,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.777811,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8667,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.7291,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.6875,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.7467,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 3.56,
+              "unit": "s"
+            }
+          ]
+        },
+        {
+          "model": "Arch-Agent-1.5B",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "cost",
+              "value": 2.45,
+              "unit": "USD"
+            },
+            {
+              "metric": "accuracy (overall)",
+              "value": 0.746725,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Non-live (AST))",
+              "value": 0.8267,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Single Turn/Live (AST))",
+              "value": 0.6773,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Relevance)",
+              "value": 0.75,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (Hallucination Measurement/Irrelevance)",
+              "value": 0.7483,
+              "unit": null
+            },
+            {
+              "metric": "latency mean",
+              "value": 2.38,
+              "unit": "s"
+            }
+          ]
+        }
+      ]
     }
   ],
   "notes": "Aligned to adapters/bfcl/README.md: the Harbor BFCL adapter covers 13/22 BFCL v4 categories, totaling 3,641 tasks. Multi-turn and agentic categories are excluded because the adapter does not support them. The original public leaderboard overall score covered a broader set of categories; accuracy (overall) in this file has been recomputed as a weighted average over the adapter-supported subset: Non-live AST (1,150), Live AST (1,351), Hallucination/Relevance (16), and Hallucination/Irrelevance (1,124). Cost, latency, and format-sensitivity fields are preserved when present because they are leaderboard metadata/secondary measurements, not task-category scores."

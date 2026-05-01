@@ -1,8 +1,10 @@
 domain,superdomain,n_benchmarks,mean_absolute_progress,median_absolute_progress,mean_latest_best
-Mathematics & Reasoning,Non-Agentic,4,0.289625,0.17125,0.8281499999999999
-Software Engineering,Agentic,11,0.2556041466478457,0.06624561312630223,0.5781430489656846
+Professional Domains,Agentic,2,0.37124999999999997,0.37124999999999997,0.8196
+Knowledge & Long Context,Non-Agentic,4,0.351975,0.3457,0.773475
+Mathematics & Reasoning,Non-Agentic,4,0.29312499999999997,0.17125,0.8281499999999999
+Software Engineering,Agentic,13,0.23297273947125402,0.06624561312630223,0.58211334912481
 Multimodal,Non-Agentic,1,0.22899999999999998,0.22899999999999998,0.778
-Knowledge & Long Context,Non-Agentic,4,0.2116,0.23800000000000002,0.773475
+Data & Analytics,Modified Agentic,2,0.19369999999999998,0.19369999999999998,0.4103
 Scientific Research,Modified Agentic,1,0.06999999999999998,0.06999999999999998,0.285
-Data & Analytics,Agentic,2,0.0,0.0,0.4103
-"Agents, Tools & Systems",Agentic,3,0.0,0.0,0.5062333333333333
+Safety & Security,Non-Agentic,1,0.040000000000000036,0.040000000000000036,0.050000000000000044
+"Agents, Tools & Systems",Agentic,5,0.025193508114856433,0.0,0.6492255438202247

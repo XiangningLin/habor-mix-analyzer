@@ -19,44 +19,11 @@
   },
   "results_over_time": [
     {
-      "date": "2024-11",
+      "date": "2023-09",
       "source_type": "leaderboard",
       "source_url": "https://lawbench.opencompass.org.cn/leaderboard",
+      "note": "Official paper results. LawBench evaluates Chinese legal tasks. The main ranking is based on average task performance.",
       "results": [
-        {
-          "model": "Qwen-1.5-72B-Chat",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 56.26,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 57.38,
-              "unit": "score"
-            }
-          ]
-        },
-        {
-          "model": "BlueLM",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 53.09,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 54.54,
-              "unit": "score"
-            }
-          ]
-        },
         {
           "model": "GPT-4",
           "system_description": null,
@@ -70,108 +37,6 @@
             {
               "metric": "overall-one-shot",
               "value": 53.85,
-              "unit": "score"
-            }
-          ]
-        },
-        {
-          "model": "Qwen-1.5-14B-Chat",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 46.85,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 49.43,
-              "unit": "score"
-            }
-          ]
-        },
-        {
-          "model": "InternLM2-Chat-7B",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 45.8,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 48.53,
-              "unit": "score"
-            }
-          ]
-        },
-        {
-          "model": "Qwen-1.5-72B",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 42.17,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 40.83,
-              "unit": "score"
-            }
-          ]
-        },
-        {
-          "model": "ChatGPT (GPT-3.5-turbo)",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 42.15,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 44.52,
-              "unit": "score"
-            }
-          ]
-        },
-        {
-          "model": "Qwen-1.5-7B-Chat",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 41.41,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 43.87,
-              "unit": "score"
-            }
-          ]
-        },
-        {
-          "model": "InternLM2-Chat-20B",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 40.47,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 47.74,
               "unit": "score"
             }
           ]
@@ -223,23 +88,6 @@
             {
               "metric": "overall-one-shot",
               "value": 37.28,
-              "unit": "score"
-            }
-          ]
-        },
-        {
-          "model": "Qwen-1.5-14B",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 35.28,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 32.8,
               "unit": "score"
             }
           ]
@@ -347,23 +195,6 @@
           ]
         },
         {
-          "model": "Qwen-1.5-7B",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 30.27,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 28.22,
-              "unit": "score"
-            }
-          ]
-        },
-        {
           "model": "HanFei",
           "system_description": null,
           "effort": null,
@@ -415,23 +246,6 @@
           ]
         },
         {
-          "model": "TigerBot-SFT",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 25.89,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 25.62,
-              "unit": "score"
-            }
-          ]
-        },
-        {
           "model": "Lawyer-LLaMA",
           "system_description": null,
           "effort": null,
@@ -444,23 +258,6 @@
             {
               "metric": "overall-one-shot",
               "value": 23.02,
-              "unit": "score"
-            }
-          ]
-        },
-        {
-          "model": "TigerBot-Base",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 21.71,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 20.34,
               "unit": "score"
             }
           ]
@@ -840,23 +637,6 @@
           ]
         },
         {
-          "model": "LaWGPT-7B-beta1.1",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 9.91,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 11.59,
-              "unit": "score"
-            }
-          ]
-        },
-        {
           "model": "LLaMA-2-13B",
           "system_description": null,
           "effort": null,
@@ -903,23 +683,6 @@
             {
               "metric": "overall-one-shot",
               "value": 16.52,
-              "unit": "score"
-            }
-          ]
-        },
-        {
-          "model": "GoGPT",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            {
-              "metric": "overall-zero-shot",
-              "value": 8.92,
-              "unit": "score"
-            },
-            {
-              "metric": "overall-one-shot",
-              "value": 16.23,
               "unit": "score"
             }
           ]
@@ -1043,8 +806,301 @@
             }
           ]
         }
-      ],
-      "note": "Official paper results. LawBench evaluates Chinese legal tasks. The main ranking is based on average task performance."
+      ]
+    },
+    {
+      "date": "2023-10-31",
+      "source_type": "leaderboard",
+      "source_url": "https://lawbench.opencompass.org.cn/leaderboard",
+      "note": "Official paper results. LawBench evaluates Chinese legal tasks. The main ranking is based on average task performance.",
+      "results": [
+        {
+          "model": "LaWGPT-7B-beta1.1",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 9.91,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 11.59,
+              "unit": "score"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2023-11-02",
+      "source_type": "leaderboard",
+      "source_url": "https://lawbench.opencompass.org.cn/leaderboard",
+      "note": "Official paper results. LawBench evaluates Chinese legal tasks. The main ranking is based on average task performance.",
+      "results": [
+        {
+          "model": "BlueLM",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 53.09,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 54.54,
+              "unit": "score"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2023-12-13",
+      "source_type": "leaderboard",
+      "source_url": "https://lawbench.opencompass.org.cn/leaderboard",
+      "note": "Official paper results. LawBench evaluates Chinese legal tasks. The main ranking is based on average task performance.",
+      "results": [
+        {
+          "model": "TigerBot-SFT",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 25.89,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 25.62,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "TigerBot-Base",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 21.71,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 20.34,
+              "unit": "score"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2024-01-17",
+      "source_type": "leaderboard",
+      "source_url": "https://lawbench.opencompass.org.cn/leaderboard",
+      "note": "Official paper results. LawBench evaluates Chinese legal tasks. The main ranking is based on average task performance.",
+      "results": [
+        {
+          "model": "InternLM2-Chat-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 45.8,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 48.53,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "InternLM2-Chat-20B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 40.47,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 47.74,
+              "unit": "score"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2024-01-25",
+      "source_type": "leaderboard",
+      "source_url": "https://lawbench.opencompass.org.cn/leaderboard",
+      "note": "Official paper results. LawBench evaluates Chinese legal tasks. The main ranking is based on average task performance.",
+      "results": [
+        {
+          "model": "ChatGPT (GPT-3.5-turbo)",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 42.15,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 44.52,
+              "unit": "score"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2024-02-05",
+      "source_type": "leaderboard",
+      "source_url": "https://lawbench.opencompass.org.cn/leaderboard",
+      "note": "Official paper results. LawBench evaluates Chinese legal tasks. The main ranking is based on average task performance.",
+      "results": [
+        {
+          "model": "Qwen-1.5-72B-Chat",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 56.26,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 57.38,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-1.5-14B-Chat",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 46.85,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 49.43,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-1.5-72B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 42.17,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 40.83,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-1.5-7B-Chat",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 41.41,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 43.87,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-1.5-14B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 35.28,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 32.8,
+              "unit": "score"
+            }
+          ]
+        },
+        {
+          "model": "Qwen-1.5-7B",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 30.27,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 28.22,
+              "unit": "score"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2024-11",
+      "source_type": "leaderboard",
+      "source_url": "https://lawbench.opencompass.org.cn/leaderboard",
+      "note": "Official paper results. LawBench evaluates Chinese legal tasks. The main ranking is based on average task performance.",
+      "results": [
+        {
+          "model": "GoGPT",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "overall-zero-shot",
+              "value": 8.92,
+              "unit": "score"
+            },
+            {
+              "metric": "overall-one-shot",
+              "value": 16.23,
+              "unit": "score"
+            }
+          ]
+        }
+      ]
     }
   ],
   "notes": "Chinese legal benchmark under the Chinese civil law system. Contains 20 tasks across 3 cognitive levels: memorization, understanding, and application."

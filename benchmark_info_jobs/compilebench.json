@@ -15,13 +15,14 @@
   },
   "evaluation": {
     "primary_metric": "accuracy (pass@1)",
-    "harbor_aligned_metric": "Accuracy — CompileBench is already in Harbor format (built with Harbor Framework). Parity: terminus-2+claude-haiku-4-5 achieves 0.733 (73.3%) across 3 identical trials."
+    "harbor_aligned_metric": "Accuracy (pass@1) \u2014 official CompileBench pass@1 is the fraction of individual attempts that succeed; pass@3 is task-level success within three attempts. CompileBench is already in Harbor format (built with Harbor Framework). Parity: terminus-2+claude-haiku-4-5 achieves 0.733 (73.3%) across 3 identical trials."
   },
   "results_over_time": [
     {
-      "date": "2026-04",
+      "date": "2025-09",
       "source_type": "leaderboard",
       "source_url": "https://www.compilebench.com/",
+      "note": "compilebench.com leaderboard snapshot as of 2026-04-22. 26 models tested on 15 compilation tasks. pass@1 = fraction of individual attempts that succeed; pass@3 = fraction of tasks with at least 1 of 3 attempts succeeding. Cost and time are totals across all 15 tasks x 3 attempts. Claude Opus 4.1 (thinking-16k) is the only model to achieve 100% pass@3, while the best pass@1 systems are Claude Sonnet 4 thinking-16k and GPT-5 Codex high at 91.1%. GPT-5-mini (minimal) is the cheapest ($0.33) but only 28.9% pass@1.",
       "results": [
         {
           "model": "claude-opus-4.1-thinking-16k",
@@ -30,12 +31,12 @@
           "scores": [
             {
               "metric": "accuracy (pass@1)",
-              "value": 1,
+              "value": 0.8,
               "unit": null
             },
             {
               "metric": "accuracy (pass@3)",
-              "value": 0.8,
+              "value": 1,
               "unit": null
             },
             {
@@ -57,12 +58,12 @@
           "scores": [
             {
               "metric": "accuracy (pass@1)",
-              "value": 0.9333,
+              "value": 0.9111,
               "unit": null
             },
             {
               "metric": "accuracy (pass@3)",
-              "value": 0.9111,
+              "value": 0.9333,
               "unit": null
             },
             {
@@ -84,12 +85,12 @@
           "scores": [
             {
               "metric": "accuracy (pass@1)",
-              "value": 0.9333,
+              "value": 0.9111,
               "unit": null
             },
             {
               "metric": "accuracy (pass@3)",
-              "value": 0.9111,
+              "value": 0.9333,
               "unit": null
             },
             {
@@ -111,12 +112,12 @@
           "scores": [
             {
               "metric": "accuracy (pass@1)",
-              "value": 0.9333,
+              "value": 0.8667,
               "unit": null
             },
             {
               "metric": "accuracy (pass@3)",
-              "value": 0.8667,
+              "value": 0.9333,
               "unit": null
             },
             {
@@ -131,6 +132,532 @@
             }
           ]
         },
+        {
+          "model": "grok-4",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.7111,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.8667,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 28.25,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 17372.2,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "claude-sonnet-4",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.7778,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.8,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 20.04,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 8281.3,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "gpt-5-mini-high",
+          "effort": "high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.7556,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.8,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 2.73,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 16558.9,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "deepseek-v3.1",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.6444,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.8,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 21.28,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 6570.2,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "gpt-5-minimal",
+          "effort": "minimal",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.5778,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.8,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 2.47,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 5080.3,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "grok-code-fast-1",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.6444,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.7333,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.71,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 9483.7,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "glm-4.5",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.4889,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.7333,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 3.86,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 4961.8,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1-mini",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.4667,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.6667,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 3.78,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 5657.2,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-pro",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.5333,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 11.3,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 7880.5,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "gpt-4.1",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.5333,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 11.71,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 4038.9,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "gpt-oss-120b-high",
+          "effort": "high",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.4222,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 2.3,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 6636.8,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-flash",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.4,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.6,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 2.27,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 6144.8,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "gemini-2.5-flash-thinking",
+          "effort": "thinking-16k",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.4444,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.5333,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 6.41,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 13765.7,
+              "unit": "seconds"
+            }
+          ]
+        },
+        {
+          "model": "gpt-5-mini-minimal",
+          "effort": "minimal",
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.2889,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.4667,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 0.33,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 5371.9,
+              "unit": "seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-05",
+      "source_type": "leaderboard",
+      "source_url": "https://www.compilebench.com/",
+      "note": "compilebench.com leaderboard snapshot as of 2026-04-22. 26 models tested on 15 compilation tasks. pass@1 = fraction of individual attempts that succeed; pass@3 = fraction of tasks with at least 1 of 3 attempts succeeding. Cost and time are totals across all 15 tasks x 3 attempts. Claude Opus 4.1 (thinking-16k) is the only model to achieve 100% pass@3, while the best pass@1 systems are Claude Sonnet 4 thinking-16k and GPT-5 Codex high at 91.1%. GPT-5-mini (minimal) is the cheapest ($0.33) but only 28.9% pass@1.",
+      "results": [
+        {
+          "model": "kimi-k2-0905",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.5778,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.8,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 26.42,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 6807.0,
+              "unit": "seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-19",
+      "source_type": "leaderboard",
+      "source_url": "https://www.compilebench.com/",
+      "note": "compilebench.com leaderboard snapshot as of 2026-04-22. 26 models tested on 15 compilation tasks. pass@1 = fraction of individual attempts that succeed; pass@3 = fraction of tasks with at least 1 of 3 attempts succeeding. Cost and time are totals across all 15 tasks x 3 attempts. Claude Opus 4.1 (thinking-16k) is the only model to achieve 100% pass@3, while the best pass@1 systems are Claude Sonnet 4 thinking-16k and GPT-5 Codex high at 91.1%. GPT-5-mini (minimal) is the cheapest ($0.33) but only 28.9% pass@1.",
+      "results": [
+        {
+          "model": "grok-4-fast",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.5556,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.7333,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 2.08,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 12739.1,
+              "unit": "seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-22",
+      "source_type": "leaderboard",
+      "source_url": "https://www.compilebench.com/",
+      "note": "compilebench.com leaderboard snapshot as of 2026-04-22. 26 models tested on 15 compilation tasks. pass@1 = fraction of individual attempts that succeed; pass@3 = fraction of tasks with at least 1 of 3 attempts succeeding. Cost and time are totals across all 15 tasks x 3 attempts. Claude Opus 4.1 (thinking-16k) is the only model to achieve 100% pass@3, while the best pass@1 systems are Claude Sonnet 4 thinking-16k and GPT-5 Codex high at 91.1%. GPT-5-mini (minimal) is the cheapest ($0.33) but only 28.9% pass@1.",
+      "results": [
+        {
+          "model": "deepseek-v3.1-terminus",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.6444,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.7333,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 7.34,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 10305.5,
+              "unit": "seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-23",
+      "source_type": "leaderboard",
+      "source_url": "https://www.compilebench.com/",
+      "note": "compilebench.com leaderboard snapshot as of 2026-04-22. 26 models tested on 15 compilation tasks. pass@1 = fraction of individual attempts that succeed; pass@3 = fraction of tasks with at least 1 of 3 attempts succeeding. Cost and time are totals across all 15 tasks x 3 attempts. Claude Opus 4.1 (thinking-16k) is the only model to achieve 100% pass@3, while the best pass@1 systems are Claude Sonnet 4 thinking-16k and GPT-5 Codex high at 91.1%. GPT-5-mini (minimal) is the cheapest ($0.33) but only 28.9% pass@1.",
+      "results": [
+        {
+          "model": "qwen3-max",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "accuracy (pass@1)",
+              "value": 0.5333,
+              "unit": null
+            },
+            {
+              "metric": "accuracy (pass@3)",
+              "value": 0.6667,
+              "unit": null
+            },
+            {
+              "metric": "cost",
+              "value": 55.08,
+              "unit": "USD"
+            },
+            {
+              "metric": "time",
+              "value": 6756.7,
+              "unit": "seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-29",
+      "source_type": "leaderboard",
+      "source_url": "https://www.compilebench.com/",
+      "note": "compilebench.com leaderboard snapshot as of 2026-04-22. 26 models tested on 15 compilation tasks. pass@1 = fraction of individual attempts that succeed; pass@3 = fraction of tasks with at least 1 of 3 attempts succeeding. Cost and time are totals across all 15 tasks x 3 attempts. Claude Opus 4.1 (thinking-16k) is the only model to achieve 100% pass@3, while the best pass@1 systems are Claude Sonnet 4 thinking-16k and GPT-5 Codex high at 91.1%. GPT-5-mini (minimal) is the cheapest ($0.33) but only 28.9% pass@1.",
+      "results": [
         {
           "model": "claude-sonnet-4.5",
           "effort": null,
@@ -165,12 +692,12 @@
           "scores": [
             {
               "metric": "accuracy (pass@1)",
-              "value": 0.8667,
+              "value": 0.8444,
               "unit": null
             },
             {
               "metric": "accuracy (pass@3)",
-              "value": 0.8444,
+              "value": 0.8667,
               "unit": null
             },
             {
@@ -184,7 +711,15 @@
               "unit": "seconds"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "date": "2025-10-15",
+      "source_type": "leaderboard",
+      "source_url": "https://www.compilebench.com/",
+      "note": "compilebench.com leaderboard snapshot as of 2026-04-22. 26 models tested on 15 compilation tasks. pass@1 = fraction of individual attempts that succeed; pass@3 = fraction of tasks with at least 1 of 3 attempts succeeding. Cost and time are totals across all 15 tasks x 3 attempts. Claude Opus 4.1 (thinking-16k) is the only model to achieve 100% pass@3, while the best pass@1 systems are Claude Sonnet 4 thinking-16k and GPT-5 Codex high at 91.1%. GPT-5-mini (minimal) is the cheapest ($0.33) but only 28.9% pass@1.",
+      "results": [
         {
           "model": "claude-haiku-4.5-thinking-16k",
           "effort": "thinking-16k",
@@ -192,12 +727,12 @@
           "scores": [
             {
               "metric": "accuracy (pass@1)",
-              "value": 0.8667,
+              "value": 0.7333,
               "unit": null
             },
             {
               "metric": "accuracy (pass@3)",
-              "value": 0.7333,
+              "value": 0.8667,
               "unit": null
             },
             {
@@ -213,45 +748,18 @@
           ]
         },
         {
-          "model": "grok-4",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.8667,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.7111,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 28.25,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 17372.2,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
           "model": "claude-haiku-4.5",
           "effort": null,
           "system_description": null,
           "scores": [
             {
               "metric": "accuracy (pass@1)",
-              "value": 0.8667,
+              "value": 0.6889,
               "unit": null
             },
             {
               "metric": "accuracy (pass@3)",
-              "value": 0.6889,
+              "value": 0.8667,
               "unit": null
             },
             {
@@ -265,469 +773,9 @@
               "unit": "seconds"
             }
           ]
-        },
-        {
-          "model": "claude-sonnet-4",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.8,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.7778,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 20.04,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 8281.3,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "gpt-5-mini-high",
-          "effort": "high",
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.8,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.7556,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 2.73,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 16558.9,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "deepseek-v3.1",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.8,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.6444,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 21.28,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 6570.2,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "gpt-5-minimal",
-          "effort": "minimal",
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.8,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.5778,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 2.47,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 5080.3,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "kimi-k2-0905",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.8,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.5778,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 26.42,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 6807.0,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "deepseek-v3.1-terminus",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.7333,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.6444,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 7.34,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 10305.5,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "grok-code-fast-1",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.7333,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.6444,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 0.71,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 9483.7,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "grok-4-fast",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.7333,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.5556,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 2.08,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 12739.1,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "glm-4.5",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.7333,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.4889,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 3.86,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 4961.8,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "qwen3-max",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.6667,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.5333,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 55.08,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 6756.7,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "gpt-4.1-mini",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.6667,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.4667,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 3.78,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 5657.2,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "gemini-2.5-pro",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.6,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.5333,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 11.3,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 7880.5,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "gpt-4.1",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.6,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.5333,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 11.71,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 4038.9,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "gpt-oss-120b-high",
-          "effort": "high",
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.6,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.4222,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 2.3,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 6636.8,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "gemini-2.5-flash",
-          "effort": null,
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.6,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.4,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 2.27,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 6144.8,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "gemini-2.5-flash-thinking",
-          "effort": "thinking-16k",
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.5333,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.4444,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 6.41,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 13765.7,
-              "unit": "seconds"
-            }
-          ]
-        },
-        {
-          "model": "gpt-5-mini-minimal",
-          "effort": "minimal",
-          "system_description": null,
-          "scores": [
-            {
-              "metric": "accuracy (pass@1)",
-              "value": 0.4667,
-              "unit": null
-            },
-            {
-              "metric": "accuracy (pass@3)",
-              "value": 0.2889,
-              "unit": null
-            },
-            {
-              "metric": "cost",
-              "value": 0.33,
-              "unit": "USD"
-            },
-            {
-              "metric": "time",
-              "value": 5371.9,
-              "unit": "seconds"
-            }
-          ]
         }
-      ],
-      "note": "compilebench.com leaderboard snapshot as of 2026-04-22. 26 models tested on 15 compilation tasks. pass@1 = at least 1 of 3 attempts succeeds per task; pass@3 = fraction of all attempts that succeed. Cost and time are totals across all 15 tasks x 3 attempts. Claude Opus 4.1 (thinking-16k) is the only model to achieve 100% pass@1 but at highest cost ($70.20). GPT-5-mini (minimal) is the cheapest ($0.33) but only 46.7%."
+      ]
     }
   ],
-  "notes": "CompileBench tests whether LLMs can compile real-world open-source C/C++ projects from source. Created by Quesma, it focuses on practical build challenges that go beyond typical coding benchmarks.\n\n15 tasks across 4 open-source projects:\n- **curl** (HTTP client): SSL build, static linking, ARM64 cross-compilation, Windows cross-compilation\n- **jq** (JSON processor): standard build, static, musl static\n- **GNU Coreutils**: v9.7 standard, static, v5.0 legacy (2003)\n- **cowsay**: legacy build\n\nDifficulty range:\n- Easiest: curl-ssl (97% pass@1, median 1m48s)\n- Hardest: curl-ssl-arm64-static (1% pass@1, median 7m40s) — only Claude Opus 4.1 succeeded\n\nKey challenges:\n- Dependency resolution ('dependency hell')\n- Cross-compilation (ARM64, Windows)\n- Static linking with musl libc\n- Legacy toolchains (22-year-old code from 2003)\n- Alpine Linux builds\n\nBenchmark stats: 30,240 commands executed, 31,065 LLM requests, 66 hours total runtime, $376.77 total cost across all models.\n\nNo academic paper — this is an industry benchmark from Quesma. Made Hacker News front page (Sep 22, 2025).\n\nAlready in Harbor format (built with Harbor Framework). The adapter is essentially a pass-through.\n\nNotable: GPT-5-mini attempted to cheat by creating symlinks to system binaries instead of compiling from source. Verification checks caught this.\n\nLeaderboard at compilebench.com shows interactive results with Pareto frontiers for cost vs accuracy and speed vs accuracy."
+  "notes": "CompileBench tests whether LLMs can compile real-world open-source C/C++ projects from source. Created by Quesma, it focuses on practical build challenges that go beyond typical coding benchmarks.\n\n15 tasks across 4 open-source projects:\n- **curl** (HTTP client): SSL build, static linking, ARM64 cross-compilation, Windows cross-compilation\n- **jq** (JSON processor): standard build, static, musl static\n- **GNU Coreutils**: v9.7 standard, static, v5.0 legacy (2003)\n- **cowsay**: legacy build\n\nDifficulty range:\n- Easiest: curl-ssl (97% pass@1, median 1m48s)\n- Hardest: curl-ssl-arm64-static (1% pass@1, median 7m40s) \u2014 only Claude Opus 4.1 succeeded\n\nKey challenges:\n- Dependency resolution ('dependency hell')\n- Cross-compilation (ARM64, Windows)\n- Static linking with musl libc\n- Legacy toolchains (22-year-old code from 2003)\n- Alpine Linux builds\n\nBenchmark stats: 30,240 commands executed, 31,065 LLM requests, 66 hours total runtime, $376.77 total cost across all models.\n\nNo academic paper \u2014 this is an industry benchmark from Quesma. Made Hacker News front page (Sep 22, 2025).\n\nAlready in Harbor format (built with Harbor Framework). The adapter is essentially a pass-through.\n\nNotable: GPT-5-mini attempted to cheat by creating symlinks to system binaries instead of compiling from source. Verification checks caught this.\n\nLeaderboard at compilebench.com shows interactive results with Pareto frontiers for cost vs accuracy and speed vs accuracy."
 }

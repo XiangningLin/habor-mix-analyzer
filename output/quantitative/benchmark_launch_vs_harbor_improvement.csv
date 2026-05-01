@@ -1,59 +1,58 @@
-benchmark,matrix_column,benchmark_name,domain,superdomain,launch_date_ym,launch_best_score,launch_n_models,harbor_best_score,harbor_best_model,harbor_best_agent,absolute_improvement,relative_improvement,relative_improvement_pct,status
-featbench,featbench,FeatBench,Software Engineering,Agentic,,,0,,,,,,,excluded_metric_alignment
-featurebench,featurebench-modal,FeatureBench,Software Engineering,Agentic,,,0,,,,,,,excluded_metric_alignment
-financeagent,financeagent_terminal,Finance Agent Benchmark,Professional Domains,Agentic,,,0,,,,,,,excluded_metric_alignment
-gaia2,gaia2,GAIA2,"Agents, Tools & Systems",Agentic,,,0,,,,,,,excluded_metric_alignment
-lawbench,lawbench,LawBench,Professional Domains,Non-Agentic,,,0,,,,,,,excluded_metric_alignment
-mlgym_bench,mlgym,MLGym-Bench,Scientific Research,Modified Agentic,,,0,,,,,,,excluded_metric_alignment
-pixiu,pixiu,PIXIU,Professional Domains,Modified Agentic,,,0,,,,,,,excluded_metric_alignment
-researchcodebench,research-code-bench,ResearchCodeBench,Scientific Research,Modified Agentic,,,0,,,,,,,excluded_metric_alignment
-skillsbench,skillsbench,SkillsBench,"Agents, Tools & Systems",Agentic,,,0,,,,,,,excluded_metric_alignment
-swegym,swegym,SWE-Gym,Software Engineering,Agentic,,,0,,,,,,,excluded_metric_alignment
-swe_smith,swesmith,SWE-smith,Software Engineering,Agentic,,,0,,,,,,,excluded_metric_alignment
-devopsgym,devopsgym,DevOps-Gym,Software Engineering,Agentic,2026-04,0.4681,9,,,,,,,missing_harbor_score
-multi_swe_bench,multi-swe-bench,Multi-SWE-bench,Software Engineering,Agentic,2025-03,0.2162,36,,,,,,,missing_harbor_score
-qcircuitbench,qcircuitbench,QCircuitBench,Scientific Research,Non-Agentic,2025-12,0.0245,4,0.702381,gemini-3.1-pro-preview,terminus-2,0.6778810000000001,27.66861224489796,2766.8612244897963,ok
-arc_agi_2,arc-agi-2,ARC-AGI-2,Mathematics & Reasoning,Non-Agentic,2025-05,0.03,7,0.742,gemini-3.1-pro-preview,gemini-cli,0.712,23.733333333333334,2373.3333333333335,ok
-strongreject,strongreject,StrongReject,Safety & Security,Non-Agentic,2024-12,0.050000000000000044,3,0.972167,claude-haiku-4-5-20251001,terminus-2,0.922167,18.44333999999998,1844.3339999999982,ok
-swe_bench_verified,swebench-verified,SWE-bench-verified,Software Engineering,Agentic,2023-10,0.044,4,0.772,gemini-3.1-pro-preview,terminus-2,0.728,16.545454545454547,1654.5454545454547,ok
-gso,gso,GSO,Software Engineering,Agentic,2025-05,0.049,6,0.442157,claude-sonnet-4-6,terminus-2,0.39315700000000003,8.02361224489796,802.361224489796,ok
-livecodebench,livecodebench,LiveCodeBench,Software Engineering,Modified Agentic,2023-03,0.109,1,0.924,gpt-5.4,codex,0.8150000000000001,7.477064220183487,747.7064220183487,ok
-quixbugs,quixbugs,QuixBugs,Software Engineering,Non-Agentic,2020-09,0.125,10,0.975,gpt-5.4,codex,0.85,6.8,680.0,ok
-hle,hle,Humanity's Last Exam,Knowledge & Long Context,Non-Agentic,2025-01,0.094,7,0.543775,gemini-3.1-pro-preview,gemini-cli,0.44977500000000004,4.7848404255319155,478.48404255319156,ok
-usaco,usaco,USACO,Software Engineering,Modified Agentic,2024-04,0.202,19,0.956,gpt-5.4,codex,0.754,3.7326732673267324,373.26732673267327,ok
-deepsynth,deepsynth,DeepSynth,"Agents, Tools & Systems",Agentic,2026-01,0.1564,12,0.591495,gemini-3.1-pro-preview,gemini-cli,0.435095,2.7819373401534526,278.1937340153453,ok
-swt_bench,swtbench,SWT-Bench,Software Engineering,Agentic,2024-06,0.203,13,0.728,gpt-5.4,codex,0.5249999999999999,2.5862068965517233,258.6206896551723,ok
-crust_bench,crustbench,CRUST-Bench,Software Engineering,Modified Agentic,2025-04,0.32,13,0.982,gpt-5.4,codex,0.6619999999999999,2.0687499999999996,206.87499999999997,ok
-seal0,seal0,Seal-0,"Agents, Tools & Systems",Agentic,2025-06,0.171,15,0.506306,gpt-5.4,codex,0.335306,1.9608538011695904,196.08538011695904,ok
-replicationbench,replicationbench,ReplicationBench,Scientific Research,Agentic,2025-10,0.22,7,0.637778,gemini-3.1-pro-preview,gemini-cli,0.417778,1.898990909090909,189.8990909090909,ok
-scicode,scicode,SciCode,Scientific Research,Modified Agentic,2024-03,0.215,4,0.588362,gpt-5.4,codex,0.3733620000000001,1.7365674418604655,173.65674418604655,ok
-simpleqa,simpleqa,SimpleQA,Knowledge & Long Context,Non-Agentic,2024-10,0.427,8,0.961,gemini-3.1-pro-preview,gemini-cli,0.534,1.2505854800936769,125.05854800936768,ok
-bix_bench,bixbench,BIX-Bench,Scientific Research,Agentic,2025-10,0.21,2,0.461,gemini-3.1-pro-preview,gemini-cli,0.251,1.1952380952380952,119.52380952380952,ok
-humanevalfix,humanevalfix,HumanEvalFix,Software Engineering,Non-Agentic,2023-08,0.47,9,1.0,claude-sonnet-4-6,terminus-2,0.53,1.1276595744680853,112.76595744680853,ok
-swe_lancer,swe-lancer,SWE-Lancer,Software Engineering,Agentic,2025-02,0.361,3,0.724,gemini-3.1-pro-preview,gemini-cli,0.363,1.005540166204986,100.55401662049861,ok
-lab_bench,labbench,LAB-Bench,Scientific Research,Non-Agentic,2024-07,0.3758,7,0.725967,gpt-5.4,codex,0.350167,0.9317908461947845,93.17908461947845,ok
-ineqmath,ineqmath,IneqMath,Mathematics & Reasoning,Non-Agentic,2024-02,0.5375,1,0.999,gpt-5.4,codex,0.4615,0.8586046511627907,85.86046511627907,ok
-da_code,dacode,DA-Code,Data & Analytics,Agentic,2024-10,0.305,7,0.554287,claude-opus-4-6,terminus-2,0.24928699999999998,0.8173344262295081,81.73344262295082,ok
-omni_math,omnimath,Omni-MATH,Mathematics & Reasoning,Non-Agentic,2026-04,0.6054,15,0.882,gemini-3.1-pro-preview,gemini-cli,0.27659999999999996,0.4568880079286421,45.68880079286421,ok
-reasoning_gym,reasoning-gym,Reasoning Gym,Mathematics & Reasoning,Non-Agentic,2025-07,0.6351,10,0.908069,gpt-5.4,codex,0.272969,0.42980475515666827,42.980475515666825,ok
-aider_polyglot,aider-polyglot,Aider Polyglot,Software Engineering,Modified Agentic,2024-12,0.617,10,0.88,gemini-3.1-pro-preview,gemini-cli,0.263,0.42625607779578606,42.62560777957861,ok
-widesearch,widesearch,WideSearch,"Agents, Tools & Systems",Agentic,2025-08,0.622,17,0.799583,gpt-5.4,codex,0.17758300000000005,0.2855032154340837,28.55032154340837,ok
-mmau,mmau,MMAU,Multimodal,Non-Agentic,2024-10,0.549,14,0.69,gpt-5.4,codex,0.1409999999999999,0.25683060109289596,25.683060109289595,ok
-mmmlu,mmmlu,MMMLU,Knowledge & Long Context,Non-Agentic,2024-08,0.772,6,0.842667,gpt-5.4,codex,0.07066700000000004,0.09153756476683943,9.153756476683943,ok
-kumo,kumo,KUMO,Mathematics & Reasoning,Non-Agentic,2025-04,0.8894264150943396,23,0.966981,gemini-3.1-pro-preview,terminus-2,0.07755458490566036,0.0871961790087315,8.71961790087315,ok
-swe_bench_multilingual,swebench-multilingual,SWE-Bench-Multilingual,Software Engineering,Agentic,2026-02,0.727,11,0.768,gemini-3.1-pro-preview,terminus-2,0.041000000000000036,0.056396148555708445,5.639614855570844,ok
-crmarena,crmarena,CRMArena,Professional Domains,Agentic,2024-11,0.643,25,0.676422,gpt-5.4,codex,0.03342199999999995,0.05197822706065311,5.197822706065311,ok
-gaia,gaia,GAIA,"Agents, Tools & Systems",Agentic,2025-02,0.7257,3,0.758788,gpt-5.4,codex,0.033088000000000006,0.04559459831886455,4.559459831886455,ok
-aime,aime,AIME,Mathematics & Reasoning,Non-Agentic,2026-04,0.9812,96,0.993333,claude-opus-4-6,claude-code,0.01213300000000006,0.012365470852018,1.2365470852018,ok
-gpqa_diamond,gpqa-diamond,GPQA Diamond,Knowledge & Long Context,Non-Agentic,2026-04,0.9545,99,0.964646,gemini-3.1-pro-preview,gemini-cli,0.010145999999999988,0.010629649030906222,1.062964903090622,ok
-compilebench,compilebench,CompileBench,Software Engineering,Agentic,2026-04,1.0,26,1.0,gpt-5.4,codex,0.0,0.0,0.0,ok
-algotune,algotune,AlgoTune,Software Engineering,Modified Agentic,2025-07,0.3516279254962272,4,0.333387,claude-sonnet-4-6,claude-code,-0.01824092549622719,-0.05187564517375884,-5.1875645173758835,ok
-bfcl,bfcl,Berkeley Function Calling Leaderboard (BFCL),"Agents, Tools & Systems",Non-Agentic,2026-04,0.907203,109,0.843902,gemini-3.1-pro-preview,terminus-2,-0.06330099999999994,-0.06977600382714777,-6.977600382714777,ok
-medagentbench,medagentbench,MedAgentBench,Professional Domains,Agentic,2025-02,0.6967,12,0.642,gemini-3.1-pro-preview,terminus-2,-0.05469999999999997,-0.0785129898091,-7.85129898091,ok
-sldbench,sldbench,SLDBench,Scientific Research,Agentic,2025-07,0.8740769500000001,27,0.801446,claude-sonnet-4-6,claude-code,-0.07263095000000008,-0.0830944575303125,-8.30944575303125,ok
-swe_bench_pro,swebenchpro,SWE-Bench Pro,Software Engineering,Agentic,2026-04,0.591,24,0.538,gpt-5.4,codex,-0.052999999999999936,-0.08967851099830784,-8.967851099830785,ok
-spreadsheetbench,spreadsheetbench,SpreadsheetBench,Professional Domains,Agentic,2026-03,0.9425,6,0.8315,claude-sonnet-4-6,claude-code,-0.11099999999999999,-0.11777188328912465,-11.777188328912464,ok
-terminalbench_2_0,terminal-bench,Terminal-Bench 2.0,"Agents, Tools & Systems",Agentic,2026-04,0.8202247191011236,124,0.692135,gemini-3.1-pro-preview,terminus-2,-0.12808971910112366,-0.15616417808219185,-15.616417808219186,ok
-bigcodebench,bigcodebench,BigCodeBench,Software Engineering,Modified Agentic,2024-06,0.561,51,0.441379,claude-opus-4-6,terminus-2,-0.11962100000000003,-0.21322816399286992,-21.322816399286992,ok
-codepde,codepde,CodePDE,Scientific Research,Modified Agentic,2025-05,0.8,14,0.6,claude-opus-4-6,terminus-2,-0.20000000000000007,-0.25000000000000006,-25.000000000000007,ok
-spider_2,spider2,Spider 2.0,Data & Analytics,Modified Agentic,2026-04,0.5156,14,0.38125,claude-opus-4-6,claude-code,-0.13434999999999997,-0.2605702094647013,-26.05702094647013,ok
+benchmark,matrix_column,benchmark_name,domain,superdomain,is_subset,launch_date_ym,launch_best_score,launch_n_models,harbor_best_score,harbor_best_model,harbor_best_agent,absolute_improvement,relative_improvement,relative_improvement_pct,status
+featbench,featbench,FeatBench,Other,Uncategorized,False,,,0,,,,,,,excluded_metric_alignment
+featurebench,featurebench-modal,FeatureBench,Software Engineering,Agentic,False,,,0,,,,,,,excluded_metric_alignment
+financeagent,financeagent_terminal,Finance Agent Benchmark,Professional Domains,Agentic,True,,,0,,,,,,,excluded_metric_alignment
+gaia2,gaia2,GAIA2,"Agents, Tools & Systems",Agentic,True,,,0,,,,,,,excluded_metric_alignment
+lawbench,lawbench,LawBench,Professional Domains,Non-Agentic,True,,,0,,,,,,,excluded_metric_alignment
+mlgym_bench,mlgym,MLGym-Bench,Scientific Research,Modified Agentic,False,,,0,,,,,,,excluded_metric_alignment
+pixiu,pixiu,PIXIU,Professional Domains,Modified Agentic,False,,,0,,,,,,,excluded_metric_alignment
+researchcodebench,research-code-bench,ResearchCodeBench,Scientific Research,Modified Agentic,False,,,0,,,,,,,excluded_metric_alignment
+skillsbench,skillsbench,SkillsBench,"Agents, Tools & Systems",Agentic,False,,,0,,,,,,,excluded_metric_alignment
+swegym,swegym,SWE-Gym,Software Engineering,Agentic,False,,,0,,,,,,,excluded_metric_alignment
+swe_smith,swesmith,SWE-smith,Software Engineering,Agentic,False,,,0,,,,,,,excluded_metric_alignment
+devopsgym,devopsgym,DevOps-Gym,Software Engineering,Agentic,False,2026-04,0.4681,9,,,,,,,missing_harbor_score
+strongreject,strongreject,StrongReject,Safety & Security,Non-Agentic,False,2024-02,0.010000000000000009,1,0.970278,claude-haiku-4-5-20251001,terminus-2,0.960278,96.02779999999991,9602.779999999992,ok
+arc_agi_2,arc-agi-2,ARC-AGI-2,Mathematics & Reasoning,Non-Agentic,False,2023-11,0.016,1,0.766667,gemini-3.1-pro-preview,gemini-cli,0.750667,46.916687499999995,4691.66875,ok
+qcircuitbench,qcircuitbench,QCircuitBench,Scientific Research,Non-Agentic,False,2025-12,0.0245,4,0.686508,gemini-3.1-pro-preview,terminus-2,0.662008,27.02073469387755,2702.073469387755,ok
+swe_bench_verified,swebench-verified,SWE-bench-verified,Software Engineering,Agentic,False,2023-10,0.044,4,0.776667,gemini-3.1-pro-preview,terminus-2,0.732667,16.651522727272727,1665.1522727272727,ok
+quixbugs,quixbugs,QuixBugs,Software Engineering,Non-Agentic,False,2017-10,0.1,8,0.975,gpt-5.4,codex,0.875,8.75,875.0,ok
+gso,gso,GSO,Software Engineering,Agentic,False,2025-05,0.049,6,0.45098,claude-sonnet-4-6,claude-code,0.40198,8.203673469387756,820.3673469387755,ok
+livecodebench,livecodebench,LiveCodeBench,Software Engineering,Modified Agentic,True,2023-03,0.109,1,0.926667,gpt-5.4,codex,0.817667,7.501532110091744,750.1532110091744,ok
+hle,hle,Humanity's Last Exam,Knowledge & Long Context,Non-Agentic,False,2025-01,0.094,7,0.54083,gemini-3.1-pro-preview,gemini-cli,0.44683000000000006,4.753510638297873,475.3510638297873,ok
+usaco,usaco,USACO,Software Engineering,Modified Agentic,True,2024-04,0.202,19,0.96,gpt-5.4,codex,0.758,3.7524752475247523,375.2475247524752,ok
+spreadsheetbench,spreadsheetbench,SpreadsheetBench,Professional Domains,Agentic,True,2024-06,0.2,16,0.831667,claude-opus-4-6,terminus-2,0.631667,3.1583349999999997,315.83349999999996,ok
+deepsynth,deepsynth,DeepSynth,"Agents, Tools & Systems",Agentic,False,2026-01,0.1564,12,0.587975,gemini-3.1-pro-preview,gemini-cli,0.43157500000000004,2.7594309462915603,275.943094629156,ok
+swt_bench,swtbench,SWT-Bench,Software Engineering,Agentic,True,2024-06,0.203,13,0.706667,gpt-5.4,codex,0.5036670000000001,2.4811182266009855,248.11182266009854,ok
+spider_2,spider2,Spider 2.0,Data & Analytics,Modified Agentic,True,2024-11,0.1282,18,0.395833,claude-opus-4-6,claude-code,0.267633,2.0876209048361933,208.76209048361935,ok
+crust_bench,crustbench,CRUST-Bench,Software Engineering,Modified Agentic,False,2025-04,0.32,13,0.98,gpt-5.4,codex,0.6599999999999999,2.0624999999999996,206.24999999999994,ok
+seal0,seal0,Seal-0,"Agents, Tools & Systems",Agentic,False,2025-06,0.171,15,0.51051,gpt-5.4,codex,0.33951,1.9854385964912278,198.54385964912277,ok
+replicationbench,replicationbench,ReplicationBench,Scientific Research,Agentic,False,2025-10,0.22,7,0.62963,gemini-3.1-pro-preview,gemini-cli,0.40963000000000005,1.8619545454545456,186.19545454545457,ok
+scicode,scicode,SciCode,Scientific Research,Modified Agentic,True,2024-03,0.215,4,0.582241,gpt-5.4,codex,0.36724100000000004,1.708097674418605,170.8097674418605,ok
+gpqa_diamond,gpqa-diamond,GPQA Diamond,Knowledge & Long Context,Non-Agentic,False,2023-11,0.393,13,0.97138,gemini-3.1-pro-preview,gemini-cli,0.57838,1.4717048346055979,147.17048346055978,ok
+bix_bench,bixbench,BIX-Bench,Scientific Research,Agentic,False,2025-02,0.21,2,0.48,gemini-3.1-pro-preview,gemini-cli,0.27,1.2857142857142858,128.57142857142858,ok
+simpleqa,simpleqa,SimpleQA,Knowledge & Long Context,Non-Agentic,False,2024-10,0.427,8,0.96,gemini-3.1-pro-preview,gemini-cli,0.5329999999999999,1.2482435597189694,124.82435597189694,ok
+humanevalfix,humanevalfix,HumanEvalFix,Software Engineering,Non-Agentic,False,2023-08,0.47,9,1.0,gpt-5.4,codex,0.53,1.1276595744680853,112.76595744680853,ok
+swe_lancer,swe-lancer,SWE-Lancer,Software Engineering,Agentic,False,2025-02,0.361,3,0.71,gemini-3.1-pro-preview,gemini-cli,0.349,0.9667590027700831,96.67590027700831,ok
+lab_bench,labbench,LAB-Bench,Scientific Research,Non-Agentic,False,2024-07,0.3758,7,0.731123,gpt-5.4,codex,0.35532299999999994,0.9455109100585416,94.55109100585416,ok
+ineqmath,ineqmath,IneqMath,Mathematics & Reasoning,Non-Agentic,False,2024-02,0.5375,1,0.998333,gpt-5.4,codex,0.46083300000000005,0.8573637209302327,85.73637209302328,ok
+da_code,dacode,DA-Code,Data & Analytics,Agentic,False,2024-10,0.305,7,0.553716,claude-opus-4-6,terminus-2,0.248716,0.8154622950819672,81.54622950819672,ok
+omni_math,omnimath,Omni-MATH,Mathematics & Reasoning,Non-Agentic,False,2024-10,0.6054,15,0.88,gemini-3.1-pro-preview,gemini-cli,0.27459999999999996,0.45358440700363384,45.35844070036338,ok
+reasoning_gym,reasoning-gym,Reasoning Gym,Mathematics & Reasoning,Non-Agentic,False,2025-05,0.6351,10,0.910778,gemini-3.1-pro-preview,terminus-2,0.275678,0.4340702251613919,43.407022516139186,ok
+aider_polyglot,aider-polyglot,Aider Polyglot,Software Engineering,Modified Agentic,False,2024-12,0.617,10,0.884444,gemini-3.1-pro-preview,gemini-cli,0.267444,0.4334586709886548,43.34586709886548,ok
+bigcodebench,bigcodebench,BigCodeBench-Hard,Software Engineering,Modified Agentic,False,2024-06,0.321,93,0.445977,claude-sonnet-4-6,terminus-2,0.124977,0.3893364485981308,38.933644859813086,ok
+mmau,mmau,MMAU,Multimodal,Non-Agentic,False,2024-10,0.549,14,0.703333,gpt-5.4,codex,0.15433299999999994,0.2811165755919853,28.111657559198527,ok
+widesearch,widesearch,WideSearch,"Agents, Tools & Systems",Agentic,True,2025-08,0.622,17,0.791109,gpt-5.4,codex,0.16910899999999995,0.27187942122186487,27.187942122186488,ok
+swe_bench_pro,swebenchpro,SWE-Bench Pro,Software Engineering,Agentic,False,2025-09,0.436,1,0.55,gpt-5.4,codex,0.11400000000000005,0.261467889908257,26.146788990825698,ok
+swe_bench_multilingual,swebench-multilingual,SWE-Bench-Multilingual,Software Engineering,Agentic,False,2026-02,0.727,11,0.8,claude-opus-4-6,terminus-2,0.07300000000000006,0.10041265474552967,10.041265474552967,ok
+compilebench,compilebench,CompileBench,Software Engineering,Agentic,False,2025-09,0.9111,18,1.0,gpt-5.4,codex,0.08889999999999998,0.09757436066293489,9.757436066293488,ok
+kumo,kumo,KUMO,Mathematics & Reasoning,Non-Agentic,True,2025-04,0.8894264150943396,23,0.968553,gemini-3.1-pro-preview,terminus-2,0.07912658490566038,0.08896361021306927,8.896361021306927,ok
+mmmlu,mmmlu,MMMLU,Knowledge & Long Context,Non-Agentic,False,2024-08,0.772,6,0.837778,gpt-5.4,codex,0.065778,0.08520466321243524,8.520466321243523,ok
+gaia,gaia,GAIA,"Agents, Tools & Systems",Agentic,False,2025-02,0.7257,3,0.759596,gpt-5.4,codex,0.03389600000000004,0.046708006063111526,4.670800606311152,ok
+algotune,algotune,AlgoTune,Software Engineering,Modified Agentic,False,2025-07,0.3516279254962272,4,0.366747,claude-sonnet-4-6,claude-code,0.015119074503772811,0.042997365702500304,4.2997365702500305,ok
+aime,aime,AIME,Mathematics & Reasoning,Non-Agentic,False,2026-04,0.9812,96,0.994444,claude-opus-4-6,claude-code,0.013244000000000034,0.013497757847533667,1.3497757847533667,ok
+crmarena,crmarena,CRMArena,Professional Domains,Agentic,False,2024-11,0.643,25,0.646803,gpt-5.4,codex,0.003803000000000001,0.0059144634525660975,0.5914463452566098,ok
+terminalbench_2_0,terminal-bench,Terminal-Bench 2.0,"Agents, Tools & Systems",Agentic,False,2026-01,0.6942571785268414,96,0.692884,gpt-5.4,codex,-0.0013731785268413788,-0.001977910447761094,-0.1977910447761094,ok
+medagentbench,medagentbench,MedAgentBench,Professional Domains,Agentic,False,2025-01,0.6967,9,0.643333,gpt-5.4,codex,-0.05336699999999994,-0.07659968422563505,-7.659968422563505,ok
+bfcl,bfcl,Berkeley Function Calling Leaderboard (BFCL),"Agents, Tools & Systems",Non-Agentic,False,2025-07,0.907203,80,0.837398,gemini-3.1-pro-preview,terminus-2,-0.069805,-0.07694529228849553,-7.694529228849553,ok
+sldbench,sldbench,SLDBench,Scientific Research,Agentic,False,2025-07,0.8740769500000001,27,0.795206,gpt-5.4,codex,-0.0788709500000001,-0.09023341709216803,-9.023341709216803,ok
+codepde,codepde,CodePDE,Scientific Research,Modified Agentic,False,2025-05,0.8,14,0.6,gpt-5.4,terminus-2,-0.20000000000000007,-0.25000000000000006,-25.000000000000007,ok

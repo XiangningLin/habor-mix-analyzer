@@ -19,10 +19,685 @@
   },
   "results_over_time": [
     {
+      "date": "2024-06-21",
+      "source_type": "paper",
+      "source_url": "https://openreview.net/pdf?id=KYxzmRLF6i",
+      "note": "SpreadsheetBench paper Table 2 launch baselines on the full 912-instruction benchmark. The Harbor matrix evaluates the V1 Verified 400-task subset, so this launch snapshot is retained as historical context and is not an exact split match. The comparable pass rate field uses Soft Restriction Overall (% converted to fraction); hard/cell/sheet breakdowns are preserved as auxiliary metrics. Human performance is preserved only as auxiliary human_* metrics and is excluded from the pass rate selector used for previous-SOTA. SheetCopilot and Copilot in Excel were evaluated on 50 instructions and one test case per instruction in the paper, not the full 912.",
+      "results": [
+        {
+          "model": "Binder (GPT-3.5)",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.011699999999999999,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.011699999999999999,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0158,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.0005,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.0,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeQwen (7B)",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.0051,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.0051,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0036,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.0076,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.0033,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.0036,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.0029,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "CodeQwen (7B) w / Multi-Round",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.0366,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.0366,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0149,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.07139999999999999,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.0297,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.0089,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.0629,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepseekCoder (33B)",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.026000000000000002,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.026000000000000002,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0059,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.0581,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.022000000000000002,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.0036,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.051399999999999994,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "DeepseekCoder (33B) w / Multi-Round",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.053099999999999994,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.053099999999999994,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0315,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.0876,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.0385,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.0196,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.06860000000000001,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mixtral-8x7B",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.0311,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.0311,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0297,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.0333,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.0242,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.0232,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.025699999999999997,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Mixtral-8x7B w / Multi-Round",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.0388,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.0388,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0339,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.0467,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.0285,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.0232,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.0371,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3 (70B)",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.0132,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.0132,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0018,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.031400000000000004,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.011000000000000001,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.0,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.0286,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Llama-3 (70B) w / Multi-Round",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.0374,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.0374,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0113,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.079,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.0318,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.0070999999999999995,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.07139999999999999,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-3.5",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.023399999999999997,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.023399999999999997,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0131,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.039900000000000005,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.016399999999999998,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.0070999999999999995,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.0313,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-3.5 w / Multi-Round",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.0709,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.0709,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.0333,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.1311,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.0537,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.025,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.09970000000000001,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.18350000000000002,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.18350000000000002,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.1503,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.2365,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.1502,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.11939999999999999,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.19940000000000002,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "GPT-4o w / Multi-Round",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.1696,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.1696,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.1349,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.22510000000000002,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_overall",
+              "value": 0.13269999999999998,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_cell_level",
+              "value": 0.1052,
+              "unit": null
+            },
+            {
+              "metric": "hard_restriction_sheet_level",
+              "value": 0.1766,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "SheetCopilot (GPT-4)",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.14,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.16670000000000001,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.1,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Copilot in Excel",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_overall",
+              "value": 0.2,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_cell_level",
+              "value": 0.23329999999999998,
+              "unit": null
+            },
+            {
+              "metric": "soft_restriction_sheet_level",
+              "value": 0.15,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Human Performance",
+          "effort": null,
+          "system_description": null,
+          "scores": [
+            {
+              "metric": "human_soft_restriction_overall",
+              "value": 0.7132999999999999,
+              "unit": null
+            },
+            {
+              "metric": "human_soft_restriction_overall",
+              "value": 0.7132999999999999,
+              "unit": null
+            },
+            {
+              "metric": "human_soft_restriction_cell_level",
+              "value": 0.7556,
+              "unit": null
+            },
+            {
+              "metric": "human_soft_restriction_sheet_level",
+              "value": 0.65,
+              "unit": null
+            },
+            {
+              "metric": "human_hard_restriction_overall",
+              "value": 0.62,
+              "unit": null
+            },
+            {
+              "metric": "human_hard_restriction_cell_level",
+              "value": 0.6667000000000001,
+              "unit": null
+            },
+            {
+              "metric": "human_hard_restriction_sheet_level",
+              "value": 0.55,
+              "unit": null
+            }
+          ]
+        }
+      ]
+    },
+    {
       "date": "2026-03-07",
       "source_type": "leaderboard",
       "source_url": "https://spreadsheetbench.github.io/",
+      "note": null,
       "results": [
+        {
+          "model": "Kyra",
+          "effort": null,
+          "system_description": "Kyra",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.8425,
+              "unit": null
+            }
+          ]
+        },
+        {
+          "model": "Decide Agent",
+          "effort": null,
+          "system_description": "Decide Agent",
+          "scores": [
+            {
+              "metric": "pass rate",
+              "value": 0.825,
+              "unit": null
+            }
+          ]
+        },
         {
           "model": "Tetra-Beta-2",
           "effort": null,
@@ -70,34 +745,9 @@
               "unit": null
             }
           ]
-        },
-        {
-          "model": "Kyra",
-          "effort": null,
-          "system_description": "Kyra",
-          "scores": [
-            {
-              "metric": "pass rate",
-              "value": 0.8425,
-              "unit": null
-            }
-          ]
-        },
-        {
-          "model": "Decide Agent",
-          "effort": null,
-          "system_description": "Decide Agent",
-          "scores": [
-            {
-              "metric": "pass rate",
-              "value": 0.825,
-              "unit": null
-            }
-          ]
         }
-      ],
-      "note": null
+      ]
     }
   ],
-  "notes": "Only SpreadsheetBench V1 Verified (400) is retained; SpreadsheetBench 2 leaderboard entries are intentionally excluded from this file under the current scope. num_tasks therefore reflects the verified_400 split rather than the 912-task V1 Full benchmark. The metric is pass rate: the percentage of tasks whose spreadsheet output matches the ground-truth answer file at the benchmark answer_position."
+  "notes": "Only SpreadsheetBench V1 Verified (400) is retained; SpreadsheetBench 2 leaderboard entries are intentionally excluded from this file under the current scope. num_tasks therefore reflects the verified_400 split rather than the 912-task V1 Full benchmark. The metric is pass rate: the percentage of tasks whose spreadsheet output matches the ground-truth answer file at the benchmark answer_position. Paper launch baselines from Table 2 are full 912-instruction SpreadsheetBench scores; Harbor uses the V1 Verified 400-task subset, so launch comparisons are historical-context rather than exact split-matched comparisons."
 }

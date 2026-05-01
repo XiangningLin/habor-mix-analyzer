@@ -19,36 +19,64 @@
   },
   "results_over_time": [
     {
-      "date": "2024-12",
+      "date": "2024-02",
       "source_type": "paper",
       "source_url": "https://neurips.cc/virtual/2024/poster/97752",
+      "note": "StrongREJECT score is a 0-1 automated evaluator score for jailbreak attack success, where higher means the model response provided more useful harmful information. These rows report the best attack score under oracle selection across 37 jailbreaks.",
+      "results": [
+        {
+          "model": "gpt-3.5-turbo",
+          "system_description": null,
+          "effort": null,
+          "scores": [
+            {
+              "metric": "Best (oracle over 37 jailbreaks) StrongREJECT score",
+              "value": 0.99,
+              "unit": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2024-07-18",
+      "source_type": "paper",
+      "source_url": "https://neurips.cc/virtual/2024/poster/97752",
+      "note": "StrongREJECT score is a 0-1 automated evaluator score for jailbreak attack success, where higher means the model response provided more useful harmful information. These rows report the best attack score under oracle selection across 37 jailbreaks.",
       "results": [
         {
           "model": "gpt-4o-mini",
           "system_description": null,
           "effort": null,
           "scores": [
-            { "metric": "Best (oracle over 37 jailbreaks) StrongREJECT score", "value": 0.95, "unit": null }
+            {
+              "metric": "Best (oracle over 37 jailbreaks) StrongREJECT score",
+              "value": 0.95,
+              "unit": null
+            }
           ]
-        },
-        {
-          "model": "gpt-3.5-turbo",
-          "system_description": null,
-          "effort": null,
-          "scores": [
-            { "metric": "Best (oracle over 37 jailbreaks) StrongREJECT score", "value": 0.99, "unit": null }
-          ]
-        },
+        }
+      ]
+    },
+    {
+      "date": "2024-07-23",
+      "source_type": "paper",
+      "source_url": "https://neurips.cc/virtual/2024/poster/97752",
+      "note": "StrongREJECT score is a 0-1 automated evaluator score for jailbreak attack success, where higher means the model response provided more useful harmful information. These rows report the best attack score under oracle selection across 37 jailbreaks.",
+      "results": [
         {
           "model": "llama-3.1-70b-instruct",
           "system_description": null,
           "effort": null,
           "scores": [
-            { "metric": "Best (oracle over 37 jailbreaks) StrongREJECT score", "value": 0.96, "unit": null }
+            {
+              "metric": "Best (oracle over 37 jailbreaks) StrongREJECT score",
+              "value": 0.96,
+              "unit": null
+            }
           ]
         }
-      ],
-      "note": "StrongREJECT score is a 0-1 automated evaluator score for jailbreak attack success, where higher means the model response provided more useful harmful information. These rows report the best attack score under oracle selection across 37 jailbreaks."
+      ]
     }
   ],
   "notes": "StrongREJECT evaluates jailbreak attack effectiveness rather than acting as a runtime safety filter. It combines 313 forbidden prompts across 6 harm categories (illegal goods/services, non-violent crimes, hate/harassment/discrimination, disinformation/deception, violence, sexual content) with an automated rubric-based evaluator that scores victim model responses on both non-refusal and response quality (specificity + convincingness). "

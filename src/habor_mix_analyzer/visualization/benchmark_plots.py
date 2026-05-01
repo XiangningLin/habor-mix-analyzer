@@ -304,11 +304,25 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
     if not required.issubset(launch_progress.columns):
         return
 
+    excluded_benchmarks = {"bfcl", "medagentbench", "sldbench", "codepde"}
+    label_overrides = {
+        "aime": "AIME 24&25",
+        "bigcodebench": "BigCodeBench-Hard",
+    }
+
+    launch_cols = ["matrix_column", "launch_best_score"]
+    if "is_subset" in launch_progress.columns:
+        launch_cols.append("is_subset")
     launch = launch_progress.loc[
         (launch_progress["status"] == "ok")
         & launch_progress["launch_best_score"].notna(),
-        ["matrix_column", "launch_best_score"],
+        launch_cols,
     ].copy()
+    if "is_subset" not in launch.columns:
+        launch["is_subset"] = False
+    launch["is_subset"] = launch["is_subset"].map(
+        lambda value: str(value).strip().lower() in {"true", "1", "yes"}
+    )
     if launch.empty:
         return
 
@@ -317,6 +331,7 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
         on="benchmark",
         how="inner",
     )
+    plot_df = plot_df[~plot_df["benchmark"].isin(excluded_benchmarks)].copy()
     if plot_df.empty:
         return
 
@@ -355,7 +370,14 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
     plot_df["headroom_width"] = (1.0 - plot_df["current_sota"]).clip(lower=0)
     plot_df = plot_df.sort_values(["domain", "current_sota"], ascending=[True, True])
 
-    labels = [wrap_text(benchmark_display_name(value), 24) for value in plot_df["benchmark"]]
+    def _display_label(row: pd.Series) -> str:
+        benchmark = str(row["benchmark"])
+        label = label_overrides.get(benchmark, benchmark_display_name(benchmark))
+        if bool(row.get("is_subset", False)):
+            label = f"{label}*"
+        return label
+
+    labels = [wrap_text(_display_label(row), 24) for _, row in plot_df.iterrows()]
     colors = [domain_colors.get(str(value), "#aaaaaa") for value in plot_df["domain"]]
     n = len(plot_df)
 
@@ -486,7 +508,6 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
                 framealpha=0.9,
                 bbox_to_anchor=(0.5, 0.03),
             )
-
         # fig.suptitle(
         #     "Benchmark Headroom: Best System Score by Domain\n(shaded area = room for improvement)",
         # )

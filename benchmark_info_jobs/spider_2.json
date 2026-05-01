@@ -41,6 +41,11 @@
               "metric": "SR (Spider 2.0)",
               "value": 0.2136,
               "unit": null
+            },
+            {
+              "metric": "SR (Spider 2.0-DBT)",
+              "value": 0.1282,
+              "unit": null
             }
           ]
         },
@@ -287,7 +292,7 @@
           ]
         }
       ],
-      "note": "Paper release baselines from Tables 4, 5, and 6. DeepSeek-V3 appears in Table 4 (Lite/Snow EX) while DeepSeek-V2.5 appears in Table 6 (Spider 2.0 full SR) — these are different models. Qwen2.5-Coder (Table 4) and Qwen2.5-72B (Table 6) are also distinct. CodeS-15B is a fine-tuned model, not a scaffold, so system_description is null."
+      "note": "Paper release baselines from Tables 4, 5, and 6. For Harbor-aligned launch comparison, use Table 6's DBT Project subset: Spider-Agent + o1-preview reports SR 12.82% with DBT Project, stored here as SR (Spider 2.0-DBT). This is a subset/variant comparison because Harbor covers 64 of 68 DBT tasks. DeepSeek-V3 appears in Table 4 (Lite/Snow EX) while DeepSeek-V2.5 appears in Table 6 (Spider 2.0 full SR) — these are different models. Qwen2.5-Coder (Table 4) and Qwen2.5-72B (Table 6) are also distinct. CodeS-15B is a fine-tuned model, not a scaffold, so system_description is null."
     },
     {
       "date": "2026-04",

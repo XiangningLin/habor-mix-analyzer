@@ -4,13 +4,20 @@ aider_polyglot,2025-11,Aider Polyglot,0.88,69
 aime,2026-04,AIME,0.9812,96
 algotune,2025-07,AlgoTune,0.3516279254962272,4
 algotune,2026-04,AlgoTune,0.4178735386225294,18
-arc_agi_2,2025-05,ARC-AGI-2,0.03,7
+arc_agi_2,2023-11,ARC-AGI-2,0.016,1
+arc_agi_2,2024-11,ARC-AGI-2,0.276,2
+arc_agi_2,2025-11,ARC-AGI-2,0.376,6
 arc_agi_2,2025-12,ARC-AGI-2,0.542,7
 arc_agi_2,2026-02,ARC-AGI-2,0.846,4
-bigcodebench,2024-06,BigCodeBench,0.561,51
+bfcl,2025-07,Berkeley Function Calling Leaderboard (BFCL),0.907203,80
+bigcodebench,2024-06,BigCodeBench-Hard,0.321,93
+bigcodebench,2024-12,BigCodeBench-Hard,0.3545,3
+bigcodebench,2025-02,BigCodeBench-Hard,0.358,4
+compilebench,2025-09,CompileBench,0.9111,18
 da_code,2024-10,DA-Code,0.305,7
 devopsgym,2026-04,DevOps-Gym,0.4681,9
 gaia,2025-02,GAIA,0.7257,3
+gpqa_diamond,2023-11,GPQA Diamond,0.393,13
 gpqa_diamond,2026-04,GPQA Diamond,0.9545,152
 gso,2025-05,GSO,0.049,6
 gso,2025-06,GSO,0.0882,1
@@ -41,6 +48,7 @@ livecodebench,2025-03,LiveCodeBench,0.778,14
 livecodebench,2025-04,LiveCodeBench,0.859,27
 livecodebench,2025-08,LiveCodeBench,0.878,31
 livecodebench,2025-11,LiveCodeBench,0.917,27
+medagentbench,2025-01,MedAgentBench,0.6967,9
 mmau,2024-10,MMAU,0.549,14
 mmau,2026-04,MMAU,0.778,29
 mmmlu,2024-08,MMMLU,0.772,6
@@ -50,8 +58,9 @@ mmmlu,2025-11,MMMLU,0.908,3
 mmmlu,2025-12,MMMLU,0.918,5
 mmmlu,2026-02,MMMLU,0.926,6
 mmmlu,2026-04,MMMLU,0.927,5
-multi_swe_bench,2025-03,Multi-SWE-bench,0.2162,36
-omni_math,2026-04,Omni-MATH,0.6054,15
+omni_math,2024-10,Omni-MATH,0.6054,15
+quixbugs,2017-10,QuixBugs,0.1,8
+quixbugs,2017-12,QuixBugs,0.125,1
 scicode,2024-03,SciCode,0.215,4
 scicode,2024-04,SciCode,0.229,6
 scicode,2024-06,SciCode,0.26,4
@@ -60,8 +69,17 @@ seal0,2025-06,Seal-0,0.171,15
 simpleqa,2024-10,SimpleQA,0.427,8
 simpleqa,2025-07,SimpleQA,0.625,23
 simpleqa,2026-03,SimpleQA,0.748,27
+spider_2,2024-11,Spider 2.0,0.1282,18
 spider_2,2026-04,Spider 2.0,0.5156,14
+spreadsheetbench,2024-06,SpreadsheetBench,0.2,16
+spreadsheetbench,2026-03,SpreadsheetBench,0.9425,6
+strongreject,2024-02,StrongReject,0.010000000000000009,1
+strongreject,2024-07,StrongReject,0.050000000000000044,1
 swe_bench_multilingual,2026-02,SWE-Bench-Multilingual,0.727,11
+swe_bench_pro,2025-09,SWE-Bench Pro,0.436,10
+swe_bench_pro,2025-11,SWE-Bench Pro,0.4589,1
+swe_bench_pro,2026-02,SWE-Bench Pro,0.519,1
+swe_bench_pro,2026-03,SWE-Bench Pro,0.591,1
 swe_bench_verified,2023-10,SWE-bench-verified,0.044,4
 swe_bench_verified,2024-04,SWE-bench-verified,0.224,4
 swe_bench_verified,2024-05,SWE-bench-verified,0.256,1
@@ -82,6 +100,10 @@ swe_bench_verified,2025-09,SWE-bench-verified,0.788,3
 swe_bench_verified,2025-12,SWE-bench-verified,0.792,2
 swe_bench_verified,2026-04,SWE-bench-verified,0.939,1
 swt_bench,2024-06,SWT-Bench,0.203,13
+terminalbench_2_0,2026-01,Terminal-Bench 2.0,0.6942571785268414,96
+terminalbench_2_0,2026-02,Terminal-Bench 2.0,0.802247191011236,24
+terminalbench_2_0,2026-03,Terminal-Bench 2.0,0.8179775280898877,2
+terminalbench_2_0,2026-04,Terminal-Bench 2.0,0.8202247191011236,1
 usaco,2024-04,USACO,0.202,19
 usaco,2025-01,USACO,0.3811,1
 usaco,2025-03,USACO,0.3909,1

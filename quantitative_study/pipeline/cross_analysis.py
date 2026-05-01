@@ -336,6 +336,7 @@ def benchmark_launch_vs_harbor_improvement(
             benchmark_name=alignment.benchmark_name,
             domain=domain,
             superdomain=superdomain,
+            is_subset=alignment.alignment_status == "subset_or_variant",
             launch_date_ym=None,
             launch_best_score=np.nan,
             launch_n_models=0,

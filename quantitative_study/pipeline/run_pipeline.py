@@ -189,6 +189,11 @@ def main() -> None:
     if not args.no_figures:
         print("\n" + "=" * 70)
         print("E. Generating paper figures...")
+        progress_for_figures = progress_over_time(
+            args.benchmark_info_dir,
+            min_snapshots=1,
+            frontier_only=True,
+        )
         generate_all_figures(
             summary=summary,
             direction=direction,
@@ -198,7 +203,7 @@ def main() -> None:
             difficulty=difficulty,
             domain_df=dom_sum,
             superdomain_df=superdom_sum,
-            progress_df=prog,
+            progress_df=progress_for_figures,
             domain_prog_df=dom_prog,
             benchmark_launch_imp_df=launch_imp,
             domain_launch_imp_df=domain_launch_imp,

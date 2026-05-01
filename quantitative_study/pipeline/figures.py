@@ -23,6 +23,7 @@ import pandas as pd
 
 from .loading import load_metric_alignment
 from .config import (
+    BENCHMARK_TAXONOMY,
     COLOR_BLUE, COLOR_GRAY, COLOR_GREEN, COLOR_GRID, COLOR_AXIS,
     COLOR_PURPLE, COLOR_RED,
     DPI, DOMAIN_COLORS, FIGSIZE_SINGLE, FIGSIZE_WIDE,
@@ -61,6 +62,40 @@ def _categorical_colors(n: int) -> list[str]:
 def _slugify(value: object) -> str:
     slug = re.sub(r"[^a-z0-9]+", "_", str(value).lower()).strip("_")
     return slug or "other"
+
+
+_PROGRESS_EXCLUDED_DOMAINS = {
+    "Data & Analytics",
+    "Professional Domains",
+    "Safety & Security",
+    "Multimodal",
+}
+
+_PROGRESS_GROUP_ORDER = {
+    "Software Engineering (Repo-level Issue Resolution and Testing)": 0,
+    "Software Engineering (Competitive & Function-level Coding)": 1,
+    "Software Engineering (Other)": 2,
+    "Mathematics & Reasoning": 3,
+    "Knowledge & Long Context": 4,
+    "Scientific Research": 5,
+    "Agents, Tools & Systems": 6,
+    "Other": 7,
+}
+
+
+def _progress_plot_group(benchmark: str, domain: str) -> str | None:
+    if domain in _PROGRESS_EXCLUDED_DOMAINS:
+        return None
+    if domain != "Software Engineering":
+        return domain
+
+    taxonomy = BENCHMARK_TAXONOMY.get(benchmark) or BENCHMARK_TAXONOMY.get(benchmark.replace("_", "-"))
+    subdomain = taxonomy.get("subdomain") if taxonomy else ""
+    if subdomain == "Repo-level Issue Resolution":
+        return "Software Engineering (Repo-level Issue Resolution and Testing)"
+    if subdomain == "Competitive & Function-level Coding":
+        return "Software Engineering (Competitive & Function-level Coding)"
+    return "Software Engineering (Other)"
 
 
 # ===================================================================
@@ -346,38 +381,45 @@ def fig_progress_over_time(
     _apply_style()
     progress_df = progress_df.copy()
     progress_df["domain"] = progress_df["benchmark"].map(lambda b: _domain_for(str(b))[0])
+    progress_df["plot_group"] = progress_df.apply(
+        lambda row: _progress_plot_group(str(row["benchmark"]), str(row["domain"])),
+        axis=1,
+    )
+    progress_df = progress_df[progress_df["plot_group"].notna()].copy()
+    if progress_df.empty:
+        return
     progress_df["n_snapshots"] = progress_df.groupby("benchmark")["benchmark"].transform("size")
     progress_df["progress_delta"] = (
         progress_df.groupby("benchmark")["best_score"].transform("max")
         - progress_df.groupby("benchmark")["best_score"].transform("min")
     )
-    progress_df["sort_domain"] = progress_df["domain"].map(
-        lambda d: list(DOMAIN_COLORS).index(d) if d in DOMAIN_COLORS else len(DOMAIN_COLORS)
+    progress_df["sort_group"] = progress_df["plot_group"].map(
+        lambda g: _PROGRESS_GROUP_ORDER.get(str(g), len(_PROGRESS_GROUP_ORDER))
     )
 
     benchmark_rank = (
-        progress_df[["benchmark", "domain", "n_snapshots", "progress_delta", "sort_domain"]]
+        progress_df[["benchmark", "plot_group", "n_snapshots", "progress_delta", "sort_group"]]
         .drop_duplicates()
         .sort_values(
-            ["sort_domain", "n_snapshots", "progress_delta", "benchmark"],
+            ["sort_group", "n_snapshots", "progress_delta", "benchmark"],
             ascending=[True, False, False, True],
         )
     )
     selected = benchmark_rank.copy()
     harbor_best = _harbor_best_by_benchmark(harbor_df)
 
-    def _make_domain_fig(domain: str, domain_selected: pd.DataFrame) -> plt.Figure:
-        plot_df = progress_df[progress_df["benchmark"].isin(domain_selected["benchmark"])].copy()
+    def _make_group_fig(group_name: str, group_selected: pd.DataFrame) -> plt.Figure:
+        plot_df = progress_df[progress_df["benchmark"].isin(group_selected["benchmark"])].copy()
         all_dates = sorted(plot_df["date_ym"].unique())
         date_to_x = {d: i for i, d in enumerate(all_dates)}
         plot_df["_x"] = plot_df["date_ym"].map(date_to_x)
 
-        n_benchmarks = len(domain_selected)
-        fig, ax = plt.subplots(figsize=(12.5, 5.8))
+        n_benchmarks = len(group_selected)
+        fig, ax = plt.subplots(figsize=(16, 4))
         bench_colors: dict[str, str] = {}
         bench_last_points: dict[str, tuple[int, float]] = {}
         variants = _categorical_colors(n_benchmarks)
-        ordered_benchmarks = [str(b) for b in domain_selected["benchmark"]]
+        ordered_benchmarks = [str(b) for b in group_selected["benchmark"]]
         for bench, color in zip(ordered_benchmarks, variants, strict=False):
             bench_colors[bench] = color
 
@@ -399,8 +441,6 @@ def fig_progress_over_time(
             if bench not in bench_colors:
                 continue
             last_x, last_score = bench_last_points[bench]
-            if score < last_score:
-                continue
             ax.plot(
                 [last_x, harbor_x], [last_score, score],
                 color=bench_colors[bench], linestyle="--", linewidth=1.4,
@@ -420,8 +460,8 @@ def fig_progress_over_time(
                 )
 
         ax.set_xlabel("Result Date")
-        ax.set_ylabel("Best score")
-        ax.set_title(f"Score Progress Over Time: {domain}")
+        ax.set_ylabel("score")
+        ax.set_title(group_name, fontsize=15, pad=8)
         ax.grid(color=COLOR_GRID, linewidth=0.8)
         handles, labels = ax.get_legend_handles_labels()
         if harbor_best and any(bench in bench_colors for bench in harbor_best):
@@ -430,8 +470,8 @@ def fig_progress_over_time(
                 markeredgecolor="white", markersize=8, label="Harbor result",
             ))
             labels.append("Harbor result")
-        ax.legend(handles, labels, loc="upper left", bbox_to_anchor=(1.01, 1.0),
-                  frameon=False, fontsize=8.6, handlelength=1.9)
+        ax.legend(handles, labels, loc="upper left", bbox_to_anchor=(1.02, 1.0),
+                  frameon=False, fontsize=10.5, handlelength=1.9)
 
         step = max(1, len(all_dates) // 10)
         tick_positions = list(range(0, len(all_dates), step))
@@ -441,22 +481,22 @@ def fig_progress_over_time(
             tick_labels.append("Harbor")
             ax.set_xlim(-0.5, harbor_x + 0.5)
         ax.set_xticks(tick_positions)
-        ax.set_xticklabels(tick_labels, rotation=45, ha="right")
+        ax.set_xticklabels(tick_labels, rotation=30, ha="right")
         ax.set_ylim(0, 1.05)
-        fig.tight_layout(rect=(0.02, 0, 0.74, 1))
+        fig.subplots_adjust(left=0.07, right=0.84, bottom=0.2, top=0.9)
         return fig
 
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)
     combined_path = FIGURE_DIR / "progress_over_time_v2.pdf"
     with PdfPages(combined_path) as pdf:
-        for domain, domain_selected in selected.groupby("domain", sort=False):
-            fig = _make_domain_fig(str(domain), domain_selected)
-            domain_slug = _slugify(domain)
-            single_path = FIGURE_DIR / f"progress_over_time_v2_{domain_slug}.pdf"
-            png_path = FIGURE_DIR / f"progress_over_time_v2_{domain_slug}.png"
-            fig.savefig(single_path, bbox_inches="tight", dpi=DPI, pad_inches=0.08)
-            fig.savefig(png_path, bbox_inches="tight", dpi=DPI, pad_inches=0.08)
-            pdf.savefig(fig, bbox_inches="tight", dpi=DPI, pad_inches=0.08)
+        for group_name, group_selected in selected.groupby("plot_group", sort=False):
+            fig = _make_group_fig(str(group_name), group_selected)
+            group_slug = _slugify(group_name)
+            single_path = FIGURE_DIR / f"progress_over_time_v2_{group_slug}.pdf"
+            png_path = FIGURE_DIR / f"progress_over_time_v2_{group_slug}.png"
+            fig.savefig(single_path, dpi=DPI)
+            fig.savefig(png_path, dpi=DPI)
+            pdf.savefig(fig, dpi=DPI)
             plt.close(fig)
             print(f"  [fig] {single_path}")
             print(f"  [fig] {png_path}")

@@ -45,35 +45,34 @@ Populate using **`benchmark_info_template.md`**.
 | 38 | MLGym-Bench | `mlgym_bench.json` |
 | 39 | MMAU | `mmau.json` |
 | 40 | MMMLU | `mmmlu.json` |
-| 41 | Multi-SWE-bench | `multi_swe_bench.json` |
-| 42 | OfficeQA | `officeqa.json` |
-| 43 | Omni-math | `omni_math.json` |
-| 44 | paperbench | `paperbench.json` |
-| 45 | PIXIU | `pixiu.json` |
-| 46 | QCircuitBench | `qcircuitbench.json` |
-| 47 | QuixBugs | `quixbugs.json` |
-| 48 | Reasoning Gym | `reasoning_gym.json` |
-| 49 | ReplicationBench | `replicationbench.json` |
-| 50 | ResearchCodeBench | `researchcodebench.json` |
-| 51 | Scicode | `scicode.json` |
-| 52 | ScienceAgentBench | `scienceagentbench.json` |
-| 53 | Seal0 | `seal0.json` |
-| 54 | SimpleQA | `simpleqa.json` |
-| 55 | SkillsBench | `skillsbench.json` |
-| 56 | SLDBench | `sldbench.json` |
-| 57 | Spider 2 | `spider_2.json` |
-| 58 | SpreadsheetBench | `spreadsheetbench.json` |
-| 59 | StrongReject | `strongreject.json` |
-| 60 | SWE-Bench Pro | `swe_bench_pro.json` |
-| 61 | SWE-Bench-Live | `swe_bench_live.json` |
-| 62 | SWE-Bench-Multilingual | `swe_bench_multilingual.json` |
-| 63 | SWE-bench-verified | `swe_bench_verified.json` |
-| 64 | SWE-fficiency | `swe_fficiency.json` |
-| 65 | SWE-Lancer | `swe_lancer.json` |
-| 66 | SWE-Perf | `swe_perf.json` |
-| 67 | SWE-smith | `swe_smith.json` |
-| 68 | SWT Bench | `swt_bench.json` |
-| 69 | TerminalBench2.0 | `terminalbench_2_0.json` |
-| 70 | USACO | `usaco.json` |
-| 71 | WebgenBench | `webgenbench.json` |
-| 72 | widesearch | `widesearch.json` |
+| 41 | OfficeQA | `officeqa.json` |
+| 42 | Omni-math | `omni_math.json` |
+| 43 | paperbench | `paperbench.json` |
+| 44 | PIXIU | `pixiu.json` |
+| 45 | QCircuitBench | `qcircuitbench.json` |
+| 46 | QuixBugs | `quixbugs.json` |
+| 47 | Reasoning Gym | `reasoning_gym.json` |
+| 48 | ReplicationBench | `replicationbench.json` |
+| 49 | ResearchCodeBench | `researchcodebench.json` |
+| 50 | Scicode | `scicode.json` |
+| 51 | ScienceAgentBench | `scienceagentbench.json` |
+| 52 | Seal0 | `seal0.json` |
+| 53 | SimpleQA | `simpleqa.json` |
+| 54 | SkillsBench | `skillsbench.json` |
+| 55 | SLDBench | `sldbench.json` |
+| 56 | Spider 2 | `spider_2.json` |
+| 57 | SpreadsheetBench | `spreadsheetbench.json` |
+| 58 | StrongReject | `strongreject.json` |
+| 59 | SWE-Bench Pro | `swe_bench_pro.json` |
+| 60 | SWE-Bench-Live | `swe_bench_live.json` |
+| 61 | SWE-Bench-Multilingual | `swe_bench_multilingual.json` |
+| 62 | SWE-bench-verified | `swe_bench_verified.json` |
+| 63 | SWE-fficiency | `swe_fficiency.json` |
+| 64 | SWE-Lancer | `swe_lancer.json` |
+| 65 | SWE-Perf | `swe_perf.json` |
+| 66 | SWE-smith | `swe_smith.json` |
+| 67 | SWT Bench | `swt_bench.json` |
+| 68 | TerminalBench2.0 | `terminalbench_2_0.json` |
+| 69 | USACO | `usaco.json` |
+| 70 | WebgenBench | `webgenbench.json` |
+| 71 | widesearch | `widesearch.json` |
