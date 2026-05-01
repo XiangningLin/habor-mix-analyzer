@@ -19,6 +19,429 @@
   },
   "results_over_time": [
     {
+      "date": "2023-11-03",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Icecuber",
+          "effort": null,
+          "system_description": null,
+          "score": 0.016,
+          "note": "Original system_description: Custom"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2023-11-03. Submitter(s): ARC Prize 2024."
+    },
+    {
+      "date": "2024-07-18",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "GPT-4o-mini",
+          "effort": null,
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: Base LLM"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2024-07-18."
+    },
+    {
+      "date": "2024-09-12",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "o1-mini",
+          "effort": null,
+          "system_description": null,
+          "score": 0.008,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2024-09-12."
+    },
+    {
+      "date": "2024-11-03",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "ARChitects",
+          "effort": null,
+          "system_description": null,
+          "score": 0.025,
+          "note": "Original system_description: Custom"
+        },
+        {
+          "model": "NVARC",
+          "effort": null,
+          "system_description": null,
+          "score": 0.276,
+          "note": "Original system_description: Custom"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2024-11-03. Submitter(s): ARC Prize 2024, ARC Prize 2025."
+    },
+    {
+      "date": "2024-11-20",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "GPT-4o",
+          "effort": null,
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: Base LLM"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2024-11-20."
+    },
+    {
+      "date": "2024-12-20",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "o3 (Preview) ¹",
+          "effort": "Low",
+          "system_description": null,
+          "score": 0.04,
+          "note": "Original system_description: CoT + Synthesis"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2024-12-20. ¹ ARC-AGI-2 score estimate based on partial testing results and o1-pro pricing"
+    },
+    {
+      "date": "2025-01-22",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Deepseek R1",
+          "effort": null,
+          "system_description": null,
+          "score": 0.013,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-01-22."
+    },
+    {
+      "date": "2025-01-31",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "o3-mini",
+          "effort": "Low",
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "o3-mini",
+          "effort": "Medium",
+          "system_description": null,
+          "score": 0.021,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "o3-mini",
+          "effort": "High",
+          "system_description": null,
+          "score": 0.03,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-01-31."
+    },
+    {
+      "date": "2025-02-02",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Gemini 2.0 Flash",
+          "effort": null,
+          "system_description": null,
+          "score": 0.013,
+          "note": "Original system_description: Base LLM"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-02-02."
+    },
+    {
+      "date": "2025-02-15",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Gemini 1.5 Pro",
+          "effort": null,
+          "system_description": null,
+          "score": 0.008,
+          "note": "Original system_description: Base LLM"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-02-15."
+    },
+    {
+      "date": "2025-02-19",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Grok 3",
+          "effort": null,
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: Base LLM"
+        },
+        {
+          "model": "Grok 3 Mini",
+          "effort": "Low",
+          "system_description": null,
+          "score": 0.004,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Gemini 2.5 Pro (Preview)",
+          "effort": null,
+          "system_description": null,
+          "score": 0.038,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Gemini 2.5 Pro (Preview)",
+          "effort": "Thinking 1K",
+          "system_description": null,
+          "score": 0.034,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-02-19."
+    },
+    {
+      "date": "2025-02-24",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Claude 3.7",
+          "effort": null,
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: Base LLM"
+        },
+        {
+          "model": "Claude 3.7",
+          "effort": "16K",
+          "system_description": null,
+          "score": 0.007,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude 3.7",
+          "effort": "1K",
+          "system_description": null,
+          "score": 0.004,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude 3.7",
+          "effort": "8K",
+          "system_description": null,
+          "score": 0.009,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-02-24."
+    },
+    {
+      "date": "2025-02-27",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "GPT-4.5",
+          "effort": null,
+          "system_description": null,
+          "score": 0.008,
+          "note": "Original system_description: Base LLM"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-02-27."
+    },
+    {
+      "date": "2025-04-05",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Llama 4 Maverick",
+          "effort": null,
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: Base LLM"
+        },
+        {
+          "model": "Llama 4 Scout",
+          "effort": null,
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: Base LLM"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-04-05."
+    },
+    {
+      "date": "2025-04-14",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "GPT-4.1-Nano",
+          "effort": null,
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: Base LLM"
+        },
+        {
+          "model": "GPT-4.1-Mini",
+          "effort": null,
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: Base LLM"
+        },
+        {
+          "model": "GPT-4.1",
+          "effort": null,
+          "system_description": null,
+          "score": 0.004,
+          "note": "Original system_description: Base LLM"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-04-14."
+    },
+    {
+      "date": "2025-04-16",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "o3",
+          "effort": "Low",
+          "system_description": null,
+          "score": 0.02,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "o3",
+          "effort": "Medium",
+          "system_description": null,
+          "score": 0.03,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "o3",
+          "effort": "High",
+          "system_description": null,
+          "score": 0.065,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "o4-mini",
+          "effort": "Low",
+          "system_description": null,
+          "score": 0.017,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "o4-mini",
+          "effort": "Medium",
+          "system_description": null,
+          "score": 0.024,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "o4-mini",
+          "effort": "High",
+          "system_description": null,
+          "score": 0.061,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-04-16."
+    },
+    {
+      "date": "2025-05-14",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Claude Sonnet 4",
+          "effort": null,
+          "system_description": null,
+          "score": 0.013,
+          "note": "Original system_description: Base LLM"
+        },
+        {
+          "model": "Claude Sonnet 4",
+          "effort": "Thinking 1K",
+          "system_description": null,
+          "score": 0.009,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Sonnet 4",
+          "effort": "Thinking 8K",
+          "system_description": null,
+          "score": 0.021,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Sonnet 4",
+          "effort": "Thinking 16K",
+          "system_description": null,
+          "score": 0.059,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Opus 4",
+          "effort": "Thinking 16K",
+          "system_description": null,
+          "score": 0.086,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Opus 4",
+          "effort": "Thinking 8K",
+          "system_description": null,
+          "score": 0.045,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Opus 4",
+          "effort": "Thinking 1K",
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Opus 4",
+          "effort": null,
+          "system_description": null,
+          "score": 0.013,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-05-14."
+    },
+    {
       "date": "2025-05-17",
       "source_type": "paper",
       "source_url": "https://arxiv.org/abs/2505.11831",
@@ -57,16 +480,536 @@
           "model": "ARChitects",
           "effort": null,
           "system_description": null,
-          "score": 0.025
+          "score": 0.025,
+          "note": "Original system_description: program synthesis (ARC Prize 2024 winner)"
         },
         {
           "model": "Icecuber",
           "effort": null,
           "system_description": null,
-          "score": 0.016
+          "score": 0.016,
+          "note": "Original system_description: program synthesis (ARC Prize 2020 winner)"
         }
       ],
       "note": "Paper Table 1, Semi-Private Evaluation set (n=120). o-series and Claude rows are bare LLM; ARChitects and Icecuber use program synthesis."
+    },
+    {
+      "date": "2025-05-20",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Gemini 2.5 Flash (Preview)",
+          "effort": null,
+          "system_description": null,
+          "score": 0.017,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Gemini 2.5 Flash (Preview)",
+          "effort": "Thinking 1K",
+          "system_description": null,
+          "score": 0.022,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Gemini 2.5 Flash (Preview)",
+          "effort": "Thinking 8K",
+          "system_description": null,
+          "score": 0.021,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Gemini 2.5 Flash (Preview)",
+          "effort": "Thinking 16K",
+          "system_description": null,
+          "score": 0.02,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Gemini 2.5 Flash (Preview)",
+          "effort": "Thinking 24K",
+          "system_description": null,
+          "score": 0.025,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-05-20."
+    },
+    {
+      "date": "2025-05-23",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Codex Mini (Latest)",
+          "effort": null,
+          "system_description": null,
+          "score": 0.013,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-05-23."
+    },
+    {
+      "date": "2025-05-28",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Deepseek R1 (05/28)",
+          "effort": null,
+          "system_description": null,
+          "score": 0.011,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-05-28."
+    },
+    {
+      "date": "2025-06-10",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "o3-Pro",
+          "effort": "Low",
+          "system_description": null,
+          "score": 0.021,
+          "note": "Original system_description: CoT + Synthesis"
+        },
+        {
+          "model": "o3-Pro",
+          "effort": "Medium",
+          "system_description": null,
+          "score": 0.019,
+          "note": "Original system_description: CoT + Synthesis"
+        },
+        {
+          "model": "o3-Pro",
+          "effort": "High",
+          "system_description": null,
+          "score": 0.049,
+          "note": "Original system_description: CoT + Synthesis"
+        },
+        {
+          "model": "Magistral Small",
+          "effort": null,
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Magistral Medium",
+          "effort": null,
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Magistral Medium",
+          "effort": "Thinking",
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-06-10."
+    },
+    {
+      "date": "2025-06-17",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Gemini 2.5 Pro",
+          "effort": "Thinking 1K",
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "effort": "Thinking 8K",
+          "system_description": null,
+          "score": 0.029,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "effort": "Thinking 16K",
+          "system_description": null,
+          "score": 0.04,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Gemini 2.5 Pro",
+          "effort": "Thinking 32K",
+          "system_description": null,
+          "score": 0.049,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-06-17."
+    },
+    {
+      "date": "2025-07-09",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Grok 4",
+          "effort": "Thinking",
+          "system_description": null,
+          "score": 0.16,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-07-09."
+    },
+    {
+      "date": "2025-07-25",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Qwen3-235b-a22b Instruct (25/07)",
+          "effort": null,
+          "system_description": null,
+          "score": 0.013,
+          "note": "Original system_description: Base LLM"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-07-25."
+    },
+    {
+      "date": "2025-08-07",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "GPT-5",
+          "effort": "High",
+          "system_description": null,
+          "score": 0.099,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5",
+          "effort": "Medium",
+          "system_description": null,
+          "score": 0.075,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5",
+          "effort": "Low",
+          "system_description": null,
+          "score": 0.019,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5",
+          "effort": "Minimal",
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: Base LLM"
+        },
+        {
+          "model": "GPT-5 Mini",
+          "effort": "High",
+          "system_description": null,
+          "score": 0.044,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5 Mini",
+          "effort": "Medium",
+          "system_description": null,
+          "score": 0.04,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5 Mini",
+          "effort": "Low",
+          "system_description": null,
+          "score": 0.008,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5 Mini",
+          "effort": "Minimal",
+          "system_description": null,
+          "score": 0.017,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5 Nano",
+          "effort": "High",
+          "system_description": null,
+          "score": 0.026,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5 Nano",
+          "effort": "Medium",
+          "system_description": null,
+          "score": 0.009,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5 Nano",
+          "effort": "Low",
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5 Nano",
+          "effort": "Minimal",
+          "system_description": null,
+          "score": 0.0,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Hierarchical Reasoning Model (HRM)",
+          "effort": null,
+          "system_description": null,
+          "score": 0.02
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-08-07. Submitter(s): Bespoke, E. Pang, J. Berman. Excluded third-party scaffold/refinement submissions on this date (per pipeline convention): Grok 4 (effort='Refine.', score=0.294, system_description='Refinement (J. Berman submission)'); Grok 4 (effort='Refine.', score=0.26, system_description='Refinement (E. Pang submission)')."
+    },
+    {
+      "date": "2025-09-29",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Claude Sonnet 4.5",
+          "effort": null,
+          "system_description": null,
+          "score": 0.038,
+          "note": "Original system_description: Base LLM"
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "effort": "Thinking 1K",
+          "system_description": null,
+          "score": 0.058,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "effort": "Thinking 8K",
+          "system_description": null,
+          "score": 0.069,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "effort": "Thinking 16K",
+          "system_description": null,
+          "score": 0.069,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Sonnet 4.5",
+          "effort": "Thinking 32K",
+          "system_description": null,
+          "score": 0.136,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-09-29."
+    },
+    {
+      "date": "2025-10-01",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Claude Haiku 4.5",
+          "effort": null,
+          "system_description": null,
+          "score": 0.013,
+          "note": "Original system_description: Base LLM"
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "effort": "Thinking 1K",
+          "system_description": null,
+          "score": 0.013,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "effort": "Thinking 8K",
+          "system_description": null,
+          "score": 0.017,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "effort": "Thinking 16K",
+          "system_description": null,
+          "score": 0.028,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Claude Haiku 4.5",
+          "effort": "Thinking 32K",
+          "system_description": null,
+          "score": 0.04,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-10-01."
+    },
+    {
+      "date": "2025-10-06",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "GPT-5 Pro",
+          "effort": null,
+          "system_description": null,
+          "score": 0.183,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-10-06."
+    },
+    {
+      "date": "2025-10-07",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Tiny Recursion Model (TRM)",
+          "effort": null,
+          "system_description": null,
+          "score": 0.063
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-10-07. Submitter(s): Bespoke."
+    },
+    {
+      "date": "2025-10-21",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Grok 4",
+          "effort": "Fast Reasoning",
+          "system_description": null,
+          "score": 0.053,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-10-21."
+    },
+    {
+      "date": "2025-11-13",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "GPT-5.1",
+          "effort": "Thinking, None",
+          "system_description": null,
+          "score": 0.004,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5.1",
+          "effort": "Thinking, Low",
+          "system_description": null,
+          "score": 0.019,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5.1",
+          "effort": "Thinking, Medium",
+          "system_description": null,
+          "score": 0.065,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "GPT-5.1",
+          "effort": "Thinking, High",
+          "system_description": null,
+          "score": 0.176,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-11-13."
+    },
+    {
+      "date": "2025-11-18",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Gemini 3 Pro",
+          "effort": null,
+          "system_description": null,
+          "score": 0.311,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-11-18."
+    },
+    {
+      "date": "2025-11-24",
+      "source_type": "leaderboard",
+      "source_url": "https://arcprize.org/leaderboard",
+      "results": [
+        {
+          "model": "Opus 4.5",
+          "effort": "Thinking, None",
+          "system_description": null,
+          "score": 0.078,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Opus 4.5",
+          "effort": "Thinking, 1K",
+          "system_description": null,
+          "score": 0.094,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Opus 4.5",
+          "effort": "Thinking, 8K",
+          "system_description": null,
+          "score": 0.139,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Opus 4.5",
+          "effort": "Thinking, 16K",
+          "system_description": null,
+          "score": 0.228,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Opus 4.5",
+          "effort": "Thinking, 32K",
+          "system_description": null,
+          "score": 0.306,
+          "note": "Original system_description: CoT"
+        },
+        {
+          "model": "Opus 4.5",
+          "effort": "Thinking, 64K",
+          "system_description": null,
+          "score": 0.376,
+          "note": "Original system_description: CoT"
+        }
+      ],
+      "note": "ARC Prize leaderboard rows dated 2025-11-24."
     },
     {
       "date": "2025-12-01",
@@ -77,25 +1020,11 @@
           "model": "Deepseek V3.2",
           "effort": null,
           "system_description": null,
-          "note": "Original system_description: Base LLM",
-          "score": 0.04
+          "score": 0.04,
+          "note": "Original system_description: Base LLM"
         }
       ],
-      "note": "ARC Prize leaderboard row dated 2025-12-01. ARC-AGI-2 column only."
-    },
-    {
-      "date": "2025-12-04",
-      "source_type": "leaderboard",
-      "source_url": "https://arcprize.org/leaderboard",
-      "results": [
-        {
-          "model": "Gemini 3 Pro",
-          "effort": null,
-          "system_description": null,
-          "score": 0.311
-        }
-      ],
-      "note": "ARC Prize leaderboard row dated 2025-12-04 (Poetiq submission). ARC-AGI-2 column only."
+      "note": "ARC Prize leaderboard rows dated 2025-12-01."
     },
     {
       "date": "2025-12-11",
@@ -106,53 +1035,53 @@
           "model": "GPT-5.2",
           "effort": null,
           "system_description": null,
-          "note": "Original system_description: Base LLM",
-          "score": 0.008
+          "score": 0.008,
+          "note": "Original system_description: Base LLM"
         },
         {
           "model": "GPT-5.2",
           "effort": "Low",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.097
+          "score": 0.097,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.2",
           "effort": "Medium",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.267
+          "score": 0.267,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.2",
           "effort": "High",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.433
+          "score": 0.433,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.2",
           "effort": "X-High",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.529
+          "score": 0.529,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.2 Pro",
           "effort": "Medium",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.385
+          "score": 0.385,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.2 Pro",
           "effort": "High",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.542
+          "score": 0.542,
+          "note": "Original system_description: CoT"
         }
       ],
-      "note": "ARC Prize leaderboard rows dated 2025-12-11. GPT-5.2 Pro (X-High) row skipped — ARC-AGI-2 score is N/A in the leaderboard."
+      "note": "ARC Prize leaderboard rows dated 2025-12-11."
     },
     {
       "date": "2025-12-17",
@@ -163,32 +1092,32 @@
           "model": "Gemini 3 Flash Preview",
           "effort": "Minimal",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.033
+          "score": 0.033,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Gemini 3 Flash Preview",
           "effort": "Low",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.013
+          "score": 0.013,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Gemini 3 Flash Preview",
           "effort": "Medium",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.128
+          "score": 0.128,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Gemini 3 Flash Preview",
           "effort": "High",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.336
+          "score": 0.336,
+          "note": "Original system_description: CoT"
         }
       ],
-      "note": "ARC Prize leaderboard rows dated 2025-12-17. Anthropic Opus 4.6 (Max) row on the same date skipped — ARC-AGI-2 score is N/A (only a private-set teaser value is shown)."
+      "note": "ARC Prize leaderboard rows dated 2025-12-17. Anthropic Opus 4.6 (Max) row on the same date is omitted: its ARC-AGI-2 cell is N/A (the 0.5% shown on that row is the ARC-AGI-3 column, a different benchmark)."
     },
     {
       "date": "2026-01-27",
@@ -199,11 +1128,11 @@
           "model": "Kimi K2.5",
           "effort": null,
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.118
+          "score": 0.118,
+          "note": "Original system_description: CoT"
         }
       ],
-      "note": "ARC Prize leaderboard row dated 2026-01-27."
+      "note": "ARC Prize leaderboard rows dated 2026-01-27."
     },
     {
       "date": "2026-02-05",
@@ -214,32 +1143,32 @@
           "model": "Claude Opus 4.6",
           "effort": "120K, Low",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.646
+          "score": 0.646,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Claude Opus 4.6",
           "effort": "120K, Medium",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.663
+          "score": 0.663,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Claude Opus 4.6",
           "effort": "120K, High",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.692
+          "score": 0.692,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Claude Opus 4.6",
           "effort": "120K, Max",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.688
+          "score": 0.688,
+          "note": "Original system_description: CoT"
         }
       ],
-      "note": "ARC Prize leaderboard rows dated 2026-02-05. Parenthetical encodes (thinking-budget-context, effort): 120K context × Low/Medium/High/Max thinking budget."
+      "note": "ARC Prize leaderboard rows dated 2026-02-05."
     },
     {
       "date": "2026-02-12",
@@ -247,28 +1176,28 @@
       "source_url": "https://arcprize.org/leaderboard",
       "results": [
         {
-          "model": "Gemini 3 Deep Think (preview)",
+          "model": "Gemini 3 Deep Think (Preview) ²",
           "effort": null,
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.451
+          "score": 0.451,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Gemini 3 Deep Think (2/26)",
           "effort": null,
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.846
+          "score": 0.846,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Minimax M2.5",
           "effort": null,
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.049
+          "score": 0.049,
+          "note": "Original system_description: CoT"
         }
       ],
-      "note": "ARC Prize leaderboard rows dated 2026-02-12. Deep Think '2/26' denotes the Feb-2026 revision."
+      "note": "ARC Prize leaderboard rows dated 2026-02-12. Deep Think '2/26' denotes the Feb-2026 revision. ² Provisional cost estimates based on Gemini 3 Pro pricing. Model to be retested once released. Per general leaderboard note: '(Preview)' results are unofficial and may be based on incomplete testing."
     },
     {
       "date": "2026-02-17",
@@ -279,15 +1208,15 @@
           "model": "Claude Sonnet 4.6",
           "effort": "Max",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.583
+          "score": 0.583,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Claude Sonnet 4.6",
           "effort": "High",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.604
+          "score": 0.604,
+          "note": "Original system_description: CoT"
         }
       ],
       "note": "ARC Prize leaderboard rows dated 2026-02-17."
@@ -301,8 +1230,8 @@
           "model": "Gemini 3.1 Pro (Preview)",
           "effort": null,
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.771
+          "score": 0.771,
+          "note": "Original system_description: CoT"
         }
       ],
       "note": "ARC Prize leaderboard row dated 2026-02-19 (Google blog announcement: blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/)."
@@ -316,11 +1245,11 @@
           "model": "GLM-5",
           "effort": null,
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.049
+          "score": 0.049,
+          "note": "Original system_description: CoT"
         }
       ],
-      "note": "ARC Prize leaderboard row dated 2026-02-20."
+      "note": "ARC Prize leaderboard rows dated 2026-02-20."
     },
     {
       "date": "2026-03-04",
@@ -331,36 +1260,36 @@
           "model": "GPT-5.4",
           "effort": "Low",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.292
+          "score": 0.292,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4",
           "effort": "Medium",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.554
+          "score": 0.554,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4",
           "effort": "High",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.675
+          "score": 0.675,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4",
           "effort": "xHigh",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.74
+          "score": 0.74,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4 Pro",
           "effort": "xHigh",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.833
+          "score": 0.833,
+          "note": "Original system_description: CoT"
         }
       ],
       "note": "ARC Prize leaderboard rows dated 2026-03-04."
@@ -374,11 +1303,11 @@
           "model": "Grok 4.20",
           "effort": "Reasoning",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.651
+          "score": 0.651,
+          "note": "Original system_description: CoT"
         }
       ],
-      "note": "ARC Prize leaderboard row dated 2026-03-09."
+      "note": "ARC Prize leaderboard rows dated 2026-03-09."
     },
     {
       "date": "2026-03-17",
@@ -389,57 +1318,57 @@
           "model": "GPT-5.4 Mini",
           "effort": "xHigh",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.189
+          "score": 0.189,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4 Mini",
           "effort": "High",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.132
+          "score": 0.132,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4 Mini",
           "effort": "Medium",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.044
+          "score": 0.044,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4 Mini",
           "effort": "Low",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.011
+          "score": 0.011,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4 Nano",
           "effort": "xHigh",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.057
+          "score": 0.057,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4 Nano",
           "effort": "High",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.036
+          "score": 0.036,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4 Nano",
           "effort": "Medium",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.019
+          "score": 0.019,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "GPT-5.4 Nano",
           "effort": "Low",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.015
+          "score": 0.015,
+          "note": "Original system_description: CoT"
         }
       ],
       "note": "ARC Prize leaderboard rows dated 2026-03-17."
@@ -453,33 +1382,33 @@
           "model": "Claude 4.7",
           "effort": "Low",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.621
+          "score": 0.621,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Claude 4.7",
           "effort": "Medium",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.675
+          "score": 0.675,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Claude 4.7",
           "effort": "High",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.683
+          "score": 0.683,
+          "note": "Original system_description: CoT"
         },
         {
           "model": "Claude 4.7",
           "effort": "Max",
           "system_description": null,
-          "note": "Original system_description: CoT",
-          "score": 0.758
+          "score": 0.758,
+          "note": "Original system_description: CoT"
         }
       ],
       "note": "ARC Prize public leaderboard snapshot. Only ARC-AGI-2 column captured; the ARC-AGI-1 scores in the same rows belong to a different benchmark."
     }
   ],
-  "notes": "2025 successor to ARC-AGI, released with the ARC Prize 2025 competition. Task breakdown: 1000 public training + 120 public eval + 120 semi-private + 120 private = 1360 total; num_tasks=360 counts only the three 120-task eval sets. Paper Table 1 scores are on the Semi-Private set; the Private set powers Kaggle competition scoring and is not released. Paper's baseline runner lives in a separate repo: github.com/arcprize/model_baseline."
+  "notes": "2025 successor to ARC-AGI, released with the ARC Prize 2025 competition. Task breakdown: 1000 public training + 120 public eval + 120 semi-private + 120 private = 1360 total; num_tasks=360 counts only the three 120-task eval sets. Paper Table 1 scores are on the Semi-Private set; the Private set powers Kaggle competition scoring and is not released. Paper's baseline runner lives in a separate repo: github.com/arcprize/model_baseline. Per the pipeline-version convention (PR #14), third-party scaffold/refinement submissions are excluded from results_over_time. Excluded entries (preserved here for traceability) — 2025-12-04: Gemini 3 Pro (effort='Refine.', score=0.54, system_description='Refinement'). Original entry note: \"ARC Prize leaderboard rows dated 2025-12-04. Submitter(s): Poetiq.\" | 2026-02-03: GPT-5.2 (effort='Refine.', score=0.729, system_description='Refinement'). Original entry note: \"ARC Prize leaderboard row dated 2026-02-03 (Johan Land submission; solver at kaggle.com/code/johanland/johan-land-solver-v7-public).\""
 }

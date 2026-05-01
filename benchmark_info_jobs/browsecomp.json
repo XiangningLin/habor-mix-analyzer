@@ -19,6 +19,40 @@
   },
   "results_over_time": [
     {
+      "date": "2025-01-09",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "DeepSeek-V3.1",
+          "effort": "164K",
+          "system_description": null,
+          "score": 0.3
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): DeepSeek."
+    },
+    {
+      "date": "2025-04-15",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "o3",
+          "effort": "200K",
+          "system_description": null,
+          "score": 0.497
+        },
+        {
+          "model": "o4-mini",
+          "effort": "200K",
+          "system_description": null,
+          "score": 0.515
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): OpenAI."
+    },
+    {
       "date": "2025-04-16",
       "source_type": "paper",
       "source_url": "https://arxiv.org/abs/2504.12516",
@@ -32,8 +66,9 @@
         {
           "model": "GPT-4o (2024-08-06)",
           "effort": null,
-          "system_description": "with browsing",
-          "score": 0.019
+          "system_description": null,
+          "score": 0.019,
+          "note": "Original system_description: with browsing"
         },
         {
           "model": "GPT-4.5 (2025-02-27)",
@@ -57,6 +92,68 @@
       "note": "Paper Table 3 (accuracy). null system_description = self-contained model with no external scaffold column. 'with browsing' = GPT-4o given a browse tool. Paper §4.1 calls Deep Research 'an agent model', and footnote 1 warns it was trained on BrowseComp-style data — not a generic frontier number."
     },
     {
+      "date": "2025-05-27",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "DeepSeek-R1-0528",
+          "effort": "131K",
+          "system_description": null,
+          "score": 0.089
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): DeepSeek."
+    },
+    {
+      "date": "2025-07-27",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "GLM-4.5-Air",
+          "effort": null,
+          "system_description": null,
+          "score": 0.213
+        },
+        {
+          "model": "GLM-4.5",
+          "effort": null,
+          "system_description": null,
+          "score": 0.264
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Zhipu AI."
+    },
+    {
+      "date": "2025-08-06",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "GPT-5",
+          "effort": null,
+          "system_description": null,
+          "score": 0.549
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): OpenAI."
+    },
+    {
+      "date": "2025-08-27",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "Grok 4 Fast",
+          "effort": "2.0M",
+          "system_description": null,
+          "score": 0.449
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): xAI."
+    },
+    {
       "date": "2025-09-04",
       "source_type": "leaderboard",
       "source_url": "https://llm-stats.com/benchmarks/browsecomp",
@@ -68,7 +165,69 @@
           "score": 0.602
         }
       ],
-      "note": "llm-stats.com progress-over-time chart tooltip — State-of-the-art frontier point (Moonshot AI)."
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Moonshot AI."
+    },
+    {
+      "date": "2025-09-28",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "DeepSeek-V3.2-Exp",
+          "effort": null,
+          "system_description": null,
+          "score": 0.401
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): DeepSeek."
+    },
+    {
+      "date": "2025-09-29",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "GLM-4.6",
+          "effort": "131K",
+          "system_description": null,
+          "score": 0.451
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Zhipu AI."
+    },
+    {
+      "date": "2025-10-26",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "MiniMax M2",
+          "effort": "1.0M",
+          "system_description": null,
+          "score": 0.44
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): MiniMax."
+    },
+    {
+      "date": "2025-11-30",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "DeepSeek-V3.2",
+          "effort": "Thinking",
+          "system_description": null,
+          "score": 0.514
+        },
+        {
+          "model": "DeepSeek-V3.2",
+          "effort": "164K",
+          "system_description": null,
+          "score": 0.514
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): DeepSeek."
     },
     {
       "date": "2025-12-10",
@@ -77,12 +236,116 @@
       "results": [
         {
           "model": "GPT-5.2 Pro",
-          "effort": null,
+          "effort": "400K",
           "system_description": null,
           "score": 0.779
+        },
+        {
+          "model": "GPT-5.2",
+          "effort": "400K",
+          "system_description": null,
+          "score": 0.658
         }
       ],
-      "note": "llm-stats.com progress-over-time chart tooltip — State-of-the-art frontier point (OpenAI)."
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): OpenAI."
+    },
+    {
+      "date": "2025-12-15",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "MiMo-V2-Flash",
+          "effort": "256K",
+          "system_description": null,
+          "score": 0.583
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Xiaomi."
+    },
+    {
+      "date": "2025-12-21",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "GLM-4.7",
+          "effort": "205K",
+          "system_description": null,
+          "score": 0.52
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Zhipu AI."
+    },
+    {
+      "date": "2025-12-22",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "MiniMax M2.1",
+          "effort": "1.0M",
+          "system_description": null,
+          "score": 0.62
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): MiniMax."
+    },
+    {
+      "date": "2026-01-13",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "LongCat-Flash-Thinking-2601",
+          "effort": "128K",
+          "system_description": null,
+          "score": 0.566
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Meituan."
+    },
+    {
+      "date": "2026-01-18",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "GLM-4.7-Flash",
+          "effort": "128K",
+          "system_description": null,
+          "score": 0.428
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Zhipu AI."
+    },
+    {
+      "date": "2026-01-26",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "Kimi K2.5",
+          "effort": "262K",
+          "system_description": null,
+          "score": 0.749
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Moonshot AI."
+    },
+    {
+      "date": "2026-02-01",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "Step-3.5-Flash",
+          "effort": "66K",
+          "system_description": null,
+          "score": 0.69
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): StepFun."
     },
     {
       "date": "2026-02-04",
@@ -91,12 +354,82 @@
       "results": [
         {
           "model": "Claude Opus 4.6",
-          "effort": null,
+          "effort": "1.0M",
           "system_description": null,
-          "score": 0.840
+          "score": 0.84
         }
       ],
-      "note": "llm-stats.com tooltip (Anthropic). Tooltip does not expose system_description (tool use / browsing / reasoning level)."
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Anthropic."
+    },
+    {
+      "date": "2026-02-10",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "GLM-5",
+          "effort": "200K",
+          "system_description": null,
+          "score": 0.759
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Zhipu AI."
+    },
+    {
+      "date": "2026-02-11",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "MiniMax M2.5",
+          "effort": "1.0M",
+          "system_description": null,
+          "score": 0.763
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip. Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): MiniMax."
+    },
+    {
+      "date": "2026-02-13",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "Seed 2.0 Pro",
+          "effort": null,
+          "system_description": null,
+          "score": 0.773
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): ByteDance."
+    },
+    {
+      "date": "2026-02-15",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "Qwen3.5-397B-A17B",
+          "effort": "262K",
+          "system_description": null,
+          "score": 0.69
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Alibaba Cloud / Qwen Team."
+    },
+    {
+      "date": "2026-02-16",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "Claude Sonnet 4.6",
+          "effort": "200K",
+          "system_description": null,
+          "score": 0.747
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Anthropic."
     },
     {
       "date": "2026-02-18",
@@ -105,12 +438,86 @@
       "results": [
         {
           "model": "Gemini 3.1 Pro",
-          "effort": null,
+          "effort": "1.0M",
           "system_description": null,
           "score": 0.859
         }
       ],
-      "note": "llm-stats.com tooltip (Google). Tooltip does not expose system_description (tool use / browsing / reasoning level)."
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Google."
+    },
+    {
+      "date": "2026-02-23",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "Qwen3.5-122B-A10B",
+          "effort": "262K",
+          "system_description": null,
+          "score": 0.638
+        },
+        {
+          "model": "Qwen3.5-35B-A3B",
+          "effort": "262K",
+          "system_description": null,
+          "score": 0.61
+        },
+        {
+          "model": "Qwen3.5-27B",
+          "effort": "262K",
+          "system_description": null,
+          "score": 0.61
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Alibaba Cloud / Qwen Team."
+    },
+    {
+      "date": "2026-03-04",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "GPT-5.4",
+          "effort": "1.0M",
+          "system_description": null,
+          "score": 0.827
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): OpenAI."
+    },
+    {
+      "date": "2026-03-05",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "Sarvam-105B",
+          "effort": null,
+          "system_description": null,
+          "score": 0.495
+        },
+        {
+          "model": "Sarvam-30B",
+          "effort": null,
+          "system_description": null,
+          "score": 0.355
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Sarvam AI."
+    },
+    {
+      "date": "2026-03-10",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "Nemotron 3 Super (120B A12B)",
+          "effort": null,
+          "system_description": null,
+          "score": 0.313
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): NVIDIA."
     },
     {
       "date": "2026-04-06",
@@ -122,9 +529,29 @@
           "effort": null,
           "system_description": null,
           "score": 0.869
+        },
+        {
+          "model": "GLM-5.1",
+          "effort": "200K",
+          "system_description": null,
+          "score": 0.793
         }
       ],
-      "note": "llm-stats.com tooltip (Anthropic). Tooltip does not expose system_description (tool use / browsing / reasoning level)."
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Anthropic, Zhipu AI."
+    },
+    {
+      "date": "2026-04-15",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "Claude Opus 4.7",
+          "effort": "1.0M",
+          "system_description": null,
+          "score": 0.793
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Anthropic."
     },
     {
       "date": "2026-04-19",
@@ -133,13 +560,45 @@
       "results": [
         {
           "model": "Kimi K2.6",
-          "effort": null,
+          "effort": "262K",
           "system_description": null,
           "score": 0.863
         }
       ],
-      "note": "llm-stats.com tooltip (Moonshot AI). Tooltip does not expose system_description (tool use / browsing / reasoning level)."
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): Moonshot AI."
+    },
+    {
+      "date": "2026-04-22",
+      "source_type": "leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/browsecomp",
+      "results": [
+        {
+          "model": "GPT-5.5 Pro",
+          "effort": "1.0M",
+          "system_description": null,
+          "score": 0.901
+        },
+        {
+          "model": "GPT-5.5",
+          "effort": "1.0M",
+          "system_description": null,
+          "score": 0.844
+        },
+        {
+          "model": "DeepSeek-V4-Pro-Max",
+          "effort": "1.0M",
+          "system_description": null,
+          "score": 0.834
+        },
+        {
+          "model": "DeepSeek-V4-Flash-Max",
+          "effort": "1.0M",
+          "system_description": null,
+          "score": 0.732
+        }
+      ],
+      "note": "llm-stats.com Progress Over Time chart tooltip(s). Tooltip does not expose system_description (tool use / browsing / reasoning level). The 'effort' field carries the model's context-window length from the leaderboard ranking table (e.g., '1.0M', '262K'); null when the table shows '—'. Org(s): DeepSeek, OpenAI."
     }
   ],
-  "notes": "Stub casing preserved; official name in paper and blog is 'BrowseComp'. Dataset originally 1,287 questions; 21 removed after Deep Research 0% pass-rate review, leaving 1,266. Code distributed via openai/simple-evals."
+  "notes": "Stub casing preserved; official name in paper and blog is 'BrowseComp'. Dataset originally 1,287 questions; 21 removed after Deep Research 0% pass-rate review, leaving 1,266. Code distributed via openai/simple-evals. Leaderboard snapshot from llm-stats.com captured 2026-04-25 (drafts/browsecomp/BrowseComp Leaderboard.mhtml + 43 chart-tooltip screenshots): all 45 models in the ranking table now carry submission dates from the Progress Over Time chart tooltips. The 'effort' field on leaderboard rows carries each model's context-window length from the llm-stats.com ranking table (e.g., '1.0M', '262K'); null where the table shows '—'. effort is null on paper rows since the paper's Table 3 doesn't report context windows."
 }
