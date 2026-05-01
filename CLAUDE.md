@@ -63,4 +63,14 @@ Trial consistency, pass@k, efficiency, and trajectory failure taxonomy need run-
 - `data/processed/intermediate/` — step-1 and step-2 artifacts (consumed by step 3; wiped by `--clean impute` / removal of matching files by `--clean intermediate`).
 - `output/intermediate_studies/{benchmark_level,task_level}/` — full expanded study tables.
 - `output/key_analyses/{tables,figures,reports}/` — curated key-analysis subset. `KEY_ANALYSIS_TABLES` in `orchestration/runner.py` is the authoritative list of which study tables get mirrored here; `KEY_TABLE_SUBDIRS` routes each one into `benchmark_level/`, `task_level/`, `leaderboards/`, `harbormix/`, or `provenance/`.
+- `paper/tex/` — LaTeX source files (`paper.tex`, `appendix_quantitative_analysis_details.tex`, `references.bib`). Macros between `@@STATS_BEGIN@@`/`@@STATS_END@@` markers are auto-injected by the pipeline.
+- `paper/figs/` — single source-of-truth for paper figures; pipeline copies curated figures here from `output/key_analyses/figures/`.
 - `clean_legacy_output_dirs()` removes older layouts (`output/{figures,tables,reports,intermediate,paper,studies}`, `data/processed/generated`) on every run — don't reintroduce those paths.
+
+## Repository structure
+
+- `src/habor_mix_analyzer/` — main pipeline code
+- `data/raw/` — input matrices; `data/metadata/` — benchmark metadata JSON/CSV
+- `scripts/exploratory/` — one-off debug and analysis scripts (not part of the pipeline)
+- `docs/` — handoff notes, templates
+- `quantitative_study/` — legacy parallel pipeline (kept for reference)

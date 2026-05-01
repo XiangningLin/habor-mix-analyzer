@@ -1,14 +1,16 @@
 benchmark,domain,difficulty_tier,best_score,best_model,best_agent,headroom,mean_score,median_score,score_range,n_systems
-gaia2,"Agents, Tools & Systems",hard,0.380559,claude-sonnet-4-6,claude-code,0.619441,0.1989466875,0.20948050000000001,0.380559,16
-seal0,"Agents, Tools & Systems",medium,0.51051,gpt-5.4,codex,0.48949,0.3230101875,0.34234200000000004,0.45045,16
+gaia2,"Agents, Tools & Systems",hard,0.380559,claude-sonnet-4-6,claude-code,0.619441,0.198798625,0.20948050000000001,0.380559,16
+seal0,"Agents, Tools & Systems",medium,0.51051,gpt-5.4,codex,0.48949,0.32282249999999996,0.339339,0.45045,16
 deepsynth,"Agents, Tools & Systems",medium,0.587975,gemini-3.1-pro-preview,gemini-cli,0.412025,0.320458125,0.3432405,0.558345,16
-skillsbench,"Agents, Tools & Systems",medium,0.601902,gpt-5.4,codex,0.39809799999999995,0.32057206250000003,0.3137025,0.584586,16
-terminal-bench,"Agents, Tools & Systems",medium,0.692884,gpt-5.4,codex,0.30711599999999994,0.45412,0.5187269999999999,0.6404500000000001,16
+skillsbench,"Agents, Tools & Systems",medium,0.601902,gpt-5.4,codex,0.39809799999999995,0.320904,0.3137025,0.584586,16
+terminal-bench,"Agents, Tools & Systems",medium,0.692884,gpt-5.4,codex,0.30711599999999994,0.45365175,0.5187269999999999,0.6404500000000001,16
 gaia,"Agents, Tools & Systems",medium,0.759596,gpt-5.4,codex,0.24040399999999995,0.5239898125,0.5686869999999999,0.59596,16
-widesearch,"Agents, Tools & Systems",medium,0.791109,gpt-5.4,codex,0.20889100000000005,0.52269725,0.5670284999999999,0.671491,16
+widesearch,"Agents, Tools & Systems",medium,0.791109,gpt-5.4,codex,0.20889100000000005,0.5233891875,0.5670284999999999,0.671491,16
+cybergym,"Agents, Tools & Systems",medium,0.833333,gemini-3.1-pro-preview,terminus-2,0.166667,0.6145831875,0.633333,0.666666,16
 bfcl,"Agents, Tools & Systems",easy,0.837398,gemini-3.1-pro-preview,terminus-2,0.16260200000000002,0.7469511875,0.764228,0.227642,16
 spider2,Data & Analytics,hard,0.395833,claude-opus-4-6,claude-code,0.604167,0.2705078125,0.265625,0.286458,16
-hle,Knowledge & Long Context,hard,0.54083,gemini-3.1-pro-preview,gemini-cli,0.45916999999999997,0.2811245,0.28045549999999997,0.48326600000000003,16
+dacode,Data & Analytics,medium,0.615755,claude-opus-4-6,terminus-2,0.38424499999999995,0.5071390625,0.559493,0.44446300000000005,16
+hle,Knowledge & Long Context,hard,0.54083,gemini-3.1-pro-preview,gemini-cli,0.45916999999999997,0.28254681249999997,0.29183400000000004,0.48326600000000003,16
 mmmlu,Knowledge & Long Context,medium,0.837778,gpt-5.4,codex,0.16222199999999998,0.3956945,0.3766665,0.837778,16
 simpleqa,Knowledge & Long Context,easy,0.96,gemini-3.1-pro-preview,gemini-cli,0.040000000000000036,0.796875,0.8533335,0.8016669999999999,16
 gpqa-diamond,Knowledge & Long Context,easy,0.97138,gemini-3.1-pro-preview,gemini-cli,0.02861999999999998,0.79219275,0.8106059999999999,0.436026,16
@@ -17,34 +19,37 @@ omnimath,Mathematics & Reasoning,easy,0.88,gemini-3.1-pro-preview,gemini-cli,0.1
 reasoning-gym,Mathematics & Reasoning,easy,0.910778,gemini-3.1-pro-preview,terminus-2,0.08922200000000002,0.8024054375,0.8374855,0.345082,16
 kumo,Mathematics & Reasoning,easy,0.968553,gemini-3.1-pro-preview,terminus-2,0.031447,0.9015329375,0.9504714999999999,0.42767200000000005,16
 aime,Mathematics & Reasoning,easy,0.994444,claude-opus-4-6,claude-code,0.005556000000000005,0.8840278125000001,0.927778,0.37222199999999994,16
-ineqmath,Mathematics & Reasoning,easy,0.998333,gpt-5.4,codex,0.001666999999999974,0.9411111333333333,0.951666,0.17833300000000007,15
+ineqmath,Mathematics & Reasoning,easy,0.996667,gpt-5.4,codex,0.0033330000000000304,0.827083375,0.8816665,0.996667,16
 mmau,Multimodal,medium,0.703333,gpt-5.4,codex,0.296667,0.5756250624999999,0.6133335,0.6333329999999999,16
 medagentbench,Professional Domains,medium,0.643333,gpt-5.4,codex,0.35666699999999996,0.455625125,0.5,0.5633330000000001,16
-lawbench,Professional Domains,medium,0.697135,gemini-3.1-pro-preview,terminus-2,0.30286500000000005,0.5346317857142858,0.5756494999999999,0.5874769999999999,14
+lawbench,Professional Domains,medium,0.697135,gemini-3.1-pro-preview,terminus-2,0.30286500000000005,0.54672075,0.5973885,0.5874769999999999,16
 pixiu,Professional Domains,medium,0.747648,gemini-3.1-pro-preview,gemini-cli,0.252352,0.5702573125,0.5761825,0.44859299999999996,16
-spreadsheetbench,Professional Domains,medium,0.831667,claude-opus-4-6,terminus-2,0.16833299999999995,0.6558332499999999,0.7583335,0.7366670000000001,16
+spreadsheetbench,Professional Domains,medium,0.831667,claude-sonnet-4-6,claude-code,0.16833299999999995,0.6558333125,0.7583335,0.7366670000000001,16
 financeagent_terminal,Professional Domains,medium,0.833333,claude-opus-4-6,claude-code,0.166667,0.4999999375,0.5366664999999999,0.833333,16
 strongreject,Safety & Security,easy,0.970278,claude-haiku-4-5-20251001,terminus-2,0.029722000000000026,0.9176215624999999,0.9269445000000001,0.23722199999999993,16
 bixbench,Scientific Research,medium,0.48,gemini-3.1-pro-preview,gemini-cli,0.52,0.30499981249999997,0.30666649999999995,0.406667,16
-scicode,Scientific Research,medium,0.582241,gpt-5.4,codex,0.417759,0.38894249999999997,0.44594849999999997,0.578074,16
+scicode,Scientific Research,medium,0.582241,gpt-5.4,codex,0.417759,0.390257625,0.44525400000000004,0.578074,16
 codepde,Scientific Research,medium,0.6,gpt-5.4,terminus-2,0.4,0.3624999375,0.333333,0.6,16
 replicationbench,Scientific Research,hard,0.62963,gemini-3.1-pro-preview,gemini-cli,0.37037,0.26319456250000006,0.22592600000000002,0.588889,16
 qcircuitbench,Scientific Research,medium,0.686508,gemini-3.1-pro-preview,terminus-2,0.313492,0.4274848125,0.49201799999999996,0.686508,16
 labbench,Scientific Research,medium,0.731123,gpt-5.4,codex,0.26887700000000003,0.30835625,0.2707185,0.712707,16
 sldbench,Scientific Research,medium,0.795206,gpt-5.4,codex,0.20479400000000003,0.6403324375,0.7419375,0.720012,16
 research-code-bench,Scientific Research,medium,0.866352,gpt-5.4,codex,0.133648,0.3141705625,0.21383649999999998,0.866352,16
-algotune,Software Engineering,hard,0.366747,claude-sonnet-4-6,claude-code,0.6332530000000001,0.209495375,0.20478049999999998,0.366747,16
+algotune,Software Engineering,hard,0.366747,claude-sonnet-4-6,claude-code,0.6332530000000001,0.20717393750000002,0.20478049999999998,0.366747,16
+featurebench-modal,Software Engineering,hard,0.405405,claude-opus-4-6,terminus-2,0.594595,0.1760135,0.1567565,0.401801,16
 bigcodebench,Software Engineering,medium,0.445977,claude-sonnet-4-6,terminus-2,0.5540229999999999,0.3645115,0.39770099999999997,0.411494,16
-gso,Software Engineering,hard,0.45098,claude-sonnet-4-6,claude-code,0.5490200000000001,0.243055625,0.3055555,0.45098,16
+gso,Software Engineering,hard,0.45098,claude-sonnet-4-6,claude-code,0.5490200000000001,0.242851375,0.3055555,0.45098,16
 swebenchpro,Software Engineering,medium,0.55,gpt-5.4,codex,0.44999999999999996,0.36229175,0.4533335,0.496667,16
 swesmith,Software Engineering,hard,0.581633,claude-opus-4-6,terminus-2,0.41836700000000004,0.2538264375,0.260204,0.571429,16
-swtbench,Software Engineering,medium,0.706667,gpt-5.4,codex,0.29333299999999995,0.4160000666666666,0.486667,0.6333340000000001,15
 swe-lancer,Software Engineering,medium,0.71,gemini-3.1-pro-preview,gemini-cli,0.29000000000000004,0.46437506250000005,0.466667,0.48,16
+swtbench,Software Engineering,medium,0.72,claude-opus-4-6,terminus-2,0.28,0.4350000625,0.5133335,0.646667,16
+aa-lcr,Software Engineering,medium,0.750842,gpt-5.4,codex,0.249158,0.590698875,0.646465,0.619529,16
 swebench-verified,Software Engineering,medium,0.776667,gemini-3.1-pro-preview,terminus-2,0.223333,0.5939583125,0.6966665,0.666667,16
+swebench-multilingual,Software Engineering,medium,0.8,claude-opus-4-6,terminus-2,0.19999999999999996,0.5600000624999999,0.69,0.766667,16
 aider-polyglot,Software Engineering,medium,0.884444,gemini-3.1-pro-preview,gemini-cli,0.11555599999999999,0.5410185625000001,0.565926,0.788148,16
 livecodebench,Software Engineering,easy,0.926667,gpt-5.4,codex,0.07333299999999998,0.7902084375,0.8716665,0.62,16
 usaco,Software Engineering,easy,0.96,gpt-5.4,codex,0.040000000000000036,0.7027083125,0.79,0.9033329999999999,16
 quixbugs,Software Engineering,easy,0.975,gpt-5.4,codex,0.025000000000000022,0.8403645625,0.925,0.683333,16
-crustbench,Software Engineering,easy,0.98,gpt-5.4,codex,0.020000000000000018,0.7402083125,0.8216665,0.866667,16
+crustbench,Software Engineering,easy,0.98,gpt-5.4,codex,0.020000000000000018,0.7404166249999999,0.8216665,0.866667,16
 compilebench,Software Engineering,easy,1.0,gpt-5.4,codex,0.0,0.8027776875,0.922222,0.866667,16
-humanevalfix,Software Engineering,saturated,1.0,gpt-5.4,codex,0.0,0.9894307333333333,0.997967,0.07113800000000003,15
+humanevalfix,Software Engineering,saturated,1.0,gpt-5.4,codex,0.0,0.9569358125,0.997967,0.5304880000000001,16

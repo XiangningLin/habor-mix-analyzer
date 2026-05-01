@@ -17,18 +17,15 @@ from ..core import (
     RANDOM_SEED,
     RAW_DIR,
     TASK_INTERMEDIATE_STUDY_DIR,
+    ImputationResult,
     clean_dir,
     read_matrix,
     score_columns,
     set_plot_style,
     write_csv,
 )
-from ..preprocessing.svd_imputation import (
-    aggregate_task_result_to_benchmarks,
-    validated_impute_dataframe,
-    write_benchmark_aggregate_outputs,
-    write_matrix_outputs,
-)
+from ..core.config import PAPER_BENCHMARKS
+from ..preprocessing.svd_imputation import robust_column_stats, normalize
 from ..reporting.key_analysis_report import copy_paper_figures, write_appendix_model_agent, write_appendix_stats, write_key_analysis_reports, write_paper_stats
 from ..studies.benchmark_predictability import (
     pca_for_cols,
@@ -58,35 +55,21 @@ from ..studies.model_agent_roles import (
 from ..studies.provenance import analysis_data_provenance, imputation_diagnostics_summary
 from ..studies.task_alignment import task_aggregate_alignment
 from ..studies.task_selection import select_harbormix_tasks, task_reliability_tables
-from ..studies.task_similarity import task_similarity_and_representatives
+from ..studies.task_similarity import build_goto_task_set, global_task_selection, greedy_task_selection_within_benchmark, task_predictability_holdout, task_similarity_and_representatives, unified_task_holdout
 from ..studies.terminus_comparison import summarize_agent_lift, terminus_delta_by_model
 from ..visualization.benchmark_plots import (
     save_agent_lift_heatmap,
     save_benchmark_cluster_heatmap,
     save_benchmark_headroom_plot,
-    save_benchmark_headroom_summary_plot,
-    save_benchmark_progress_and_headroom_plot,
     save_benchmark_uniqueness_plot,
-    save_domain_grouped_heatmap,
     save_effective_dimensionality_plot,
     save_greedy_selection_plot,
-    save_key_effect_plot,
-    save_terminus_delta_by_model_plot,
+    save_svd_spectrum_plot,
     save_within_family_detail_plot,
     save_within_family_summary_plot,
 )
-from ..visualization.leaderboard_plots import (
-    benchmark_mini_leaderboard_tables_and_figures,
-    save_key_agent_model_score_plot,
-)
 from ..visualization.task_plots import (
-    save_harbormix_selection_plot,
-    save_per_benchmark_task_correlation_heatmaps,
     save_representative_task_plot,
-    save_task_alignment_plot,
-    save_task_composition_plot,
-    save_task_composition_percent_plot,
-    save_task_predictability_plot,
     save_task_similarity_heatmap,
 )
 
@@ -104,7 +87,6 @@ INTERMEDIATE_TABLES = [
     "benchmark_latent_loadings",
     "benchmark_latent_agent_model_scores",
     "benchmark_latent_explained_variance",
-    "svd_scree",
 ]
 
 KEY_ANALYSIS_TABLES = [
@@ -128,13 +110,20 @@ KEY_ANALYSIS_TABLES = [
     "benchmark_uniqueness_filtered",
     "benchmark_agent_lift_vs_terminus",
     "terminus_delta_by_model",
-    "benchmark_mini_leaderboards",
     "task_benchmark_reliable_summary",
     "task_to_benchmark_alignment",
     "task_within_benchmark_similarity",
     "task_cross_benchmark_similarity",
     "task_representative_tasks",
     "task_predictability_ranked",
+    "task_holdout_predictability",
+    "task_holdout_method_comparison",
+    "task_greedy_selection",
+    "task_greedy_selection_summary",
+    "task_goto_set",
+    "task_global_representatives",
+    "task_global_greedy_selection",
+    "task_holdout_unified_comparison",
     "harbormix_selected_tasks",
     "harbormix_selection_by_benchmark",
 ]
@@ -144,13 +133,20 @@ KEY_TABLE_SUBDIRS = {
     "imputation_diagnostics_summary": "provenance",
     "benchmark_agent_model_scores": "leaderboards",
     "benchmark_scores_long": "leaderboards",
-    "benchmark_mini_leaderboards": "leaderboards",
     "task_benchmark_reliable_summary": "task_level",
     "task_to_benchmark_alignment": "task_level",
     "task_within_benchmark_similarity": "task_level",
     "task_cross_benchmark_similarity": "task_level",
     "task_representative_tasks": "task_level",
     "task_predictability_ranked": "task_level",
+    "task_holdout_predictability": "task_level",
+    "task_holdout_method_comparison": "task_level",
+    "task_greedy_selection": "task_level",
+    "task_greedy_selection_summary": "task_level",
+    "task_goto_set": "task_level",
+    "task_global_representatives": "task_level",
+    "task_global_greedy_selection": "task_level",
+    "task_holdout_unified_comparison": "task_level",
     "harbormix_selected_tasks": "harbormix",
     "harbormix_selection_by_benchmark": "harbormix",
     "terminus_delta_by_model": "benchmark_level",
@@ -198,66 +194,48 @@ def clean_step_outputs(steps: set[str]) -> None:
     ensure_output_dirs()
 
 
-def _mask_extreme_outliers(df: pd.DataFrame, iqr_factor: float = 10.0) -> pd.DataFrame:
-    """Replace extreme outliers with NaN so they don't corrupt aggregated stats."""
-    cols = score_columns(df)
-    out = df.copy()
-    for col in cols:
-        s = pd.to_numeric(out[col], errors="coerce")
-        q1, q3 = s.quantile(0.25), s.quantile(0.75)
-        iqr = q3 - q1
-        if iqr < 1e-9:
-            iqr = s.std(ddof=0)
-        if not np.isfinite(iqr) or iqr < 1e-9:
-            continue
-        lo, hi = q1 - iqr_factor * iqr, q3 + iqr_factor * iqr
-        mask = (s < lo) | (s > hi)
-        if mask.any():
-            out.loc[mask, col] = np.nan
-    return out
-
-
 def read_raw_matrices() -> tuple[pd.DataFrame, pd.DataFrame]:
-    raw_benchmark = _mask_extreme_outliers(read_matrix(RAW_DIR / "benchmark_level_matrix.csv"))
+    raw_benchmark = read_matrix(RAW_DIR / "benchmark_level_matrix.csv")
     raw_task = read_matrix(RAW_DIR / "task_level_matrix.csv")
     if not raw_benchmark[KEY_COLUMNS].equals(raw_task[KEY_COLUMNS]):
         raise ValueError("Benchmark and task matrices do not have identical agent/model rows.")
-    return raw_benchmark, raw_task
+    bench_cols = [c for c in score_columns(raw_benchmark) if c in PAPER_BENCHMARKS]
+    task_cols = [c for c in score_columns(raw_task) if c.split("/", 1)[0] in PAPER_BENCHMARKS]
+    return raw_benchmark[KEY_COLUMNS + bench_cols], raw_task[KEY_COLUMNS + task_cols]
 
 
-def load_imputation_result(prefix: str):
-    from ..core import ImputationResult
-
-    if prefix == "benchmark":
-        diagnostics_path = PROCESSED_DIR / "benchmark_from_task_aggregate_diagnostics.json"
-        if not diagnostics_path.exists():
-            raise FileNotFoundError(f"Missing {diagnostics_path}; run `habor-analyze impute` first.")
-        diagnostics = json.loads(diagnostics_path.read_text())
-        return ImputationResult(
-            normalized=pd.read_csv(PROCESSED_DIR / "benchmark_from_task_aggregate_normalized_matrix.csv"),
-            raw=pd.read_csv(PROCESSED_DIR / "benchmark_from_task_aggregate_matrix.csv"),
-            stats=pd.read_csv(PROCESSED_DIR / "benchmark_from_task_aggregate_column_quality.csv"),
-            cv=pd.read_csv(PROCESSED_DIR / "benchmark_from_task_aggregate_diagnostics_cv.csv"),
-            best_rank=0,
-            missing_fraction=float(diagnostics["missing_fraction_before_task_aggregation"]),
-        )
-
-    diagnostics_path = PROCESSED_DIR / f"{prefix}_imputation_diagnostics.json"
-    if not diagnostics_path.exists():
-        raise FileNotFoundError(f"Missing {diagnostics_path}; run `habor-analyze impute` first.")
-    diagnostics = json.loads(diagnostics_path.read_text())
+def _build_result(df: pd.DataFrame) -> ImputationResult:
+    cols = score_columns(df)
+    values = df[cols].astype(float)
+    stats = robust_column_stats(values)
+    normalized = pd.concat([df[KEY_COLUMNS], normalize(values, stats)], axis=1)
+    cv = pd.DataFrame({"method": ["raw"], "rank": [0], "holdout_cells": [0], "rmse": [0.0], "mae": [0.0]})
     return ImputationResult(
-        normalized=pd.read_csv(PROCESSED_DIR / f"{prefix}_imputed_normalized_matrix.csv"),
-        raw=pd.read_csv(PROCESSED_DIR / f"{prefix}_imputed_matrix.csv"),
-        stats=pd.read_csv(PROCESSED_DIR / f"{prefix}_column_quality.csv"),
-        cv=pd.read_csv(PROCESSED_DIR / f"{prefix}_imputation_cv.csv"),
-        best_rank=int(diagnostics["best_rank"]),
-        missing_fraction=float(diagnostics["missing_fraction"]),
+        normalized=normalized,
+        raw=df.copy(),
+        stats=stats,
+        cv=cv,
+        best_rank=0,
+        missing_fraction=float(values.isna().mean().mean()),
+    )
+
+
+def _load_result(prefix: str) -> ImputationResult:
+    stats_path = PROCESSED_DIR / f"{prefix}_column_quality.csv"
+    if not stats_path.exists():
+        raise FileNotFoundError(f"Missing {stats_path}; run `habor-analyze impute` first.")
+    return ImputationResult(
+        normalized=pd.read_csv(PROCESSED_DIR / f"{prefix}_normalized_matrix.csv"),
+        raw=pd.read_csv(PROCESSED_DIR / f"{prefix}_raw_matrix.csv"),
+        stats=pd.read_csv(stats_path),
+        cv=pd.read_csv(PROCESSED_DIR / f"{prefix}_cv.csv"),
+        best_rank=0,
+        missing_fraction=0.0,
     )
 
 
 def load_imputation_results():
-    return load_imputation_result("benchmark"), load_imputation_result("task")
+    return _load_result("benchmark"), _load_result("task")
 
 
 def load_intermediate_tables() -> dict[str, pd.DataFrame]:
@@ -270,23 +248,23 @@ def load_intermediate_tables() -> dict[str, pd.DataFrame]:
     return tables
 
 
+def _write_result(prefix: str, result: ImputationResult) -> None:
+    write_csv(result.raw, PROCESSED_DIR / f"{prefix}_raw_matrix.csv")
+    write_csv(result.normalized, PROCESSED_DIR / f"{prefix}_normalized_matrix.csv")
+    write_csv(result.stats, PROCESSED_DIR / f"{prefix}_column_quality.csv")
+    write_csv(result.cv, PROCESSED_DIR / f"{prefix}_cv.csv")
+
+
 def run_imputation_step() -> None:
-    log("impute: reading raw benchmark and task matrices")
+    log("impute: reading raw benchmark and task matrices (filtered to PAPER_BENCHMARKS)")
     ensure_output_dirs()
     raw_benchmark, raw_task = read_raw_matrices()
-    log("impute: fitting task-level imputer with held-out validation")
-    task_result = validated_impute_dataframe(
-        raw_task,
-        ranks=[2],
-        holdout_fraction=0.05,
-        seed=RANDOM_SEED,
-    )
-    log(f"impute: selected task imputer={task_result.cv.iloc[0]['method']} rank={task_result.best_rank}")
-    log("impute: aggregating filled task matrix into benchmark scores")
-    benchmark_result = aggregate_task_result_to_benchmarks(raw_benchmark, raw_task, task_result)
-    write_benchmark_aggregate_outputs(benchmark_result, task_result)
-    write_matrix_outputs("task", task_result)
-    log("impute: wrote processed task-imputed and benchmark-from-task-aggregate matrices")
+    log(f"impute: {len(score_columns(raw_benchmark))} benchmarks, {len(score_columns(raw_task))} tasks")
+    benchmark_result = _build_result(raw_benchmark)
+    task_result = _build_result(raw_task)
+    _write_result("benchmark", benchmark_result)
+    _write_result("task", task_result)
+    log("impute: wrote processed benchmark and task matrices (raw + normalized)")
 
 
 def run_intermediate_step() -> dict[str, pd.DataFrame]:
@@ -295,7 +273,7 @@ def run_intermediate_step() -> dict[str, pd.DataFrame]:
     raw_benchmark, raw_task = read_raw_matrices()
     benchmark_result, task_result = load_imputation_results()
     log("intermediate: building shared benchmark/task tables")
-    return write_tables(raw_benchmark, raw_task, benchmark_result, task_result)
+    return write_tables(raw_benchmark, benchmark_result, task_result)
 
 
 def build_study_tables(
@@ -349,6 +327,37 @@ def build_study_tables(
     task_within_similarity, representative_tasks, task_predictability, task_cross_similarity = task_similarity_and_representatives(
         task_result, tasks_enriched, benchmark_clusters
     )
+    log("studies: within-benchmark BenchPress-style task holdout predictability")
+    task_holdout_ranked, task_holdout_methods = task_predictability_holdout(task_result, tasks_enriched)
+    log("studies: within-benchmark greedy task selection")
+    task_greedy_sel, task_greedy_sel_summary = greedy_task_selection_within_benchmark(task_result, tasks_enriched)
+    log("studies: building go-to task set")
+    goto_task_set = build_goto_task_set(representative_tasks, task_greedy_sel)
+    log("studies: cross-benchmark global go-to task selection")
+    global_task_rep, global_task_greedy = global_task_selection(task_result, tasks_enriched)
+    log("studies: unified within/cross/global BenchPress-style task holdout")
+    unified_holdout = unified_task_holdout(task_result, tasks_enriched)
+
+    # ── Task-level SVD spectrum (logit space, reliable bounded tasks) ──
+    reliable_task_cols = tasks_enriched.loc[
+        tasks_enriched["is_bounded_score_task"]
+        & tasks_enriched["is_reliable_observed_task"]
+        & (tasks_enriched["observed_std"] >= 0.05),
+        "task_column",
+    ].tolist()
+    reliable_task_cols = [c for c in reliable_task_cols if c in task_result.raw.columns]
+    X_task_raw = task_result.raw[reliable_task_cols].astype(float).fillna(0).to_numpy()
+    eps_t = 0.005
+    X_task_smooth = np.clip(X_task_raw, eps_t, 1 - eps_t)
+    X_task_logit = np.log(X_task_smooth / (1 - X_task_smooth))
+    from sklearn.decomposition import PCA as _PCA
+    _pca_task = _PCA()
+    _pca_task.fit(X_task_logit)
+    task_svd_spectrum = pd.DataFrame({
+        "component": np.arange(1, len(_pca_task.explained_variance_ratio_) + 1),
+        "explained_variance_ratio": _pca_task.explained_variance_ratio_,
+    })
+    task_svd_spectrum.attrs["n_tasks"] = len(reliable_task_cols)
     log("studies: selecting final HaborMix task set")
     selected_tasks, scored_task_pool = select_harbormix_tasks(tasks_enriched, representative_tasks, task_predictability)
     selected_task_summary = (
@@ -365,10 +374,6 @@ def build_study_tables(
         .reset_index()
         .sort_values(["selected_tasks", "mean_selection_score"], ascending=False)
     )
-    mini_leaderboards, mini_leaderboard_figures = benchmark_mini_leaderboard_tables_and_figures(
-        benchmark_result, benchmark_clusters, included_benchmarks
-    )
-
     study_tables = {
         "benchmark_filtering": filter_table,
         "analysis_data_provenance": provenance,
@@ -396,7 +401,6 @@ def build_study_tables(
         "benchmark_agent_lift_vs_terminus": agent_lift_summary,
         "benchmark_agent_lift_by_benchmark": agent_lift_by_benchmark,
         "terminus_delta_by_model": terminus_by_model,
-        "benchmark_mini_leaderboards": mini_leaderboards,
         "task_enriched_item_stats": tasks_enriched,
         "task_benchmark_reliable_summary": task_summary,
         "task_to_benchmark_alignment": alignment,
@@ -404,12 +408,21 @@ def build_study_tables(
         "task_cross_benchmark_similarity": task_cross_similarity,
         "task_representative_tasks": representative_tasks,
         "task_predictability_ranked": task_predictability,
+        "task_holdout_predictability": task_holdout_ranked,
+        "task_holdout_method_comparison": task_holdout_methods,
+        "task_svd_spectrum": task_svd_spectrum,
+        "task_greedy_selection": task_greedy_sel,
+        "task_greedy_selection_summary": task_greedy_sel_summary,
+        "task_goto_set": goto_task_set,
+        "task_global_representatives": global_task_rep,
+        "task_global_greedy_selection": global_task_greedy,
+        "task_holdout_unified_comparison": unified_holdout,
         "harbormix_selected_tasks": selected_tasks,
         "harbormix_scored_task_pool": scored_task_pool,
         "harbormix_selection_by_benchmark": selected_task_summary,
         "task_frontier_or_saturated_watchlist": frontier_tasks,
     }
-    return study_tables, included_benchmarks, mini_leaderboard_figures
+    return study_tables, included_benchmarks
 
 
 def write_study_tables(study_tables: dict[str, pd.DataFrame]) -> None:
@@ -421,45 +434,25 @@ def write_study_tables(study_tables: dict[str, pd.DataFrame]) -> None:
         write_csv(study_tables[name], KEY_TABLE_DIR / subdir / f"{name}.csv")
 
 
-def write_study_figures(study_tables: dict[str, pd.DataFrame]) -> None:
-    log("figures: writing key analysis visualizations")
+def write_study_figures(study_tables: dict[str, pd.DataFrame], raw_benchmark: pd.DataFrame) -> None:
+    log("figures: writing paper figures")
     set_plot_style()
-    save_key_agent_model_score_plot(study_tables["benchmark_agent_model_scores"])
-    save_key_effect_plot(
-        study_tables["benchmark_model_adjusted_effects"],
-        "model",
-        "benchmark_model_adjusted_effects.png",
-        "Model Effects Adjusted for Agent and Benchmark",
-    )
     save_within_family_summary_plot(study_tables["benchmark_within_family_summary"])
     save_within_family_detail_plot(study_tables["benchmark_within_family_model_vs_agent"])
+    save_agent_lift_heatmap(study_tables["benchmark_agent_lift_by_benchmark"])
     save_benchmark_headroom_plot(study_tables["benchmark_headroom_by_domain"])
-    launch_progress_path = OUTPUT_DIR / "quantitative" / "benchmark_launch_vs_harbor_improvement.csv"
-    if launch_progress_path.is_file():
-        save_benchmark_progress_and_headroom_plot(
-            study_tables["benchmark_headroom_by_domain"],
-            pd.read_csv(launch_progress_path),
-        )
-    save_benchmark_headroom_summary_plot(study_tables["benchmark_headroom_by_domain"])
     save_benchmark_cluster_heatmap(study_tables["benchmark_correlation_clustered"])
-    save_domain_grouped_heatmap(study_tables["benchmark_correlation_filtered"])
+    save_benchmark_uniqueness_plot(study_tables["benchmark_uniqueness_filtered"], study_tables["benchmark_filtering"])
     save_effective_dimensionality_plot(
         study_tables["benchmark_pca_full_explained_variance"]["explained_variance_ratio"].to_numpy(),
         study_tables["benchmark_effective_dimensionality"].iloc[0].to_dict(),
     )
     save_greedy_selection_plot(study_tables["benchmark_greedy_selection"])
-    save_agent_lift_heatmap(study_tables["benchmark_agent_lift_by_benchmark"])
-    save_terminus_delta_by_model_plot(study_tables["terminus_delta_by_model"])
-    save_benchmark_uniqueness_plot(study_tables["benchmark_uniqueness_filtered"], study_tables["benchmark_filtering"])
-    save_task_composition_plot(study_tables["task_benchmark_reliable_summary"])
-    save_task_composition_percent_plot(study_tables["task_benchmark_reliable_summary"])
-    save_task_alignment_plot(study_tables["task_to_benchmark_alignment"])
+    save_svd_spectrum_plot(raw_benchmark)
     save_task_similarity_heatmap(
         study_tables["task_cross_benchmark_similarity"], study_tables["benchmark_similarity_clusters"]
     )
-    save_task_predictability_plot(study_tables["task_predictability_ranked"])
     save_representative_task_plot(study_tables["task_representative_tasks"])
-    save_harbormix_selection_plot(study_tables["harbormix_selected_tasks"])
 
 
 def run_studies_step() -> None:
@@ -469,18 +462,17 @@ def run_studies_step() -> None:
     benchmark_result, task_result = load_imputation_results()
     tables = load_intermediate_tables()
     set_plot_style()
-    study_tables, included_benchmarks, mini_leaderboard_figures = build_study_tables(
-        raw_benchmark, benchmark_result, task_result, tables
+    study_tables, included_benchmarks = build_study_tables(
+        raw_benchmark, benchmark_result, task_result, tables,
     )
     write_study_tables(study_tables)
-    write_study_figures(study_tables)
-    save_per_benchmark_task_correlation_heatmaps(task_result, study_tables["task_enriched_item_stats"])
-    write_key_analysis_reports(study_tables, benchmark_result, task_result, included_benchmarks, mini_leaderboard_figures)
+    write_study_figures(study_tables, raw_benchmark)
+    write_key_analysis_reports(study_tables, benchmark_result, task_result, included_benchmarks)
     write_paper_stats(study_tables, included_benchmarks, raw_benchmark)
     write_appendix_stats(study_tables, benchmark_result, included_benchmarks)
     write_appendix_model_agent(study_tables)
     copy_paper_figures()
-    log("studies: wrote key analysis tables, figures, reports, paper.tex stats, appendix stats, appendix, and figs/main/quantitative/")
+    log("studies: wrote key analysis tables, figures, reports, paper/tex/ stats, and paper/figs/")
 
 
 def expand_steps(steps: list[str]) -> list[str]:

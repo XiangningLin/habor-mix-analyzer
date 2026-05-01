@@ -3,20 +3,6 @@ from __future__ import annotations
 from ..core import *
 
 
-def save_key_agent_model_score_plot(scores: pd.DataFrame) -> None:
-    plot_df = scores.sort_values("mean_score_percentile_across_benchmarks").tail(18)
-    labels = [wrap_text(value, width=32) for value in plot_df["agent_model"]]
-    fig, ax = plt.subplots(figsize=(11, 7.6))
-    ax.barh(labels, plot_df["mean_score_percentile_across_benchmarks"], color="#9ecae1", edgecolor="white")
-    ax.set_title("Top Agent+Model Pairs by Benchmark Score Percentile")
-    ax.set_xlabel("Mean within-benchmark score percentile\n(1.0 = best score on each benchmark)")
-    ax.set_ylabel("")
-    ax.grid(axis="x", color="#dddddd", linewidth=0.8)
-    fig.tight_layout()
-    save_key_figure(fig, "leaderboards/benchmark_agent_model_top_scores.png")
-    plt.close(fig)
-
-
 def _plot_grouped_leaderboard(
     ax: plt.Axes,
     leaders: pd.DataFrame,
@@ -123,7 +109,7 @@ def benchmark_mini_leaderboard_tables_and_figures(
                 )
                 single_fig.tight_layout()
                 safe_benchmark = benchmark.replace("/", "_").replace(" ", "_")
-                single_filename = f"leaderboards/per_benchmark/mini_leaderboard_{safe_benchmark}.png"
+                single_filename = f"leaderboards/per_benchmark/mini_leaderboard_{safe_benchmark}.pdf"
                 save_key_figure(single_fig, single_filename)
                 plt.close(single_fig)
             for ax in axes_flat[len(page_benchmarks) :]:
@@ -135,7 +121,7 @@ def benchmark_mini_leaderboard_tables_and_figures(
                 fontsize=16,
             )
             fig.tight_layout(rect=(0, 0, 1, 0.96))
-            filename = f"leaderboards/clustered/mini_leaderboards_cluster_{cluster_id}_page_{page_idx}.png"
+            filename = f"leaderboards/clustered/mini_leaderboards_cluster_{cluster_id}_page_{page_idx}.pdf"
             save_key_figure(fig, filename)
             plt.close(fig)
             figure_paths.append(filename)

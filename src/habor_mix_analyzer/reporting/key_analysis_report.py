@@ -3,26 +3,20 @@ from __future__ import annotations
 from ..core import *
 
 
-PAPER_TEX_PATH = ROOT / "paper_writing" / "paper.tex"
-PAPER_FIGS_DIR = ROOT / "figs" / "main" / "quantitative"
+PAPER_TEX_PATH = ROOT / "paper" / "tex" / "paper.tex"
+PAPER_FIGS_DIR = ROOT / "paper" / "figs" / "main" / "quantitative"
 
 PAPER_FIGURES = {
-    "benchmark_level/within_family_model_vs_agent_summary.png": "within_family_model_vs_agent_summary.png",
-    "benchmark_level/within_family_model_vs_agent_detail.png": "within_family_model_vs_agent_detail.png",
-    "benchmark_level/benchmark_model_adjusted_effects.png": "benchmark_model_adjusted_effects.png",
-    "benchmark_level/benchmark_agent_lift_heatmap.png": "benchmark_agent_lift_heatmap.png",
-    "benchmark_level/terminus_delta_by_model_heatmap.png": "terminus_delta_by_model_heatmap.png",
-    "benchmark_level/benchmark_headroom_by_domain.png": "benchmark_headroom_by_domain.png",
-    "benchmark_level/benchmark_headroom_tier_summary.png": "benchmark_headroom_tier_summary.png",
-    "benchmark_level/benchmark_similarity_clustered_heatmap.png": "benchmark_similarity_clustered_heatmap.png",
-    "benchmark_level/benchmark_uniqueness_vs_coverage.png": "benchmark_uniqueness_vs_coverage.png",
-    "benchmark_level/benchmark_effective_dimensionality.png": "benchmark_effective_dimensionality.png",
-    "benchmark_level/benchmark_greedy_selection.png": "benchmark_greedy_selection.png",
-    "task_level/task_similarity_benchmark_pair_heatmap.png": "task_similarity_benchmark_pair_heatmap.png",
-    "task_level/task_hard_to_predict_ranked.png": "task_hard_to_predict_ranked.png",
-    "task_level/task_best_representatives.png": "task_best_representatives.png",
-    "task_level/task_reliable_difficulty_composition.png": "task_reliable_difficulty_composition.png",
-    "harbormix/harbormix_selection_diagnostics.png": "harbormix_selection_diagnostics.png",
+    "benchmark_level/within_family_model_vs_agent_summary.pdf": "within_family_model_vs_agent_summary.pdf",
+    "benchmark_level/within_family_model_vs_agent_detail.pdf": "within_family_model_vs_agent_detail.pdf",
+    "benchmark_level/benchmark_agent_lift_heatmap.pdf": "benchmark_agent_lift_heatmap.pdf",
+    "benchmark_level/benchmark_headroom_by_domain.pdf": "benchmark_headroom_by_domain.pdf",
+    "benchmark_level/benchmark_similarity_clustered_heatmap.pdf": "benchmark_similarity_clustered_heatmap.pdf",
+    "benchmark_level/benchmark_uniqueness_vs_coverage.pdf": "benchmark_uniqueness_vs_coverage.pdf",
+    "benchmark_level/benchmark_effective_dimensionality.pdf": "benchmark_effective_dimensionality.pdf",
+    "benchmark_level/benchmark_greedy_selection.pdf": "benchmark_greedy_selection.pdf",
+    "task_level/task_similarity_benchmark_pair_heatmap.pdf": "task_similarity_benchmark_pair_heatmap.pdf",
+    "task_level/task_best_representatives.pdf": "task_best_representatives.pdf",
 }
 
 
@@ -49,6 +43,10 @@ def _tex_cmd(name: str, value: str) -> str:
 
 def _fmt(x: float, decimals: int = 1) -> str:
     return f"{x:.{decimals}f}"
+
+
+def _tex_escape(s: str) -> str:
+    return s.replace("_", r"\_").replace("&", r"\&").replace("%", r"\%").replace("#", r"\#")
 
 
 def _fmt_nolz(x: float, decimals: int = 3) -> str:
@@ -312,8 +310,8 @@ def write_paper_stats(study_tables: dict[str, pd.DataFrame], included_benchmarks
         lines.append("")
 
     # ── Figure paths (only macros actually used in paper.tex) ──
-    fig = "figs/main/quantitative"
-    lines.append("% ── Figure paths (all under figs/main/quantitative/) ──")
+    fig = "../figs/main/quantitative"
+    lines.append("% ── Figure paths (all under paper/figs/main/quantitative/) ──")
     lines += [
         _tex_cmd("FigHeadroomByDomain", f"{fig}/bench_progress_and_headroom"),
     ]
@@ -332,7 +330,7 @@ def write_paper_stats(study_tables: dict[str, pd.DataFrame], included_benchmarks
     PAPER_TEX_PATH.write_text(tex)
 
 
-APPENDIX_TEX_PATH = ROOT / "paper_writing" / "appendix_quantitative_analysis_details.tex"
+APPENDIX_TEX_PATH = ROOT / "paper" / "tex" / "appendix_quantitative_analysis_details.tex"
 
 
 def write_appendix_stats(
@@ -608,7 +606,7 @@ def write_appendix_stats(
     # ── Task-level SVD extension ──
     lines.append("% ── Task-level SVD ──")
     try:
-        task_df = pd.read_csv(PROCESSED_DIR / "task_imputed_matrix.csv")
+        task_df = pd.read_csv(PROCESSED_DIR / "task_raw_matrix.csv")
         task_stats_df = pd.read_csv(PROCESSED_DIR / "task_item_stats.csv")
         task_to_bench = dict(zip(task_stats_df["task_column"], task_stats_df["benchmark"]))
         task_numeric = task_df.select_dtypes(include=[np.number])
@@ -728,10 +726,10 @@ def write_appendix_stats(
             _tex_cmd("TaskRedundMedianPCsNinety", str(int(np.median(pcs_90_list)))),
             _tex_cmd("TaskRedundMeanCompression", _fmt(float(np.mean(compressions)), 1)),
             _tex_cmd("TaskRedundMeanZeroVarPct", _fmt(float(np.mean(zero_var_pcts)), 1)),
-            _tex_cmd("TaskRedundRhoKOne", _fmt(float(np.mean(rho_k1)), 3)),
-            _tex_cmd("TaskRedundRhoKThree", _fmt(float(np.mean(rho_k3)), 3)),
-            _tex_cmd("TaskRedundRhoKFive", _fmt(float(np.mean(rho_k5)), 3)),
-            _tex_cmd("TaskRedundRhoKTen", _fmt(float(np.mean(rho_k10)), 3)),
+            _tex_cmd("TaskRedundRhoKOne", _fmt(float(np.nanmean(rho_k1)), 3)),
+            _tex_cmd("TaskRedundRhoKThree", _fmt(float(np.nanmean(rho_k3)), 3)),
+            _tex_cmd("TaskRedundRhoKFive", _fmt(float(np.nanmean(rho_k5)), 3)),
+            _tex_cmd("TaskRedundRhoKTen", _fmt(float(np.nanmean(rho_k10)), 3)),
             _tex_cmd("TaskRedundAboveNFKOne", f"{sum(1 for r in rho_k1 if r > 0.95)}/{len(rho_k1)}"),
             _tex_cmd("TaskRedundAboveNFKThree", f"{sum(1 for r in rho_k3 if r > 0.95)}/{len(rho_k3)}"),
             _tex_cmd("TaskRedundAboveNFKFive", f"{sum(1 for r in rho_k5 if r > 0.95)}/{len(rho_k5)}"),
@@ -751,6 +749,172 @@ def write_appendix_stats(
                 _tex_cmd(f"TaskZeroVarEx{i}Pct", _fmt(zv["pct"], 0)),
             ]
         lines.append("")
+
+        # ── Per-benchmark go-to task table ──
+        rep_path = KEY_TABLE_DIR / "task_level" / "task_representative_tasks.csv"
+        if rep_path.exists():
+            rep_df = pd.read_csv(rep_path)
+            top1 = (
+                rep_df.sort_values("useful_representativeness_score", ascending=False)
+                .groupby("benchmark")
+                .head(1)
+                .sort_values("useful_representativeness_score", ascending=False)
+            )
+            tbl = []
+            tbl.append(r"\begin{table}[t]\small")
+            tbl.append(r"\centering")
+            tbl.append(r"\caption{Best single representative task per benchmark, ranked by useful representativeness score (leave-one-out correlation $\times$ task variance). Full list in \texttt{task\_representative\_tasks.csv}.}")
+            tbl.append(r"\label{tab:go-to-tasks}")
+            tbl.append(r"\begin{tabular}{llc}")
+            tbl.append(r"\toprule")
+            tbl.append(r"Benchmark & Best representative task & Score \\")
+            tbl.append(r"\midrule")
+            for _, row in top1.head(25).iterrows():
+                bname = benchmark_display_name(str(row["benchmark"]))
+                tid = str(row["task_id"])
+                if len(tid) > 40:
+                    tid = tid[:37] + "..."
+                score = f'{float(row["useful_representativeness_score"]):.2f}'
+                tbl.append(f"{bname} & \\texttt{{{_tex_escape(tid)}}} & {score} \\\\")
+            tbl.append(r"\bottomrule")
+            tbl.append(r"\end{tabular}")
+            tbl.append(r"\end{table}")
+            goto_tex = "\n".join(tbl)
+            lines.append(f"\\providecommand{{\\AppGoToTaskTable}}{{{goto_tex}}}")
+            lines.append("")
+
+        # ── Global cross-benchmark go-to task table ──
+        global_rep = study_tables.get("task_global_representatives")
+        global_greedy = study_tables.get("task_global_greedy_selection")
+        if global_rep is not None and not global_rep.empty:
+            n_global_tasks = len(global_rep)
+            n_below_07 = 0
+            if global_greedy is not None and not global_greedy.empty:
+                n_below_07 = int((global_greedy["max_abs_corr_to_selected"] < 0.7).sum())
+            lines.append("% ── Global cross-benchmark go-to tasks ──")
+            lines += [
+                _tex_cmd("GlobalGoToNumTasks", str(n_global_tasks)),
+                _tex_cmd("GlobalGoToIndependent", str(n_below_07)),
+            ]
+            gtbl = []
+            gtbl.append(r"\begin{table}[t]\small")
+            gtbl.append(r"\centering")
+            gtbl.append(r"\caption{Top 25 globally representative go-to tasks across all benchmarks, ranked by global useful representativeness (leave-one-out correlation with the full-pool aggregate $\times$ task variance). Full list in \texttt{task\_global\_representatives.csv}.}")
+            gtbl.append(r"\label{tab:global-go-to-tasks}")
+            gtbl.append(r"\begin{tabular}{llcc}")
+            gtbl.append(r"\toprule")
+            gtbl.append(r"Benchmark & Task & Score & Difficulty \\")
+            gtbl.append(r"\midrule")
+            for _, row in global_rep.head(25).iterrows():
+                bname = benchmark_display_name(str(row["benchmark"]))
+                tid = str(row["task_id"])
+                if len(tid) > 35:
+                    tid = tid[:32] + "..."
+                score = f'{float(row["global_useful_representativeness"]):.2f}'
+                tier = str(row["difficulty_tier"])
+                gtbl.append(f"{bname} & \\texttt{{{_tex_escape(tid)}}} & {score} & {tier} \\\\")
+            gtbl.append(r"\bottomrule")
+            gtbl.append(r"\end{tabular}")
+            gtbl.append(r"\end{table}")
+            global_goto_tex = "\n".join(gtbl)
+            lines.append(f"\\providecommand{{\\AppGlobalGoToTaskTable}}{{{global_goto_tex}}}")
+            lines.append("")
+
+            # ── First-10 global greedy selection sequence ──
+            if global_greedy is not None and not global_greedy.empty:
+                seq_lines = []
+                for _, row in global_greedy.head(10).iterrows():
+                    bname = benchmark_display_name(str(row["benchmark"]))
+                    tid = str(row["task_id"])
+                    if len(tid) > 30:
+                        tid = tid[:27] + "..."
+                    corr_val = float(row["max_abs_corr_to_selected"])
+                    seq_lines.append(f"  \\item {bname} / \\texttt{{{_tex_escape(tid)}}} ($r{{=}}{corr_val:.2f}$)")
+                greedy_seq_tex = "\n".join(seq_lines)
+                lines.append(f"\\providecommand{{\\AppGlobalGreedySequence}}{{{greedy_seq_tex}}}")
+                lines.append("")
+
+        # ── Combined go-to task set (top-3 independent+representative per benchmark) ──
+        goto_set = study_tables.get("task_goto_set")
+        if goto_set is not None and not goto_set.empty:
+            n_goto_tasks = len(goto_set)
+            n_goto_benchmarks = goto_set["benchmark"].nunique()
+            lines.append("% ── Combined go-to task set ──")
+            lines += [
+                _tex_cmd("GoToSetNumTasks", str(n_goto_tasks)),
+                _tex_cmd("GoToSetNumBenchmarks", str(n_goto_benchmarks)),
+            ]
+            gtbl2 = []
+            gtbl2.append(r"\begin{table}[t]\small")
+            gtbl2.append(r"\centering")
+            gtbl2.append(r"\caption{Combined go-to task set: top-3 independently informative and representative tasks per benchmark (greedy $\max|r|{<}0.7$, then ranked by useful representativeness). Showing first 30 of " + str(n_goto_tasks) + r" tasks across " + str(n_goto_benchmarks) + r" benchmarks.}")
+            gtbl2.append(r"\label{tab:goto-task-set}")
+            gtbl2.append(r"\begin{tabular}{llccc}")
+            gtbl2.append(r"\toprule")
+            gtbl2.append(r"Benchmark & Task & Repr.\ score & Greedy step & Difficulty \\")
+            gtbl2.append(r"\midrule")
+            prev_bench = None
+            for _, row in goto_set.head(30).iterrows():
+                bname = benchmark_display_name(str(row["benchmark"]))
+                tid = str(row["task_id"])
+                if len(tid) > 35:
+                    tid = tid[:32] + "..."
+                score = f'{float(row["useful_representativeness_score"]):.2f}'
+                step = str(int(row["greedy_step"]))
+                tier = str(row["difficulty_tier"])
+                if prev_bench is not None and bname != prev_bench:
+                    gtbl2.append(r"\addlinespace")
+                gtbl2.append(f"{bname} & \\texttt{{{_tex_escape(tid)}}} & {score} & {step} & {tier} \\\\")
+                prev_bench = bname
+            gtbl2.append(r"\bottomrule")
+            gtbl2.append(r"\end{tabular}")
+            gtbl2.append(r"\end{table}")
+            goto_set_tex = "\n".join(gtbl2)
+            lines.append(f"\\providecommand{{\\AppGoToTaskSetTable}}{{{goto_set_tex}}}")
+            lines.append("")
+
+            # Overlap analysis: per-benchmark top-1 vs global top-N
+            rep_path2 = KEY_TABLE_DIR / "task_level" / "task_representative_tasks.csv"
+            if rep_path2.exists() and global_rep is not None and not global_rep.empty:
+                local_rep_df = pd.read_csv(rep_path2)
+                per_bench_top1 = set(
+                    local_rep_df.sort_values("useful_representativeness_score", ascending=False)
+                    .groupby("benchmark")
+                    .head(1)["task_column"]
+                )
+                n_per_bench = len(per_bench_top1)
+                global_top_n = set(global_rep.head(n_per_bench)["task_column"])
+                overlap = per_bench_top1 & global_top_n
+                overlap_pct = len(overlap) / n_per_bench * 100 if n_per_bench > 0 else 0
+                lines += [
+                    _tex_cmd("GoToOverlapCount", str(len(overlap))),
+                    _tex_cmd("GoToOverlapTotal", str(n_per_bench)),
+                    _tex_cmd("GoToOverlapPct", _fmt(overlap_pct, 0)),
+                ]
+                lines.append("")
+
+        # ── Unified within/cross/global holdout comparison ──
+        unified = study_tables.get("task_holdout_unified_comparison")
+        if unified is not None and not unified.empty:
+            lines.append("% ── Unified task holdout comparison ──")
+            n_holdout_benchmarks = len(unified)
+            within_better = int((unified["global_vs_within_delta"] <= 0).sum())
+            cross_better = int((unified["global_vs_within_delta"] > 0).sum())
+            within_pct = within_better / n_holdout_benchmarks * 100
+            median_within_imp = float(unified["within_blend_vs_baseline_pct"].median())
+            median_cross_imp = float(unified["cross_blend_vs_baseline_pct"].median())
+            median_global_imp = float(unified["global_blend_vs_baseline_pct"].median())
+            lines += [
+                _tex_cmd("UnifiedHoldoutNumBenchmarks", str(n_holdout_benchmarks)),
+                _tex_cmd("UnifiedWithinBetter", str(within_better)),
+                _tex_cmd("UnifiedCrossBetter", str(cross_better)),
+                _tex_cmd("UnifiedWithinBetterPct", _fmt(within_pct, 0)),
+                _tex_cmd("UnifiedMedianWithinImp", _fmt(median_within_imp, 1)),
+                _tex_cmd("UnifiedMedianCrossImp", _fmt(median_cross_imp, 1)),
+                _tex_cmd("UnifiedMedianGlobalImp", _fmt(median_global_imp, 1)),
+            ]
+            lines.append("")
+
     except Exception as e:
         lines.append(f"% Task-level stats skipped: {e}")
         lines.append("")
@@ -1044,7 +1208,6 @@ KEY_TABLE_SUBDIRS = {
     "imputation_diagnostics_summary": "provenance",
     "benchmark_agent_model_scores": "leaderboards",
     "benchmark_scores_long": "leaderboards",
-    "benchmark_mini_leaderboards": "leaderboards",
     "task_benchmark_reliable_summary": "task_level",
     "task_to_benchmark_alignment": "task_level",
     "task_within_benchmark_similarity": "task_level",
@@ -1067,7 +1230,6 @@ def write_key_analysis_reports(
     benchmark_result: ImputationResult,
     task_result: ImputationResult,
     included_benchmarks: list[str],
-    mini_leaderboard_figures: list[str],
 ) -> None:
     filter_table = study_tables["benchmark_filtering"]
     provenance = study_tables["analysis_data_provenance"]
@@ -1116,7 +1278,7 @@ def write_key_analysis_reports(
     selected_tiers = selected_tasks["difficulty_tier"].value_counts().to_dict()
     selected_tier_summary = ", ".join(f"{tier}: {count}" for tier, count in selected_tiers.items())
     key_tables = sorted(str(path.relative_to(KEY_TABLE_DIR)) for path in KEY_TABLE_DIR.rglob("*.csv"))
-    all_key_figures = sorted(str(path.relative_to(KEY_FIGURE_DIR)) for path in KEY_FIGURE_DIR.rglob("*.png"))
+    all_key_figures = sorted(str(path.relative_to(KEY_FIGURE_DIR)) for path in KEY_FIGURE_DIR.rglob("*.pdf"))
     key_figures = [name for name in all_key_figures if not name.startswith("leaderboards/per_benchmark/")]
     per_benchmark_leaderboard_count = len(all_key_figures) - len(key_figures)
     code_files = [
@@ -1194,13 +1356,12 @@ def write_key_analysis_reports(
         "",
         "| Question | Status | Main artifacts |",
         "| --- | --- | --- |",
-        "| Agent vs model role overall and per benchmark | covered | `tables/benchmark_level/benchmark_within_family_model_vs_agent.csv`, `tables/benchmark_level/benchmark_within_family_summary.csv`, `figures/benchmark_level/within_family_model_vs_agent_summary.png` |",
+        "| Agent vs model role overall and per benchmark | covered | `tables/benchmark_level/benchmark_within_family_model_vs_agent.csv`, `tables/benchmark_level/benchmark_within_family_summary.csv`, `figures/benchmark_level/within_family_model_vs_agent_summary.pdf` |",
         "| BenchPress-style benchmark predictability and hard-to-predict benchmarks/tasks | covered | `tables/benchmark_level/benchmark_uniqueness_filtered.csv`, `tables/task_level/task_predictability_ranked.csv`, benchmark/task predictability figures |",
         "| Benchmark/task similarity and clustering | covered | `tables/benchmark_level/benchmark_similarity_clusters.csv`, `tables/task_level/task_cross_benchmark_similarity.csv`, clustered heatmaps |",
-        "| Representative tasks per benchmark | covered | `tables/task_level/task_representative_tasks.csv`, `figures/task_level/task_best_representatives.png` |",
-        "| Mini-leaderboards grouped by similar benchmarks | covered | `tables/leaderboards/benchmark_mini_leaderboards.csv`, `figures/leaderboards/clustered/mini_leaderboards_cluster_*.png` |",
+        "| Representative tasks per benchmark | covered | `tables/task_level/task_representative_tasks.csv`, `figures/task_level/task_best_representatives.pdf` |",
         "| Agent harness improvements over Terminus | covered | `tables/benchmark_level/benchmark_agent_lift_vs_terminus.csv`, `tables/benchmark_level/terminus_delta_by_model.csv`, Terminus heatmaps |",
-        "| Quantitative HaborMix task selection | covered | `tables/harbormix/harbormix_selected_tasks.csv`, `tables/harbormix/harbormix_selection_by_benchmark.csv`, `figures/harbormix/harbormix_selection_diagnostics.png` |",
+        "| Quantitative HaborMix task selection | covered | `tables/harbormix/harbormix_selected_tasks.csv`, `tables/harbormix/harbormix_selection_by_benchmark.csv`, `figures/harbormix/harbormix_selection_diagnostics.pdf` |",
         "",
         "## Study 1: Coverage Filtering",
         "",
@@ -1217,7 +1378,7 @@ def write_key_analysis_reports(
         f"- Excluded sparse benchmarks: {', '.join(excluded['benchmark'].tolist())}.",
         f"- Benchmark scores are task aggregates, not direct benchmark-imputation outputs; pre-aggregation benchmark missing fraction was {benchmark_result.missing_fraction:.3f}.",
         "",
-        *markdown_table(filter_table, ["benchmark", "include_in_key_analysis", "observed_count", "missing_fraction", "task_cell_missing_fraction"], 12),
+        *markdown_table(filter_table, ["benchmark", "include_in_key_analysis", "observed_count", "missing_fraction"], 12),
         "",
         "**Insight and findings:** Sparse columns should stay in appendix/provisional analysis until more experiments land. The main key analysis story should use the coverage-filtered benchmark set.",
         "",
@@ -1234,13 +1395,13 @@ def write_key_analysis_reports(
         f"- `{md_path(key_table_path('benchmark_model_adjusted_effects'))}`",
         f"- `{md_path(key_table_path('benchmark_agent_adjusted_effects'))}`",
         "",
-        report_image("benchmark_level/within_family_model_vs_agent_summary.png", "Within-family model vs agent effect size"),
+        report_image("benchmark_level/within_family_model_vs_agent_summary.pdf", "Within-family model vs agent effect size"),
         "",
-        report_image("benchmark_level/within_family_model_vs_agent_detail.png", "Within-family model vs agent effect by benchmark"),
+        report_image("benchmark_level/within_family_model_vs_agent_detail.pdf", "Within-family model vs agent effect by benchmark"),
         "",
-        report_image("benchmark_level/benchmark_model_adjusted_effects.png", "Model effects adjusted for agent and benchmark"),
+        report_image("benchmark_level/benchmark_model_adjusted_effects.pdf", "Model effects adjusted for agent and benchmark"),
         "",
-        report_image("benchmark_level/benchmark_agent_adjusted_effects.png", "Agent effects adjusted for model and benchmark"),
+        report_image("benchmark_level/benchmark_agent_adjusted_effects.pdf", "Agent effects adjusted for model and benchmark"),
         "",
         "**Result overview and analysis:**",
         *markdown_table(family_summary, ["family", "model_effect_median", "agent_effect_median", "model_wins", "total_benchmarks"], 10),
@@ -1257,14 +1418,7 @@ def write_key_analysis_reports(
         "**Result paths:**",
         f"- `{md_path(key_table_path('benchmark_agent_model_scores'))}`",
         f"- `{md_path(key_table_path('benchmark_scores_long'))}`",
-        f"- `{md_path(key_table_path('benchmark_mini_leaderboards'))}`",
         f"- `{md_path(key_table_path('benchmark_similarity_clusters'))}`",
-        f"- `{md_path(KEY_FIGURE_DIR / 'leaderboards' / 'clustered' / 'mini_leaderboards_cluster_*.png')}`",
-        f"- `{md_path(KEY_FIGURE_DIR / 'leaderboards' / 'per_benchmark' / 'mini_leaderboard_*.png')}`",
-        "",
-        report_image("leaderboards/benchmark_agent_model_top_scores.png", "Top agent+model pairs on included benchmarks"),
-        "",
-        *[report_image(fig, f"Mini-leaderboards {fig}") for fig in mini_leaderboard_figures],
         "",
         "**Result overview and analysis:**",
         *markdown_table(agent_model_scores, ["rank", "agent_model", "mean_score_percentile_across_benchmarks", "original_benchmark_table_coverage"], 10),
@@ -1279,7 +1433,7 @@ def write_key_analysis_reports(
         "The participation ratio (PR = (Σλ)² / Σλ²) measures how many components carry meaningful variance — "
         "a PR of k means the suite behaves like k independent benchmarks.",
         "",
-        report_image("benchmark_level/benchmark_effective_dimensionality.png", "Effective dimensionality: scree and cumulative variance"),
+        report_image("benchmark_level/benchmark_effective_dimensionality.pdf", "Effective dimensionality: scree and cumulative variance"),
         "",
         f"**Result:** {len(included_benchmarks)} benchmarks collapse to ~{dim_stats.iloc[0]['participation_ratio']:.0f} effective independent dimensions "
         f"(participation ratio). The first component alone explains {dim_stats.iloc[0]['top1_variance']:.1%} of variance; "
@@ -1291,9 +1445,9 @@ def write_key_analysis_reports(
         "**Method:** Every benchmark pair is labeled within-domain or cross-domain (using the domain taxonomy in `config.py`). "
         "We compare the Spearman correlation distributions to quantify how much domain grouping explains the correlation structure.",
         "",
-        report_image("benchmark_level/benchmark_domain_correlation_comparison.png", "Within- vs cross-domain correlation distributions"),
+        report_image("benchmark_level/benchmark_domain_correlation_comparison.pdf", "Within- vs cross-domain correlation distributions"),
         "",
-        report_image("benchmark_level/benchmark_correlation_by_domain.png", "Domain-grouped benchmark correlation heatmap"),
+        report_image("benchmark_level/benchmark_correlation_by_domain.pdf", "Domain-grouped benchmark correlation heatmap"),
         "",
         "**Result:**",
         *markdown_table(domain_corr_summary, ["group", "n_pairs", "mean_spearman", "median_spearman", "frac_above_0.7"], 15),
@@ -1306,7 +1460,7 @@ def write_key_analysis_reports(
         "0.4 × SVD-Logit (rank-2 soft-impute in logit space). Per-benchmark median absolute error on held-out cells "
         "measures predictability: higher error means the benchmark carries more unique signal.",
         "",
-        report_image("benchmark_level/benchmark_uniqueness_vs_coverage.png", "Benchmark predictability ranking (BenchPress holdout error)"),
+        report_image("benchmark_level/benchmark_uniqueness_vs_coverage.pdf", "Benchmark predictability ranking (BenchPress holdout error)"),
         "",
         "Hardest-to-predict benchmarks (highest holdout error):",
         *markdown_table(unique_low, ["benchmark", "cv_r2_from_other_included_benchmarks", "cv_rmse"], 10),
@@ -1320,11 +1474,11 @@ def write_key_analysis_reports(
         "greedily add the benchmark whose max |correlation| to the already-selected set is smallest. "
         "This orders benchmarks from most to least independently informative.",
         "",
-        report_image("benchmark_level/benchmark_greedy_selection.png", "Greedy benchmark selection order"),
+        report_image("benchmark_level/benchmark_greedy_selection.pdf", "Greedy benchmark selection order"),
         "",
         "### 4.5 Data-Driven Clustering",
         "",
-        report_image("benchmark_level/benchmark_similarity_clustered_heatmap.png", "Clustered benchmark similarity heatmap"),
+        report_image("benchmark_level/benchmark_similarity_clustered_heatmap.pdf", "Clustered benchmark similarity heatmap"),
         "",
         "**Code files:**",
         *code_files,
@@ -1360,11 +1514,11 @@ def write_key_analysis_reports(
         f"- `{md_path(key_table_path('task_within_benchmark_similarity'))}`",
         f"- `{md_path(key_table_path('task_cross_benchmark_similarity'))}`",
         "",
-        report_image("task_level/task_hard_to_predict_ranked.png", "Hard-to-predict reliable tasks"),
+        report_image("task_level/task_hard_to_predict_ranked.pdf", "Hard-to-predict reliable tasks"),
         "",
-        report_image("task_level/task_best_representatives.png", "Best representative task per benchmark"),
+        report_image("task_level/task_best_representatives.pdf", "Best representative task per benchmark"),
         "",
-        report_image("task_level/task_similarity_benchmark_pair_heatmap.png", "Task similarity across benchmark pairs"),
+        report_image("task_level/task_similarity_benchmark_pair_heatmap.pdf", "Task similarity across benchmark pairs"),
         "",
         "**Result overview and analysis:**",
         "Hardest-to-predict reliable tasks:",
@@ -1392,9 +1546,9 @@ def write_key_analysis_reports(
         f"- `{md_path(key_table_path('terminus_delta_by_model'))}`",
         f"- `{md_path(BENCHMARK_INTERMEDIATE_STUDY_DIR / 'benchmark_agent_lift_by_benchmark.csv')}`",
         "",
-        report_image("benchmark_level/benchmark_agent_lift_heatmap.png", "Agent lift vs terminus by benchmark"),
+        report_image("benchmark_level/benchmark_agent_lift_heatmap.pdf", "Agent lift vs terminus by benchmark"),
         "",
-        report_image("benchmark_level/terminus_delta_by_model_heatmap.png", "Agent lift vs terminus by model"),
+        report_image("benchmark_level/terminus_delta_by_model_heatmap.pdf", "Agent lift vs terminus by model"),
         "",
         "**Result overview and analysis:**",
         *markdown_table(agent_lift, ["agent", "mean_delta_vs_terminus", "win_rate_vs_terminus", "compared_models"], 6),
@@ -1416,11 +1570,11 @@ def write_key_analysis_reports(
         f"- `{md_path(TASK_INTERMEDIATE_STUDY_DIR / 'harbormix_scored_task_pool.csv')}`",
         f"- `{md_path(TASK_INTERMEDIATE_STUDY_DIR / 'task_frontier_or_saturated_watchlist.csv')}`",
         "",
-        report_image("harbormix/harbormix_selection_diagnostics.png", "HaborMix selection diagnostics"),
+        report_image("harbormix/harbormix_selection_diagnostics.pdf", "HaborMix selection diagnostics"),
         "",
-        report_image("task_level/task_reliable_difficulty_composition.png", "Reliable bounded task difficulty composition"),
+        report_image("task_level/task_reliable_difficulty_composition.pdf", "Reliable bounded task difficulty composition"),
         "",
-        report_image("task_level/task_reliable_difficulty_composition_percent.png", "Reliable bounded task difficulty composition by percentage"),
+        report_image("task_level/task_reliable_difficulty_composition_percent.pdf", "Reliable bounded task difficulty composition by percentage"),
         "",
         "**Result overview and analysis:**",
         *markdown_table(selection_by_benchmark, ["benchmark", "difficulty_tier", "selected_tasks", "mean_selection_score", "mean_representative_signal", "mean_unique_unpredictable_signal", "mean_difficulty_signal"], 14),
@@ -1441,7 +1595,7 @@ def write_key_analysis_reports(
         "**Result paths:**",
         f"- `{md_path(key_table_path('task_to_benchmark_alignment'))}`",
         "",
-        report_image("task_level/task_to_benchmark_alignment.png", "Task aggregate vs benchmark score alignment"),
+        report_image("task_level/task_to_benchmark_alignment.pdf", "Task aggregate vs benchmark score alignment"),
         "",
         "**Result overview and analysis:**",
         *markdown_table(alignment_good, ["benchmark", "n_reliable_bounded_tasks", "spearman_agent_model_correlation", "alignment_quality"], 12),
@@ -1489,13 +1643,13 @@ def write_key_analysis_reports(
         "",
         "The filtering table is now evidence-based on the task-first pipeline: benchmark scores come from filled-task aggregates, while the missingness columns describe how much original task evidence supported each aggregate before filling.",
         "",
-        report_image("benchmark_level/benchmark_uniqueness_vs_coverage.png", "Benchmark predictability ranking"),
+        report_image("benchmark_level/benchmark_uniqueness_vs_coverage.pdf", "Benchmark predictability ranking"),
         "",
-        *markdown_table(filter_table, ["benchmark", "include_in_key_analysis", "observed_count", "task_cell_missing_fraction"], 8),
+        *markdown_table(filter_table, ["benchmark", "include_in_key_analysis", "observed_count", "missing_fraction"], 8),
         "",
         "2. Model identity is the larger overall factor. Within-family analysis shows switching model produces larger score changes than switching agent across the majority of benchmarks.",
         "",
-        report_image("benchmark_level/within_family_model_vs_agent_summary.png", "Within-family model vs agent effect size"),
+        report_image("benchmark_level/within_family_model_vs_agent_summary.pdf", "Within-family model vs agent effect size"),
         "",
         *markdown_table(family_summary, ["family", "model_effect_median", "agent_effect_median", "model_wins", "total_benchmarks"], 8),
         "",
@@ -1503,7 +1657,7 @@ def write_key_analysis_reports(
         "",
         "The Terminus table should be read as a harnessing-effect estimate: the paired comparison holds model fixed where the same model appears under Terminus and another agent.",
         "",
-        report_image("benchmark_level/terminus_delta_by_model_heatmap.png", "Agent lift vs terminus by model"),
+        report_image("benchmark_level/terminus_delta_by_model_heatmap.pdf", "Agent lift vs terminus by model"),
         "",
         *markdown_table(agent_lift, ["agent", "mean_delta_vs_terminus", "win_rate_vs_terminus", "compared_models"], 6),
         "",
@@ -1511,7 +1665,7 @@ def write_key_analysis_reports(
         "",
         "The benchmark-predictability result is deliberately separate from clustering: regression asks whether other benchmarks reconstruct a target, while the heatmap shows score-profile similarity. Use both when deciding whether two benchmarks are redundant.",
         "",
-        report_image("benchmark_level/benchmark_similarity_clustered_heatmap.png", "Clustered benchmark similarity heatmap"),
+        report_image("benchmark_level/benchmark_similarity_clustered_heatmap.pdf", "Clustered benchmark similarity heatmap"),
         "",
         *markdown_table(unique_low, ["benchmark", "cv_r2_from_other_included_benchmarks", "cv_rmse"], 8),
         "",
@@ -1519,9 +1673,9 @@ def write_key_analysis_reports(
         "",
         "The representative-task score now uses leave-one-out aggregate correlation times task variance, so tasks that are merely typical but non-discriminative are less likely to dominate the selected base set.",
         "",
-        report_image("task_level/task_hard_to_predict_ranked.png", "Hard-to-predict reliable tasks"),
+        report_image("task_level/task_hard_to_predict_ranked.pdf", "Hard-to-predict reliable tasks"),
         "",
-        report_image("task_level/task_best_representatives.png", "Best representative task per benchmark"),
+        report_image("task_level/task_best_representatives.pdf", "Best representative task per benchmark"),
         "",
         *markdown_table(hard_tasks, ["benchmark", "task_id", "task_unpredictability_score", "difficulty_tier"], 8),
         "",
@@ -1531,7 +1685,7 @@ def write_key_analysis_reports(
         "",
         "The HaborMix scorer is no longer centered on moderate difficulty. It first takes useful representative base tasks, then fills to a compact target size with difficult, frontier-with-variance, unique/unpredictable, and high-composite tasks.",
         "",
-        report_image("harbormix/harbormix_selection_diagnostics.png", "HaborMix selection diagnostics"),
+        report_image("harbormix/harbormix_selection_diagnostics.pdf", "HaborMix selection diagnostics"),
         "",
         *markdown_table(selection_by_benchmark, ["benchmark", "difficulty_tier", "selected_tasks", "mean_selection_score"], 10),
         "",
@@ -1539,7 +1693,7 @@ def write_key_analysis_reports(
         "",
         "This table is diagnostic rather than a gate. Weak alignment means the reliable bounded subset may not proxy the full task-derived aggregate well; it does not automatically remove the benchmark from the benchmark-level analysis.",
         "",
-        report_image("task_level/task_to_benchmark_alignment.png", "Task aggregate vs benchmark score alignment"),
+        report_image("task_level/task_to_benchmark_alignment.pdf", "Task aggregate vs benchmark score alignment"),
         "",
         *markdown_table(alignment_good, ["benchmark", "n_reliable_bounded_tasks", "spearman_agent_model_correlation", "alignment_quality"], 8),
         "",

@@ -1,17 +1,16 @@
 from __future__ import annotations
 
 from ..core import *
-from ..preprocessing.svd_imputation import singular_value_report
 
 
-def benchmark_long(raw: pd.DataFrame, aggregated: pd.DataFrame, normalized: pd.DataFrame) -> pd.DataFrame:
+def benchmark_long(raw: pd.DataFrame, normalized: pd.DataFrame) -> pd.DataFrame:
     rows: list[pd.DataFrame] = []
     for benchmark in score_columns(raw):
         part = raw[KEY_COLUMNS].copy()
         part["benchmark"] = benchmark
         part["original_benchmark_table_score"] = raw[benchmark]
-        part["benchmark_score"] = aggregated[benchmark]
-        part["normalized_score"] = normalized[benchmark]
+        part["benchmark_score"] = raw[benchmark]
+        part["normalized_score"] = normalized[benchmark] if benchmark in normalized.columns else np.nan
         part["original_benchmark_table_missing"] = raw[benchmark].isna()
         rows.append(part)
     return pd.concat(rows, ignore_index=True)
@@ -48,15 +47,12 @@ def corr_or_nan(x: np.ndarray, y: np.ndarray) -> float:
 
 
 def task_stats(
-    raw_task: pd.DataFrame,
-    task_imputed: ImputationResult,
-    benchmark_imputed: ImputationResult,
+    task_result: ImputationResult,
+    benchmark_result: ImputationResult,
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    task_cols = score_columns(raw_task)
-    raw_values = raw_task[task_cols].astype(float)
-    imputed_raw_values = task_imputed.raw[task_cols].astype(float)
-    imputed_norm_values = task_imputed.normalized[task_cols].astype(float)
-    agent_model_strength = benchmark_imputed.normalized[score_columns(benchmark_imputed.normalized)].mean(axis=1).to_numpy()
+    task_cols = score_columns(task_result.raw)
+    raw_values = task_result.raw[task_cols].astype(float)
+    agent_model_strength = benchmark_result.normalized[score_columns(benchmark_result.normalized)].mean(axis=1).to_numpy()
 
     records: list[dict[str, float | int | str]] = []
     meta = task_metadata(task_cols).set_index("task_column")
@@ -66,7 +62,6 @@ def task_stats(
         raw_mean = float(observed.mean()) if count else np.nan
         raw_min = float(observed.min()) if count else np.nan
         raw_max = float(observed.max()) if count else np.nan
-        imputed_mean = float(imputed_raw_values[col].mean())
         records.append(
             {
                 "task_column": col,
@@ -79,11 +74,11 @@ def task_stats(
                 "observed_std": float(observed.std(ddof=0)) if count else np.nan,
                 "observed_min": raw_min,
                 "observed_max": raw_max,
-                "imputed_mean": imputed_mean,
-                "imputed_normalized_mean": float(imputed_norm_values[col].mean()),
-                "imputed_normalized_std": float(imputed_norm_values[col].std(ddof=0)),
-                "strength_correlation": corr_or_nan(imputed_norm_values[col].to_numpy(), agent_model_strength),
-                "difficulty_tier": bounded_tier(imputed_mean, raw_min, raw_max),
+                "imputed_mean": raw_mean,
+                "imputed_normalized_mean": raw_mean,
+                "imputed_normalized_std": float(observed.std(ddof=0)) if count else np.nan,
+                "strength_correlation": corr_or_nan(raw_values[col].to_numpy(), agent_model_strength),
+                "difficulty_tier": bounded_tier(raw_mean, raw_min, raw_max),
                 "negative_count": int((raw_values[col] < 0).sum()),
                 "gt_one_count": int((raw_values[col] > 1).sum()),
             }
@@ -109,13 +104,12 @@ def task_stats(
     )
     summary = summary.merge(tiers, on="benchmark", how="left")
 
-    task_benchmark_matrix = pd.concat([raw_task[KEY_COLUMNS], imputed_raw_values], axis=1)
     bench_records: list[pd.DataFrame] = []
     for benchmark, columns in meta.groupby("benchmark").groups.items():
-        part = raw_task[KEY_COLUMNS].copy()
-        part[benchmark] = imputed_raw_values[list(columns)].mean(axis=1)
+        part = task_result.raw[KEY_COLUMNS].copy()
+        part[benchmark] = raw_values[list(columns)].mean(axis=1)
         bench_records.append(part[[benchmark]])
-    from_tasks = pd.concat([raw_task[KEY_COLUMNS], *bench_records], axis=1)
+    from_tasks = pd.concat([task_result.raw[KEY_COLUMNS], *bench_records], axis=1)
     return item_stats, summary, from_tasks
 
 
@@ -303,29 +297,11 @@ def benchmark_correlations(benchmark_result: ImputationResult) -> tuple[pd.DataF
 
 
 def benchmark_predictability(benchmark_result: ImputationResult) -> pd.DataFrame:
+    from .benchmark_predictability import predictability_for_cols
+
     cols = score_columns(benchmark_result.normalized)
-    matrix = benchmark_result.normalized[cols].astype(float)
-    matrix = matrix.dropna(axis=1, how="any")
-    cols = list(matrix.columns)
-    rows = []
-    cv = KFold(n_splits=5, shuffle=True, random_state=RANDOM_SEED)
-    alphas = np.logspace(-3, 3, 13)
-    for target in cols:
-        x = matrix.drop(columns=[target]).to_numpy()
-        y = matrix[target].to_numpy()
-        predictions = np.full_like(y, np.nan, dtype=float)
-        for train_idx, test_idx in cv.split(x):
-            model = RidgeCV(alphas=alphas)
-            model.fit(x[train_idx], y[train_idx])
-            predictions[test_idx] = model.predict(x[test_idx])
-        rows.append(
-            {
-                "benchmark": target,
-                "cv_r2": float(r2_score(y, predictions)),
-                "cv_rmse": float(np.sqrt(np.mean((y - predictions) ** 2))),
-            }
-        )
-    return pd.DataFrame(rows).sort_values("cv_r2")
+    cols = [c for c in cols if benchmark_result.normalized[c].notna().any()]
+    return predictability_for_cols(benchmark_result.normalized, cols)
 
 
 def latent_loadings(
@@ -357,22 +333,17 @@ def latent_loadings(
 
 def write_tables(
     raw_benchmark: pd.DataFrame,
-    raw_task: pd.DataFrame,
     benchmark_result: ImputationResult,
     task_result: ImputationResult,
 ) -> dict[str, pd.DataFrame]:
-    long_df = benchmark_long(raw_benchmark, benchmark_result.raw, benchmark_result.normalized)
-    item_stats, task_summary, task_benchmark_matrix = task_stats(raw_task, task_result, benchmark_result)
+    long_df = benchmark_long(raw_benchmark, benchmark_result.normalized)
+    item_stats, task_summary, task_benchmark_matrix = task_stats(task_result, benchmark_result)
     agent_model_strength = agent_model_strength_scores(benchmark_result, raw_benchmark)
     agent_diff = agent_differential(benchmark_result)
     variance_df = variance_decomposition(long_df)
     corr, corr_pairs = benchmark_correlations(benchmark_result)
     predictability = benchmark_predictability(benchmark_result)
     loadings, latent_agent_model_scores, latent_explained = latent_loadings(benchmark_result)
-    svd_report = pd.concat(
-        [singular_value_report("benchmark", benchmark_result), singular_value_report("task", task_result)],
-        ignore_index=True,
-    )
 
     tables = {
         "benchmark_observed_imputed_long": long_df,
@@ -388,7 +359,6 @@ def write_tables(
         "benchmark_latent_loadings": loadings,
         "benchmark_latent_agent_model_scores": latent_agent_model_scores,
         "benchmark_latent_explained_variance": latent_explained,
-        "svd_scree": svd_report,
     }
     for name, table in tables.items():
         table.to_csv(PROCESSED_DIR / f"{name}.csv", index=False)

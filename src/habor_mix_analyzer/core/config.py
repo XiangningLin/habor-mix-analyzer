@@ -43,6 +43,7 @@ PAPER_BENCHMARKS: set[str] = {
     "cybergym",
     "dacode",
     "deepsynth",
+    "featurebench-modal",
     "financeagent_terminal",
     "gaia",
     "gaia2",
@@ -56,7 +57,6 @@ PAPER_BENCHMARKS: set[str] = {
     "lawbench",
     "livecodebench",
     "medagentbench",
-    "mlgym",
     "mmau",
     "mmmlu",
     "omnimath",
@@ -109,6 +109,7 @@ BENCHMARK_DOMAIN: dict[str, str] = {
     "compilebench": "Software Engineering",
     "crustbench": "Software Engineering",
     "featbench": "Software Engineering",
+    "featurebench-modal": "Software Engineering",
     "gso": "Software Engineering",
     "humanevalfix": "Software Engineering",
     "livecodebench": "Software Engineering",
@@ -136,7 +137,6 @@ BENCHMARK_DOMAIN: dict[str, str] = {
     "bixbench": "Scientific Research",
     "codepde": "Scientific Research",
     "labbench": "Scientific Research",
-    "mlgym": "Scientific Research",
     "qcircuitbench": "Scientific Research",
     "replicationbench": "Scientific Research",
     "research-code-bench": "Scientific Research",
@@ -165,6 +165,8 @@ BENCHMARK_DOMAIN: dict[str, str] = {
     "strongreject": "Safety & Security",
     # Multimodal
     "mmau": "Multimodal",
+    # Other
+    "aa-lcr": "Software Engineering",
 }
 
 BENCHMARK_DISPLAY_NAME: dict[str, str] = {
@@ -175,6 +177,7 @@ BENCHMARK_DISPLAY_NAME: dict[str, str] = {
     "compilebench": "CompileBench",
     "crustbench": "CRUST-Bench",
     "featbench": "FeatureBench",
+    "featurebench-modal": "FeatureBench",
     "gso": "GSO",
     "humanevalfix": "HumanEvalFix",
     "livecodebench": "LiveCodeBench",
@@ -202,7 +205,6 @@ BENCHMARK_DISPLAY_NAME: dict[str, str] = {
     "bixbench": "BIX-Bench",
     "codepde": "CodePDE",
     "labbench": "LAB-Bench",
-    "mlgym": "MLGym-Bench",
     "qcircuitbench": "QCircuitBench",
     "replicationbench": "ReplicationBench",
     "research-code-bench": "ResearchCodeBench",

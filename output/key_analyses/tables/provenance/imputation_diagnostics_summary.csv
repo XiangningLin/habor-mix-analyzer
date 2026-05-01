@@ -1,3 +1,3 @@
 matrix,agent_model_rows,score_columns,preprocessing_method,missing_fraction_before_processing,selected_imputation_method,selected_imputation_rank,task_imputation_method_used_for_benchmark_aggregation,task_imputation_rank_used_for_benchmark_aggregation,holdout_cells,holdout_rmse_scaled_score_space,holdout_mae_scaled_score_space,mae_gap_to_second_best_method,interpretation
-benchmark,16,57,task_imputation_then_benchmark_aggregate,0.027412280701754384,,,column_median,0.0,0,,,,Benchmark scores are not imputed directly; they are means of task scores after task-level filling.
-task,16,7290,column_median,0.05850480109739369,column_median,0.0,,,5491,11.222008461015198,0.8367051902983215,0.0025710283653958,"Task-level method is selected by held-out observed-cell validation; task matrix is wide and sparse, so item-level conclusions are restricted to reliable bounded non-degenerate tasks."
+benchmark,16,54,raw (no imputation),0.0,none,0,,,0,,,,Raw benchmark scores used directly (data is fully observed for PAPER_BENCHMARKS).
+task,16,6801,raw (no imputation),0.0,none,0,,,0,,,,Raw task scores used directly (data is fully observed for PAPER_BENCHMARKS).
