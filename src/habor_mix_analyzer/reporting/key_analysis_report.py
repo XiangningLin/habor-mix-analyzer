@@ -5,6 +5,7 @@ from ..core import *
 
 PAPER_TEX_PATH = ROOT / "paper" / "tex" / "paper.tex"
 PAPER_FIGS_DIR = ROOT / "paper" / "figs" / "main" / "quantitative"
+APPENDIX_FIGS_DIR = ROOT / "paper" / "figs" / "appendix" / "quantitative"
 
 PAPER_FIGURES = {
     "benchmark_level/within_family_model_vs_agent_summary.pdf": "within_family_model_vs_agent_summary.pdf",
@@ -19,12 +20,23 @@ PAPER_FIGURES = {
     "task_level/task_best_representatives.pdf": "task_best_representatives.pdf",
 }
 
+APPENDIX_FIGURES = {
+    "benchmark_level/benchmark_svd_spectrum.pdf": "benchmark_svd_spectrum.pdf",
+    "benchmark_level/benchmark_headroom_by_score.pdf": "benchmark_headroom_by_score.pdf",
+}
+
 
 def copy_paper_figures() -> None:
     PAPER_FIGS_DIR.mkdir(parents=True, exist_ok=True)
     for src_rel, dst_name in PAPER_FIGURES.items():
         src = KEY_FIGURE_DIR / src_rel
         dst = PAPER_FIGS_DIR / dst_name
+        if src.exists():
+            shutil.copy2(src, dst)
+    APPENDIX_FIGS_DIR.mkdir(parents=True, exist_ok=True)
+    for src_rel, dst_name in APPENDIX_FIGURES.items():
+        src = KEY_FIGURE_DIR / src_rel
+        dst = APPENDIX_FIGS_DIR / dst_name
         if src.exists():
             shutil.copy2(src, dst)
 
@@ -309,12 +321,68 @@ def write_paper_stats(study_tables: dict[str, pd.DataFrame], included_benchmarks
                 ]
         lines.append("")
 
-    # ── Figure paths (only macros actually used in paper.tex) ──
-    fig = "../figs/main/quantitative"
-    lines.append("% ── Figure paths (all under paper/figs/main/quantitative/) ──")
-    lines += [
-        _tex_cmd("FigHeadroomByDomain", f"{fig}/bench_progress_and_headroom"),
-    ]
+    # ── Cross-referenced appendix macros (also needed by paper.tex prose) ──
+    # These are computed in write_appendix_stats; we duplicate them here so
+    # paper.tex compiles independently of appendix include order.
+    lines.append("% ── Appendix macros also used in paper.tex ──")
+    uniq = study_tables.get("benchmark_uniqueness_filtered")
+    if uniq is not None and "benchpress_medape" in uniq.columns:
+        uniq_sorted = uniq.sort_values("benchpress_medape")
+        uniq_rev = uniq.sort_values("benchpress_medape", ascending=False)
+        for i, label in enumerate(["One", "Two", "Three"]):
+            if i < len(uniq_sorted):
+                r = uniq_sorted.iloc[i]
+                lines += [
+                    _tex_cmd(f"BenchPressRedundant{label}", benchmark_display_name(str(r["benchmark"]))),
+                    _tex_cmd(f"BenchPressRedundant{label}Score", _fmt(float(r["benchpress_medape"]), 1)),
+                ]
+            if i < len(uniq_rev):
+                r = uniq_rev.iloc[i]
+                lines += [
+                    _tex_cmd(f"BenchPressUnique{label}", benchmark_display_name(str(r["benchmark"]))),
+                    _tex_cmd(f"BenchPressUnique{label}Score", _fmt(float(r["benchpress_medape"]), 1)),
+                ]
+
+    greedy = study_tables.get("benchmark_greedy_selection")
+    if greedy is not None:
+        below_07 = int((greedy["max_abs_corr_to_selected"] < 0.7).sum())
+        first_above = greedy[greedy["max_abs_corr_to_selected"] >= 0.7]
+        lines += [
+            _tex_cmd("GreedyBenchmarksBelowSeven", str(below_07)),
+            _tex_cmd("GreedyFirstAboveSeven", benchmark_display_name(str(first_above.iloc[0]["benchmark"])) if len(first_above) > 0 else "—"),
+            _tex_cmd("GreedyFirstAboveSevenStep", str(int(first_above.iloc[0]["step"])) if len(first_above) > 0 else "—"),
+        ]
+
+    # AppNumSystems used by paper.tex BenchPress paragraph
+    if raw_benchmark is not None:
+        lines.append(_tex_cmd("AppNumSystems", str(len(raw_benchmark))))
+
+    # SVD spectrum macros used by paper.tex BenchPress paragraph
+    from ..studies.benchmark_predictability import _is_pct_col, _to_logit
+    if raw_benchmark is not None:
+        mat_np = raw_benchmark.drop(columns=KEY_COLUMNS, errors="ignore").select_dtypes(include=[np.number]).values
+        agents_list = raw_benchmark["agent"].tolist()
+        eps = 0.005
+        M_logit = mat_np.copy()
+        for j in range(M_logit.shape[1]):
+            valid = ~np.isnan(mat_np[:, j])
+            if valid.any() and _is_pct_col(mat_np[:, j]):
+                M_logit[valid, j] = _to_logit(mat_np[valid, j], eps=eps)
+        col_mean = np.nanmean(M_logit, axis=0)
+        col_std = np.nanstd(M_logit, axis=0)
+        col_std[col_std == 0] = 1
+        M_z = (M_logit - col_mean) / col_std
+        M_z_filled = np.where(np.isnan(M_z), 0.0, M_z)
+        terminus_mask = [a == BASELINE_AGENT for a in agents_list]
+        M_model_only = M_z_filled[terminus_mask, :]
+        _, s_mo, _ = np.linalg.svd(M_model_only, full_matrices=False)
+        v_mo = (s_mo ** 2) / (s_mo ** 2).sum()
+        _, s_full, _ = np.linalg.svd(M_z_filled, full_matrices=False)
+        v_full = (s_full ** 2) / (s_full ** 2).sum()
+        lines += [
+            _tex_cmd("AppSVDModelOnlyPCOne", _fmt(v_mo[0] * 100, 1)),
+            _tex_cmd("AppSVDFullPCTwo", _fmt(v_full[1] * 100, 1)),
+        ]
     lines.append("")
 
     import re
@@ -603,6 +671,24 @@ def write_appendix_stats(
                 ]
         lines.append("")
 
+    # ── Benchmark-level greedy selection sequence ──
+    greedy = study_tables.get("benchmark_greedy_selection")
+    if greedy is not None and not greedy.empty:
+        lines.append("% ── Benchmark greedy selection sequence ──")
+        seq_lines = []
+        for _, row in greedy.head(10).iterrows():
+            bname = benchmark_display_name(str(row["benchmark"]))
+            domain = str(row["domain"])
+            corr_val = float(row["max_abs_corr_to_selected"])
+            seq_lines.append(f"  \\item {bname} ($\\rho{{=}}{corr_val:.2f}$, {_tex_escape(domain)})")
+        greedy_seq_tex = "\n".join(seq_lines)
+        lines.append(f"\\providecommand{{\\AppBenchGreedySequence}}{{{greedy_seq_tex}}}")
+        above_07 = greedy[greedy["max_abs_corr_to_selected"] >= 0.7]
+        if not above_07.empty:
+            first_above = above_07.iloc[0]
+            lines.append(_tex_cmd("GreedyFirstAboveSevenCorr", f"{float(first_above['max_abs_corr_to_selected']):.2f}"))
+        lines.append("")
+
     # ── Task-level SVD extension ──
     lines.append("% ── Task-level SVD ──")
     try:
@@ -829,7 +915,7 @@ def write_appendix_stats(
                     if len(tid) > 30:
                         tid = tid[:27] + "..."
                     corr_val = float(row["max_abs_corr_to_selected"])
-                    seq_lines.append(f"  \\item {bname} / \\texttt{{{_tex_escape(tid)}}} ($r{{=}}{corr_val:.2f}$)")
+                    seq_lines.append(f"  \\item {bname} / \\texttt{{{_tex_escape(tid)}}} ($\\rho{{=}}{corr_val:.2f}$)")
                 greedy_seq_tex = "\n".join(seq_lines)
                 lines.append(f"\\providecommand{{\\AppGlobalGreedySequence}}{{{greedy_seq_tex}}}")
                 lines.append("")
@@ -847,7 +933,7 @@ def write_appendix_stats(
             gtbl2 = []
             gtbl2.append(r"\begin{table}[t]\small")
             gtbl2.append(r"\centering")
-            gtbl2.append(r"\caption{Combined go-to task set: top-3 independently informative and representative tasks per benchmark (greedy $\max|r|{<}0.7$, then ranked by useful representativeness). Showing first 30 of " + str(n_goto_tasks) + r" tasks across " + str(n_goto_benchmarks) + r" benchmarks.}")
+            gtbl2.append(r"\caption{Combined go-to task set: top-3 independently informative and representative tasks per benchmark (greedy $\max|\rho|{<}0.7$, then ranked by useful representativeness). Showing first 30 of " + str(n_goto_tasks) + r" tasks across " + str(n_goto_benchmarks) + r" benchmarks.}")
             gtbl2.append(r"\label{tab:goto-task-set}")
             gtbl2.append(r"\begin{tabular}{llccc}")
             gtbl2.append(r"\toprule")
@@ -913,6 +999,50 @@ def write_appendix_stats(
                 _tex_cmd("UnifiedMedianCrossImp", _fmt(median_cross_imp, 1)),
                 _tex_cmd("UnifiedMedianGlobalImp", _fmt(median_global_imp, 1)),
             ]
+            lines.append("")
+
+        # ── Task holdout method comparison stats ──
+        holdout_methods = study_tables.get("task_holdout_method_comparison")
+        if holdout_methods is not None and not holdout_methods.empty:
+            lines.append("% ── Task holdout method stats ──")
+            n_hm_benchmarks = len(holdout_methods)
+            n_hm_improved = int((holdout_methods["blend_improvement_pct"] > 0).sum())
+            hm_median_imp = float(holdout_methods["blend_improvement_pct"].median())
+            best_hm = holdout_methods.sort_values("blend_improvement_pct", ascending=False)
+            worst_hm = holdout_methods.sort_values("blend_improvement_pct", ascending=True)
+            lines += [
+                _tex_cmd("TaskHoldoutNumBenchmarks", str(n_hm_benchmarks)),
+                _tex_cmd("TaskHoldoutNumImproved", str(n_hm_improved)),
+                _tex_cmd("TaskHoldoutMedianImprovement", _fmt(hm_median_imp, 1)),
+            ]
+            for i, label in enumerate(["One", "Two", "Three"]):
+                if i < len(best_hm):
+                    r = best_hm.iloc[i]
+                    lines += [
+                        _tex_cmd(f"TaskHoldoutBest{label}Name", benchmark_display_name(str(r["benchmark"]))),
+                        _tex_cmd(f"TaskHoldoutBest{label}Imp", _fmt(float(r["blend_improvement_pct"]), 1)),
+                    ]
+                if i < len(worst_hm):
+                    r = worst_hm.iloc[i]
+                    lines.append(_tex_cmd(f"TaskHoldoutWorst{label}Name", benchmark_display_name(str(r["benchmark"]))))
+            lines.append("")
+
+        # ── Within-benchmark greedy selection stats ──
+        greedy_summary = study_tables.get("task_greedy_selection_summary")
+        if greedy_summary is not None and not greedy_summary.empty:
+            lines.append("% ── Within-benchmark greedy stats ──")
+            by_frac = greedy_summary.sort_values("frac_below_0.7", ascending=False)
+            by_frac_low = greedy_summary.sort_values("frac_below_0.7", ascending=True)
+            for i, label in enumerate(["One", "Two"]):
+                if i < len(by_frac):
+                    r = by_frac.iloc[i]
+                    lines += [
+                        _tex_cmd(f"TaskGreedyHighIndep{label}Name", benchmark_display_name(str(r["benchmark"]))),
+                        _tex_cmd(f"TaskGreedyHighIndep{label}Pct", f"{float(r['frac_below_0.7'])*100:.0f}"),
+                    ]
+                if i < len(by_frac_low):
+                    r = by_frac_low.iloc[i]
+                    lines.append(_tex_cmd(f"TaskGreedyLowIndep{label}Name", benchmark_display_name(str(r["benchmark"]))))
             lines.append("")
 
     except Exception as e:

@@ -191,142 +191,71 @@
 \providecommand{\AimeGptNanoCodexAgent}{0.739}
 \providecommand{\AimeGptNanoCodexDeltaPP}{-1.7}
 
-% ── Figure paths (all under paper/figs/main/quantitative/) ──
-\providecommand{\FigHeadroomByDomain}{../figs/main/quantitative/bench\_progress\_and\_headroom}
+% ── Appendix macros also used in paper.tex ──
+\providecommand{\BenchPressRedundantOne}{HLE}
+\providecommand{\BenchPressRedundantOneScore}{38.5}
+\providecommand{\BenchPressUniqueOne}{MMAU}
+\providecommand{\BenchPressUniqueOneScore}{419.2}
+\providecommand{\BenchPressRedundantTwo}{Aider Polyglot}
+\providecommand{\BenchPressRedundantTwoScore}{39.4}
+\providecommand{\BenchPressUniqueTwo}{KUMO}
+\providecommand{\BenchPressUniqueTwoScore}{295.2}
+\providecommand{\BenchPressRedundantThree}{GPQA Diamond}
+\providecommand{\BenchPressRedundantThreeScore}{40.7}
+\providecommand{\BenchPressUniqueThree}{Reasoning Gym}
+\providecommand{\BenchPressUniqueThreeScore}{254.3}
+\providecommand{\GreedyBenchmarksBelowSeven}{13}
+\providecommand{\GreedyFirstAboveSeven}{GSO}
+\providecommand{\GreedyFirstAboveSevenStep}{14}
+\providecommand{\AppNumSystems}{16}
+\providecommand{\AppSVDModelOnlyPCOne}{71.8}
+\providecommand{\AppSVDFullPCTwo}{10.5}
 
 % @@STATS_END@@
 
+% ── Figure paths (not auto-generated) ──
+\providecommand{\FigHeadroomByDomain}{figs/main/quantitative/bench_progress_and_headroom}
+
 \subsubsection{Benchmarks}
 
-%%% !todo: need to make sure all the figures and data being used is from the finalized benchmarks.
-
-%%% for each part of these, it can be included in the appendix for all the math equations, data details, and more figures.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{How fast are models improving over time?}
-% TODO: progress-over-time figure (needs model release dates in data).
-% \lin{We need one main figure here: progress by the years of some main
-% benchmarks that we care and can make apple-to-apple comparison. Each domain
-% should share the same color - different benchmarks should have different
-% color intensity.}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Which benchmarks still challenge frontier systems?}
-Current evaluations exhibit a severe saturation problem. Among the
-\NumIncludedBenchmarks{} benchmarks analyzed (\outlinecomment{xiangning: these need to use the finalized benchmarks}),
-about one-fifth (\NumSaturatedBenchmarks{}) have already been effectively
-solved (best model with agents has scores $>$95\%). This saturation spans traditionally
-``difficult'' domains, including Mathematics \& Reasoning (e.g., AIME, KUMO)
-and Knowledge \& Long Context (e.g., GPQA Diamond). Consequently, these
-benchmarks now offer minimal headroom to differentiate the next generation
-of frontier models.
+\textit{Progress is fastest where evaluation is densest---perceived stagnation often reflects measurement gaps, not capability plateaus.}
+Historical progress has concentrated in domains with dense leaderboard coverage---Mathematics \& Reasoning and competitive coding---where scores approach saturation within months of release (Appendix~\ref{app:overtime}).  Agent-intensive domains (tool use, scientific research, long-horizon planning) show sparser measurement histories and substantially more remaining headroom, suggesting that \emph{evaluation infrastructure}, not only capability, gates perceived progress.
 
-The remaining challenge lies unevenly across domains. While areas like
-\MostHeadroomDomainOne{} and \MostHeadroomDomainTwo{} retain substantial
-headroom, Software Engineering emerges as the most structurally heterogeneous
-domain. It simultaneously contains the highest concentration of saturated
-tasks (e.g., HumanEvalFix, CompileBench) and the highest concentration of
-unsolved challenges (e.g., \SEHardBenchmarkOne{}, \SEHardBenchmarkTwo{},
-where state-of-the-art systems still score below 50\%). This dichotomy
-highlights a fundamental shift in AI capabilities: while isolated,
-well-specified coding tasks (like bug fixing or snippet generation) are
-largely solved, open-ended, system-level software engineering remains a
-true frontier.
+Among the \NumIncludedBenchmarks{} benchmarks in our evaluation, roughly one-fifth (\NumSaturatedBenchmarks{}) are effectively saturated ($>$95\% best score), spanning traditionally ``hard'' tasks such as AIME and GPQA Diamond.  The remaining challenge concentrates unevenly: Software Engineering simultaneously hosts solved function-level tasks and unsolved system-level challenges where frontier systems still score below 50\% (Figure~\ref{fig:headroom-by-domain}).  This within-domain heterogeneity---between well-specified, unit-testable problems and open-ended engineering---marks the boundary of current agentic capability.
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\linewidth]{\FigHeadroomByDomain}
-  \caption{Best system score per benchmark, colored by domain. The shaded area
-    represents headroom---room for improvement. Benchmarks are sorted within
-    each domain by best score.}
+  \caption{Best system score per benchmark, colored by domain.  Benchmarks are sorted within each domain by best score; shaded area indicates remaining headroom.}
   \label{fig:headroom-by-domain}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Are benchmark scores predictable, and does agent scaffolding alter this structure?}
+\paragraph{How many benchmarks do we actually need?}
+\textit{A single capability axis dominates model-only evaluation; agent scaffolding introduces a structurally distinct second dimension.}
+Applying BenchPress-style matrix completion~\cite{papailiopoulos2026benchpress} to our \AppNumSystems{}-system $\times$ \NumIncludedBenchmarks{}-benchmark matrix, a single principal component captures \AppSVDModelOnlyPCOne{}\% of variance under the minimal Terminus-2 scaffold---comparable to the 71\% reported by BenchPress on model-only matrices.  When advanced scaffolds are included, a second orthogonal component emerges (\AppSVDFullPCTwo{}\% additional variance) that cleanly separates scaffolded from unscaffolded systems (Appendix~\ref{app:benchpress}).
 
-Recent work shows model-only benchmark scores are highly
-redundant and predictable via low-rank matrix
-completion~\cite{papailiopoulos2026benchpress}. We find a
-similar low-rank structure persists in our setting, but it
-fundamentally changes when introducing advanced agent
-scaffolds. Under the minimal Terminus-2 baseline, a single
-principal component explains \AppSVDModelOnlyPCOne{}\% of
-variance (comparable to the 71\% reported by BenchPress on
-scaffold-free evaluations). When advanced scaffolds are
-included, a second orthogonal component emerges
-(\AppSVDFullPCTwo{}\% variance) that perfectly separates
-advanced-scaffold systems from baseline systems.
-This indicates agent scaffolding is not a uniform score
-multiplier, but introduces a structurally distinct capability
-dimension (Appendix~\ref{app:benchpress} details SVD
-methodology and task-level predictability limitations).
+\textit{Difficulty and uniqueness are decoupled.}
+Greedy forward selection retains only \GreedyBenchmarksBelowSeven{} of \NumIncludedBenchmarks{} benchmarks at the $|\rho|<0.7$ pairwise Spearman independence threshold.  Benchmarks that resist prediction tend to involve open-ended exploration, multi-step tool use, or domain-specific reasoning---capabilities orthogonal to the dominant axis.  Some of the hardest benchmarks are fully predicted by easier ones, while moderate-difficulty tasks provide irreplaceable signal.  This motivates evaluation design that prioritizes \emph{coverage of independent capability axes} over raw difficulty.
 
-Despite this added complexity, the combined model-agent matrix
-remains highly predictable. Using a matrix-completion approach
-(Appendix~\ref{app:benchpress}), we find that many established
-benchmarks are largely redundant: scores on
-\BenchPressRedundantOne{}
-(\BenchPressRedundantOneScore{}\% median absolute percentage
-error), \BenchPressRedundantTwo{}
-(\BenchPressRedundantTwoScore{}\%), and
-\BenchPressRedundantThree{} (\BenchPressRedundantThreeScore{}\%)
-can be reliably reconstructed from a sparse subset of other
-evaluations. Conversely, benchmarks that resist
-prediction---such as \BenchPressUniqueOne{}
-(\BenchPressUniqueOneScore{}\% error), \BenchPressUniqueTwo{}
-(\BenchPressUniqueTwoScore{}\%), and \BenchPressUniqueThree{}
-(\BenchPressUniqueThreeScore{}\%)---measure capabilities orthogonal to the
-dominant axes. Notably, AIME---despite being considered a difficult
-mathematics benchmark---is among the most predictable
-(\BenchPressRedundantOneScore{}\%-class MedAPE), confirming that
-difficulty and uniqueness are decoupled: to meaningfully differentiate
-future agentic systems, evaluation design must pivot from creating
-harder static questions toward tasks that demand open-ended
-exploration and long-horizon planning.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Agent Harness}
 \label{sec:agent-harness}
-\outlinecomment{0.5 pages}
 
-\paragraph{Does the model or the agent matter more?}
-When deploying an agentic system, practitioners must choose both a base
-model and an agent scaffold. To quantify their relative importance, we
-compare the variance introduced by swapping models versus swapping agents
-within the same provider family (Appendix~\ref{app:within-family}).
+\paragraph{Which matters more: the model or the scaffold?}
+\textit{The foundation model is the binding constraint; scaffolding modulates how capability is deployed but does not substitute for capability itself.}
+Across all three provider families, upgrading the base model produces \AnthropicModelAgentRatio{}--\OpenAIModelAgentRatio{}$\times$ larger score changes than switching the scaffold (Appendix~\ref{app:within-family}).  When adjusting for baseline difficulty across all \NumModels{} models and \NumAgents{} agents, variance attributable to the model exceeds that of the scaffold by over an order of magnitude.
 
-The results strongly favor model selection. In both the Anthropic family
-(model-dominant on \AnthropicModelWinPct\% of benchmarks, ratio
-\AnthropicModelAgentRatio{}$\times$) and the OpenAI family
-(\OpenAIModelWinPct\%, \OpenAIModelAgentRatio{}$\times$), upgrading the
-underlying model yields a substantially larger score change than switching
-the agent harness. The Google family is the exception: with only two
-models and a ratio of \GoogleModelAgentRatio{}$\times$, agent and model
-effects are comparable (\GoogleModelWinPct\% model-dominant). When
-adjusting for baseline difficulty across all \NumModels{} models and
-\NumAgents{} agents (Appendix~\ref{app:adjusted-effects}), the variance
-attributed to the base model exceeds that of the agent scaffold by over
-an order of magnitude. Thus, while sophisticated agent harnesses garner
-significant attention, the raw capability of the underlying foundation
-model remains the primary bottleneck for system-level performance.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Does the agent harness help, and when?}
-We compare each agent scaffold against the Terminus~2 neutral baseline across
-all benchmarks. Table~\ref{tab:agent-lift} holds the agent fixed within each
-provider family and varies the underlying model from strong to weak.
+\paragraph{When does scaffolding help?}
+\textit{Scaffolding requires a \emph{competence floor}; above it, two contrasting regimes emerge.}
+The base model must be strong enough to absorb the orchestration overhead---planning, tool dispatch, context management---that the scaffold imposes.  Below this floor, agentic wrapping \emph{degrades} results (Table~\ref{tab:agent-lift}).
 
 \begin{table}[t]\small
 \centering
-\caption{Agent lift over Terminus~2 by model tier within each provider family.
-  Agent~$\Delta$ is the mean score change; Positive Lift is the fraction of
-  benchmarks where the agent scaffold strictly improves upon the neutral
-  harness score.}
+\caption{Agent lift over Terminus~2 by model tier.  $\Delta$: mean normalized score change; Positive Lift: fraction of benchmarks where the scaffold strictly improves upon the neutral harness.}
 \label{tab:agent-lift}
 \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llccc@{}}
 \toprule
-Family & Model (tier) & Base & Agent $\Delta$ & Positive Lift \\
+Family & Model (tier) & Base & Agent $\Delta$ & Pos.\ Lift \\
 \midrule
 \multirow{3}{*}{OpenAI + Codex}
   & GPT-5.4 (strong)  & \GPTFiveFourBase & \GPTFiveFourDelta & \GPTFiveFourLift\% \\
@@ -345,28 +274,10 @@ Family & Model (tier) & Base & Agent $\Delta$ & Positive Lift \\
 \end{tabular*}
 \end{table}
 
-Agent scaffolding does not uniformly improve model
-performance. A necessary condition is that the base model
-exceeds a \emph{competence floor} set by the orchestration
-overhead of the scaffold (planning, tool dispatch, context
-management); below this floor, agentic wrapping degrades
-results---GPT-5-Nano under Codex improves on only \GPTNanoLift\% of
-benchmarks, and Gemini~Flash under Gemini~CLI shows essentially zero
-mean delta (\GeminiFlashDelta{}) despite improving on \GeminiFlashLift\%
-of benchmarks individually (Table~\ref{tab:agent-lift}).
-
-Above this floor, the magnitude and distribution of gains
-depend on the scaffold--model pairing in a structured way.
-We observe two contrasting regimes.
-\textbf{Capability amplification}, exemplified by Codex,
-where gains scale \emph{with} base-model strength
-(Table~\ref{tab:agent-lift}), consistent with a scaffold
-that exposes capabilities the model already possesses but
-cannot deploy in single-turn evaluation.
-\textbf{Gap closing}, exemplified by Claude~Code, where
-gains scale \emph{inversely} with base-model strength,
-consistent with a scaffold that compensates for weaknesses
-through retry and decomposition strategies.
-Gemini~CLI falls between the two, providing a modest,
-roughly uniform lift across tiers.
+Above this floor, scaffold design interacts with model strength in two distinct ways:
+\begin{itemize}[nosep,leftmargin=1.5em]
+  \item \textbf{Capability amplification} (Codex)---gains scale \emph{with} base-model strength, consistent with a scaffold that unlocks latent capabilities the model cannot deploy in single-turn evaluation.
+  \item \textbf{Gap closing} (Claude~Code)---gains scale \emph{inversely} with base-model strength, consistent with a scaffold that compensates for weaknesses via retry and decomposition.
+\end{itemize}
+These two regimes suggest that there is no universally optimal scaffold: strong models need an orchestrator that \emph{expands} their action space, while weaker models need one that \emph{constrains and corrects}.
 

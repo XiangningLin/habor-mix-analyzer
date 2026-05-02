@@ -434,7 +434,7 @@ def write_study_tables(study_tables: dict[str, pd.DataFrame]) -> None:
         write_csv(study_tables[name], KEY_TABLE_DIR / subdir / f"{name}.csv")
 
 
-def write_study_figures(study_tables: dict[str, pd.DataFrame], raw_benchmark: pd.DataFrame) -> None:
+def write_study_figures(study_tables: dict[str, pd.DataFrame], raw_benchmark: pd.DataFrame, included_benchmarks: list[str] | None = None) -> None:
     log("figures: writing paper figures")
     set_plot_style()
     save_within_family_summary_plot(study_tables["benchmark_within_family_summary"])
@@ -448,7 +448,7 @@ def write_study_figures(study_tables: dict[str, pd.DataFrame], raw_benchmark: pd
         study_tables["benchmark_effective_dimensionality"].iloc[0].to_dict(),
     )
     save_greedy_selection_plot(study_tables["benchmark_greedy_selection"])
-    save_svd_spectrum_plot(raw_benchmark)
+    save_svd_spectrum_plot(raw_benchmark, included_benchmarks)
     save_task_similarity_heatmap(
         study_tables["task_cross_benchmark_similarity"], study_tables["benchmark_similarity_clusters"]
     )
@@ -466,7 +466,7 @@ def run_studies_step() -> None:
         raw_benchmark, benchmark_result, task_result, tables,
     )
     write_study_tables(study_tables)
-    write_study_figures(study_tables, raw_benchmark)
+    write_study_figures(study_tables, raw_benchmark, included_benchmarks)
     write_key_analysis_reports(study_tables, benchmark_result, task_result, included_benchmarks)
     write_paper_stats(study_tables, included_benchmarks, raw_benchmark)
     write_appendix_stats(study_tables, benchmark_result, included_benchmarks)

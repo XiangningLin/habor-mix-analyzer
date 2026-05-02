@@ -13,6 +13,81 @@ def darken_color(color: str, factor: float = 0.72) -> str:
     return to_hex((r * factor, g * factor, b * factor))
 
 
+def save_svd_spectrum_plot(raw_mat: pd.DataFrame, included_benchmarks: list[str] | None = None) -> None:
+    from ..studies.benchmark_predictability import _is_pct_col, _to_logit
+
+    key = ["model", "agent"]
+    agents = raw_mat["agent"].tolist()
+    bench_names = [c for c in raw_mat.columns if c not in key and raw_mat[c].dtype.kind in "fi"]
+    if included_benchmarks is not None:
+        bench_names = [c for c in bench_names if c in included_benchmarks]
+    matrix_np = raw_mat[bench_names].values
+    eps = 0.005
+
+    def _logit_zscore(M: np.ndarray) -> np.ndarray:
+        M_l = M.copy()
+        is_pct = np.array([_is_pct_col(M[:, j]) for j in range(M.shape[1])])
+        for j in range(M_l.shape[1]):
+            valid = ~np.isnan(M_l[:, j])
+            if valid.any() and is_pct[j]:
+                M_l[valid, j] = _to_logit(M[valid, j], eps=eps)
+        mu = np.nanmean(M_l, axis=0)
+        sd = np.nanstd(M_l, axis=0)
+        sd[sd == 0] = 1
+        Mz = (M_l - mu) / sd
+        return np.where(np.isnan(Mz), 0.0, Mz)
+
+    terminus_mask = np.array([a == BASELINE_AGENT for a in agents])
+
+    spectra = {}
+    for label, mask in [("Baseline scaffold (Terminus-2)", terminus_mask), ("Full (all scaffolds)", np.ones(len(agents), dtype=bool))]:
+        Mz = _logit_zscore(matrix_np[mask])
+        _, s, _ = np.linalg.svd(Mz, full_matrices=False)
+        v = (s ** 2) / (s ** 2).sum() * 100
+        spectra[label] = v
+
+    n_show = min(10, min(len(v) for v in spectra.values()))
+    x = np.arange(n_show)
+    bar_w = 0.35
+
+    fig, ax = plt.subplots(figsize=(10, 5.5))
+    ax2 = ax.twinx()
+
+    colors = {"Baseline scaffold (Terminus-2)": "#4292c6", "Full (all scaffolds)": "#756bb1"}
+    for i, (label, v) in enumerate(spectra.items()):
+        vals = v[:n_show]
+        bars = ax.bar(x + (i - 0.5) * bar_w, vals, bar_w, label=label,
+                      color=colors[label], edgecolor="white", alpha=0.85)
+        for j, bar in enumerate(bars):
+            if vals[j] > 3:
+                ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.8,
+                        f"{vals[j]:.1f}%", ha="center", va="bottom", fontsize=8,
+                        color=colors[label], fontweight="bold")
+
+    for label, v in spectra.items():
+        remaining = 100 - np.cumsum(v[:n_show])
+        ax2.plot(x, remaining, "o-", color=colors[label], markersize=5, alpha=0.7)
+
+    ax.set_xticks(x)
+    ax.set_xticklabels([f"$\\sigma_{{{i+1}}}$" for i in range(n_show)], fontsize=11)
+    ax.set_xlabel("Component")
+    ax.set_ylabel("Variance explained (%)")
+    ax.set_ylim(0, max(v[0] for v in spectra.values()) * 1.2)
+    ax2.set_ylabel("Remaining spectrum (%)", color="#888")
+    ax2.set_ylim(0, 100)
+    ax2.tick_params(axis="y", labelcolor="#888")
+
+    n_sys_model = int(terminus_mask.sum())
+    n_sys_full = len(agents)
+    n_bench = matrix_np.shape[1]
+    ax.set_title(
+        f"Singular value spectrum of the {n_sys_full}×{n_bench} benchmark matrix\n"
+        f"(logit-transformed, z-scored — baseline subset: {n_sys_model}×{n_bench})",
+        fontsize=13,
+    )
+    ax.legend(loc="upper right", fontsize=10)
+    ax.grid(axis="y", color="#eeeeee", linewidth=0.6)
+
 def save_key_effect_plot(effects: pd.DataFrame, group_col: str, filename: str, title: str) -> None:
     plot_df = effects.sort_values("adjusted_mean")
     labels = [wrap_text(value, width=28) for value in plot_df[group_col]]

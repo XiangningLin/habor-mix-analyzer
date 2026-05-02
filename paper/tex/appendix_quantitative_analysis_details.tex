@@ -78,6 +78,19 @@ CompileBench & 139.9 & unique \\
 \providecommand{\BenchPressUniqueThree}{Reasoning Gym}
 \providecommand{\BenchPressUniqueThreeScore}{254.3}
 
+% ── Benchmark greedy selection sequence ──
+\providecommand{\AppBenchGreedySequence}{  \item CodePDE ($\rho{=}0.00$, Scientific Research)
+  \item PIXIU ($\rho{=}0.00$, Professional Domains)
+  \item IneqMath ($\rho{=}0.25$, Mathematics \& Reasoning)
+  \item ResearchCodeBench ($\rho{=}0.26$, Scientific Research)
+  \item BFCL ($\rho{=}0.42$, Agents, Tools \& Systems)
+  \item AlgoTune ($\rho{=}0.45$, Software Engineering)
+  \item AA-LCR ($\rho{=}0.56$, Software Engineering)
+  \item USACO ($\rho{=}0.56$, Software Engineering)
+  \item LAB-Bench ($\rho{=}0.59$, Scientific Research)
+  \item SLDBench ($\rho{=}0.61$, Scientific Research)}
+\providecommand{\GreedyFirstAboveSevenCorr}{0.70}
+
 % ── Task-level SVD ──
 \providecommand{\TaskTotalTasks}{6801}
 \providecommand{\TaskZeroVarTasks}{908}
@@ -198,23 +211,23 @@ ARC-AGI-2 & \texttt{58490d8a\_0} & 0.37 & medium \\
 \end{tabular}
 \end{table}}
 
-\providecommand{\AppGlobalGreedySequence}{  \item Reasoning Gym / \texttt{reasoning-gym-cognition-col...} ($r{=}0.00$)
-  \item Seal0 / \texttt{57} ($r{=}0.00$)
-  \item Omni-math / \texttt{omnimath\_3664} ($r{=}0.00$)
-  \item HLE / \texttt{hle/hle\_\_6737591afaa3cc153f...} ($r{=}0.02$)
-  \item Reasoning Gym / \texttt{reasoning-gym-algorithmic-c...} ($r{=}0.06$)
-  \item Aider Polyglot / \texttt{polyglot\_python\_list-ops} ($r{=}0.09$)
-  \item Widesearch / \texttt{widesearch/widesearch-ws-en...} ($r{=}0.12$)
-  \item SpreadsheetBench / \texttt{52305} ($r{=}0.17$)
-  \item HLE / \texttt{hle/hle\_\_673511ca392d03ca70...} ($r{=}0.19$)
-  \item BigCodeBench / \texttt{bigcodebench\_302} ($r{=}0.21$)}
+\providecommand{\AppGlobalGreedySequence}{  \item Reasoning Gym / \texttt{reasoning-gym-cognition-col...} ($\rho{=}0.00$)
+  \item Seal0 / \texttt{57} ($\rho{=}0.00$)
+  \item Omni-math / \texttt{omnimath\_3664} ($\rho{=}0.00$)
+  \item HLE / \texttt{hle/hle\_\_6737591afaa3cc153f...} ($\rho{=}0.02$)
+  \item Reasoning Gym / \texttt{reasoning-gym-algorithmic-c...} ($\rho{=}0.06$)
+  \item Aider Polyglot / \texttt{polyglot\_python\_list-ops} ($\rho{=}0.09$)
+  \item Widesearch / \texttt{widesearch/widesearch-ws-en...} ($\rho{=}0.12$)
+  \item SpreadsheetBench / \texttt{52305} ($\rho{=}0.17$)
+  \item HLE / \texttt{hle/hle\_\_673511ca392d03ca70...} ($\rho{=}0.19$)
+  \item BigCodeBench / \texttt{bigcodebench\_302} ($\rho{=}0.21$)}
 
 % ── Combined go-to task set ──
 \providecommand{\GoToSetNumTasks}{159}
 \providecommand{\GoToSetNumBenchmarks}{53}
 \providecommand{\AppGoToTaskSetTable}{\begin{table}[t]\small
 \centering
-\caption{Combined go-to task set: top-3 independently informative and representative tasks per benchmark (greedy $\max|r|{<}0.7$, then ranked by useful representativeness). Showing first 30 of 159 tasks across 53 benchmarks.}
+\caption{Combined go-to task set: top-3 independently informative and representative tasks per benchmark (greedy $\max|\rho|{<}0.7$, then ranked by useful representativeness). Showing first 30 of 159 tasks across 53 benchmarks.}
 \label{tab:goto-task-set}
 \begin{tabular}{llccc}
 \toprule
@@ -276,6 +289,28 @@ CRUST-Bench & \texttt{crustbench-ljmm} & 0.25 & 17 & easy \\
 \providecommand{\UnifiedMedianCrossImp}{2.6}
 \providecommand{\UnifiedMedianGlobalImp}{3.3}
 
+% ── Task holdout method stats ──
+\providecommand{\TaskHoldoutNumBenchmarks}{53}
+\providecommand{\TaskHoldoutNumImproved}{42}
+\providecommand{\TaskHoldoutMedianImprovement}{22.0}
+\providecommand{\TaskHoldoutBestOneName}{HumanEvalFix}
+\providecommand{\TaskHoldoutBestOneImp}{66.7}
+\providecommand{\TaskHoldoutWorstOneName}{CyberGym}
+\providecommand{\TaskHoldoutBestTwoName}{LiveCodeBench}
+\providecommand{\TaskHoldoutBestTwoImp}{61.5}
+\providecommand{\TaskHoldoutWorstTwoName}{LawBench}
+\providecommand{\TaskHoldoutBestThreeName}{KUMO}
+\providecommand{\TaskHoldoutBestThreeImp}{55.9}
+\providecommand{\TaskHoldoutWorstThreeName}{BigCodeBench}
+
+% ── Within-benchmark greedy stats ──
+\providecommand{\TaskGreedyHighIndepOneName}{CyberGym}
+\providecommand{\TaskGreedyHighIndepOnePct}{70}
+\providecommand{\TaskGreedyLowIndepOneName}{HumanEvalFix}
+\providecommand{\TaskGreedyHighIndepTwoName}{BIX-Bench}
+\providecommand{\TaskGreedyHighIndepTwoPct}{69}
+\providecommand{\TaskGreedyLowIndepTwoName}{ResearchCodeBench}
+
 % @@STATS_END@@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -283,99 +318,61 @@ CRUST-Bench & \texttt{crustbench-ljmm} & 0.25 & 17 & easy \\
 \label{app:benchpress}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We adapt the BenchPress methodology~\cite{papailiopoulos2026benchpress} to
-study how much redundancy exists among our benchmarks and whether agent
-scaffolding introduces structure beyond what model capability alone explains.
-BenchPress was originally applied to an 83-model $\times$ 49-benchmark
-matrix (34\% filled); its core analysis used a fully-observed
-31-model $\times$ 10-benchmark subblock.  Our matrix is
-\AppNumSystems{}~system $\times$ \AppNumBenchmarks{}~benchmark (fully observed after filtering
-extreme-valued and manually excluded columns). \bo{Should we clarify the exact data object used here? In particular, it would help to state whether this is the raw benchmark matrix, the task first benchmark aggregate matrix, or the normalized benchmark relative matrix. Since later conclusions depend on the score space, I think one short 'data contract' sentence here would make the appendix much easier to audit.}
+We adapt the BenchPress methodology~\cite{papailiopoulos2026benchpress} to quantify redundancy among benchmarks and to test whether agent scaffolding introduces structure beyond model capability alone.  BenchPress was originally applied to an 83-model $\times$ 49-benchmark matrix (34\% filled), with core analyses on a fully-observed 31$\times$10 subblock.  Our setting differs in three respects: the matrix is \AppNumSystems{}~systems $\times$ \AppNumBenchmarks{}~benchmarks (fully observed after coverage filtering); rows include both baseline and scaffolded systems; and scores are task-aggregate benchmark scores on each benchmark's native metric scale.  All included benchmarks have scores in $[0,1]$; benchmarks with unbounded scales (e.g., MLGym) are excluded from the logit-space analyses described below.
 
 \paragraph{Methodology.}
-All percentage-bounded scores $s \in [0,1]$ are transformed to logit space
-before any regression or SVD:
+Percentage-bounded scores $s \in [0,1]$ are transformed to logit space:
 \begin{equation}
   z = \operatorname{logit}(s) = \log\!\frac{\,\mathrm{clip}(s,\,\epsilon,\,1{-}\epsilon)\,}
        {1 - \mathrm{clip}(s,\,\epsilon,\,1{-}\epsilon)},
-  \quad \epsilon = 0.005.
+  \quad \epsilon = 0.005,
   \label{eq:logit}
-\end{equation}\bo{Could we specify how non percentage bounded benchmarks are handled? Some benchmark columns may have scores outside $[0,1]$ or nonstandard scales. If they are excluded or normalized. Maybe we should state that explicitly before the logit transform. Otherwise readers may assume all columns are treated identically.}
-The BenchPress predictor is a blend of two components:
+\end{equation}
+where $s$ is the raw benchmark score (pass rate or normalized metric), $z$ is the logit-transformed score used in all subsequent regression and SVD analyses, and $\epsilon$ clips extreme values away from 0 and 1 to avoid infinite logits.
 
+The predictor blends two components:
 \begin{enumerate}
-\item \textbf{LogitBenchReg.} For each target benchmark~$b_j$, identify the
-  $k{=}5$ other benchmarks with the highest training-set $R^2$ when predicting
-  $b_j$ via univariate OLS in logit space (minimum $R^2 \ge 0.1$).  For a
-  held-out system~$i$, the prediction is the $R^2$-weighted average of the
-  individual univariate predictions, mapped back through the inverse logit.
+\item \textbf{LogitBenchReg.} For each target benchmark~$b_j$, select the $k{=}5$ other benchmarks with the highest training-set $R^2$ via univariate OLS in logit space (minimum $R^2 \ge 0.1$).  Predict the held-out system as the $R^2$-weighted average of univariate predictions, inverse-logit-transformed.
 
-\item \textbf{SVD-Logit (Soft-Impute).}  Column-wise $z$-score the
-  logit-transformed matrix, initialize missing entries to~0, then iterate:
-  compute rank-$r$ truncated SVD, replace \emph{only} missing entries with
-  the low-rank approximation (observed entries stay pinned), and repeat until
-  convergence ($\Delta_{\mathrm{rel}} < 10^{-4}$).  De-standardize and
-  inverse-logit to obtain predictions.
+\item \textbf{SVD-Logit (Soft-Impute).}  Column-wise $z$-score the logit matrix, initialize missing entries to~0, then iterate rank-$r$ truncated SVD---replacing only missing entries with the low-rank approximation---until convergence ($\Delta_{\mathrm{rel}} < 10^{-4}$).  De-standardize and inverse-logit to obtain predictions.
 \end{enumerate}
 
 The final predictor is
 $\hat{s} = 0.6 \times \hat{s}^{\mathrm{BenchReg}} + 0.4 \times \hat{s}^{\mathrm{SVD}}$,
-following~\cite{papailiopoulos2026benchpress}.  When LogitBenchReg returns no
-prediction for a cell, the method falls back to SVD-Logit alone; when both
-fail, it falls back to the column mean. \bo{The current description may read like an exact reproduction of\cite{papailiopoulos2026benchpress}, but our setting has only 16 systems and includes agent scaffolds. If our implementation differs from the original, for example using univariate OLS with $R^2$-weighted averaging rather than ridge regression, is it better to call it a BenchPress-inspired adaptation?}
+following~\cite{papailiopoulos2026benchpress}.  When LogitBenchReg produces no prediction, the method falls back to SVD-Logit alone; when both fail, it falls back to the column mean.
 
 \paragraph{Evaluation protocol.}
-We use a per-system holdout: for each of 5 random seeds, randomly hide 50\%
-of each system's scores, train BenchPress on the remaining cells, and predict
-the hidden ones.  The primary metric is \textbf{Median Absolute Percentage
-Error} (MedAPE):
+Per-system holdout: for each of 5 random seeds, randomly mask 50\% of each system's scores, train on the remainder, and predict the masked cells.  The primary metric is Median Absolute Percentage Error (MedAPE):
 \begin{equation}
   \mathrm{MedAPE} = \operatorname{median}_{(i,j)\in\mathcal{H}}
-    \frac{|\hat{s}_{i,j} - s_{i,j}|}{|s_{i,j}|} \times 100\%.
+    \frac{|\hat{s}_{i,j} - s_{i,j}|}{|s_{i,j}|} \times 100\%,
   \label{eq:medape}
 \end{equation}
-This matches the metric used by BenchPress, making our results directly
-comparable to their reported 7\% MedAPE on the larger matrix. \bo{Both our matrices and sparsity are different (including task-first aggregation and normalized benchmark protocol). Would it be better to write it as inspired by, or something like a sanity-check style comparison? } 
+where $\mathcal{H}$ is the set of held-out (masked) cells, $i$ indexes systems (model--agent pairs), $j$ indexes benchmarks, $s_{i,j}$ is the observed score for system $i$ on benchmark $j$, and $\hat{s}_{i,j}$ is the predicted score.
 
-\paragraph{Finding~1: Low-rank structure (SVD spectrum).}
-We compute SVD in logit space on the \AppNumModelsOnly{}~system $\times$ \AppNumBenchmarks{}~benchmark
-Terminus-2 submatrix (baseline scaffold only, no advanced agent).
-Note that Terminus-2 is a minimal agent harness rather than a bare model evaluation,
-so this submatrix is not directly equivalent to the model-only matrices studied by
-BenchPress; nonetheless, it isolates the effect of varying only the base model while
-holding the scaffold fixed.
-The first principal component explains \AppSVDModelOnlyPCOne{}\% of the variance,
-comparable to BenchPress's 71\% on their 31$\times$10 block (which used truly
-scaffold-free evaluations).  The first two components
-capture \AppSVDModelOnlyPCOneTwo{}\%.  This suggests that the benchmark space is dominated by a
-single ``general capability'' axis even when restricting to our set of
-\AppNumModelsOnly{}~frontier models under a fixed scaffold.
+\paragraph{Low-rank structure.}
+\textit{A single capability axis dominates model-only evaluation; adding scaffolds introduces an orthogonal dimension.}
+SVD in logit space on the \AppNumModelsOnly{}-system Terminus-2 submatrix (varying only the base model under a fixed minimal scaffold) yields PC1 = \AppSVDModelOnlyPCOne{}\% of variance---comparable to BenchPress's 71\% on their 31$\times$10 block with scaffold-free evaluations.  The first two components capture \AppSVDModelOnlyPCOneTwo{}\%, confirming that the benchmark space is dominated by a single ``general capability'' axis across \AppNumModelsOnly{}~frontier models.
 
-On the full \AppNumSystems{}-system matrix (models with and without agents), the spectrum
-shifts: PC1 explains \AppSVDFullPCOne{}\% and PC2 explains \AppSVDFullPCTwo{}\% (cumulative \AppSVDFullCumTwo{}\%).
-The reduction in PC1's share is explained by Finding~2.
+On the full \AppNumSystems{}-system matrix, the spectrum shifts: PC1 drops to \AppSVDFullPCOne{}\% and PC2 captures \AppSVDFullPCTwo{}\% (cumulative \AppSVDFullCumTwo{}\%).  Figure~\ref{fig:svd-spectrum} visualizes the comparison.
 
-\paragraph{Finding~2: PC2 perfectly separates advanced-scaffold from
-baseline systems.}
-On the \AppNumSystems{}$\times$\AppNumBenchmarks{} matrix, PC2 achieves
-perfect separation between the \AppNumAgentSystems{} advanced-scaffold
-systems (PC2 $> 0$; mean $= {}\AppPCTwoAgentMean{}$) and the
-\AppNumBaseSystems{} Terminus-2 baseline systems (PC2 $< 0$; mean $=
-{}\AppPCTwoBaseMean{}$) with zero overlap. This means the second
-principal component of the combined score matrix captures the ``agent
-effect''---a dimension orthogonal to general model capability that
-BenchPress could not observe, since its matrix contained only baseline
-systems.
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figs/appendix/quantitative/benchmark_svd_spectrum}
+  \caption{Singular value spectrum of the benchmark score matrix in logit space.  Blue: \AppNumModelsOnly{}-system Terminus-2 submatrix (baseline scaffold only).  Purple: full \AppNumSystems{}-system matrix (all scaffolds).  The drop in PC1 share and rise in PC2 when scaffolds are included reflects the orthogonal ``agent effect'' dimension.}
+  \label{fig:svd-spectrum}
+\end{figure}
 
-\paragraph{Finding~3: BenchPress blend reduces prediction error by \AppBlendImprovement{}\%
-over the column-mean baseline.}
-Table~\ref{tab:benchpress-methods} compares prediction methods at 50\%
-holdout.
+\paragraph{Agent separation in PC2.}
+\textit{The second principal component achieves perfect separation between scaffolded and baseline systems.}
+On the full matrix, PC2 separates the \AppNumAgentSystems{} advanced-scaffold systems (mean $= {}\AppPCTwoAgentMean{}$) from the \AppNumBaseSystems{} Terminus-2 baselines (mean $= {}\AppPCTwoBaseMean{}$) with zero overlap.  This orthogonal ``agent effect'' dimension is invisible in model-only matrices, which is why BenchPress's original analysis reported a single dominant component.
+
+\paragraph{Prediction accuracy.}
+\textit{The BenchPress blend reduces prediction error by \AppBlendImprovement{}\% over the column-mean baseline.}
 
 \begin{table}[h]\small
 \centering
-\caption{Prediction methods on our \AppNumSystems{}$\times$\AppNumBenchmarks{} matrix (50\% holdout,
-5~seeds).  MedAPE (\%) is the primary metric.}
+\caption{Prediction methods on our \AppNumSystems{}$\times$\AppNumBenchmarks{} matrix (50\% holdout, 5~seeds).}
 \label{tab:benchpress-methods}
 \begin{tabular}{lcc}
 \toprule
@@ -389,63 +386,38 @@ BenchPress blend ($r{=}2$) & \textbf{\AppBlendMedAPE{}} & \textbf{\AppBlendMedAE
 \end{tabular}
 \end{table}
 
-The BenchPress blend achieves \AppBlendMedAPE{}\% MedAPE, a \AppBlendImprovement{}\% relative improvement
-over the \AppBaselineMedAPE{}\% column-mean baseline.  This is higher than BenchPress's
-7\% on its larger matrix, which we attribute to our smaller training set
-(\AppNumSystems{} vs.\ 31 rows) and greater benchmark diversity (\AppNumBenchmarks{} vs.\ 10 columns).
+The blend achieves \AppBlendMedAPE{}\% MedAPE---higher than BenchPress's 7\% on their larger matrix, which we attribute to our smaller system count (\AppNumSystems{} vs.\ 31 rows) and substantially greater benchmark diversity (\AppNumBenchmarks{} vs.\ 10 columns).
 
-\paragraph{Finding~4: Per-benchmark predictability.}
-Table~\ref{tab:bench-predict} shows the most and least predictable benchmarks,
-sorted by MedAPE at 50\% holdout.
+\paragraph{Per-benchmark predictability.}
+\textit{Predictability identifies redundancy: benchmarks that are easily predicted from others provide no independent signal.}
 
 \AppPerBenchmarkPredictTable{}
 
-Benchmarks that resist prediction---\BenchPressUniqueOne{}
-(\BenchPressUniqueOneScore{}\%), \BenchPressUniqueTwo{}
-(\BenchPressUniqueTwoScore{}\%), \BenchPressUniqueThree{}
-(\BenchPressUniqueThreeScore{}\%)---share a common trait: they test
-capabilities orthogonal to the mainstream evaluation axis (novel agentic
-research tasks, scientific experimentation, abstract reasoning).
-Conversely, highly predictable benchmarks like \BenchPressRedundantOne{}
-(\BenchPressRedundantOneScore{}\%) and \BenchPressRedundantTwo{}
-(\BenchPressRedundantTwoScore{}\%) are fully explained by the
-general-capability component.
+Benchmarks that resist prediction---\BenchPressUniqueOne{} (\BenchPressUniqueOneScore{}\%), \BenchPressUniqueTwo{} (\BenchPressUniqueTwoScore{}\%), \BenchPressUniqueThree{} (\BenchPressUniqueThreeScore{}\%)---test capabilities orthogonal to the dominant axis: novel agentic research tasks, scientific experimentation, and abstract reasoning.  Conversely, highly predictable benchmarks like \BenchPressRedundantOne{} (\BenchPressRedundantOneScore{}\%) and \BenchPressRedundantTwo{} (\BenchPressRedundantTwoScore{}\%) are fully explained by the general-capability component.
 
-
-\paragraph{Finding~5: Greedy forward selection identifies a minimal independent benchmark set.}
+\paragraph{Greedy forward selection.}
 \label{par:greedy-selection}
-To determine the smallest subset of benchmarks that captures most independent information, we apply greedy forward selection: starting from the benchmark with the lowest mean absolute correlation to all others, we iteratively add the benchmark whose maximum absolute correlation with the already-selected set is smallest.  The procedure orders all \AppNumBenchmarks{} benchmarks from most to least independent.
+\textit{Only \GreedyBenchmarksBelowSeven{} of \AppNumBenchmarks{} benchmarks contribute independent signal at the $|\rho|<0.7$ threshold.}
+Greedy forward selection starts from the benchmark with the lowest mean absolute correlation to all others and iteratively adds the benchmark whose maximum absolute correlation with the already-selected set is smallest.  The first \GreedyBenchmarksBelowSeven{} selections all satisfy $\max|\rho| < 0.7$; from step~\GreedyFirstAboveSevenStep{} onward, every remaining benchmark has $|\rho| \ge 0.7$ with at least one already-selected benchmark.
 
-The first \GreedyBenchmarksBelowSeven{} benchmarks selected all have $\max|r| < 0.7$ to the selected set, meaning each adds substantial independent signal.  From step~\GreedyFirstAboveSevenStep{} onward, all remaining benchmarks have $\max|r| \ge 0.7$ with at least one already-selected benchmark---they are increasingly redundant.
-
-The selection sequence begins with:
+The selection sequence:
 \begin{enumerate}
-  \item CodePDE ($r{=}0.00$, Scientific Research)
-  \item PIXIU ($r{=}0.00$, Professional Domains)
-  \item IneqMath ($r{=}0.25$, Mathematics)
-  \item ResearchCodeBench ($r{=}0.26$, Scientific Research)
-  \item BFCL ($r{=}0.42$, Agents/Tools)
-  \item AlgoTune ($r{=}0.45$, Software Engineering)
-  \item AA-LCR ($r{=}0.56$, Software Engineering)
-  \item USACO ($r{=}0.56$, Software Engineering)
-  \item LAB-Bench ($r{=}0.59$, Scientific Research)
-  \item SLDBench ($r{=}0.61$, Scientific Research)
+\AppBenchGreedySequence{}
 \end{enumerate}
-The first redundant benchmark (GSO, step~\GreedyFirstAboveSevenStep{}, $r{=}0.70$) is largely covered by the software engineering benchmarks already selected.  This result implies that, for practitioners with constrained evaluation budgets, evaluating on $\sim$\GreedyBenchmarksBelowSeven{} well-chosen benchmarks across domains can capture most of the independent signal in a \AppNumBenchmarks{}-benchmark suite.
+The first redundant benchmark (\GreedyFirstAboveSeven{}, step~\GreedyFirstAboveSevenStep{}, $\rho{=}\GreedyFirstAboveSevenCorr{}$) is largely explained by the already-selected set.  For practitioners with constrained budgets, $\sim$\GreedyBenchmarksBelowSeven{} well-chosen benchmarks across domains capture most independent signal in the full \AppNumBenchmarks{}-benchmark suite.
 
-\paragraph{Extension to the Task Level.}
-While BenchPress was designed for continuous benchmark-level scores, we extend its SVD methodology to the task level (predicting individual question outcomes) to verify if the structural separation between models and agents persists at high granularity.
-
-After filtering out \TaskZeroVarTasks{} zero-variance tasks (where all systems scored 0 or 1), we apply logit-transformed SVD to the remaining \AppNumSystems{}-system $\times$ \TaskGoodTasks{}-task matrix. Despite the high dimensionality and the binary or near-binary nature of many individual task scores, the low-rank structure holds:
-\begin{itemize}
-    \item \textbf{General Capability (PC1):} Explains \TaskFullPCOne{}\% of the variance across all \AppNumSystems{} systems (and \TaskModelPCOne{}\% when restricted to the \AppNumModelsOnly{} baseline systems).
-    \item \textbf{Agent Axis (PC2):} Explains \TaskFullPCTwo{}\% of the variance. Even at the task level, PC2 separates advanced-scaffold systems (mean PC2 = $+\TaskAgentPCTwoMean{}$) from baseline systems (mean PC2 = $\TaskBasePCTwoMean{}$).
+\paragraph{Task-level SVD structure.}
+\textit{Low-rank structure persists at the individual-task level, but benchmark aggregation compresses away independent dimensions.}
+We extend the SVD analysis to the \AppNumSystems{}-system $\times$ \TaskGoodTasks{}-task matrix (after filtering \TaskZeroVarTasks{} zero-variance tasks where all systems scored identically).  Despite the high dimensionality and binary nature of many individual scores, the low-rank structure holds:
+\begin{itemize}[nosep]
+    \item \textbf{PC1} (general capability): \TaskFullPCOne{}\% of variance across all systems (\TaskModelPCOne{}\% when restricted to \AppNumModelsOnly{} baselines).
+    \item \textbf{PC2} (agent axis): \TaskFullPCTwo{}\% of variance, separating scaffolded (mean $= +\TaskAgentPCTwoMean{}$) from baseline systems (mean $= \TaskBasePCTwoMean{}$).
 \end{itemize}
-
-The contrast between the benchmark-level and task-level SVD spectra is itself informative: at the benchmark level, $\sigma_1$ captures \AppSVDFullPCOne{}\% of variance (one dominant axis), whereas at the task level $\sigma_1$ captures only \TaskFullPCOne{}\% with a much flatter decay---meaning task-level evaluation preserves multiple independent dimensions that benchmark aggregation compresses away.
+The spectrum contrast is informative: at the benchmark level PC1 captures \AppSVDFullPCOne{}\% of variance, whereas at the task level only \TaskFullPCOne{}\%---task-level evaluation preserves multiple independent dimensions that benchmark aggregation compresses away.
 
 \paragraph{Intra-benchmark dimensionality.}
-For each of the \TaskRedundNumBenchmarks{} benchmarks with $\ge 10$ tasks, we apply PCA to the \AppNumSystems{}-system $\times$ $T$ task score matrix (after removing zero-variance tasks, which average \TaskRedundMeanZeroVarPct{}\% per benchmark).  On average, the first principal component alone explains \textbf{\TaskRedundMeanPCOne{}\%} of the variance across tasks within a benchmark, and a median of only \textbf{\TaskRedundMedianPCsNinety{} components} suffices for 90\% cumulative variance---a \textbf{\TaskRedundMeanCompression{}$\times$} compression ratio.
+\textit{Individual benchmarks are internally low-rank: a handful of representative tasks suffice for reliable system ranking.}
+For each of the \TaskRedundNumBenchmarks{} benchmarks with $\ge 10$ tasks, PCA on the \AppNumSystems{} $\times$ $T$ task matrix (after removing zero-variance tasks, averaging \TaskRedundMeanZeroVarPct{}\% per benchmark) shows that PC1 alone explains \TaskRedundMeanPCOne{}\% of within-benchmark variance on average, and a median of only \TaskRedundMedianPCsNinety{} components suffices for 90\%---a \TaskRedundMeanCompression{}$\times$ compression ratio.
 
 Some benchmarks are particularly low-rank:
 \begin{itemize}
@@ -473,132 +445,92 @@ These benchmarks contain hundreds of items that essentially measure the same und
 
 With just 10 well-chosen tasks, \TaskRedundAboveNFKTen{} benchmarks achieve $\rho > 0.95$, and the overall mean $\rho$ across all benchmarks reaches \TaskRedundRhoKTen{} at $k{=}10$---indicating that a small task subset can approximate the full-suite ranking with high fidelity for most benchmarks.
 
-\paragraph{Within-benchmark task predictability via holdout.}
+\paragraph{Within-benchmark task holdout prediction.}
 \label{par:task-holdout}
-The PCA and ranking analyses above quantify redundancy from spectral and rank-correlation perspectives.  We now apply the BenchPress prediction framework directly: can we predict hidden task scores from peer tasks?
+\textit{Peer-based prediction quantifies task redundancy directly: benchmarks with highly predictable items contain interchangeable measurement points.}
+Applying full BenchPress across $\TaskGoodTasks{}$ tasks with only $\AppNumSystems{}{-}1$ training systems guarantees spurious fit.  We circumvent this by restricting prediction to tasks \emph{within the same benchmark}: for each benchmark with $\ge 5$ reliable tasks, we apply a holdout protocol within the $(\AppNumSystems{} \times T)$ sub-matrix---randomly masking 50\% of each system's scores (3 folds), predicting via (a)~task-mean baseline, (b)~top-$k$ peer-weighted correlation, and (c)~within-benchmark rank-2 SVD, then blending (b) and (c) at $0.6/0.4$.
 
-While applying the full BenchPress pipeline (LogitBenchReg from $\sim$6000 tasks) to the task level fails due to dimensionality---$\TaskGoodTasks{}$ tasks with only $\AppNumSystems{}{-}1$ training systems guarantees spurious $R^2{=}1$---we circumvent this by restricting prediction to tasks \emph{within the same benchmark}.
+Across \TaskHoldoutNumBenchmarks{} benchmarks, the blend improves over baseline in \TaskHoldoutNumImproved{} cases (median improvement \TaskHoldoutMedianImprovement{}\%).  The most internally predictable benchmarks---\TaskHoldoutBestOneName{} (\TaskHoldoutBestOneImp{}\%), \TaskHoldoutBestTwoName{} (\TaskHoldoutBestTwoImp{}\%), \TaskHoldoutBestThreeName{} (\TaskHoldoutBestThreeImp{}\%)---contain items that test essentially the same capability axis.  Benchmarks where the blend underperforms (e.g., \TaskHoldoutWorstOneName{}, \TaskHoldoutWorstTwoName{}) have heterogeneous task structures resistant to peer-based prediction.
 
-For each benchmark with $\ge 5$ reliable tasks, we apply a BenchPress-style holdout protocol within the benchmark's $(16 \times T)$ sub-matrix:
-\begin{enumerate}
-  \item For each fold (3 folds), randomly hide 50\% of each system's task scores.
-  \item Predict hidden cells using three methods:
-    \textbf{(a)} task-mean baseline (column mean of visible systems),
-    \textbf{(b)} top-$k$ peer weighted (correlation-weighted average of the $k$ most correlated peer tasks), and
-    \textbf{(c)} within-benchmark rank-2 SVD (soft-impute).
-  \item Blend peer + SVD predictions ($0.6 \times \text{peer} + 0.4 \times \text{SVD}$).
-  \item Report per-task Median Absolute Error (MedAE).
-\end{enumerate}
-
-Across 53 benchmarks, the blend improves over the task-mean baseline in 48 (median improvement 28.4\%).  Benchmarks with the most internally predictable tasks---HumanEvalFix (71\% improvement), KUMO (55\%), LiveCodeBench (55\%)---contain highly redundant items that test essentially the same capability axis.  The few benchmarks where the blend underperforms the baseline (e.g., LawBench, SWE-Lancer) tend to have heterogeneous task structures that resist peer-based prediction.
-
-\paragraph{Per-benchmark representative tasks and greedy selection.}
+\paragraph{Representative tasks and within-benchmark greedy selection.}
 \label{par:per-bench-goto}
-The holdout analysis identifies \emph{which} tasks are predictable; we now identify which tasks are most \emph{representative}.  Table~\ref{tab:go-to-tasks} lists the single most representative task per benchmark---the task whose leave-one-out correlation with the remaining-task aggregate is highest, weighted by task variance (the ``useful representativeness score'').  For practitioners who can run only one task per benchmark, these items maximize ranking fidelity to the full suite; with $k{=}3$ per benchmark the median ranking fidelity reaches $\rho \approx 0.89$.
+\textit{A single well-chosen task per benchmark can approximate the full-suite ranking; three tasks achieve $\rho \approx \TaskRedundRhoKThree{}$.}
+Table~\ref{tab:go-to-tasks} lists the single most representative task per benchmark---the task whose leave-one-out correlation with the remaining-task aggregate is highest, weighted by task variance (``useful representativeness score'').
 
 \AppGoToTaskTable{}
 
-Mirroring the benchmark-level greedy forward selection (Finding~5), we also apply greedy selection within each benchmark: iteratively select the task whose maximum absolute correlation with already-selected tasks is smallest.  The fraction of tasks with $\max|r| < 0.7$ varies widely: benchmarks like BigCodeBench (58\%) and AlgoTune (56\%) contain many independently-informative items, while highly redundant benchmarks like HumanEvalFix and MMMLU reach $r > 0.7$ within the first few selections.
+Mirroring the benchmark-level greedy selection, we apply greedy forward selection within each benchmark.  The fraction of tasks with $\max|\rho| < 0.7$ varies widely: \TaskGreedyHighIndepOneName{} (\TaskGreedyHighIndepOnePct{}\%) and \TaskGreedyHighIndepTwoName{} (\TaskGreedyHighIndepTwoPct{}\%) contain many independently-informative items, while \TaskGreedyLowIndepOneName{} and \TaskGreedyLowIndepTwoName{} reach $\rho > 0.7$ within the first few selections.
 
-\paragraph{Unified within- vs.\ cross-benchmark task prediction.}
+\paragraph{Within- vs.\ cross-benchmark prediction.}
 \label{par:unified-holdout}
-The analyses above use only within-benchmark peers.  A natural question is whether tasks from \emph{other} benchmarks can predict a given task better than same-benchmark peers.  To answer this fairly, we run a unified holdout experiment: for each benchmark, we apply the \emph{same} holdout mask and the \emph{same} $k{=}5$ peer count across three peer scopes:
-\begin{itemize}
-  \item \textbf{Within-benchmark peers:} the $k$ most-correlated tasks from the same benchmark.
-  \item \textbf{Cross-benchmark peers:} the $k$ most-correlated tasks from \emph{other} benchmarks only.
-  \item \textbf{Global peers:} the $k$ most-correlated tasks from the entire pool (any benchmark).
-\end{itemize}
-Each scope produces a peer prediction and a blend with rank-2 SVD ($0.6 \times \text{peer} + 0.4 \times \text{SVD}$).  We report MedAE improvement over the task-mean baseline.
+\textit{Same-benchmark peers predict better in most cases, but a substantial minority of benchmarks share latent structure across evaluation boundaries.}
+We run a unified holdout comparison: for each benchmark, the same mask and $k{=}5$ peer count across three scopes (within-benchmark, cross-benchmark only, global pool), each blended with rank-2 SVD at $0.6/0.4$.
 
-Across \UnifiedHoldoutNumBenchmarks{} benchmarks, within-benchmark blends outperform global blends in \UnifiedWithinBetter{}/\UnifiedHoldoutNumBenchmarks{} (\UnifiedWithinBetterPct{}\%) cases.  The median improvement over baseline is \UnifiedMedianWithinImp{}\% (within), \UnifiedMedianCrossImp{}\% (cross-benchmark), and \UnifiedMedianGlobalImp{}\% (global).  For the majority of benchmarks, same-benchmark peers provide more accurate predictions---confirming that tasks within a benchmark genuinely share structure beyond what cross-benchmark signal captures.  However, for a substantial minority (\UnifiedCrossBetter{}/\UnifiedHoldoutNumBenchmarks{}), cross-benchmark or global peers predict \emph{better}, suggesting that some benchmarks share latent capability axes that cut across evaluation boundaries.
+Within-benchmark blends outperform global blends in \UnifiedWithinBetter{}/\UnifiedHoldoutNumBenchmarks{} (\UnifiedWithinBetterPct{}\%) cases.  Median improvement over baseline: \UnifiedMedianWithinImp{}\% (within), \UnifiedMedianCrossImp{}\% (cross), \UnifiedMedianGlobalImp{}\% (global).  For the remaining \UnifiedCrossBetter{}/\UnifiedHoldoutNumBenchmarks{} benchmarks, cross-benchmark peers predict \emph{better}---indicating shared capability axes that cut across nominal evaluation boundaries.
 
-\paragraph{Cross-benchmark global go-to tasks.}
+\paragraph{Cross-benchmark global representative tasks.}
 \label{par:global-goto}
-The per-benchmark representative analysis (Table~\ref{tab:go-to-tasks}) identifies the best task \emph{within} each benchmark, but practitioners may want a single compact task set that covers as much independent signal as possible \emph{across all benchmarks}.  We flatten all \GlobalGoToNumTasks{} reliable bounded tasks into a single pool and perform two complementary analyses:
+\textit{Per-benchmark and cross-benchmark representativeness select different tasks---the overlap is only \GoToOverlapPct{}\%.}
+We flatten all \GlobalGoToNumTasks{} reliable bounded tasks into a single pool and compute two measures: (1)~\emph{global representativeness} (leave-one-out correlation with the full-pool aggregate $\times$ task standard deviation), and (2)~\emph{greedy independence} (iteratively selecting the task least correlated with the already-selected set).
 
-\begin{enumerate}
-  \item \textbf{Global representativeness.}  For each task, we compute the leave-one-out Pearson correlation between its normalized score profile across all 16 systems and the aggregate profile of all remaining tasks in the pool.  Multiplying by the task's observed standard deviation yields a ``global useful representativeness'' score---high values indicate tasks that both track the overall system ranking and have enough variance to discriminate systems.
-
-  \item \textbf{Greedy forward selection across all tasks.}  Starting from the task with the lowest mean absolute Pearson correlation to all others, we iteratively add the task whose maximum absolute correlation with the already-selected set is smallest.  This orders tasks from most to least independent.
-\end{enumerate}
-
-Table~\ref{tab:global-go-to-tasks} lists the top~25 tasks by global useful representativeness.  The greedy selection sequence begins with:
+Table~\ref{tab:global-go-to-tasks} lists the top~25 tasks by global representativeness.  The greedy sequence begins with:
 \begin{enumerate}
 \AppGlobalGreedySequence{}
 \end{enumerate}
 
 \AppGlobalGoToTaskTable{}
 
-\paragraph{Per-benchmark vs.\ global representative overlap.}
-A key question is whether the per-benchmark ``best representative task'' and the globally most representative tasks are the same set.  Comparing the per-benchmark top-1 tasks (one per benchmark) with the top-$N$ globally representative tasks (where $N$ equals the number of benchmarks), we find only \GoToOverlapCount{}/\GoToOverlapTotal{} (\GoToOverlapPct{}\%) overlap.
-This is because per-benchmark representativeness selects tasks that best track \emph{within-benchmark} variation, while global representativeness selects tasks that best track the \emph{cross-benchmark consensus}.  Benchmarks with idiosyncratic score profiles (e.g., those identified as ``unique'' in the BenchPress analysis) nominate internally representative tasks that look unrepresentative in the global pool.
+Comparing per-benchmark top-1 tasks with the top-$N$ globally representative tasks yields only \GoToOverlapCount{}/\GoToOverlapTotal{} (\GoToOverlapPct{}\%) overlap.  Per-benchmark selection tracks \emph{within-benchmark} variation; global selection tracks the \emph{cross-benchmark consensus}.  Benchmarks with idiosyncratic profiles (those identified as ``unique'' in the predictability analysis) nominate internally representative tasks that appear unrepresentative in the global pool.
 
 \paragraph{Combined go-to task set.}
-For practitioners seeking a compact evaluation set, we construct a combined go-to task set that balances independence and representativeness.  Within each benchmark, we apply greedy forward selection to identify independently informative tasks ($\max|r| < 0.7$), then select the top 3 by useful representativeness score.  This yields \GoToSetNumTasks{} tasks across \GoToSetNumBenchmarks{} benchmarks---a substantial reduction from the full \GlobalGoToNumTasks{}-task pool, while preserving both within-benchmark coverage and cross-benchmark diversity.
+\textit{A principled compact evaluation: \GoToSetNumTasks{} tasks across \GoToSetNumBenchmarks{} benchmarks balance independence with representativeness.}
+Within each benchmark, greedy forward selection identifies independently informative tasks ($\max|\rho| < 0.7$); the top~3 by useful representativeness are retained.  This yields a \GoToSetNumTasks{}-task set---substantially reduced from the full \GlobalGoToNumTasks{}-task pool while preserving both within-benchmark coverage and cross-benchmark diversity.
 
 \AppGoToTaskSetTable{}
 
 \paragraph{Implications.}
-The two-level redundancy---across benchmarks (Findings~4--5) and within benchmarks (this section)---implies that a carefully selected subset of benchmarks, each evaluated on a small number of representative tasks, can approximate the full evaluation matrix at a fraction of the computational cost.  For practitioners with constrained evaluation budgets, the combined go-to task set provides a principled starting point: \GoToSetNumTasks{} tasks that balance within-benchmark representativeness with cross-benchmark independence.
+Two-level redundancy---across benchmarks and within them---implies that a carefully selected subset of benchmarks, each evaluated on a small number of representative tasks, approximates the full evaluation matrix at a fraction of the computational cost.  The combined go-to task set (\GoToSetNumTasks{} tasks) provides a principled starting point for budget-constrained evaluation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Model vs.\ Agent Effect: Methodology Details}
+\subsubsection{Model vs.\ Agent Effect: Methodology}
 \label{app:model-vs-agent}
 
-This appendix formalizes the within-family and adjusted-effect analyses
-summarized in Section~\ref{sec:agent-harness}.  Let $s(m, a, b)$ denote the
-benchmark score for model~$m$, agent scaffold~$a$, and benchmark~$b$.
+We formalize the within-family and adjusted-effect analyses from Section~\ref{sec:agent-harness}.  Let $s(m, a, b)$ denote the benchmark-relative score for model~$m$, agent scaffold~$a$, and benchmark~$b$.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Within-Family Comparison}
+\paragraph{Within-family comparison.}
 \label{app:within-family}
 
-For each model provider family $f$ (e.g., Anthropic, OpenAI, Google), let
-$M_f$ be the set of models belonging to $f$ and $A_f$ the set of non-baseline
-agents evaluated on that family.  The baseline agent is Terminus~2.
+For each provider family $f$ (Anthropic, OpenAI, Google), let $M_f$ be its model set and $A_f$ its non-baseline agents.  The baseline scaffold is Terminus~2.
 
-\subparagraph{Model effect (fixing agent).}
-For each benchmark~$b$, we fix the agent to Terminus~2 and measure the score
-range across models within the family:
+\textit{Model effect} (fixing scaffold): the score range across models on Terminus~2,
 \begin{equation}
   \Delta_{\mathrm{model}}^{(f,b)}
-  \;=\;
-  \max_{m \in M_f}\, s(m,\,\text{terminus-2},\,b)
-  \;-\;
-  \min_{m \in M_f}\, s(m,\,\text{terminus-2},\,b).
+  = \max_{m \in M_f}\, s(m,\,\text{terminus-2},\,b)
+  - \min_{m \in M_f}\, s(m,\,\text{terminus-2},\,b),
   \label{eq:model-effect}
 \end{equation}
-This requires at least two models in~$f$ with observed Terminus~2 scores on~$b$.
+where $f$ denotes the provider family, $b$ is the benchmark, and $M_f$ is the set of models belonging to family $f$.  This measures how much performance varies due to model choice alone, with scaffold held fixed.
 
-\subparagraph{Agent effect (fixing model).}
-For each model $m \in M_f$ evaluated under both Terminus~2 and another agent
-$a \in A_f$ on benchmark~$b$, we compute the absolute score change:
+\textit{Agent effect} (fixing model): for each $(m, a)$ pair with both scores observed,
 \begin{equation}
   \delta_{\mathrm{agent}}^{(m,a,b)}
-  \;=\;
-  \bigl|\, s(m,\,a,\,b) - s(m,\,\text{terminus-2},\,b) \,\bigr|.
+  = \bigl|\, s(m,\,a,\,b) - s(m,\,\text{terminus-2},\,b) \,\bigr|,
   \label{eq:agent-delta}
 \end{equation}
-The family-level agent effect on~$b$ averages over all available model--agent pairs:
+where $m$ is a specific model, $a$ is a non-baseline scaffold, and the absolute difference isolates the scaffold's marginal contribution for a fixed model on benchmark $b$.
+
+The family-level agent effect averages over all available model--scaffold pairs:
 \begin{equation}
   \Delta_{\mathrm{agent}}^{(f,b)}
-  \;=\;
-  \frac{1}{|\mathcal{P}_{f,b}|}
+  = \frac{1}{|\mathcal{P}_{f,b}|}
   \sum_{(m,a)\in \mathcal{P}_{f,b}}
   \delta_{\mathrm{agent}}^{(m,a,b)},
   \label{eq:agent-effect}
 \end{equation}
-where $\mathcal{P}_{f,b} = \{(m,a) : m \in M_f,\; a \in A_f,\; \text{both }
-s(m,a,b) \text{ and } s(m,\text{terminus-2},b) \text{ are observed}\}$.
+where $\mathcal{P}_{f,b}$ is the set of (model, scaffold) pairs in family $f$ for which both the scaffolded score $s(m, a, b)$ and the baseline score $s(m, \text{terminus-2}, b)$ are observed.
 
-\subparagraph{Dominance classification.}
-For a given $(f, b)$ pair, the benchmark is classified as
-\emph{model-dominant} if $\Delta_{\mathrm{model}}^{(f,b)} >
-\Delta_{\mathrm{agent}}^{(f,b)}$, and \emph{agent-dominant} otherwise.
-
-\subparagraph{Family-level summary.}
-We aggregate across benchmarks within each family using the mean:
+A benchmark is \emph{model-dominant} for family $f$ if $\Delta_{\mathrm{model}}^{(f,b)} > \Delta_{\mathrm{agent}}^{(f,b)}$.  Family-level summaries average across benchmarks:
 \begin{align}
   \overline{\Delta}_{\mathrm{model}}^{(f)}
   &= \frac{1}{|B_f|}\sum_{b \in B_f} \Delta_{\mathrm{model}}^{(f,b)}, &
@@ -606,82 +538,23 @@ We aggregate across benchmarks within each family using the mean:
   &= \frac{1}{|B_f|}\sum_{b \in B_f} \Delta_{\mathrm{agent}}^{(f,b)},
   \label{eq:family-summary}
 \end{align}
-where $B_f$ is the set of benchmarks with both model-effect and agent-effect
-estimates for family~$f$.  The model-to-agent ratio is
-$\overline{\Delta}_{\mathrm{model}}^{(f)} / \overline{\Delta}_{\mathrm{agent}}^{(f)}$,
-and the model-dominant percentage is the fraction of benchmarks in~$B_f$
-classified as model-dominant.
-
-Table~\ref{tab:within-family-summary} reports these statistics for the three
-multi-model families.
+where $B_f$ is the set of benchmarks for which family $f$ has sufficient coverage to compute both effects.
 
 \begin{table}[t]
   \centering
-  \caption{Within-family model vs.\ agent effect comparison.  The model effect
-    is the score range across models within the family on Terminus~2; the agent
-    effect is the mean absolute score change from switching the agent while
-    holding the model fixed.  Ratio and model-dominant percentage are computed
-    per benchmark, then averaged.}
+  \caption{Within-family model vs.\ agent effect.  Model effect: score range across models on Terminus~2.  Agent effect: mean $|\Delta|$ from switching scaffold.}
   \label{tab:within-family-summary}
   \begin{tabular}{lcccccc}
     \toprule
-    Family
-      & Models
-      & Agents
-      & $\overline{\Delta}_{\mathrm{model}}$
-      & $\overline{\Delta}_{\mathrm{agent}}$
-      & Ratio
-      & Model-dom.\ \% \\
+    Family & Models & Agent & $\overline{\Delta}_{\mathrm{model}}$ & $\overline{\Delta}_{\mathrm{agent}}$ & Ratio & Model-dom.\ \% \\
     \midrule
-    Anthropic
-      & 3
-      & claude-code
-      & \AnthropicModelEffectMean{}
-      & \AnthropicAgentEffectMean{}
-      & \AnthropicModelAgentRatio{}$\times$
-      & \AnthropicModelWinPct\% \\
-    OpenAI
-      & 3
-      & codex
-      & \OpenAIModelEffectMean{}
-      & \OpenAIAgentEffectMean{}
-      & \OpenAIModelAgentRatio{}$\times$
-      & \OpenAIModelWinPct\% \\
-    Google
-      & 2
-      & gemini-cli
-      & \GoogleModelEffectMean{}
-      & \GoogleAgentEffectMean{}
-      & \GoogleModelAgentRatio{}$\times$
-      & \GoogleModelWinPct\% \\
+    Anthropic & 3 & claude-code & \AnthropicModelEffectMean{} & \AnthropicAgentEffectMean{} & \AnthropicModelAgentRatio{}$\times$ & \AnthropicModelWinPct\% \\
+    OpenAI & 3 & codex & \OpenAIModelEffectMean{} & \OpenAIAgentEffectMean{} & \OpenAIModelAgentRatio{}$\times$ & \OpenAIModelWinPct\% \\
+    Google & 2 & gemini-cli & \GoogleModelEffectMean{} & \GoogleAgentEffectMean{} & \GoogleModelAgentRatio{}$\times$ & \GoogleModelWinPct\% \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-Table~\ref{tab:within-family-example} illustrates the per-benchmark comparison
-for one representative family.
+\textit{The model dominates in all families with $\ge 3$ models.}  Anthropic and OpenAI show \AnthropicModelAgentRatio{}$\times$ and \OpenAIModelAgentRatio{}$\times$ model-to-agent ratios respectively, with model-dominant classification on \AnthropicModelWinPct{}\% and \OpenAIModelWinPct{}\% of benchmarks.  Google's smaller model set (2 models) yields a near-parity ratio (\GoogleModelAgentRatio{}$\times$), suggesting that the measured model effect scales with intra-family model diversity.
 
-\begin{table}[t]
-  \centering
-  \caption{Example within-family comparison for the Anthropic family
-    (claude-opus-4-6, claude-sonnet-4-6, claude-haiku-4-5).
-    \emph{Model effect}: score range across the three models on Terminus~2.
-    \emph{Agent effect}: mean $|\Delta|$ from switching to Claude~Code while
-    holding each model fixed.  Only a representative subset of benchmarks is
-    shown.}
-  \label{tab:within-family-example}
-  \small
-  \begin{tabular}{lcccc}
-    \toprule
-    & \multicolumn{2}{c}{Model effect (Terminus-2)}
-    & \multicolumn{2}{c}{Agent effect (fix model)} \\
-    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
-    Benchmark & Score range & Rank & Mean $|\Delta|$ & Rank \\
-    \midrule
-    \multicolumn{5}{c}{\emph{Auto-populated from pipeline output ---
-      see \texttt{benchmark\_within\_family\_model\_vs\_agent.csv}}} \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-
+\input{src/appendix/quantitative_overtime_analysis}
