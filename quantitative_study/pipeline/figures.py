@@ -415,7 +415,7 @@ def fig_progress_over_time(
         plot_df["_x"] = plot_df["date_ym"].map(date_to_x)
 
         n_benchmarks = len(group_selected)
-        fig, ax = plt.subplots(figsize=(16, 4))
+        fig, ax = plt.subplots(figsize=(14, 3.3))
         bench_colors: dict[str, str] = {}
         bench_last_points: dict[str, tuple[int, float]] = {}
         variants = _categorical_colors(n_benchmarks)
@@ -481,9 +481,9 @@ def fig_progress_over_time(
             tick_labels.append("Harbor")
             ax.set_xlim(-0.5, harbor_x + 0.5)
         ax.set_xticks(tick_positions)
-        ax.set_xticklabels(tick_labels, rotation=30, ha="right")
+        ax.set_xticklabels(tick_labels, rotation=18, ha="right")
         ax.set_ylim(0, 1.05)
-        fig.subplots_adjust(left=0.07, right=0.84, bottom=0.2, top=0.9)
+        fig.subplots_adjust(left=0.07, right=0.84, bottom=0.21, top=0.9)
         return fig
 
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)

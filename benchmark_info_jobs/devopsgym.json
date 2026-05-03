@@ -47,6 +47,11 @@
               "metric": "Test Generation (%)",
               "value": 0.1387,
               "unit": null
+            },
+            {
+              "metric": "Avg (%)",
+              "value": 0.2754,
+              "unit": null
             }
           ]
         },
@@ -74,6 +79,11 @@
               "metric": "Test Generation (%)",
               "value": 0.1161,
               "unit": null
+            },
+            {
+              "metric": "Avg (%)",
+              "value": 0.2319,
+              "unit": null
             }
           ]
         },
@@ -100,6 +110,11 @@
             {
               "metric": "Test Generation (%)",
               "value": 0.0098,
+              "unit": null
+            },
+            {
+              "metric": "Avg (%)",
+              "value": 0.0967,
               "unit": null
             }
           ]
@@ -145,6 +160,11 @@
               "metric": "Test Generation (%)",
               "value": 0.0839,
               "unit": null
+            },
+            {
+              "metric": "Avg (%)",
+              "value": 0.1296,
+              "unit": null
             }
           ]
         },
@@ -171,6 +191,11 @@
             {
               "metric": "Test Generation (%)",
               "value": 0.0645,
+              "unit": null
+            },
+            {
+              "metric": "Avg (%)",
+              "value": 0.1291,
               "unit": null
             }
           ]
@@ -199,6 +224,11 @@
               "metric": "Test Generation (%)",
               "value": 0.0484,
               "unit": null
+            },
+            {
+              "metric": "Avg (%)",
+              "value": 0.0923,
+              "unit": null
             }
           ]
         },
@@ -226,11 +256,16 @@
               "metric": "Test Generation (%)",
               "value": 0.0161,
               "unit": null
+            },
+            {
+              "metric": "Avg (%)",
+              "value": 0.0355,
+              "unit": null
             }
           ]
         }
       ],
-      "note": "Paper baselines from Table 1. End-to-end pipeline tasks achieve 0% across all agent-model combinations (no agent completes all 4 stages). Build & Config has 54 tasks (repair + implementation). Monitoring has 34 tasks. Issue Resolving and Test Generation each have 310 tasks (same issues). End-to-end has 18 tasks. Some models score 0% on Monitoring. Gemini-2.5-Pro, DeepSeek-v3.1, and Qwen3-Coder-30B all get 0% on Monitoring."
+      "note": "Paper baselines from Table 1. End-to-end pipeline tasks achieve 0% across all agent-model combinations (no agent completes all 4 stages). Build & Config has 54 tasks (repair + implementation). Monitoring has 34 tasks. Issue Resolving and Test Generation each have 310 tasks (same issues). End-to-end has 18 tasks. Some models score 0% on Monitoring. Gemini-2.5-Pro, DeepSeek-v3.1, and Qwen3-Coder-30B all get 0% on Monitoring. Added derived Avg (%) for rows with all four category scores as the arithmetic mean of Build & Config, Monitoring, Issue Resolving, and Test Generation so progress plotting can align with the later leaderboard metric; rows missing categories were left without Avg (%)."
     },
     {
       "date": "2026-04",

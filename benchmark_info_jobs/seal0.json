@@ -217,7 +217,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (LLM Stats score)",
+              "metric": "accuracy (Seal-0 w/ Search)",
               "value": 0.574,
               "unit": null
             }
@@ -229,7 +229,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (LLM Stats score)",
+              "metric": "accuracy (Seal-0 w/ Search)",
               "value": 0.563,
               "unit": null
             }
@@ -241,7 +241,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (LLM Stats score)",
+              "metric": "accuracy (Seal-0 w/ Search)",
               "value": 0.472,
               "unit": null
             }
@@ -253,7 +253,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (LLM Stats score)",
+              "metric": "accuracy (Seal-0 w/ Search)",
               "value": 0.469,
               "unit": null
             }
@@ -265,7 +265,7 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (LLM Stats score)",
+              "metric": "accuracy (Seal-0 w/ Search)",
               "value": 0.441,
               "unit": null
             }
@@ -277,14 +277,14 @@
           "system_description": null,
           "scores": [
             {
-              "metric": "accuracy (LLM Stats score)",
+              "metric": "accuracy (Seal-0 w/ Search)",
               "value": 0.414,
               "unit": null
             }
           ]
         }
       ],
-      "note": null
+      "note": "llm-stats leaderboard reports score as 'accuracy (LLM Stats score)'; renamed here to 'accuracy (Seal-0 w/ Search)' to be treated as comparable to the paper metric for progress-over-time plotting."
     }
   ],
   "notes": null

@@ -88,6 +88,13 @@ def save_svd_spectrum_plot(raw_mat: pd.DataFrame, included_benchmarks: list[str]
     ax.legend(loc="upper right", fontsize=10)
     ax.grid(axis="y", color="#eeeeee", linewidth=0.6)
 
+
+def blend_with_white(color: str, alpha: float) -> str:
+    """Return the opaque color produced by drawing color over white at alpha."""
+    r, g, b = to_rgb(color)
+    return to_hex((1 - alpha + alpha * r, 1 - alpha + alpha * g, 1 - alpha + alpha * b))
+
+
 def save_key_effect_plot(effects: pd.DataFrame, group_col: str, filename: str, title: str) -> None:
     plot_df = effects.sort_values("adjusted_mean")
     labels = [wrap_text(value, width=28) for value in plot_df[group_col]]
@@ -491,18 +498,20 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
             chunk_n = end - start
             chunk_labels = labels[start:end]
             chunk_colors = colors[start:end]
+            chunk_fill_colors = [blend_with_white(color, alpha=0.35) for color in chunk_colors]
             chunk_df = plot_df.iloc[start:end]
             y = np.arange(chunk_n)
             bar_h = 0.65
+            ax.set_axisbelow(True)
 
             ax.barh(
                 y,
                 chunk_df["current_sota"].values,
                 height=bar_h,
-                color=chunk_colors,
+                color=chunk_fill_colors,
                 edgecolor="white",
-                alpha=0.35,
                 linewidth=0.45,
+                zorder=2,
             )
 
             ax.barh(
@@ -514,6 +523,7 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
                 edgecolor="white",
                 linewidth=0.45,
                 alpha=0.0,
+                zorder=2,
             )
 
             # Past SOTA at launch: same category color, but darker outline only
@@ -526,6 +536,7 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
                     facecolor="none",
                     edgecolor=outline_color,
                     linewidth=0.8,
+                    zorder=3,
                 )
 
             for i, (_, row) in enumerate(chunk_df.iterrows()):
@@ -535,21 +546,21 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
                     f'{row["current_sota"]:.0%}',
                     va="center",
                     color="#333333",
+                    zorder=4,
                 )
 
             ax.set_yticks(y)
             ax.set_yticklabels(chunk_labels)
             ax.set_xlim(0, 1.12)
             ax.set_xlabel("Score")
-            ax.axvline(0.5, color="#999999", linewidth=0.8, linestyle="--", alpha=0.6)
-            ax.grid(axis="x", color="#dddddd", linewidth=0.8, linestyle="--", alpha=0.8)
+            ax.grid(axis="x", color="#dddddd", linewidth=0.8, linestyle="--", alpha=0.8, zorder=0)
             for spine in ax.spines.values():
                 spine.set_visible(True)
 
             prev_domain = None
             for i, (_, row) in enumerate(chunk_df.iterrows()):
                 if prev_domain is not None and row["domain"] != prev_domain:
-                    ax.axhline(i - 0.5, color="#cccccc", linewidth=0.6, linestyle="-")
+                    ax.axhline(i - 0.5, color="#cccccc", linewidth=0.6, linestyle="-", zorder=1)
                 prev_domain = row["domain"]
 
         domains_present = [d for d in domain_order if d in plot_df["domain"].astype(str).values]
@@ -559,8 +570,7 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
                 (0, 0),
                 1,
                 1,
-                color=domain_colors.get(d, "#aaa"),
-                alpha=0.35,
+                color=blend_with_white(domain_colors.get(d, "#aaa"), alpha=0.35),
             )
             for d in domains_present
         ]
