@@ -82,6 +82,10 @@ _PROGRESS_GROUP_ORDER = {
     "Other": 7,
 }
 
+_PROGRESS_LABEL_OVERRIDES = {
+    "swe_bench_multilingual": "SWE-Bench-\nMultilingual",
+}
+
 
 def _progress_plot_group(benchmark: str, domain: str) -> str | None:
     if domain in _PROGRESS_EXCLUDED_DOMAINS:
@@ -415,7 +419,7 @@ def fig_progress_over_time(
         plot_df["_x"] = plot_df["date_ym"].map(date_to_x)
 
         n_benchmarks = len(group_selected)
-        fig, ax = plt.subplots(figsize=(14, 3.3))
+        fig, ax = plt.subplots(figsize=(12, 3.3))
         bench_colors: dict[str, str] = {}
         bench_last_points: dict[str, tuple[int, float]] = {}
         variants = _categorical_colors(n_benchmarks)
@@ -430,9 +434,10 @@ def fig_progress_over_time(
             color = bench_colors[bench]
             bench_last_points[bench] = (int(g["_x"].iloc[-1]), float(g["best_score"].iloc[-1]))
             label_name = g["benchmark_name"].iloc[0] if "benchmark_name" in g else bench
+            label = _PROGRESS_LABEL_OVERRIDES.get(bench, _wrap(label_name, 24))
             ax.plot(
                 g["_x"], g["best_score"], "o-",
-                label=_wrap(label_name, 24),
+                label=label,
                 color=color, markersize=5, linewidth=1.6, alpha=0.9,
             )
 
@@ -483,7 +488,7 @@ def fig_progress_over_time(
         ax.set_xticks(tick_positions)
         ax.set_xticklabels(tick_labels, rotation=18, ha="right")
         ax.set_ylim(0, 1.05)
-        fig.subplots_adjust(left=0.07, right=0.84, bottom=0.21, top=0.9)
+        fig.subplots_adjust(left=0.07, right=0.8, bottom=0.21, top=0.9)
         return fig
 
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)

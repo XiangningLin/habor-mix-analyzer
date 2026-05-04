@@ -3,6 +3,7 @@ set -euo pipefail
 
 uv run python - <<'PY'
 import shutil
+from pathlib import Path
 
 import pandas as pd
 
@@ -15,8 +16,10 @@ launch = pd.read_csv("output/quantitative/benchmark_launch_vs_harbor_improvement
 
 save_benchmark_progress_and_headroom_plot(headroom, launch)
 
+dest = Path("output/key_analyses/figures/benchmark_level/bench_progress_and_headroom.pdf")
+dest.parent.mkdir(parents=True, exist_ok=True)
 shutil.copyfile(
     "output/quantitative/figures/bench_progress_and_headroom.pdf",
-    "output/key_analyses/figures/benchmark_level/bench_progress_and_headroom.pdf",
+    dest,
 )
 PY

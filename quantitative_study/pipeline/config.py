@@ -22,7 +22,7 @@ HARBOR_CSV_CANDIDATES = [
 ]
 BENCHMARK_INFO_DIR = REPO_ROOT / "benchmark_info_jobs"
 METRIC_ALIGNMENT_PATH = REPO_ROOT / "data" / "metadata" / "benchmark_metric_alignment.csv"
-BENCHMARK_CATEGORIES_PATH = REPO_ROOT / "benchmark_categories.json"
+BENCHMARK_CATEGORIES_PATH = REPO_ROOT / "data" / "metadata" / "benchmark_categories.json"
 OUTPUT_DIR = REPO_ROOT / "output" / "quantitative"
 FIGURE_DIR = OUTPUT_DIR / "figures"
 

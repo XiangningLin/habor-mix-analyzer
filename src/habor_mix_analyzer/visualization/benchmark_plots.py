@@ -390,6 +390,11 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
     label_overrides = {
         "aime": "AIME 24&25",
         "bigcodebench": "BigCodeBench-Hard",
+        "livecodebench": "LiveCodeBench (V6)",
+    }
+    past_sota_overrides = {
+        # Official LiveCodeBench v6 launch leaderboard on Harbor's exact 100-task sample.
+        "livecodebench": 0.81,
     }
 
     launch_cols = ["matrix_column", "launch_best_score"]
@@ -416,6 +421,10 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
     plot_df = plot_df[~plot_df["benchmark"].isin(excluded_benchmarks)].copy()
     if plot_df.empty:
         return
+    for benchmark, past_sota in past_sota_overrides.items():
+        mask = plot_df["benchmark"] == benchmark
+        plot_df.loc[mask, "past_sota"] = past_sota
+        plot_df.loc[mask, "is_subset"] = False
 
     domain_order = [
         "Software Engineering",
@@ -485,7 +494,20 @@ def save_benchmark_progress_and_headroom_plot(headroom: pd.DataFrame, launch_pro
 
     with plt.rc_context():
         plt.rcdefaults()
-        plt.rcParams["hatch.linewidth"] = 0.35
+        plt.rcParams.update(
+            {
+                "font.family": "serif",
+                "font.serif": ["Times New Roman", "Times", "Liberation Serif", "DejaVu Serif"],
+                "font.size": 12,
+                "axes.labelsize": 13,
+                "xtick.labelsize": 11.5,
+                "ytick.labelsize": 11.5,
+                "legend.fontsize": 11.5,
+                "pdf.fonttype": 42,
+                "ps.fonttype": 42,
+                "hatch.linewidth": 0.35,
+            }
+        )
 
         fig, (ax_left, ax_right) = plt.subplots(
             1,
